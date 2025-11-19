@@ -1,0 +1,112 @@
+import team10 from '/assets/img/team/10.jpg';
+import team11 from '/assets/img/team/11.jpg';
+import team12 from '/assets/img/team/12.jpg';
+import arrowIcon from '/assets/img/icon/arrow.png';
+import arrowThemeIcon from '/assets/img/icon/arrow-theme.png';
+import banner3 from '/assets/img/banner/3.jpg';
+// import { Link } from "react-router-dom"; // Ссылка больше не используется, заменена на <a>
+import SkillProgress from '../process/SkillProgress';
+import SkillProgressData from "../../../src/assets/jsonData/progress/SkillProgressData.json";
+import ModalVideo from 'react-modal-video';
+import { useState } from 'react';
+import TextScrollAnimation from '../animation/TextScrollAnimation';
+import CountUp from 'react-countup';
+import useScrollAnimation from '../../hooks/useScrollAnimation';
+import useThumbParallax from '../../hooks/useThumbParallax';
+
+
+interface DataType {
+    lightMode?: boolean;
+}
+
+const AboutV1 = ({ lightMode }: DataType) => {
+
+    const [isOpen, setOpen] = useState(false);
+    const containerRef = useScrollAnimation();
+
+    useThumbParallax()
+
+    return (
+        <>
+            <div className="about-style-one-area bg-cover default-padding"
+                style={{ backgroundImage: lightMode ? 'none' : 'url(/assets/img/shape/13.png)' }}>
+                <div className="container">
+                    <div className="row">
+                        <div className="col-lg-3">
+                            <div className="about-style-one-left-info">
+                                <div className="fun-fact">
+                                    <div className="counter">
+                                        <div className="timer"><CountUp end={2000} enableScrollSpy /></div>
+                                        <div className="operator"></div>
+                                    </div>
+                                    <span className="medium">Завершено проектов</span>
+                                </div>
+                                <div className="fun-fact">
+                                    <div className="counter">
+                                        {/* Я изменил 16M на 150+ */}
+                                        <div className="timer"><CountUp end={150} enableScrollSpy /></div>
+                                        <div className="operator">+</div>
+                                    </div>
+                                    <span className="medium">Довольных клиентов</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="col-lg-8 offset-lg-1">
+                            <div className="about-style-one-info text-scroll-animation" ref={containerRef}>
+                                <div className="video-card mb-40">
+                                    <div className="thumb">
+                                        <img src={team10} alt="Image Not Found" />
+                                        <img src={team11} alt="Image Not Found" />
+                                        <img src={team12} alt="Image Not Found" />
+                                    </div>
+                                    <a href="#" className="popup-youtube" onClick={(e) => { e.preventDefault(); setOpen(true); }}>
+                                        <i className="fas fa-play" />
+                                        Смотреть видео
+                                    </a>
+                                </div>
+                                <p className="text">
+                                    Мы — команда стратегов, дизайнеров и разработчиков, объединённых общей целью: создавать цифровые продукты, которые решают задачи бизнеса и восхищают пользователей. Мы верим в осмысленный дизайн и технологии, которые работают на результат.
+                                </p>
+                                <div className="d-flex">
+
+                                    {/* ВАЖНО: Я заменил ссылку <Link to="/about-us"> на <a href="#contact">.
+                                      Она будет вести на блок "Связаться с нами". См. Шаг 2.
+                                    */}
+                                    {lightMode ?
+                                        <a href="#contact"><img src={arrowThemeIcon} alt="Image Not Found" /></a> :
+                                        <a href="#contact"><img src={arrowIcon} alt="Image Not Found" /></a>
+                                    }
+
+                                    <TextScrollAnimation triggerClassName="text">
+                                        <h2 className="title text">Креативное и современное digital-агентство</h2>
+                                    </TextScrollAnimation>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="row">
+                        <div className="col-lg-12">
+                            <div className="bottom-info mt-80 mt-md-50 mt-xs-30">
+                                <div className="thumb">
+                                    <div className="img-container">
+                                        <img src={banner3} alt="Image Not Found" />
+                                    </div>
+                                    <div className="about-skills">
+                                        {/* Progress Bar - данные берутся из JSON. См. Шаг 3 */}
+                                        {SkillProgressData.map(skill =>
+                                            <SkillProgress skill={skill} key={skill.id} />
+                                        )}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {/* ID видео можно поменять на свое */}
+            <ModalVideo channel='youtube' isOpen={isOpen} videoId="izTDbJ23_ws" onClose={() => setOpen(false)} />
+        </>
+    );
+};
+
+export default AboutV1;

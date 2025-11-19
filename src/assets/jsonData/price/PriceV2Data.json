@@ -1,0 +1,102 @@
+{
+	"monthlyPlans": [
+		{
+			"id": 1,
+			"title": "Junior разработчик",
+			"description": "Простые задачи, быстрый старт",
+			"features": [
+				"HTML/CSS/JS, базовый React",
+				"Код‑ревью наставником",
+				"Ежедневные апдейты в Slack",
+				"Оценка задач заранее",
+				"NDA по запросу"
+			],
+			"priceOriginal": null,
+			"priceDiscounted": 1200,
+			"currency": "₽",
+			"billingCycle": "час"
+		},
+		{
+			"id": 2,
+			"title": "Middle разработчик",
+			"description": "Оптимальный баланс скорости и цены",
+			"features": [
+				"React/Next.js/Node.js",
+				"Интеграции API",
+				"CI/CD, код‑ревью",
+				"Ведение задач в Jira/ClickUp",
+				"Замена специалиста при форс‑мажоре"
+			],
+			"priceOriginal": 2600,
+			"priceDiscounted": 2400,
+			"currency": "₽",
+			"billingCycle": "час"
+		},
+		{
+			"id": 3,
+			"title": "Senior разработчик",
+			"description": "Сложная архитектура и критичные сроки",
+			"features": [
+				"Архитектура, Code Review",
+				"Проектирование API/микросервисы",
+				"Оптимизация производительности",
+				"Менторинг команды",
+				"Техническая документация"
+			],
+			"priceOriginal": 3900,
+			"priceDiscounted": 3600,
+			"currency": "₽",
+			"billingCycle": "час"
+		}
+	],
+	"yearlyPlans": [
+		{
+			"id": 1,
+			"title": "Фул‑стек разработчик",
+			"description": "Проект под ключ: фронтенд + бэкенд",
+			"features": [
+				"Аналитика и оценка перед стартом",
+				"Разработка по ТЗ и спринтам",
+				"Еженедельные демо-обновления",
+				"Гарантия на релиз"
+			],
+			"priceOriginal": null,
+			"priceDiscounted": 80000,
+			"currency": "₽",
+			"billingCycle": "проект",
+			"priceLabel": "от 80к"
+		},
+		{
+			"id": 2,
+			"title": "1С программист",
+			"description": "Внедрение и доработка 1С (БП, УТ, УНФ и др.)",
+			"features": [
+				"Диагностика и план работ",
+				"Доработки конфигураций",
+				"Интеграции и обмены",
+				"Документация изменений"
+			],
+			"priceOriginal": null,
+			"priceDiscounted": 120000,
+			"currency": "₽",
+			"billingCycle": "проект",
+			"priceLabel": "от 120к"
+		},
+		{
+			"id": 3,
+			"title": "Маркетинг",
+			"description": "Аналитика, гипотезы, трафик и креативы",
+			"features": [
+				"Аудит и стратегия",
+				"Медиаплан и KPI",
+				"Запуск кампаний",
+				"Еженедельная отчётность"
+			],
+			"priceOriginal": null,
+			"priceDiscounted": 70000,
+			"currency": "₽",
+			"billingCycle": "проект",
+			"priceLabel": "от 70к"
+		}
+	]
+}

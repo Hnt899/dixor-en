@@ -1,0 +1,41 @@
+[
+	{
+		"id": 1,
+		"name": "Иван Петров",
+		"designation": "Team Lead · Full-stack",
+		"thumb": "1.jpg",
+		"social": {
+			"linkedin": "https://linkedin.com/",
+			"github": "https://github.com/"
+		}
+	},
+	{
+		"id": 2,
+		"name": "Анна Соколова",
+		"designation": "Frontend · React/Next.js",
+		"thumb": "2.jpg",
+		"social": {
+			"linkedin": "https://linkedin.com/",
+			"github": "https://github.com/"
+		}
+	},
+	{
+		"id": 3,
+		"name": "Дмитрий Орлов",
+		"designation": "Backend · Node.js/Nest",
+		"thumb": "3.jpg",
+		"social": {
+			"linkedin": "https://linkedin.com/",
+			"github": "https://github.com/"
+		}
+	},
+	{
+		"id": 4,
+		"name": "Мария Климова",
+		"designation": "DevOps · CI/CD, Cloud",
+		"thumb": "4.jpg",
+		"social": {
+			"linkedin": "https://linkedin.com/"
+		}
+	}
+]
