@@ -9,6 +9,7 @@ interface DataType {
     tag?: string;
     category?: string;
     description?: string;
+    backgroundColor?: string;
 }
 
 interface ProjectsGridProps {
@@ -16,7 +17,7 @@ interface ProjectsGridProps {
 }
 
 const SingleProjectGrid = ({ project, activeFilter }: { project: DataType; activeFilter?: string }) => {
-    const { id, thumb, text, textBold, tag, description } = project;
+    const { id, thumb, text, textBold, tag, description, backgroundColor } = project;
 
     // Сохранение позиции скролла перед переходом
     const handleProjectClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
@@ -39,6 +40,10 @@ const SingleProjectGrid = ({ project, activeFilter }: { project: DataType; activ
                 <div className="portfolio-style-two-new">
                     <div className="portfolio-card-wrapper">
                         <div className="portfolio-logo-container">
+                            <div 
+                                className="portfolio-logo-bg"
+                                style={{ backgroundColor: backgroundColor || '#f5f5f5' }}
+                            />
                             <img
                                 className="portfolio-logo"
                                 src={imageSrc}

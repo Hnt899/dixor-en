@@ -11,7 +11,8 @@
         "screenshots": [
             "сайт/3/сайт 3.png"
         ],
-        "category": "Сайты"
+        "category": "Сайты",
+        "backgroundColor": "#C9F31D"
     },
     {
         "id": 4,
@@ -25,12 +26,13 @@
         "screenshots": [
             "ux ui/1/Group 1951 (1).png"
         ],
-        "category": "UI/UX"
+        "category": "UI/UX",
+        "backgroundColor": "#C9F31D"
     },
     {
         "id": 5,
-        "thumb": "мобильнык/лого тел.png",
-        "thumbLight": "мобильнык/лого тел.png",
+        "thumb": "мобильнык/новые лого/logo (1).svg",
+        "thumbLight": "мобильнык/новые лого/logo (1).svg",
         "text": "Мобильные",
         "textBold": "Приложения",
         "thumbFull": "мобильнык/1/Group 4.png",
@@ -39,7 +41,8 @@
         "screenshots": [
             "мобильнык/1/Group 3.png"
         ],
-        "category": "Мобильные приложения"
+        "category": "Мобильные приложения",
+        "backgroundColor": "#C9F31D"
     },
     {
         "id": 8,
@@ -53,7 +56,8 @@
         "screenshots": [
             "сайт/8/сайт 8.png"
         ],
-        "category": "Сайты"
+        "category": "Сайты",
+        "backgroundColor": "#C9F31D"
     },
     {
         "id": 9,
@@ -67,7 +71,8 @@
         "screenshots": [
             "screenshots/project_9_Group 9.png"
         ],
-        "category": "Сайты"
+        "category": "Сайты",
+        "backgroundColor": "#C9F31D"
     },
     {
         "id": 16,
@@ -81,7 +86,8 @@
         "screenshots": [
             "сайт/16/Group 1993.png"
         ],
-        "category": "Сайты"
+        "category": "Сайты",
+        "backgroundColor": "#C9F31D"
     },
     {
         "id": 23,
@@ -95,12 +101,13 @@
         "screenshots": [
             "сайт/23/Group 2009.png"
         ],
-        "category": "Сайты"
+        "category": "Сайты",
+        "backgroundColor": "#C9F31D"
     },
     {
         "id": 24,
-        "thumb": "мобильнык/лого тел.png",
-        "thumbLight": "мобильнык/лого тел.png",
+        "thumb": "мобильнык/новые лого/ChatGPT Image 20 нояб. 2025 г., 14_15_01.png",
+        "thumbLight": "мобильнык/новые лого/ChatGPT Image 20 нояб. 2025 г., 14_15_01.png",
         "text": "Контроль",
         "textBold": "Договоров",
         "thumbFull": "мобильнык/2/Group 11.png",
@@ -109,12 +116,13 @@
         "screenshots": [
             "мобильнык/2/Group 10.png"
         ],
-        "category": "Мобильные приложения"
+        "category": "Мобильные приложения",
+        "backgroundColor": "#C9F31D"
     },
     {
         "id": 28,
-        "thumb": "мобильнык/лого тел.png",
-        "thumbLight": "мобильнык/лого тел.png",
+        "thumb": "мобильнык/новые лого/ChatGPT Image 20 нояб. 2025 г., 14_18_42.png",
+        "thumbLight": "мобильнык/новые лого/ChatGPT Image 20 нояб. 2025 г., 14_18_42.png",
         "text": "Магазин",
         "textBold": "Одежды",
         "thumbFull": "мобильнык/3/Group 2040.png",
@@ -123,7 +131,8 @@
         "screenshots": [
             "мобильнык/3/Group 2039.png"
         ],
-        "category": "Мобильные приложения"
+        "category": "Мобильные приложения",
+        "backgroundColor": "#C9F31D"
     },
     {
         "id": 29,
@@ -137,7 +146,8 @@
         "screenshots": [
             "сайт/29/Group 2028.png"
         ],
-        "category": "Сайты"
+        "category": "Сайты",
+        "backgroundColor": "#C9F31D"
     },
     {
         "id": 33,
@@ -151,12 +161,13 @@
         "screenshots": [
             "сайт/33/Group 2037 (3).png"
         ],
-        "category": "Сайты"
+        "category": "Сайты",
+        "backgroundColor": "#C9F31D"
     },
     {
         "id": 37,
-        "thumb": "мобильнык/лого тел.png",
-        "thumbLight": "мобильнык/лого тел.png",
+        "thumb": "мобильнык/новые лого/ChatGPT Image 20 нояб. 2025 г., 14_24_48.png",
+        "thumbLight": "мобильнык/новые лого/ChatGPT Image 20 нояб. 2025 г., 14_24_48.png",
         "text": "Доставка",
         "textBold": "Еды",
         "thumbFull": "мобильнык/4/Group 2022.png",
@@ -165,12 +176,13 @@
         "screenshots": [
             "мобильнык/4/Group 2021.png"
         ],
-        "category": "Мобильные приложения"
+        "category": "Мобильные приложения",
+        "backgroundColor": "#C9F31D"
     },
     {
         "id": 38,
-        "thumb": "мобильнык/лого тел.png",
-        "thumbLight": "мобильнык/лого тел.png",
+        "thumb": "мобильнык/новые лого/ChatGPT Image 20 нояб. 2025 г., 14_27_33.png",
+        "thumbLight": "мобильнык/новые лого/ChatGPT Image 20 нояб. 2025 г., 14_27_33.png",
         "text": "Контроль",
         "textBold": "Сделок",
         "thumbFull": "мобильнык/5/Group 2051.png",
@@ -179,12 +191,13 @@
         "screenshots": [
             "мобильнык/5/Group 2052.png"
         ],
-        "category": "Мобильные приложения"
+        "category": "Мобильные приложения",
+        "backgroundColor": "#C9F31D"
     },
     {
         "id": 39,
-        "thumb": "ux ui/лого ui 1.png",
-        "thumbLight": "ux ui/лого ui 1.png",
+        "thumb": "ux ui/новые лого/ChatGPT Image 20 нояб. 2025 г., 15_19_30.png",
+        "thumbLight": "ux ui/новые лого/ChatGPT Image 20 нояб. 2025 г., 15_19_30.png",
         "text": "Магазин",
         "textBold": "Термосов",
         "thumbFull": "",
@@ -193,12 +206,13 @@
         "screenshots": [
             "ux ui/3/Group 1935.png"
         ],
-        "category": "UI/UX"
+        "category": "UI/UX",
+        "backgroundColor": "#C9F31D"
     },
     {
         "id": 40,
-        "thumb": "ux ui/лого ui 2.png",
-        "thumbLight": "ux ui/лого ui 2.png",
+        "thumb": "ux ui/новые лого/ChatGPT Image 20 нояб. 2025 г., 15_22_09.png",
+        "thumbLight": "ux ui/новые лого/ChatGPT Image 20 нояб. 2025 г., 15_22_09.png",
         "text": "Подборка",
         "textBold": "Интерьера",
         "thumbFull": "",
@@ -207,12 +221,13 @@
         "screenshots": [
             "ux ui/4/Group 1936.png"
         ],
-        "category": "UI/UX"
+        "category": "UI/UX",
+        "backgroundColor": "#C9F31D"
     },
     {
         "id": 41,
-        "thumb": "ux ui/лого ui 3.png",
-        "thumbLight": "ux ui/лого ui 3.png",
+        "thumb": "ux ui/новые лого/ChatGPT Image 20 нояб. 2025 г., 15_27_10.png",
+        "thumbLight": "ux ui/новые лого/ChatGPT Image 20 нояб. 2025 г., 15_27_10.png",
         "text": "Гастрофера",
         "textBold": "Гастрономический Лофт",
         "thumbFull": "",
@@ -221,12 +236,13 @@
         "screenshots": [
             "ux ui/5/Group 1937.png"
         ],
-        "category": "UI/UX"
+        "category": "UI/UX",
+        "backgroundColor": "#C9F31D"
     },
     {
         "id": 43,
-        "thumb": "ux ui/лого ui 4.png",
-        "thumbLight": "ux ui/лого ui 4.png",
+        "thumb": "ux ui/новые лого/ChatGPT Image 20 нояб. 2025 г., 15_33_13.png",
+        "thumbLight": "ux ui/новые лого/ChatGPT Image 20 нояб. 2025 г., 15_33_13.png",
         "text": "Кухни",
         "textBold": "Komabdor",
         "thumbFull": "",
@@ -235,12 +251,13 @@
         "screenshots": [
             "ux ui/7/Group 1943 (2).png"
         ],
-        "category": "UI/UX"
+        "category": "UI/UX",
+        "backgroundColor": "#C9F31D"
     },
     {
         "id": 44,
-        "thumb": "ux ui/лого ui 5.png",
-        "thumbLight": "ux ui/лого ui 5.png",
+        "thumb": "ux ui/новые лого/ChatGPT Image 20 нояб. 2025 г., 15_36_19.png",
+        "thumbLight": "ux ui/новые лого/ChatGPT Image 20 нояб. 2025 г., 15_36_19.png",
         "text": "Световые",
         "textBold": "Решения",
         "thumbFull": "",
@@ -249,12 +266,13 @@
         "screenshots": [
             "ux ui/8/Group 1945.png"
         ],
-        "category": "UI/UX"
+        "category": "UI/UX",
+        "backgroundColor": "#C9F31D"
     },
     {
         "id": 45,
-        "thumb": "ux ui/лого ui.png",
-        "thumbLight": "ux ui/лого ui.png",
+        "thumb": "ux ui/новые лого/ChatGPT Image 20 нояб. 2025 г., 15_54_18.png",
+        "thumbLight": "ux ui/новые лого/ChatGPT Image 20 нояб. 2025 г., 15_54_18.png",
         "text": "Пиломатериалы",
         "textBold": "От Производителя",
         "thumbFull": "",
@@ -263,12 +281,13 @@
         "screenshots": [
             "ux ui/9/Group 1946.png"
         ],
-        "category": "UI/UX"
+        "category": "UI/UX",
+        "backgroundColor": "#C9F31D"
     },
     {
         "id": 46,
-        "thumb": "ux ui/лого ui 1.png",
-        "thumbLight": "ux ui/лого ui 1.png",
+        "thumb": "ux ui/новые лого/ChatGPT Image 20 нояб. 2025 г., 15_58_33.png",
+        "thumbLight": "ux ui/новые лого/ChatGPT Image 20 нояб. 2025 г., 15_58_33.png",
         "text": "Golden Mile",
         "textBold": "Penthouse",
         "thumbFull": "",
@@ -277,12 +296,13 @@
         "screenshots": [
             "ux ui/10/Group 1947.png"
         ],
-        "category": "UI/UX"
+        "category": "UI/UX",
+        "backgroundColor": "#C9F31D"
     },
     {
         "id": 47,
-        "thumb": "ux ui/лого ui 2.png",
-        "thumbLight": "ux ui/лого ui 2.png",
+        "thumb": "ux ui/новые лого/ChatGPT Image 20 нояб. 2025 г., 16_02_44.png",
+        "thumbLight": "ux ui/новые лого/ChatGPT Image 20 нояб. 2025 г., 16_02_44.png",
         "text": "Премиальный",
         "textBold": "Интерьерный Бутик",
         "thumbFull": "",
@@ -291,12 +311,13 @@
         "screenshots": [
             "ux ui/11/Group 1953 (1).png"
         ],
-        "category": "UI/UX"
+        "category": "UI/UX",
+        "backgroundColor": "#C9F31D"
     },
     {
         "id": 48,
-        "thumb": "ux ui/лого ui 3.png",
-        "thumbLight": "ux ui/лого ui 3.png",
+        "thumb": "ux ui/новые лого/ChatGPT Image 20 нояб. 2025 г., 16_05_36.png",
+        "thumbLight": "ux ui/новые лого/ChatGPT Image 20 нояб. 2025 г., 16_05_36.png",
         "text": "Сказочный",
         "textBold": "Праздник",
         "thumbFull": "",
@@ -305,12 +326,13 @@
         "screenshots": [
             "ux ui/12/Group 1955 (1).png"
         ],
-        "category": "UI/UX"
+        "category": "UI/UX",
+        "backgroundColor": "#C9F31D"
     },
     {
         "id": 49,
-        "thumb": "ux ui/лого ui 4.png",
-        "thumbLight": "ux ui/лого ui 4.png",
+        "thumb": "ux ui/новые лого/ChatGPT Image 20 нояб. 2025 г., 16_10_04.png",
+        "thumbLight": "ux ui/новые лого/ChatGPT Image 20 нояб. 2025 г., 16_10_04.png",
         "text": "Центр",
         "textBold": "Стоматологии",
         "thumbFull": "",
@@ -319,12 +341,13 @@
         "screenshots": [
             "ux ui/13/Group 1957 (1).png"
         ],
-        "category": "UI/UX"
+        "category": "UI/UX",
+        "backgroundColor": "#C9F31D"
     },
     {
         "id": 50,
-        "thumb": "ux ui/лого ui 5.png",
-        "thumbLight": "ux ui/лого ui 5.png",
+        "thumb": "ux ui/новые лого/ChatGPT Image 20 нояб. 2025 г., 16_14_05.png",
+        "thumbLight": "ux ui/новые лого/ChatGPT Image 20 нояб. 2025 г., 16_14_05.png",
         "text": "Сауна",
         "textBold": "И Хамам",
         "thumbFull": "",
@@ -333,12 +356,13 @@
         "screenshots": [
             "ux ui/14/Group 1961.png"
         ],
-        "category": "UI/UX"
+        "category": "UI/UX",
+        "backgroundColor": "#C9F31D"
     },
     {
         "id": 51,
-        "thumb": "ux ui/лого ui.png",
-        "thumbLight": "ux ui/лого ui.png",
+        "thumb": "ux ui/новые лого/ChatGPT Image 20 нояб. 2025 г., 16_33_12.png",
+        "thumbLight": "ux ui/новые лого/ChatGPT Image 20 нояб. 2025 г., 16_33_12.png",
         "text": "ЖК",
         "textBold": "Застройщики",
         "thumbFull": "",
@@ -347,12 +371,13 @@
         "screenshots": [
             "ux ui/15/Group 1963.png"
         ],
-        "category": "UI/UX"
+        "category": "UI/UX",
+        "backgroundColor": "#C9F31D"
     },
     {
         "id": 52,
-        "thumb": "ux ui/лого ui 1.png",
-        "thumbLight": "ux ui/лого ui 1.png",
+        "thumb": "ux ui/новые лого/ChatGPT Image 20 нояб. 2025 г., 16_36_05.png",
+        "thumbLight": "ux ui/новые лого/ChatGPT Image 20 нояб. 2025 г., 16_36_05.png",
         "text": "Товары",
         "textBold": "Для Пикника",
         "thumbFull": "",
@@ -361,12 +386,13 @@
         "screenshots": [
             "ux ui/16/Group 1964 (2).png"
         ],
-        "category": "UI/UX"
+        "category": "UI/UX",
+        "backgroundColor": "#C9F31D"
     },
     {
         "id": 53,
-        "thumb": "ux ui/лого ui 2.png",
-        "thumbLight": "ux ui/лого ui 2.png",
+        "thumb": "ux ui/новые лого/ChatGPT Image 20 нояб. 2025 г., 16_38_58.png",
+        "thumbLight": "ux ui/новые лого/ChatGPT Image 20 нояб. 2025 г., 16_38_58.png",
         "text": "Брендовая",
         "textBold": "Одежда",
         "thumbFull": "",
@@ -375,12 +401,13 @@
         "screenshots": [
             "ux ui/17/Group 1965.png"
         ],
-        "category": "UI/UX"
+        "category": "UI/UX",
+        "backgroundColor": "#C9F31D"
     },
     {
         "id": 54,
-        "thumb": "ux ui/лого ui 3.png",
-        "thumbLight": "ux ui/лого ui 3.png",
+        "thumb": "ux ui/новые лого/ChatGPT Image 20 нояб. 2025 г., 16_44_34.png",
+        "thumbLight": "ux ui/новые лого/ChatGPT Image 20 нояб. 2025 г., 16_44_34.png",
         "text": "Косметика",
         "textBold": "Для Красоты",
         "thumbFull": "",
@@ -389,12 +416,13 @@
         "screenshots": [
             "ux ui/18/Group 1967.png"
         ],
-        "category": "UI/UX"
+        "category": "UI/UX",
+        "backgroundColor": "#C9F31D"
     },
     {
         "id": 55,
-        "thumb": "ux ui/лого ui 4.png",
-        "thumbLight": "ux ui/лого ui 4.png",
+        "thumb": "ux ui/новые лого/ChatGPT Image 20 нояб. 2025 г., 16_50_19.png",
+        "thumbLight": "ux ui/новые лого/ChatGPT Image 20 нояб. 2025 г., 16_50_19.png",
         "text": "Кондиционеры",
         "textBold": "На Любой Вкус",
         "thumbFull": "",
@@ -403,12 +431,13 @@
         "screenshots": [
             "ux ui/19/Group 1968.png"
         ],
-        "category": "UI/UX"
+        "category": "UI/UX",
+        "backgroundColor": "#C9F31D"
     },
     {
         "id": 56,
-        "thumb": "ux ui/лого ui 5.png",
-        "thumbLight": "ux ui/лого ui 5.png",
+        "thumb": "ux ui/новые лого/ChatGPT Image 20 нояб. 2025 г., 16_53_46.png",
+        "thumbLight": "ux ui/новые лого/ChatGPT Image 20 нояб. 2025 г., 16_53_46.png",
         "text": "Всё",
         "textBold": "Для Дома",
         "thumbFull": "",
@@ -417,12 +446,13 @@
         "screenshots": [
             "ux ui/20/Group 1970 (1).png"
         ],
-        "category": "UI/UX"
+        "category": "UI/UX",
+        "backgroundColor": "#C9F31D"
     },
     {
         "id": 57,
-        "thumb": "ux ui/лого ui.png",
-        "thumbLight": "ux ui/лого ui.png",
+        "thumb": "ux ui/новые лого/ChatGPT Image 20 нояб. 2025 г., 16_57_49.png",
+        "thumbLight": "ux ui/новые лого/ChatGPT Image 20 нояб. 2025 г., 16_57_49.png",
         "text": "Бизнес",
         "textBold": "Консалтинг",
         "thumbFull": "",
@@ -431,12 +461,13 @@
         "screenshots": [
             "ux ui/21/Group 1973.png"
         ],
-        "category": "UI/UX"
+        "category": "UI/UX",
+        "backgroundColor": "#C9F31D"
     },
     {
         "id": 58,
-        "thumb": "ux ui/лого ui 1.png",
-        "thumbLight": "ux ui/лого ui 1.png",
+        "thumb": "ux ui/новые лого/ChatGPT Image 20 нояб. 2025 г., 17_02_47.png",
+        "thumbLight": "ux ui/новые лого/ChatGPT Image 20 нояб. 2025 г., 17_02_47.png",
         "text": "Торговля",
         "textBold": "На Маркетплейсе",
         "thumbFull": "",
@@ -445,12 +476,13 @@
         "screenshots": [
             "ux ui/22/Group 1979.png"
         ],
-        "category": "UI/UX"
+        "category": "UI/UX",
+        "backgroundColor": "#C9F31D"
     },
     {
         "id": 59,
-        "thumb": "ux ui/лого ui 2.png",
-        "thumbLight": "ux ui/лого ui 2.png",
+        "thumb": "ux ui/новые лого/ChatGPT Image 20 нояб. 2025 г., 17_06_08.png",
+        "thumbLight": "ux ui/новые лого/ChatGPT Image 20 нояб. 2025 г., 17_06_08.png",
         "text": "Натуральная",
         "textBold": "Косметика",
         "thumbFull": "",
@@ -459,12 +491,13 @@
         "screenshots": [
             "ux ui/23/Group 1983.png"
         ],
-        "category": "UI/UX"
+        "category": "UI/UX",
+        "backgroundColor": "#C9F31D"
     },
     {
         "id": 60,
-        "thumb": "ux ui/лого ui 3.png",
-        "thumbLight": "ux ui/лого ui 3.png",
+        "thumb": "ux ui/новые лого/ChatGPT Image 20 нояб. 2025 г., 17_09_12.png",
+        "thumbLight": "ux ui/новые лого/ChatGPT Image 20 нояб. 2025 г., 17_09_12.png",
         "text": "Опросы",
         "textBold": "И Анкеты",
         "thumbFull": "",
@@ -473,12 +506,13 @@
         "screenshots": [
             "ux ui/24/Group 1985 (1).png"
         ],
-        "category": "UI/UX"
+        "category": "UI/UX",
+        "backgroundColor": "#C9F31D"
     },
     {
         "id": 61,
-        "thumb": "ux ui/лого ui 4.png",
-        "thumbLight": "ux ui/лого ui 4.png",
+        "thumb": "ux ui/новые лого/ChatGPT Image 20 нояб. 2025 г., 17_12_45.png",
+        "thumbLight": "ux ui/новые лого/ChatGPT Image 20 нояб. 2025 г., 17_12_45.png",
         "text": "Консультация",
         "textBold": "Уролога",
         "thumbFull": "",
@@ -487,12 +521,13 @@
         "screenshots": [
             "ux ui/25/дизайн 1.png"
         ],
-        "category": "UI/UX"
+        "category": "UI/UX",
+        "backgroundColor": "#C9F31D"
     },
     {
         "id": 62,
-        "thumb": "ux ui/лого ui 5.png",
-        "thumbLight": "ux ui/лого ui 5.png",
+        "thumb": "ux ui/новые лого/ChatGPT Image 20 нояб. 2025 г., 17_21_18.png",
+        "thumbLight": "ux ui/новые лого/ChatGPT Image 20 нояб. 2025 г., 17_21_18.png",
         "text": "Магазин",
         "textBold": "Для Строительства",
         "thumbFull": "",
@@ -501,12 +536,13 @@
         "screenshots": [
             "ux ui/26/дизайн 2.png"
         ],
-        "category": "UI/UX"
+        "category": "UI/UX",
+        "backgroundColor": "#C9F31D"
     },
     {
         "id": 63,
-        "thumb": "ux ui/лого ui.png",
-        "thumbLight": "ux ui/лого ui.png",
+        "thumb": "ux ui/новые лого/ChatGPT Image 20 нояб. 2025 г., 17_24_24.png",
+        "thumbLight": "ux ui/новые лого/ChatGPT Image 20 нояб. 2025 г., 17_24_24.png",
         "text": "Ремонт",
         "textBold": "Автомобилей",
         "thumbFull": "",
@@ -515,12 +551,13 @@
         "screenshots": [
             "ux ui/27/дизайн 3.png"
         ],
-        "category": "UI/UX"
+        "category": "UI/UX",
+        "backgroundColor": "#C9F31D"
     },
     {
         "id": 64,
-        "thumb": "ux ui/лого ui 1.png",
-        "thumbLight": "ux ui/лого ui 1.png",
+        "thumb": "ux ui/новые лого/ChatGPT Image 20 нояб. 2025 г., 17_27_45.png",
+        "thumbLight": "ux ui/новые лого/ChatGPT Image 20 нояб. 2025 г., 17_27_45.png",
         "text": "Билеты",
         "textBold": "На Концерты",
         "thumbFull": "",
@@ -529,12 +566,13 @@
         "screenshots": [
             "ux ui/28/дизайн 5.png"
         ],
-        "category": "UI/UX"
+        "category": "UI/UX",
+        "backgroundColor": "#C9F31D"
     },
     {
         "id": 65,
-        "thumb": "ux ui/лого ui 2.png",
-        "thumbLight": "ux ui/лого ui 2.png",
+        "thumb": "ux ui/новые лого/ChatGPT Image 20 нояб. 2025 г., 17_31_24.png",
+        "thumbLight": "ux ui/новые лого/ChatGPT Image 20 нояб. 2025 г., 17_31_24.png",
         "text": "Интер Шарм",
         "textBold": "Салон Красоты",
         "thumbFull": "",
@@ -543,12 +581,13 @@
         "screenshots": [
             "ux ui/29/дизайн 6.png"
         ],
-        "category": "UI/UX"
+        "category": "UI/UX",
+        "backgroundColor": "#C9F31D"
     },
     {
         "id": 66,
-        "thumb": "ux ui/лого ui 3.png",
-        "thumbLight": "ux ui/лого ui 3.png",
+        "thumb": "ux ui/новые лого/ChatGPT Image 20 нояб. 2025 г., 17_34_50.png",
+        "thumbLight": "ux ui/новые лого/ChatGPT Image 20 нояб. 2025 г., 17_34_50.png",
         "text": "Хозмакс",
         "textBold": "Магазин",
         "thumbFull": "",
@@ -557,12 +596,13 @@
         "screenshots": [
             "ux ui/30/дизайн 7.png"
         ],
-        "category": "UI/UX"
+        "category": "UI/UX",
+        "backgroundColor": "#C9F31D"
     },
     {
         "id": 67,
-        "thumb": "ux ui/лого ui 4.png",
-        "thumbLight": "ux ui/лого ui 4.png",
+        "thumb": "ux ui/новые лого/ChatGPT Image 20 нояб. 2025 г., 17_40_38.png",
+        "thumbLight": "ux ui/новые лого/ChatGPT Image 20 нояб. 2025 г., 17_40_38.png",
         "text": "Конструктор",
         "textBold": "Диванов",
         "thumbFull": "",
@@ -571,7 +611,8 @@
         "screenshots": [
             "ux ui/31/дизайн.png"
         ],
-        "category": "UI/UX"
+        "category": "UI/UX",
+        "backgroundColor": "#C9F31D"
     },
     {
         "id": 68,
@@ -585,7 +626,8 @@
         "screenshots": [
             "сайт/68/сайт1.png"
         ],
-        "category": "Сайты"
+        "category": "Сайты",
+        "backgroundColor": "#C9F31D"
     },
     {
         "id": 69,
@@ -599,7 +641,8 @@
         "screenshots": [
             "сайт/69/сайт 2.png"
         ],
-        "category": "Сайты"
+        "category": "Сайты",
+        "backgroundColor": "#C9F31D"
     },
     {
         "id": 70,
@@ -613,7 +656,8 @@
         "screenshots": [
             "сайт/70/сайт 3.png"
         ],
-        "category": "Сайты"
+        "category": "Сайты",
+        "backgroundColor": "#C9F31D"
     },
     {
         "id": 71,
@@ -627,7 +671,8 @@
         "screenshots": [
             "сайт/71/сайт 4.png"
         ],
-        "category": "Сайты"
+        "category": "Сайты",
+        "backgroundColor": "#C9F31D"
     },
     {
         "id": 73,
@@ -641,7 +686,8 @@
         "screenshots": [
             "сайт/73/сайт 6.png"
         ],
-        "category": "Сайты"
+        "category": "Сайты",
+        "backgroundColor": "#C9F31D"
     },
     {
         "id": 74,
@@ -655,7 +701,8 @@
         "screenshots": [
             "сайт/74/сайт 7.png"
         ],
-        "category": "Сайты"
+        "category": "Сайты",
+        "backgroundColor": "#C9F31D"
     },
     {
         "id": 75,
@@ -669,7 +716,8 @@
         "screenshots": [
             "сайт/75/сайт 8.png"
         ],
-        "category": "Сайты"
+        "category": "Сайты",
+        "backgroundColor": "#C9F31D"
     },
     {
         "id": 77,
@@ -683,7 +731,8 @@
         "screenshots": [
             "сайт/77/сайт 10.png"
         ],
-        "category": "Сайты"
+        "category": "Сайты",
+        "backgroundColor": "#C9F31D"
     },
     {
         "id": 78,
@@ -697,7 +746,8 @@
         "screenshots": [
             "сайт/78/сайт 11 (2).png"
         ],
-        "category": "Сайты"
+        "category": "Сайты",
+        "backgroundColor": "#C9F31D"
     },
     {
         "id": 79,
@@ -711,7 +761,8 @@
         "screenshots": [
             "сайт/79/сайт 12.png"
         ],
-        "category": "Сайты"
+        "category": "Сайты",
+        "backgroundColor": "#C9F31D"
     },
     {
         "id": 80,
@@ -725,7 +776,8 @@
         "screenshots": [
             "сайт/80/сайт 13.png"
         ],
-        "category": "Сайты"
+        "category": "Сайты",
+        "backgroundColor": "#C9F31D"
     },
     {
         "id": 81,
@@ -739,7 +791,8 @@
         "screenshots": [
             "сайт/81/сайт 14.png"
         ],
-        "category": "Сайты"
+        "category": "Сайты",
+        "backgroundColor": "#C9F31D"
     },
     {
         "id": 82,
@@ -753,7 +806,8 @@
         "screenshots": [
             "сайт/82/сайт 15.png"
         ],
-        "category": "Сайты"
+        "category": "Сайты",
+        "backgroundColor": "#C9F31D"
     },
     {
         "id": 84,
@@ -767,7 +821,8 @@
         "screenshots": [
             "сайт/84/Group 1994.png"
         ],
-        "category": "Сайты"
+        "category": "Сайты",
+        "backgroundColor": "#C9F31D"
     },
     {
         "id": 85,
@@ -781,7 +836,8 @@
         "screenshots": [
             "сайт/85/Group 1995 (1).png"
         ],
-        "category": "Сайты"
+        "category": "Сайты",
+        "backgroundColor": "#C9F31D"
     },
     {
         "id": 86,
@@ -795,7 +851,8 @@
         "screenshots": [
             "сайт/86/Group 1998.png"
         ],
-        "category": "Сайты"
+        "category": "Сайты",
+        "backgroundColor": "#C9F31D"
     },
     {
         "id": 87,
@@ -809,7 +866,8 @@
         "screenshots": [
             "сайт/87/Group 2002 (1).png"
         ],
-        "category": "Сайты"
+        "category": "Сайты",
+        "backgroundColor": "#C9F31D"
     },
     {
         "id": 88,
@@ -823,7 +881,8 @@
         "screenshots": [
             "сайт/88/Group 2004.png"
         ],
-        "category": "Сайты"
+        "category": "Сайты",
+        "backgroundColor": "#C9F31D"
     },
     {
         "id": 89,
@@ -837,7 +896,8 @@
         "screenshots": [
             "сайт/89/Group 2007.png"
         ],
-        "category": "Сайты"
+        "category": "Сайты",
+        "backgroundColor": "#C9F31D"
     },
     {
         "id": 91,
@@ -851,7 +911,8 @@
         "screenshots": [
             "сайт/91/Group 2013.png"
         ],
-        "category": "Сайты"
+        "category": "Сайты",
+        "backgroundColor": "#C9F31D"
     },
     {
         "id": 92,
@@ -865,7 +926,8 @@
         "screenshots": [
             "сайт/92/Group 2015.png"
         ],
-        "category": "Сайты"
+        "category": "Сайты",
+        "backgroundColor": "#C9F31D"
     },
     {
         "id": 93,
@@ -879,7 +941,8 @@
         "screenshots": [
             "сайт/93/Group 2025.png"
         ],
-        "category": "Сайты"
+        "category": "Сайты",
+        "backgroundColor": "#C9F31D"
     },
     {
         "id": 94,
@@ -893,7 +956,8 @@
         "screenshots": [
             "сайт/94/Group 2026.png"
         ],
-        "category": "Сайты"
+        "category": "Сайты",
+        "backgroundColor": "#C9F31D"
     },
     {
         "id": 95,
@@ -907,7 +971,8 @@
         "screenshots": [
             "сайт/95/Group 2027 copy.png"
         ],
-        "category": "Сайты"
+        "category": "Сайты",
+        "backgroundColor": "#C9F31D"
     },
     {
         "id": 97,
@@ -921,7 +986,8 @@
         "screenshots": [
             "сайт/97/Group 2031.png"
         ],
-        "category": "Сайты"
+        "category": "Сайты",
+        "backgroundColor": "#C9F31D"
     },
     {
         "id": 98,
@@ -935,7 +1001,8 @@
         "screenshots": [
             "сайт/98/Group 2034.png"
         ],
-        "category": "Сайты"
+        "category": "Сайты",
+        "backgroundColor": "#C9F31D"
     },
     {
         "id": 99,
@@ -949,7 +1016,8 @@
         "screenshots": [
             "сайт/99/Group 2035.png"
         ],
-        "category": "Сайты"
+        "category": "Сайты",
+        "backgroundColor": "#C9F31D"
     },
     {
         "id": 101,
@@ -963,7 +1031,8 @@
         "screenshots": [
             "сайт/101/Group 2043.png"
         ],
-        "category": "Сайты"
+        "category": "Сайты",
+        "backgroundColor": "#C9F31D"
     },
     {
         "id": 102,
@@ -977,7 +1046,8 @@
         "screenshots": [
             "сайт/102/Group 2044.png"
         ],
-        "category": "Сайты"
+        "category": "Сайты",
+        "backgroundColor": "#C9F31D"
     },
     {
         "id": 103,
@@ -991,7 +1061,8 @@
         "screenshots": [
             "сайт/103/Group 2045 (1).png"
         ],
-        "category": "Сайты"
+        "category": "Сайты",
+        "backgroundColor": "#C9F31D"
     },
     {
         "id": 104,
@@ -1005,7 +1076,8 @@
         "screenshots": [
             "сайт/104/Group 2047.png"
         ],
-        "category": "Сайты"
+        "category": "Сайты",
+        "backgroundColor": "#C9F31D"
     },
     {
         "id": 105,
@@ -1019,7 +1091,8 @@
         "screenshots": [
             "сайт/105/Group 2049.png"
         ],
-        "category": "Сайты"
+        "category": "Сайты",
+        "backgroundColor": "#C9F31D"
     },
     {
         "id": 106,
@@ -1033,7 +1106,8 @@
         "screenshots": [
             "сайт/106/Group 2051.png"
         ],
-        "category": "Сайты"
+        "category": "Сайты",
+        "backgroundColor": "#C9F31D"
     },
     {
         "id": 107,
@@ -1047,7 +1121,8 @@
         "screenshots": [
             "сайт/107/Group 2053 (3).png"
         ],
-        "category": "Сайты"
+        "category": "Сайты",
+        "backgroundColor": "#C9F31D"
     },
     {
         "id": 108,
@@ -1061,7 +1136,8 @@
         "screenshots": [
             "сайт/108/Group 2055.png"
         ],
-        "category": "Сайты"
+        "category": "Сайты",
+        "backgroundColor": "#C9F31D"
     },
     {
         "id": 109,
@@ -1075,7 +1151,8 @@
         "screenshots": [
             "сайт/109/Group 2056 copy.png"
         ],
-        "category": "Сайты"
+        "category": "Сайты",
+        "backgroundColor": "#C9F31D"
     },
     {
         "id": 110,
@@ -1089,7 +1166,8 @@
         "screenshots": [
             "сайт/110/Group 2057 (2).png"
         ],
-        "category": "Сайты"
+        "category": "Сайты",
+        "backgroundColor": "#C9F31D"
     },
     {
         "id": 111,
@@ -1103,7 +1181,8 @@
         "screenshots": [
             "сайт/111/Group 2058.png"
         ],
-        "category": "Сайты"
+        "category": "Сайты",
+        "backgroundColor": "#C9F31D"
     },
     {
         "id": 112,
@@ -1117,7 +1196,8 @@
         "screenshots": [
             "сайт/112/Group 2062 (1).png"
         ],
-        "category": "Сайты"
+        "category": "Сайты",
+        "backgroundColor": "#C9F31D"
     },
     {
         "id": 113,
@@ -1131,7 +1211,8 @@
         "screenshots": [
             "сайт/113/Group 2064.png"
         ],
-        "category": "Сайты"
+        "category": "Сайты",
+        "backgroundColor": "#C9F31D"
     },
     {
         "id": 116,
@@ -1145,7 +1226,8 @@
         "screenshots": [
             "сайт/116/image 629.png"
         ],
-        "category": "Сайты"
+        "category": "Сайты",
+        "backgroundColor": "#C9F31D"
     },
     {
         "id": 117,
@@ -1159,6 +1241,7 @@
         "screenshots": [
             "сайт/117/TБ¦-¦¬¦ЖTВ.png"
         ],
-        "category": "Сайты"
+        "category": "Сайты",
+        "backgroundColor": "#C9F31D"
     }
 ]

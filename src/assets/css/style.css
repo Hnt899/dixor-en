@@ -90,10 +90,22 @@ Sidebar heading:  22px 'Barlow', sans-serif
 @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@100;200;300;400;500;600;700;800&display=swap');
 
 
+/* AKONY Bold Font */
+@font-face {
+	font-family: 'AKONY';
+	src: url('../fonts/AKONY-Bold.woff2') format('woff2'),
+		 url('../fonts/AKONY-Bold.woff') format('woff'),
+		 url('../fonts/AKONY-Bold.ttf') format('truetype');
+	font-weight: bold;
+	font-style: normal;
+	font-display: swap;
+}
+
 /* Varialbes */
 :root {
 	--font-default: 'Barlow', sans-serif;
 	--font-heading: 'Barlow', sans-serif;
+	--font-akony: 'AKONY', sans-serif;
 	--fontawesome: "Font Awesome 5 Pro";
 	--black: #000000;
 	--dark: #0e0f11;
@@ -19755,8 +19767,7 @@ nav.navbar.validnavs .navbar-collapse.collapse.show img.light-img {
     z-index: 1;
 }
 
-.portfolio-logo-container::before {
-    content: '';
+.portfolio-logo-bg {
     position: absolute;
     top: 0;
     left: 0;
@@ -19935,4 +19946,9 @@ nav.navbar.validnavs .navbar-collapse.collapse.show img.light-img {
     .portfolio-description {
         font-size: 14px;
     }
+}
+
+/* Убираем градиент для страницы портфолио */
+.breadcrumb-area.portfolio-page-no-gradient::after {
+    display: none !important;
 }

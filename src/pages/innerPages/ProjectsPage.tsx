@@ -2,7 +2,6 @@ import Breadcrumb from "../../components/breadcrumb/Breadcrumb";
 import DarkClass from "../../components/classes/DarkClass";
 import LayoutV1 from "../../components/layouts/LayoutV1";
 import ProjectsGrid from "../../components/portfolio/ProjectsGrid";
-import ProjectFilters from "../../components/portfolio/ProjectFilters";
 import { Helmet } from "react-helmet-async";
 import ThemeDark from "../../components/switcher/ThemeDark";
 import { useState, useEffect } from "react";
@@ -69,35 +68,11 @@ const ProjectsPage = () => {
             </Helmet>
 
             <LayoutV1>
-                <Breadcrumb title='Все проекты' breadCrumb='projects' />
-                
-                {/* Описание портфолио */}
-                <div className="default-padding" style={{ backgroundColor: '#0E0F11', paddingTop: '80px', paddingBottom: '80px' }}>
-                    <div className="container">
-                        <div className="row">
-                            <div className="col-lg-10 offset-lg-1 text-center">
-                                <p style={{ 
-                                    color: '#fff', 
-                                    fontSize: '22px', 
-                                    lineHeight: '1.9', 
-                                    margin: 0,
-                                    fontWeight: '300',
-                                    letterSpacing: '0.3px'
-                                }}>
-                                    Это наше <span style={{ color: 'var(--color-primary, #C9F31D)', fontWeight: '600' }}>портфолио</span> — познакомьтесь с ним. Мы создаем <span style={{ color: 'var(--color-primary, #C9F31D)', fontWeight: '600' }}>цифровые решения полного цикла</span>, 
-                                    объединяя креативность, технологичность и измеримый результат. Более <span style={{ color: 'var(--color-primary, #C9F31D)', fontWeight: '600' }}>100+</span> успешно реализованных 
-                                    проектов в различных сферах: от <span style={{ color: 'var(--color-primary, #C9F31D)', fontWeight: '600' }}>веб-разработки</span> и <span style={{ color: 'var(--color-primary, #C9F31D)', fontWeight: '600' }}>мобильных приложений</span> до <span style={{ color: 'var(--color-primary, #C9F31D)', fontWeight: '600' }}>брендинга</span> и <span style={{ color: 'var(--color-primary, #C9F31D)', fontWeight: '600' }}>UI/UX дизайна</span>. 
-                                    Каждый проект — это <span style={{ color: 'var(--color-primary, #C9F31D)', fontWeight: '600' }}>уникальное решение</span>, созданное с учетом потребностей клиента и современных трендов.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                {/* Фильтры */}
-                <ProjectFilters 
-                    onFilterChange={setActiveFilter} 
-                    activeFilter={activeFilter} 
+                <Breadcrumb 
+                    title='Все проекты' 
+                    breadCrumb='projects'
+                    activeFilter={activeFilter}
+                    onFilterChange={setActiveFilter}
                 />
                 
                 {/* Сетка проектов */}
