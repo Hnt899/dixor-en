@@ -9,7 +9,9 @@ import BlogSinglePage from "./pages/blogPages/BlogSinglePage";
 // Страница деталей проекта
 import ProjectDetailsV1Page from "./pages/innerPages/ProjectDetailsV1Page";
 // Страница со всеми проектами
-import ProjectsPage from "./pages/innerPages/ProjectsPage"; 
+import ProjectsPage from "./pages/innerPages/ProjectsPage";
+// Страница команды
+import TeamNewPage from "./pages/innerPages/TeamNewPage"; 
 
 
 const Routers = () => {
@@ -33,6 +35,9 @@ const Routers = () => {
                 {/* Страница деталей проекта */}
                 {/* :id - это 1-36 из PortfolioV1Data.json */}
                 <Route path='/project/:id' element={<ProjectDetailsV1Page />} />
+
+                {/* Страница команды */}
+                <Route path='/team' element={<TeamNewPage />} />
 
                 {/* 404 */}
                 <Route path='*' element={<NotFoundPage />} />

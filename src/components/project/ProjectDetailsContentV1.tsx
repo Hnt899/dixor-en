@@ -15,6 +15,7 @@ interface DataType {
     description?: string;
     screenshots?: string[];
     category?: string;
+    backgroundColor?: string;
 }
 
 interface ProjectDetailsProps {
@@ -24,11 +25,12 @@ interface ProjectDetailsProps {
 }
 
 const ProjectDetailsContentV1 = ({ projectInfo, sectionClass, totalProjects }: ProjectDetailsProps) => {
-    const { text, textBold, tag, id, thumbFull, description, screenshots, category } = projectInfo || {};
+    const { text, textBold, tag, id, thumbFull, description, screenshots, category, backgroundColor } = projectInfo || {};
     const title = `${text || ''} ${textBold || ''}`.trim();
     const isUIUX = category === "UI/UX";
     const isSites = category === "Сайты";
     const isBranding = category === "Брендинг";
+    
     
     // Состояние для модального окна
     const [modalImage, setModalImage] = useState<string | null>(null);
@@ -1035,7 +1037,7 @@ const ProjectDetailsContentV1 = ({ projectInfo, sectionClass, totalProjects }: P
                 ]
             },
             39: {
-                title: "Сайт фитнес-зала",
+                title: "Мобильное приложение",
                 paragraphs: [
                     "Сайт фитнес-зала с удобным интерфейсом для записи на тренировки, просмотра расписания и управления абонементом. Разработанный интерфейс помогает клиентам эффективно использовать услуги фитнес-зала.",
                     "Главная страница представляет возможности фитнес-зала через визуальный контент: фотографии зала, оборудования, тренеров и отзывы клиентов. Информация о преимуществах зала, программах тренировок и результатах помогает потенциальным клиентам понять ценность решения.",

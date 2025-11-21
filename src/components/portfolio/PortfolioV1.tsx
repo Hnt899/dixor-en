@@ -2,6 +2,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Keyboard, Pagination, Navigation, EffectFade } from 'swiper/modules';
 import PortfolioV1Data from '../../../src/assets/jsonData/portfolio/PortfolioV1Data.json';
 import SinglePortfolioV1 from './SinglePortfolioV1';
+import { Link } from 'react-router-dom';
 
 const PortfolioV1 = () => {
     // Функция для проверки, что название состоит из 2 слов
@@ -85,6 +86,11 @@ const PortfolioV1 = () => {
                     <div className="project-pagination" />
                     <div className="project-button-prev" />
                     <div className="project-button-next" />
+                </div>
+                <div className="portfolio-mobile-view-all-btn" style={{ display: 'none' }}>
+                    <Link className="btn-contact-style" to="/projects">
+                        Смотреть все работы
+                    </Link>
                 </div>
             </div>
         </>

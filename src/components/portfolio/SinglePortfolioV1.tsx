@@ -20,7 +20,7 @@ const SinglePortfolioV1 = ({ portfolio, usePlaceholderLogo = false, placeholderI
     // Функция для получения правильного пути к изображению
     const getImagePath = (imagePath?: string) => {
         if (!imagePath) return '';
-        if (imagePath.startsWith('мобильнык/') || imagePath.startsWith('ux ui/') || imagePath.startsWith('сайт/') || imagePath.startsWith('бренд/')) {
+        if (imagePath.startsWith('мобильнык/') || imagePath.startsWith('ux ui/') || imagePath.startsWith('сайт/') || imagePath.startsWith('бренд/') || imagePath.startsWith('лого/')) {
             return `/assets/${imagePath}`;
         }
         return `/assets/img/portfolio/${imagePath}`;

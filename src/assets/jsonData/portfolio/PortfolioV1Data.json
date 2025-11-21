@@ -1,8 +1,8 @@
 [
     {
         "id": 3,
-        "thumb": "сайт/новые лого/logo (1).svg",
-        "thumbLight": "сайт/новые лого/logo (1).svg",
+        "thumb": "лого/Mask group-leo.svg",
+        "thumbLight": "лого/Mask group-leo.svg",
         "text": "Продажа медицинского",
         "textBold": "оборудования",
         "thumbFull": "3.jpg",
@@ -12,12 +12,12 @@
             "сайт/3/сайт 3.png"
         ],
         "category": "Сайты",
-        "backgroundColor": "#C9F31D"
+        "backgroundColor": "#C62829"
     },
     {
         "id": 4,
-        "thumb": "сайт/новые лого/logo.svg",
-        "thumbLight": "сайт/новые лого/logo.svg",
+        "thumb": "лого/Group vozovoz.svg",
+        "thumbLight": "лого/Group vozovoz.svg",
         "text": "Грузоперевозки",
         "textBold": "Минск-Москва-Минск",
         "thumbFull": "",
@@ -27,12 +27,12 @@
             "ux ui/1/Group 1951 (1).png"
         ],
         "category": "UI/UX",
-        "backgroundColor": "#C9F31D"
+        "backgroundColor": "#323C07"
     },
     {
         "id": 5,
-        "thumb": "мобильнык/новые лого/logo (1).svg",
-        "thumbLight": "мобильнык/новые лого/logo (1).svg",
+        "thumb": "лого/Mask group-leo.svg",
+        "thumbLight": "лого/Mask group-leo.svg",
         "text": "Мобильные",
         "textBold": "Приложения",
         "thumbFull": "мобильнык/1/Group 4.png",
@@ -42,12 +42,12 @@
             "мобильнык/1/Group 3.png"
         ],
         "category": "Мобильные приложения",
-        "backgroundColor": "#C9F31D"
+        "backgroundColor": "#C62829"
     },
     {
         "id": 8,
-        "thumb": "сайт/новые лого/logo (3).svg",
-        "thumbLight": "сайт/новые лого/logo (3).svg",
+        "thumb": "лого/Group roro.svg",
+        "thumbLight": "лого/Group roro.svg",
         "text": "Продажа",
         "textBold": "ювелирных изделий",
         "thumbFull": "8.jpg",
@@ -57,12 +57,12 @@
             "сайт/8/сайт 8.png"
         ],
         "category": "Сайты",
-        "backgroundColor": "#C9F31D"
+        "backgroundColor": "#212B32"
     },
     {
         "id": 9,
-        "thumb": "сайт/новые лого/logo 3.png",
-        "thumbLight": "сайт/новые лого/logo 3.png",
+        "thumb": "лого/gardis.svg",
+        "thumbLight": "лого/gardis.svg",
         "text": "Продажа заборов",
         "textBold": "и профнастила",
         "thumbFull": "9.jpg",
@@ -72,12 +72,12 @@
             "screenshots/project_9_Group 9.png"
         ],
         "category": "Сайты",
-        "backgroundColor": "#C9F31D"
+        "backgroundColor": "#1B3F73"
     },
     {
         "id": 16,
-        "thumb": "сайт/новые лого/ChatGPT Image 19 нояб. 2025 г., 22_25_13.png",
-        "thumbLight": "сайт/новые лого/ChatGPT Image 19 нояб. 2025 г., 22_25_13.png",
+        "thumb": "лого/vracg.svg",
+        "thumbLight": "лого/vracg.svg",
         "text": "Сайт советов",
         "textBold": "от врачей",
         "thumbFull": "16.jpg",
@@ -87,12 +87,12 @@
             "сайт/16/Group 1993.png"
         ],
         "category": "Сайты",
-        "backgroundColor": "#C9F31D"
+        "backgroundColor": "#334282"
     },
     {
         "id": 23,
-        "thumb": "сайт/новые лого/ChatGPT Image 19 нояб. 2025 г., 22_27_52.png",
-        "thumbLight": "сайт/новые лого/ChatGPT Image 19 нояб. 2025 г., 22_27_52.png",
+        "thumb": "лого/Mask group-12.svg",
+        "thumbLight": "лого/Mask group-12.svg",
         "text": "Подборка",
         "textBold": "недвижимости",
         "thumbFull": "23.jpg",
@@ -102,12 +102,12 @@
             "сайт/23/Group 2009.png"
         ],
         "category": "Сайты",
-        "backgroundColor": "#C9F31D"
+        "backgroundColor": "#666763"
     },
     {
         "id": 24,
-        "thumb": "мобильнык/новые лого/ChatGPT Image 20 нояб. 2025 г., 14_15_01.png",
-        "thumbLight": "мобильнык/новые лого/ChatGPT Image 20 нояб. 2025 г., 14_15_01.png",
+        "thumb": "лого/Mask group-29.svg",
+        "thumbLight": "лого/Mask group-29.svg",
         "text": "Контроль",
         "textBold": "Договоров",
         "thumbFull": "мобильнык/2/Group 11.png",
@@ -117,12 +117,12 @@
             "мобильнык/2/Group 10.png"
         ],
         "category": "Мобильные приложения",
-        "backgroundColor": "#C9F31D"
+        "backgroundColor": "#1C3550"
     },
     {
         "id": 28,
-        "thumb": "мобильнык/новые лого/ChatGPT Image 20 нояб. 2025 г., 14_18_42.png",
-        "thumbLight": "мобильнык/новые лого/ChatGPT Image 20 нояб. 2025 г., 14_18_42.png",
+        "thumb": "лого/Mask group-28.svg",
+        "thumbLight": "лого/Mask group-28.svg",
         "text": "Магазин",
         "textBold": "Одежды",
         "thumbFull": "мобильнык/3/Group 2040.png",
@@ -132,12 +132,12 @@
             "мобильнык/3/Group 2039.png"
         ],
         "category": "Мобильные приложения",
-        "backgroundColor": "#C9F31D"
+        "backgroundColor": "#7C3AED"
     },
     {
         "id": 29,
-        "thumb": "сайт/новые лого/ChatGPT Image 19 нояб. 2025 г., 22_33_02.png",
-        "thumbLight": "сайт/новые лого/ChatGPT Image 19 нояб. 2025 г., 22_33_02.png",
+        "thumb": "лого/Mask group-13.svg",
+        "thumbLight": "лого/Mask group-13.svg",
         "text": "Оценка",
         "textBold": "авто",
         "thumbFull": "29.jpg",
@@ -147,12 +147,12 @@
             "сайт/29/Group 2028.png"
         ],
         "category": "Сайты",
-        "backgroundColor": "#C9F31D"
+        "backgroundColor": "#0D0E0A"
     },
     {
         "id": 33,
-        "thumb": "сайт/новые лого/ChatGPT Image 19 нояб. 2025 г., 22_36_15.png",
-        "thumbLight": "сайт/новые лого/ChatGPT Image 19 нояб. 2025 г., 22_36_15.png",
+        "thumb": "лого/Mask group-11.svg",
+        "thumbLight": "лого/Mask group-11.svg",
         "text": "Сервис для покупки",
         "textBold": "лекарств",
         "thumbFull": "33.jpg",
@@ -162,12 +162,12 @@
             "сайт/33/Group 2037 (3).png"
         ],
         "category": "Сайты",
-        "backgroundColor": "#C9F31D"
+        "backgroundColor": "#0E9344"
     },
     {
         "id": 37,
-        "thumb": "мобильнык/новые лого/ChatGPT Image 20 нояб. 2025 г., 14_24_48.png",
-        "thumbLight": "мобильнык/новые лого/ChatGPT Image 20 нояб. 2025 г., 14_24_48.png",
+        "thumb": "лого/Mask group-27.svg",
+        "thumbLight": "лого/Mask group-27.svg",
         "text": "Доставка",
         "textBold": "Еды",
         "thumbFull": "мобильнык/4/Group 2022.png",
@@ -177,12 +177,12 @@
             "мобильнык/4/Group 2021.png"
         ],
         "category": "Мобильные приложения",
-        "backgroundColor": "#C9F31D"
+        "backgroundColor": "#8BC432"
     },
     {
         "id": 38,
-        "thumb": "мобильнык/новые лого/ChatGPT Image 20 нояб. 2025 г., 14_27_33.png",
-        "thumbLight": "мобильнык/новые лого/ChatGPT Image 20 нояб. 2025 г., 14_27_33.png",
+        "thumb": "лого/Mask group-31.svg",
+        "thumbLight": "лого/Mask group-31.svg",
         "text": "Контроль",
         "textBold": "Сделок",
         "thumbFull": "мобильнык/5/Group 2051.png",
@@ -192,12 +192,12 @@
             "мобильнык/5/Group 2052.png"
         ],
         "category": "Мобильные приложения",
-        "backgroundColor": "#C9F31D"
+        "backgroundColor": "#E52322"
     },
     {
         "id": 39,
-        "thumb": "ux ui/новые лого/ChatGPT Image 20 нояб. 2025 г., 15_19_30.png",
-        "thumbLight": "ux ui/новые лого/ChatGPT Image 20 нояб. 2025 г., 15_19_30.png",
+        "thumb": "лого/Mask group-35.svg",
+        "thumbLight": "лого/Mask group-35.svg",
         "text": "Магазин",
         "textBold": "Термосов",
         "thumbFull": "",
@@ -207,12 +207,12 @@
             "ux ui/3/Group 1935.png"
         ],
         "category": "UI/UX",
-        "backgroundColor": "#C9F31D"
+        "backgroundColor": "#5F6057"
     },
     {
         "id": 40,
-        "thumb": "ux ui/новые лого/ChatGPT Image 20 нояб. 2025 г., 15_22_09.png",
-        "thumbLight": "ux ui/новые лого/ChatGPT Image 20 нояб. 2025 г., 15_22_09.png",
+        "thumb": "лого/Mask group-34.svg",
+        "thumbLight": "лого/Mask group-34.svg",
         "text": "Подборка",
         "textBold": "Интерьера",
         "thumbFull": "",
@@ -222,12 +222,12 @@
             "ux ui/4/Group 1936.png"
         ],
         "category": "UI/UX",
-        "backgroundColor": "#C9F31D"
+        "backgroundColor": "#315083"
     },
     {
         "id": 41,
-        "thumb": "ux ui/новые лого/ChatGPT Image 20 нояб. 2025 г., 15_27_10.png",
-        "thumbLight": "ux ui/новые лого/ChatGPT Image 20 нояб. 2025 г., 15_27_10.png",
+        "thumb": "лого/Mask group-33.svg",
+        "thumbLight": "лого/Mask group-33.svg",
         "text": "Гастрофера",
         "textBold": "Гастрономический Лофт",
         "thumbFull": "",
@@ -237,12 +237,12 @@
             "ux ui/5/Group 1937.png"
         ],
         "category": "UI/UX",
-        "backgroundColor": "#C9F31D"
+        "backgroundColor": "#1C1D18"
     },
     {
         "id": 43,
-        "thumb": "ux ui/новые лого/ChatGPT Image 20 нояб. 2025 г., 15_33_13.png",
-        "thumbLight": "ux ui/новые лого/ChatGPT Image 20 нояб. 2025 г., 15_33_13.png",
+        "thumb": "лого/Mask group-32.svg",
+        "thumbLight": "лого/Mask group-32.svg",
         "text": "Кухни",
         "textBold": "Komabdor",
         "thumbFull": "",
@@ -252,12 +252,12 @@
             "ux ui/7/Group 1943 (2).png"
         ],
         "category": "UI/UX",
-        "backgroundColor": "#C9F31D"
+        "backgroundColor": "#C0C5C8"
     },
     {
         "id": 44,
-        "thumb": "ux ui/новые лого/ChatGPT Image 20 нояб. 2025 г., 15_36_19.png",
-        "thumbLight": "ux ui/новые лого/ChatGPT Image 20 нояб. 2025 г., 15_36_19.png",
+        "thumb": "лого/Mask group-46.svg",
+        "thumbLight": "лого/Mask group-46.svg",
         "text": "Световые",
         "textBold": "Решения",
         "thumbFull": "",
@@ -267,12 +267,12 @@
             "ux ui/8/Group 1945.png"
         ],
         "category": "UI/UX",
-        "backgroundColor": "#C9F31D"
+        "backgroundColor": "#020200"
     },
     {
         "id": 45,
-        "thumb": "ux ui/новые лого/ChatGPT Image 20 нояб. 2025 г., 15_54_18.png",
-        "thumbLight": "ux ui/новые лого/ChatGPT Image 20 нояб. 2025 г., 15_54_18.png",
+        "thumb": "лого/Mask group-50.svg",
+        "thumbLight": "лого/Mask group-50.svg",
         "text": "Пиломатериалы",
         "textBold": "От Производителя",
         "thumbFull": "",
@@ -282,12 +282,12 @@
             "ux ui/9/Group 1946.png"
         ],
         "category": "UI/UX",
-        "backgroundColor": "#C9F31D"
+        "backgroundColor": "#181817"
     },
     {
         "id": 46,
-        "thumb": "ux ui/новые лого/ChatGPT Image 20 нояб. 2025 г., 15_58_33.png",
-        "thumbLight": "ux ui/новые лого/ChatGPT Image 20 нояб. 2025 г., 15_58_33.png",
+        "thumb": "лого/Mask group-49.svg",
+        "thumbLight": "лого/Mask group-49.svg",
         "text": "Golden Mile",
         "textBold": "Penthouse",
         "thumbFull": "",
@@ -297,12 +297,12 @@
             "ux ui/10/Group 1947.png"
         ],
         "category": "UI/UX",
-        "backgroundColor": "#C9F31D"
+        "backgroundColor": "#D3BA9A"
     },
     {
         "id": 47,
-        "thumb": "ux ui/новые лого/ChatGPT Image 20 нояб. 2025 г., 16_02_44.png",
-        "thumbLight": "ux ui/новые лого/ChatGPT Image 20 нояб. 2025 г., 16_02_44.png",
+        "thumb": "лого/Mask group-47.svg",
+        "thumbLight": "лого/Mask group-47.svg",
         "text": "Премиальный",
         "textBold": "Интерьерный Бутик",
         "thumbFull": "",
@@ -312,12 +312,12 @@
             "ux ui/11/Group 1953 (1).png"
         ],
         "category": "UI/UX",
-        "backgroundColor": "#C9F31D"
+        "backgroundColor": "#FEFFFC"
     },
     {
         "id": 48,
-        "thumb": "ux ui/новые лого/ChatGPT Image 20 нояб. 2025 г., 16_05_36.png",
-        "thumbLight": "ux ui/новые лого/ChatGPT Image 20 нояб. 2025 г., 16_05_36.png",
+        "thumb": "лого/Mask group-66.svg",
+        "thumbLight": "лого/Mask group-66.svg",
         "text": "Сказочный",
         "textBold": "Праздник",
         "thumbFull": "",
@@ -327,12 +327,12 @@
             "ux ui/12/Group 1955 (1).png"
         ],
         "category": "UI/UX",
-        "backgroundColor": "#C9F31D"
+        "backgroundColor": "#05ABC8"
     },
     {
         "id": 49,
-        "thumb": "ux ui/новые лого/ChatGPT Image 20 нояб. 2025 г., 16_10_04.png",
-        "thumbLight": "ux ui/новые лого/ChatGPT Image 20 нояб. 2025 г., 16_10_04.png",
+        "thumb": "лого/Mask group-70.svg",
+        "thumbLight": "лого/Mask group-70.svg",
         "text": "Центр",
         "textBold": "Стоматологии",
         "thumbFull": "",
@@ -342,12 +342,12 @@
             "ux ui/13/Group 1957 (1).png"
         ],
         "category": "UI/UX",
-        "backgroundColor": "#C9F31D"
+        "backgroundColor": "#183046"
     },
     {
         "id": 50,
-        "thumb": "ux ui/новые лого/ChatGPT Image 20 нояб. 2025 г., 16_14_05.png",
-        "thumbLight": "ux ui/новые лого/ChatGPT Image 20 нояб. 2025 г., 16_14_05.png",
+        "thumb": "лого/Mask group-69.svg",
+        "thumbLight": "лого/Mask group-69.svg",
         "text": "Сауна",
         "textBold": "И Хамам",
         "thumbFull": "",
@@ -357,12 +357,12 @@
             "ux ui/14/Group 1961.png"
         ],
         "category": "UI/UX",
-        "backgroundColor": "#C9F31D"
+        "backgroundColor": "#343532"
     },
     {
         "id": 51,
-        "thumb": "ux ui/новые лого/ChatGPT Image 20 нояб. 2025 г., 16_33_12.png",
-        "thumbLight": "ux ui/новые лого/ChatGPT Image 20 нояб. 2025 г., 16_33_12.png",
+        "thumb": "лого/Mask group-68.svg",
+        "thumbLight": "лого/Mask group-68.svg",
         "text": "ЖК",
         "textBold": "Застройщики",
         "thumbFull": "",
@@ -372,12 +372,12 @@
             "ux ui/15/Group 1963.png"
         ],
         "category": "UI/UX",
-        "backgroundColor": "#C9F31D"
+        "backgroundColor": "#2C2D2C"
     },
     {
         "id": 52,
-        "thumb": "ux ui/новые лого/ChatGPT Image 20 нояб. 2025 г., 16_36_05.png",
-        "thumbLight": "ux ui/новые лого/ChatGPT Image 20 нояб. 2025 г., 16_36_05.png",
+        "thumb": "лого/Mask group-67.svg",
+        "thumbLight": "лого/Mask group-67.svg",
         "text": "Товары",
         "textBold": "Для Пикника",
         "thumbFull": "",
@@ -387,12 +387,12 @@
             "ux ui/16/Group 1964 (2).png"
         ],
         "category": "UI/UX",
-        "backgroundColor": "#C9F31D"
+        "backgroundColor": "#F64B44"
     },
     {
         "id": 53,
-        "thumb": "ux ui/новые лого/ChatGPT Image 20 нояб. 2025 г., 16_38_58.png",
-        "thumbLight": "ux ui/новые лого/ChatGPT Image 20 нояб. 2025 г., 16_38_58.png",
+        "thumb": "лого/Mask group-61.svg",
+        "thumbLight": "лого/Mask group-61.svg",
         "text": "Брендовая",
         "textBold": "Одежда",
         "thumbFull": "",
@@ -402,12 +402,12 @@
             "ux ui/17/Group 1965.png"
         ],
         "category": "UI/UX",
-        "backgroundColor": "#C9F31D"
+        "backgroundColor": "#1F201D"
     },
     {
         "id": 54,
-        "thumb": "ux ui/новые лого/ChatGPT Image 20 нояб. 2025 г., 16_44_34.png",
-        "thumbLight": "ux ui/новые лого/ChatGPT Image 20 нояб. 2025 г., 16_44_34.png",
+        "thumb": "лого/Mask group-65.svg",
+        "thumbLight": "лого/Mask group-65.svg",
         "text": "Косметика",
         "textBold": "Для Красоты",
         "thumbFull": "",
@@ -417,12 +417,12 @@
             "ux ui/18/Group 1967.png"
         ],
         "category": "UI/UX",
-        "backgroundColor": "#C9F31D"
+        "backgroundColor": "#696B70"
     },
     {
         "id": 55,
-        "thumb": "ux ui/новые лого/ChatGPT Image 20 нояб. 2025 г., 16_50_19.png",
-        "thumbLight": "ux ui/новые лого/ChatGPT Image 20 нояб. 2025 г., 16_50_19.png",
+        "thumb": "лого/Mask group-64.svg",
+        "thumbLight": "лого/Mask group-64.svg",
         "text": "Кондиционеры",
         "textBold": "На Любой Вкус",
         "thumbFull": "",
@@ -432,12 +432,12 @@
             "ux ui/19/Group 1968.png"
         ],
         "category": "UI/UX",
-        "backgroundColor": "#C9F31D"
+        "backgroundColor": "#185696"
     },
     {
         "id": 56,
-        "thumb": "ux ui/новые лого/ChatGPT Image 20 нояб. 2025 г., 16_53_46.png",
-        "thumbLight": "ux ui/новые лого/ChatGPT Image 20 нояб. 2025 г., 16_53_46.png",
+        "thumb": "лого/Mask group-63.svg",
+        "thumbLight": "лого/Mask group-63.svg",
         "text": "Всё",
         "textBold": "Для Дома",
         "thumbFull": "",
@@ -447,12 +447,12 @@
             "ux ui/20/Group 1970 (1).png"
         ],
         "category": "UI/UX",
-        "backgroundColor": "#C9F31D"
+        "backgroundColor": "#FF7A08"
     },
     {
         "id": 57,
-        "thumb": "ux ui/новые лого/ChatGPT Image 20 нояб. 2025 г., 16_57_49.png",
-        "thumbLight": "ux ui/новые лого/ChatGPT Image 20 нояб. 2025 г., 16_57_49.png",
+        "thumb": "лого/Mask group-62.svg",
+        "thumbLight": "лого/Mask group-62.svg",
         "text": "Бизнес",
         "textBold": "Консалтинг",
         "thumbFull": "",
@@ -462,12 +462,12 @@
             "ux ui/21/Group 1973.png"
         ],
         "category": "UI/UX",
-        "backgroundColor": "#C9F31D"
+        "backgroundColor": "#FF7A08"
     },
     {
         "id": 58,
-        "thumb": "ux ui/новые лого/ChatGPT Image 20 нояб. 2025 г., 17_02_47.png",
-        "thumbLight": "ux ui/новые лого/ChatGPT Image 20 нояб. 2025 г., 17_02_47.png",
+        "thumb": "лого/Mask group-51.svg",
+        "thumbLight": "лого/Mask group-51.svg",
         "text": "Торговля",
         "textBold": "На Маркетплейсе",
         "thumbFull": "",
@@ -477,12 +477,12 @@
             "ux ui/22/Group 1979.png"
         ],
         "category": "UI/UX",
-        "backgroundColor": "#C9F31D"
+        "backgroundColor": "#A04EFD"
     },
     {
         "id": 59,
-        "thumb": "ux ui/новые лого/ChatGPT Image 20 нояб. 2025 г., 17_06_08.png",
-        "thumbLight": "ux ui/новые лого/ChatGPT Image 20 нояб. 2025 г., 17_06_08.png",
+        "thumb": "лого/Mask group-55.svg",
+        "thumbLight": "лого/Mask group-55.svg",
         "text": "Натуральная",
         "textBold": "Косметика",
         "thumbFull": "",
@@ -492,12 +492,12 @@
             "ux ui/23/Group 1983.png"
         ],
         "category": "UI/UX",
-        "backgroundColor": "#C9F31D"
+        "backgroundColor": "#1B1B1B"
     },
     {
         "id": 60,
-        "thumb": "ux ui/новые лого/ChatGPT Image 20 нояб. 2025 г., 17_09_12.png",
-        "thumbLight": "ux ui/новые лого/ChatGPT Image 20 нояб. 2025 г., 17_09_12.png",
+        "thumb": "лого/Mask group-54.svg",
+        "thumbLight": "лого/Mask group-54.svg",
         "text": "Опросы",
         "textBold": "И Анкеты",
         "thumbFull": "",
@@ -507,12 +507,12 @@
             "ux ui/24/Group 1985 (1).png"
         ],
         "category": "UI/UX",
-        "backgroundColor": "#C9F31D"
+        "backgroundColor": "#1FA358"
     },
     {
         "id": 61,
-        "thumb": "ux ui/новые лого/ChatGPT Image 20 нояб. 2025 г., 17_12_45.png",
-        "thumbLight": "ux ui/новые лого/ChatGPT Image 20 нояб. 2025 г., 17_12_45.png",
+        "thumb": "лого/Mask group-53.svg",
+        "thumbLight": "лого/Mask group-53.svg",
         "text": "Консультация",
         "textBold": "Уролога",
         "thumbFull": "",
@@ -522,12 +522,12 @@
             "ux ui/25/дизайн 1.png"
         ],
         "category": "UI/UX",
-        "backgroundColor": "#C9F31D"
+        "backgroundColor": "#2BAABB"
     },
     {
         "id": 62,
-        "thumb": "ux ui/новые лого/ChatGPT Image 20 нояб. 2025 г., 17_21_18.png",
-        "thumbLight": "ux ui/новые лого/ChatGPT Image 20 нояб. 2025 г., 17_21_18.png",
+        "thumb": "лого/Mask group-52.svg",
+        "thumbLight": "лого/Mask group-52.svg",
         "text": "Магазин",
         "textBold": "Для Строительства",
         "thumbFull": "",
@@ -537,12 +537,12 @@
             "ux ui/26/дизайн 2.png"
         ],
         "category": "UI/UX",
-        "backgroundColor": "#C9F31D"
+        "backgroundColor": "#F1202D"
     },
     {
         "id": 63,
-        "thumb": "ux ui/новые лого/ChatGPT Image 20 нояб. 2025 г., 17_24_24.png",
-        "thumbLight": "ux ui/новые лого/ChatGPT Image 20 нояб. 2025 г., 17_24_24.png",
+        "thumb": "лого/Mask group-56.svg",
+        "thumbLight": "лого/Mask group-56.svg",
         "text": "Ремонт",
         "textBold": "Автомобилей",
         "thumbFull": "",
@@ -552,12 +552,12 @@
             "ux ui/27/дизайн 3.png"
         ],
         "category": "UI/UX",
-        "backgroundColor": "#C9F31D"
+        "backgroundColor": "#010100"
     },
     {
         "id": 64,
-        "thumb": "ux ui/новые лого/ChatGPT Image 20 нояб. 2025 г., 17_27_45.png",
-        "thumbLight": "ux ui/новые лого/ChatGPT Image 20 нояб. 2025 г., 17_27_45.png",
+        "thumb": "лого/Mask group-60.svg",
+        "thumbLight": "лого/Mask group-60.svg",
         "text": "Билеты",
         "textBold": "На Концерты",
         "thumbFull": "",
@@ -567,12 +567,12 @@
             "ux ui/28/дизайн 5.png"
         ],
         "category": "UI/UX",
-        "backgroundColor": "#C9F31D"
+        "backgroundColor": "#222220"
     },
     {
         "id": 65,
-        "thumb": "ux ui/новые лого/ChatGPT Image 20 нояб. 2025 г., 17_31_24.png",
-        "thumbLight": "ux ui/новые лого/ChatGPT Image 20 нояб. 2025 г., 17_31_24.png",
+        "thumb": "лого/Mask group-59.svg",
+        "thumbLight": "лого/Mask group-59.svg",
         "text": "Интер Шарм",
         "textBold": "Салон Красоты",
         "thumbFull": "",
@@ -582,12 +582,12 @@
             "ux ui/29/дизайн 6.png"
         ],
         "category": "UI/UX",
-        "backgroundColor": "#C9F31D"
+        "backgroundColor": "#FFFFFD"
     },
     {
         "id": 66,
-        "thumb": "ux ui/новые лого/ChatGPT Image 20 нояб. 2025 г., 17_34_50.png",
-        "thumbLight": "ux ui/новые лого/ChatGPT Image 20 нояб. 2025 г., 17_34_50.png",
+        "thumb": "лого/Mask group-58.svg",
+        "thumbLight": "лого/Mask group-58.svg",
         "text": "Хозмакс",
         "textBold": "Магазин",
         "thumbFull": "",
@@ -597,12 +597,12 @@
             "ux ui/30/дизайн 7.png"
         ],
         "category": "UI/UX",
-        "backgroundColor": "#C9F31D"
+        "backgroundColor": "#33B7FB"
     },
     {
         "id": 67,
-        "thumb": "ux ui/новые лого/ChatGPT Image 20 нояб. 2025 г., 17_40_38.png",
-        "thumbLight": "ux ui/новые лого/ChatGPT Image 20 нояб. 2025 г., 17_40_38.png",
+        "thumb": "лого/Mask group-57.svg",
+        "thumbLight": "лого/Mask group-57.svg",
         "text": "Конструктор",
         "textBold": "Диванов",
         "thumbFull": "",
@@ -612,12 +612,12 @@
             "ux ui/31/дизайн.png"
         ],
         "category": "UI/UX",
-        "backgroundColor": "#C9F31D"
+        "backgroundColor": "#96BC38"
     },
     {
         "id": 68,
-        "thumb": "сайт/новые лого/logo (2).svg",
-        "thumbLight": "сайт/новые лого/logo (2).svg",
+        "thumb": "сайт/logo (2).svg",
+        "thumbLight": "сайт/logo (2).svg",
         "text": "Сервис для настройки",
         "textBold": "рекламы",
         "thumbFull": "",
@@ -627,27 +627,12 @@
             "сайт/68/сайт1.png"
         ],
         "category": "Сайты",
-        "backgroundColor": "#C9F31D"
-    },
-    {
-        "id": 69,
-        "thumb": "сайт/новые лого/logo 3.png",
-        "thumbLight": "сайт/новые лого/logo 3.png",
-        "text": "Продажа заборов",
-        "textBold": "и профнастила",
-        "thumbFull": "",
-        "tag": "Веб-разработка",
-        "description": "Интернет-магазин заборов и профнастила с широким ассортиментом материалов для ограждений, доставкой и установкой.",
-        "screenshots": [
-            "сайт/69/сайт 2.png"
-        ],
-        "category": "Сайты",
-        "backgroundColor": "#C9F31D"
+        "backgroundColor": "#FF7A08"
     },
     {
         "id": 70,
-        "thumb": "сайт/новые лого/ChatGPT Image 19 нояб. 2025 г., 22_40_46.png",
-        "thumbLight": "сайт/новые лого/ChatGPT Image 19 нояб. 2025 г., 22_40_46.png",
+        "thumb": "лого/Mask group-16.svg",
+        "thumbLight": "лого/Mask group-16.svg",
         "text": "Продажа медицинского",
         "textBold": "оборудования",
         "thumbFull": "",
@@ -657,12 +642,12 @@
             "сайт/70/сайт 3.png"
         ],
         "category": "Сайты",
-        "backgroundColor": "#C9F31D"
+        "backgroundColor": "#31C8FD"
     },
     {
         "id": 71,
-        "thumb": "сайт/новые лого/ChatGPT Image 19 нояб. 2025 г., 22_43_12.png",
-        "thumbLight": "сайт/новые лого/ChatGPT Image 19 нояб. 2025 г., 22_43_12.png",
+        "thumb": "лого/Mask group-20.svg",
+        "thumbLight": "лого/Mask group-20.svg",
         "text": "Скидки на коллекцию",
         "textBold": "сумок от модного бутика",
         "thumbFull": "",
@@ -672,12 +657,12 @@
             "сайт/71/сайт 4.png"
         ],
         "category": "Сайты",
-        "backgroundColor": "#C9F31D"
+        "backgroundColor": "#232323"
     },
     {
         "id": 73,
-        "thumb": "сайт/новые лого/ChatGPT Image 19 нояб. 2025 г., 22_53_50.png",
-        "thumbLight": "сайт/новые лого/ChatGPT Image 19 нояб. 2025 г., 22_53_50.png",
+        "thumb": "лого/Mask group artifact.svg",
+        "thumbLight": "лого/Mask group artifact.svg",
         "text": "Тур",
         "textBold": "по Турции",
         "thumbFull": "",
@@ -687,12 +672,12 @@
             "сайт/73/сайт 6.png"
         ],
         "category": "Сайты",
-        "backgroundColor": "#C9F31D"
+        "backgroundColor": "#E4490F"
     },
     {
         "id": 74,
-        "thumb": "сайт/новые лого/ChatGPT Image 19 нояб. 2025 г., 22_57_05.png",
-        "thumbLight": "сайт/новые лого/ChatGPT Image 19 нояб. 2025 г., 22_57_05.png",
+        "thumb": "лого/Mask group-6.svg",
+        "thumbLight": "лого/Mask group-6.svg",
         "text": "Правильное питание",
         "textBold": "с доставкой на дом",
         "thumbFull": "",
@@ -702,12 +687,12 @@
             "сайт/74/сайт 7.png"
         ],
         "category": "Сайты",
-        "backgroundColor": "#C9F31D"
+        "backgroundColor": "#151513"
     },
     {
         "id": 75,
-        "thumb": "сайт/новые лого/ChatGPT Image 19 нояб. 2025 г., 23_00_23.png",
-        "thumbLight": "сайт/новые лого/ChatGPT Image 19 нояб. 2025 г., 23_00_23.png",
+        "thumb": "лого/Mask group-7.svg",
+        "thumbLight": "лого/Mask group-7.svg",
         "text": "Продажа",
         "textBold": "ювелирки",
         "thumbFull": "",
@@ -717,12 +702,12 @@
             "сайт/75/сайт 8.png"
         ],
         "category": "Сайты",
-        "backgroundColor": "#C9F31D"
+        "backgroundColor": "#020200"
     },
     {
         "id": 77,
-        "thumb": "сайт/новые лого/ChatGPT Image 19 нояб. 2025 г., 23_03_29.png",
-        "thumbLight": "сайт/новые лого/ChatGPT Image 19 нояб. 2025 г., 23_03_29.png",
+        "thumb": "лого/Mask group-72.svg",
+        "thumbLight": "лого/Mask group-72.svg",
         "text": "Продажа брендовой",
         "textBold": "ювелирки",
         "thumbFull": "",
@@ -732,12 +717,12 @@
             "сайт/77/сайт 10.png"
         ],
         "category": "Сайты",
-        "backgroundColor": "#C9F31D"
+        "backgroundColor": "#000000"
     },
     {
         "id": 78,
-        "thumb": "сайт/новые лого/ChatGPT Image 19 нояб. 2025 г., 23_08_29.png",
-        "thumbLight": "сайт/новые лого/ChatGPT Image 19 нояб. 2025 г., 23_08_29.png",
+        "thumb": "лого/Mask group-21.svg",
+        "thumbLight": "лого/Mask group-21.svg",
         "text": "Лечение в медикаментозном",
         "textBold": "сне",
         "thumbFull": "",
@@ -747,12 +732,12 @@
             "сайт/78/сайт 11 (2).png"
         ],
         "category": "Сайты",
-        "backgroundColor": "#C9F31D"
+        "backgroundColor": "#020200"
     },
     {
         "id": 79,
-        "thumb": "сайт/новые лого/ChatGPT Image 19 нояб. 2025 г., 23_10_43.png",
-        "thumbLight": "сайт/новые лого/ChatGPT Image 19 нояб. 2025 г., 23_10_43.png",
+        "thumb": "лого/Mask group-18.svg",
+        "thumbLight": "лого/Mask group-18.svg",
         "text": "Мебель",
         "textBold": "",
         "thumbFull": "",
@@ -762,12 +747,12 @@
             "сайт/79/сайт 12.png"
         ],
         "category": "Сайты",
-        "backgroundColor": "#C9F31D"
+        "backgroundColor": "#DB3913"
     },
     {
         "id": 80,
-        "thumb": "сайт/новые лого/ChatGPT Image 19 нояб. 2025 г., 23_15_24.png",
-        "thumbLight": "сайт/новые лого/ChatGPT Image 19 нояб. 2025 г., 23_15_24.png",
+        "thumb": "лого/Mask group-14.svg",
+        "thumbLight": "лого/Mask group-14.svg",
         "text": "Постельное бельё",
         "textBold": "и текстиль",
         "thumbFull": "",
@@ -777,12 +762,12 @@
             "сайт/80/сайт 13.png"
         ],
         "category": "Сайты",
-        "backgroundColor": "#C9F31D"
+        "backgroundColor": "#474846"
     },
     {
         "id": 81,
-        "thumb": "сайт/новые лого/ChatGPT Image 19 нояб. 2025 г., 23_18_27.png",
-        "thumbLight": "сайт/новые лого/ChatGPT Image 19 нояб. 2025 г., 23_18_27.png",
+        "thumb": "лого/Mask group-17.svg",
+        "thumbLight": "лого/Mask group-17.svg",
         "text": "Подборка жилья",
         "textBold": "по районам",
         "thumbFull": "",
@@ -792,12 +777,12 @@
             "сайт/81/сайт 14.png"
         ],
         "category": "Сайты",
-        "backgroundColor": "#C9F31D"
+        "backgroundColor": "#43453C"
     },
     {
         "id": 82,
-        "thumb": "сайт/новые лого/ChatGPT Image 19 нояб. 2025 г., 23_24_20.png",
-        "thumbLight": "сайт/новые лого/ChatGPT Image 19 нояб. 2025 г., 23_24_20.png",
+        "thumb": "лого/Mask group-73.svg",
+        "thumbLight": "лого/Mask group-73.svg",
         "text": "Индивидуальные аккумуляторы",
         "textBold": "под ключ",
         "thumbFull": "",
@@ -807,12 +792,12 @@
             "сайт/82/сайт 15.png"
         ],
         "category": "Сайты",
-        "backgroundColor": "#C9F31D"
+        "backgroundColor": "#AB3016"
     },
     {
         "id": 84,
-        "thumb": "сайт/новые лого/ChatGPT Image 19 нояб. 2025 г., 23_27_25.png",
-        "thumbLight": "сайт/новые лого/ChatGPT Image 19 нояб. 2025 г., 23_27_25.png",
+        "thumb": "лого/Mask group-19.svg",
+        "thumbLight": "лого/Mask group-19.svg",
         "text": "Детские колготки",
         "textBold": "оптом",
         "thumbFull": "",
@@ -822,12 +807,12 @@
             "сайт/84/Group 1994.png"
         ],
         "category": "Сайты",
-        "backgroundColor": "#C9F31D"
+        "backgroundColor": "#349251"
     },
     {
         "id": 85,
-        "thumb": "сайт/новые лого/ChatGPT Image 19 нояб. 2025 г., 23_31_12.png",
-        "thumbLight": "сайт/новые лого/ChatGPT Image 19 нояб. 2025 г., 23_31_12.png",
+        "thumb": "лого/Mask group-10.svg",
+        "thumbLight": "лого/Mask group-10.svg",
         "text": "Подарочная монета",
         "textBold": "из закрытой серии",
         "thumbFull": "",
@@ -837,12 +822,12 @@
             "сайт/85/Group 1995 (1).png"
         ],
         "category": "Сайты",
-        "backgroundColor": "#C9F31D"
+        "backgroundColor": "#CEBD6E"
     },
     {
         "id": 86,
-        "thumb": "сайт/новые лого/ChatGPT Image 19 нояб. 2025 г., 23_34_06.png",
-        "thumbLight": "сайт/новые лого/ChatGPT Image 19 нояб. 2025 г., 23_34_06.png",
+        "thumb": "лого/Mask group-15.svg",
+        "thumbLight": "лого/Mask group-15.svg",
         "text": "Виниры",
         "textBold": "дёшево",
         "thumbFull": "",
@@ -852,12 +837,12 @@
             "сайт/86/Group 1998.png"
         ],
         "category": "Сайты",
-        "backgroundColor": "#C9F31D"
+        "backgroundColor": "#D2111B"
     },
     {
         "id": 87,
-        "thumb": "сайт/новые лого/ChatGPT Image 19 нояб. 2025 г., 23_49_00.png",
-        "thumbLight": "сайт/новые лого/ChatGPT Image 19 нояб. 2025 г., 23_49_00.png",
+        "thumb": "лого/Mask group-9.svg",
+        "thumbLight": "лого/Mask group-9.svg",
         "text": "Цветочный магазин",
         "textBold": "Спутник",
         "thumbFull": "",
@@ -867,12 +852,12 @@
             "сайт/87/Group 2002 (1).png"
         ],
         "category": "Сайты",
-        "backgroundColor": "#C9F31D"
+        "backgroundColor": "#326140"
     },
     {
         "id": 88,
-        "thumb": "сайт/новые лого/ChatGPT Image 19 нояб. 2025 г., 23_52_47.png",
-        "thumbLight": "сайт/новые лого/ChatGPT Image 19 нояб. 2025 г., 23_52_47.png",
+        "thumb": "лого/Mask group-8.svg",
+        "thumbLight": "лого/Mask group-8.svg",
         "text": "Оценка недвижимости",
         "textBold": "от Valpro",
         "thumbFull": "",
@@ -882,12 +867,12 @@
             "сайт/88/Group 2004.png"
         ],
         "category": "Сайты",
-        "backgroundColor": "#C9F31D"
+        "backgroundColor": "#252A29"
     },
     {
         "id": 89,
-        "thumb": "сайт/новые лого/ChatGPT Image 19 нояб. 2025 г., 23_55_22.png",
-        "thumbLight": "сайт/новые лого/ChatGPT Image 19 нояб. 2025 г., 23_55_22.png",
+        "thumb": "лого/Mask group-5.svg",
+        "thumbLight": "лого/Mask group-5.svg",
         "text": "Недвижимость",
         "textBold": "в Барселоне",
         "thumbFull": "",
@@ -897,12 +882,12 @@
             "сайт/89/Group 2007.png"
         ],
         "category": "Сайты",
-        "backgroundColor": "#C9F31D"
+        "backgroundColor": "#385974"
     },
     {
         "id": 91,
-        "thumb": "сайт/новые лого/ChatGPT Image 20 нояб. 2025 г., 00_10_59.png",
-        "thumbLight": "сайт/новые лого/ChatGPT Image 20 нояб. 2025 г., 00_10_59.png",
+        "thumb": "лого/Mask group-74.svg",
+        "thumbLight": "лого/Mask group-74.svg",
         "text": "Магазин",
         "textBold": "часов",
         "thumbFull": "",
@@ -912,12 +897,12 @@
             "сайт/91/Group 2013.png"
         ],
         "category": "Сайты",
-        "backgroundColor": "#C9F31D"
+        "backgroundColor": "#1A1E2F"
     },
     {
         "id": 92,
-        "thumb": "сайт/новые лого/ChatGPT Image 20 нояб. 2025 г., 00_14_33.png",
-        "thumbLight": "сайт/новые лого/ChatGPT Image 20 нояб. 2025 г., 00_14_33.png",
+        "thumb": "лого/Mask group-1.svg",
+        "thumbLight": "лого/Mask group-1.svg",
         "text": "Спланируйте своё",
         "textBold": "путешествие на лето",
         "thumbFull": "",
@@ -927,12 +912,12 @@
             "сайт/92/Group 2015.png"
         ],
         "category": "Сайты",
-        "backgroundColor": "#C9F31D"
+        "backgroundColor": "#1C1C1B"
     },
     {
         "id": 93,
-        "thumb": "сайт/новые лого/ChatGPT Image 20 нояб. 2025 г., 00_24_42.png",
-        "thumbLight": "сайт/новые лого/ChatGPT Image 20 нояб. 2025 г., 00_24_42.png",
+        "thumb": "лого/Mask group-4.svg",
+        "thumbLight": "лого/Mask group-4.svg",
         "text": "Аренда с последующим",
         "textBold": "выкупом дач на курорте",
         "thumbFull": "",
@@ -942,12 +927,12 @@
             "сайт/93/Group 2025.png"
         ],
         "category": "Сайты",
-        "backgroundColor": "#C9F31D"
+        "backgroundColor": "#060701"
     },
     {
         "id": 94,
-        "thumb": "сайт/новые лого/ChatGPT Image 20 нояб. 2025 г., 00_27_25.png",
-        "thumbLight": "сайт/новые лого/ChatGPT Image 20 нояб. 2025 г., 00_27_25.png",
+        "thumb": "лого/Mask group-3.svg",
+        "thumbLight": "лого/Mask group-3.svg",
         "text": "Продажа окон",
         "textBold": "в Москве",
         "thumbFull": "",
@@ -957,12 +942,12 @@
             "сайт/94/Group 2026.png"
         ],
         "category": "Сайты",
-        "backgroundColor": "#C9F31D"
+        "backgroundColor": "#F82B27"
     },
     {
         "id": 95,
-        "thumb": "сайт/новые лого/ChatGPT Image 20 нояб. 2025 г., 00_31_46.png",
-        "thumbLight": "сайт/новые лого/ChatGPT Image 20 нояб. 2025 г., 00_31_46.png",
+        "thumb": "лого/Mask group-2.svg",
+        "thumbLight": "лого/Mask group-2.svg",
         "text": "Сервис для покупки кроватей",
         "textBold": "с бесплатной доставкой",
         "thumbFull": "",
@@ -972,12 +957,12 @@
             "сайт/95/Group 2027 copy.png"
         ],
         "category": "Сайты",
-        "backgroundColor": "#C9F31D"
+        "backgroundColor": "#AA2823"
     },
     {
         "id": 97,
-        "thumb": "сайт/новые лого/ChatGPT Image 20 нояб. 2025 г., 01_00_13.png",
-        "thumbLight": "сайт/новые лого/ChatGPT Image 20 нояб. 2025 г., 01_00_13.png",
+        "thumb": "лого/Mask group-22.svg",
+        "thumbLight": "лого/Mask group-22.svg",
         "text": "Онлайн магазин",
         "textBold": "спорт товаров",
         "thumbFull": "",
@@ -987,12 +972,12 @@
             "сайт/97/Group 2031.png"
         ],
         "category": "Сайты",
-        "backgroundColor": "#C9F31D"
+        "backgroundColor": "#FA262B"
     },
     {
         "id": 98,
-        "thumb": "сайт/новые лого/ChatGPT Image 20 нояб. 2025 г., 01_12_48.png",
-        "thumbLight": "сайт/новые лого/ChatGPT Image 20 нояб. 2025 г., 01_12_48.png",
+        "thumb": "лого/Mask group skar.svg",
+        "thumbLight": "лого/Mask group skar.svg",
         "text": "Онлайн сервис для покупки",
         "textBold": "красок и лаков для полов",
         "thumbFull": "",
@@ -1002,12 +987,12 @@
             "сайт/98/Group 2034.png"
         ],
         "category": "Сайты",
-        "backgroundColor": "#C9F31D"
+        "backgroundColor": "#010100"
     },
     {
         "id": 99,
-        "thumb": "сайт/новые лого/ChatGPT Image 20 нояб. 2025 г., 01_15_24.png",
-        "thumbLight": "сайт/новые лого/ChatGPT Image 20 нояб. 2025 г., 01_15_24.png",
+        "thumb": "лого/Mask group-25.svg",
+        "thumbLight": "лого/Mask group-25.svg",
         "text": "Экспресс ремонт",
         "textBold": "техники Apple",
         "thumbFull": "",
@@ -1017,12 +1002,12 @@
             "сайт/99/Group 2035.png"
         ],
         "category": "Сайты",
-        "backgroundColor": "#C9F31D"
+        "backgroundColor": "#ED2422"
     },
     {
         "id": 101,
-        "thumb": "сайт/новые лого/ChatGPT Image 20 нояб. 2025 г., 01_20_16.png",
-        "thumbLight": "сайт/новые лого/ChatGPT Image 20 нояб. 2025 г., 01_20_16.png",
+        "thumb": "лого/Mask group-24.svg",
+        "thumbLight": "лого/Mask group-24.svg",
         "text": "Уникальная резная мебель",
         "textBold": "под заказ",
         "thumbFull": "",
@@ -1032,12 +1017,12 @@
             "сайт/101/Group 2043.png"
         ],
         "category": "Сайты",
-        "backgroundColor": "#C9F31D"
+        "backgroundColor": "#6D241B"
     },
     {
         "id": 102,
-        "thumb": "сайт/новые лого/ChatGPT Image 20 нояб. 2025 г., 01_23_51.png",
-        "thumbLight": "сайт/новые лого/ChatGPT Image 20 нояб. 2025 г., 01_23_51.png",
+        "thumb": "лого/Mask group-71.svg",
+        "thumbLight": "лого/Mask group-71.svg",
         "text": "Сервис покупки",
         "textBold": "спецтехники",
         "thumbFull": "",
@@ -1047,12 +1032,12 @@
             "сайт/102/Group 2044.png"
         ],
         "category": "Сайты",
-        "backgroundColor": "#C9F31D"
+        "backgroundColor": "#E82B34"
     },
     {
         "id": 103,
-        "thumb": "сайт/новые лого/ChatGPT Image 20 нояб. 2025 г., 01_28_10.png",
-        "thumbLight": "сайт/новые лого/ChatGPT Image 20 нояб. 2025 г., 01_28_10.png",
+        "thumb": "лого/Mask group-23.svg",
+        "thumbLight": "лого/Mask group-23.svg",
         "text": "Загородные дома",
         "textBold": "класса де люкс",
         "thumbFull": "",
@@ -1062,12 +1047,12 @@
             "сайт/103/Group 2045 (1).png"
         ],
         "category": "Сайты",
-        "backgroundColor": "#C9F31D"
+        "backgroundColor": "#762C32"
     },
     {
         "id": 104,
-        "thumb": "сайт/новые лого/ChatGPT Image 20 нояб. 2025 г., 01_32_39.png",
-        "thumbLight": "сайт/новые лого/ChatGPT Image 20 нояб. 2025 г., 01_32_39.png",
+        "thumb": "лого/Mask group-41.svg",
+        "thumbLight": "лого/Mask group-41.svg",
         "text": "Обслуживание предприятий",
         "textBold": "типа мясокомбинат",
         "thumbFull": "",
@@ -1077,12 +1062,12 @@
             "сайт/104/Group 2047.png"
         ],
         "category": "Сайты",
-        "backgroundColor": "#C9F31D"
+        "backgroundColor": "#014E82"
     },
     {
         "id": 105,
-        "thumb": "сайт/новые лого/ChatGPT Image 20 нояб. 2025 г., 01_37_10.png",
-        "thumbLight": "сайт/новые лого/ChatGPT Image 20 нояб. 2025 г., 01_37_10.png",
+        "thumb": "лого/Mask group-45.svg",
+        "thumbLight": "лого/Mask group-45.svg",
         "text": "Всё для пил",
         "textBold": "и бензопил",
         "thumbFull": "",
@@ -1092,27 +1077,27 @@
             "сайт/105/Group 2049.png"
         ],
         "category": "Сайты",
-        "backgroundColor": "#C9F31D"
+        "backgroundColor": "#CC2831"
     },
     {
         "id": 106,
-        "thumb": "сайт/новые лого/ChatGPT Image 20 нояб. 2025 г., 01_41_43.png",
-        "thumbLight": "сайт/новые лого/ChatGPT Image 20 нояб. 2025 г., 01_41_43.png",
-        "text": "Сайт",
-        "textBold": "фитнес-зала",
+        "thumb": "лого/Mask group-45.svg",
+        "thumbLight": "лого/Mask group-45.svg",
+        "text": "Мобильное",
+        "textBold": "приложение",
         "thumbFull": "",
         "tag": "Веб-разработка",
-        "description": "Сайт фитнес-зала с удобным интерфейсом для записи на тренировки, просмотра расписания и управления абонементом.",
+        "description": "Мобильное приложение с удобным интерфейсом для записи на тренировки, просмотра расписания и управления абонементом.",
         "screenshots": [
             "сайт/106/Group 2051.png"
         ],
         "category": "Сайты",
-        "backgroundColor": "#C9F31D"
+        "backgroundColor": "#FE9E0A"
     },
     {
         "id": 107,
-        "thumb": "сайт/новые лого/ChatGPT Image 20 нояб. 2025 г., 01_44_53.png",
-        "thumbLight": "сайт/новые лого/ChatGPT Image 20 нояб. 2025 г., 01_44_53.png",
+        "thumb": "лого/Mask group-43.svg",
+        "thumbLight": "лого/Mask group-43.svg",
         "text": "Одежда",
         "textBold": "с принтами",
         "thumbFull": "",
@@ -1122,12 +1107,12 @@
             "сайт/107/Group 2053 (3).png"
         ],
         "category": "Сайты",
-        "backgroundColor": "#C9F31D"
+        "backgroundColor": "#EE1523"
     },
     {
         "id": 108,
-        "thumb": "сайт/новые лого/ChatGPT Image 20 нояб. 2025 г., 01_47_09.png",
-        "thumbLight": "сайт/новые лого/ChatGPT Image 20 нояб. 2025 г., 01_47_09.png",
+        "thumb": "лого/Mask group-42.svg",
+        "thumbLight": "лого/Mask group-42.svg",
         "text": "Немецкая кухонная",
         "textBold": "утварь",
         "thumbFull": "",
@@ -1137,12 +1122,12 @@
             "сайт/108/Group 2055.png"
         ],
         "category": "Сайты",
-        "backgroundColor": "#C9F31D"
+        "backgroundColor": "#020200"
     },
     {
         "id": 109,
-        "thumb": "сайт/новые лого/ChatGPT Image 20 нояб. 2025 г., 01_50_00.png",
-        "thumbLight": "сайт/новые лого/ChatGPT Image 20 нояб. 2025 г., 01_50_00.png",
+        "thumb": "лого/Mask group-36.svg",
+        "thumbLight": "лого/Mask group-36.svg",
         "text": "Подарочные сертификаты",
         "textBold": "на все случаи жизни",
         "thumbFull": "",
@@ -1152,12 +1137,12 @@
             "сайт/109/Group 2056 copy.png"
         ],
         "category": "Сайты",
-        "backgroundColor": "#C9F31D"
+        "backgroundColor": "#090A09"
     },
     {
         "id": 110,
-        "thumb": "сайт/новые лого/ChatGPT Image 20 нояб. 2025 г., 01_52_21.png",
-        "thumbLight": "сайт/новые лого/ChatGPT Image 20 нояб. 2025 г., 01_52_21.png",
+        "thumb": "лого/Mask group-40.svg",
+        "thumbLight": "лого/Mask group-40.svg",
         "text": "Передовые технологии",
         "textBold": "строительства",
         "thumbFull": "",
@@ -1167,12 +1152,12 @@
             "сайт/110/Group 2057 (2).png"
         ],
         "category": "Сайты",
-        "backgroundColor": "#C9F31D"
+        "backgroundColor": "#AC562C"
     },
     {
         "id": 111,
-        "thumb": "сайт/новые лого/ChatGPT Image 20 нояб. 2025 г., 01_56_32.png",
-        "thumbLight": "сайт/новые лого/ChatGPT Image 20 нояб. 2025 г., 01_56_32.png",
+        "thumb": "лого/Mask group-39.svg",
+        "thumbLight": "лого/Mask group-39.svg",
         "text": "Стоматология",
         "textBold": "",
         "thumbFull": "",
@@ -1182,12 +1167,12 @@
             "сайт/111/Group 2058.png"
         ],
         "category": "Сайты",
-        "backgroundColor": "#C9F31D"
+        "backgroundColor": "#020202"
     },
     {
         "id": 112,
-        "thumb": "сайт/новые лого/ChatGPT Image 20 нояб. 2025 г., 02_04_17.png",
-        "thumbLight": "сайт/новые лого/ChatGPT Image 20 нояб. 2025 г., 02_04_17.png",
+        "thumb": "лого/Mask group-38.svg",
+        "thumbLight": "лого/Mask group-38.svg",
         "text": "Высокий уровень безопасности",
         "textBold": "автомобилей и окружающей среды",
         "thumbFull": "",
@@ -1197,12 +1182,12 @@
             "сайт/112/Group 2062 (1).png"
         ],
         "category": "Сайты",
-        "backgroundColor": "#C9F31D"
+        "backgroundColor": "#FF8E1F"
     },
     {
         "id": 113,
-        "thumb": "сайт/новые лого/ChatGPT Image 20 нояб. 2025 г., 02_06_52.png",
-        "thumbLight": "сайт/новые лого/ChatGPT Image 20 нояб. 2025 г., 02_06_52.png",
+        "thumb": "лого/Mask group-37.svg",
+        "thumbLight": "лого/Mask group-37.svg",
         "text": "Бронецкий",
         "textBold": "ювелир",
         "thumbFull": "",
@@ -1212,12 +1197,12 @@
             "сайт/113/Group 2064.png"
         ],
         "category": "Сайты",
-        "backgroundColor": "#C9F31D"
+        "backgroundColor": "#C01352"
     },
     {
         "id": 116,
-        "thumb": "сайт/новые лого/ChatGPT Image 20 нояб. 2025 г., 02_09_24.png",
-        "thumbLight": "сайт/новые лого/ChatGPT Image 20 нояб. 2025 г., 02_09_24.png",
+        "thumb": "лого/Mask group-26.svg",
+        "thumbLight": "лого/Mask group-26.svg",
         "text": "Сайт визитка",
         "textBold": "нейро-хирурга",
         "thumbFull": "",
@@ -1227,12 +1212,12 @@
             "сайт/116/image 629.png"
         ],
         "category": "Сайты",
-        "backgroundColor": "#C9F31D"
+        "backgroundColor": "#52CFD5"
     },
     {
         "id": 117,
-        "thumb": "сайт/новые лого/ChatGPT Image 20 нояб. 2025 г., 02_15_05.png",
-        "thumbLight": "сайт/новые лого/ChatGPT Image 20 нояб. 2025 г., 02_15_05.png",
+        "thumb": "лого/Mask group-30.svg",
+        "thumbLight": "лого/Mask group-30.svg",
         "text": "Исследование в области",
         "textBold": "систем безопасности",
         "thumbFull": "",
@@ -1242,6 +1227,6 @@
             "сайт/117/TБ¦-¦¬¦ЖTВ.png"
         ],
         "category": "Сайты",
-        "backgroundColor": "#C9F31D"
+        "backgroundColor": "#FB282D"
     }
 ]

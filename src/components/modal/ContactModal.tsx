@@ -148,24 +148,57 @@ const ContactModal = ({ isOpen, onClose }: ContactModalProps) => {
                     padding: '20px'
                 }}
             >
-                <div 
-                    className="modal-content contact-modal"
-                    onClick={(e) => e.stopPropagation()}
-                    style={{
-                        background: '#000000',
-                        borderRadius: '10px',
-                        padding: '40px',
-                        width: '600px',
-                        maxWidth: '90vw',
-                        height: 'auto',
-                        maxHeight: '90vh',
-                        overflowY: 'auto',
-                        position: 'relative',
-                        zIndex: 9999,
-                        scrollbarWidth: 'none',
-                        msOverflowStyle: 'none'
-                    }}
-                >
+                <div style={{ position: 'relative' }}>
+                    <button
+                        onClick={onClose}
+                        style={{
+                            position: 'absolute',
+                            top: '-20px',
+                            right: '-20px',
+                            background: 'transparent',
+                            border: 'none',
+                            color: 'var(--color-primary)',
+                            fontSize: '32px',
+                            cursor: 'pointer',
+                            width: '40px',
+                            height: '40px',
+                            display: 'flex',
+                            alignItems: 'center',
+                            justifyContent: 'center',
+                            borderRadius: '50%',
+                            transition: 'all 0.3s ease',
+                            zIndex: 10000
+                        }}
+                        onMouseEnter={(e) => {
+                            e.currentTarget.style.background = 'var(--color-primary)';
+                            e.currentTarget.style.color = '#000000';
+                        }}
+                        onMouseLeave={(e) => {
+                            e.currentTarget.style.background = 'transparent';
+                            e.currentTarget.style.color = 'var(--color-primary)';
+                        }}
+                        aria-label="Закрыть"
+                    >
+                        ×
+                    </button>
+                    <div 
+                        className="modal-content contact-modal"
+                        onClick={(e) => e.stopPropagation()}
+                        style={{
+                            background: '#000000',
+                            borderRadius: '10px',
+                            padding: '40px',
+                            width: '600px',
+                            maxWidth: '90vw',
+                            height: 'auto',
+                            maxHeight: '90vh',
+                            overflowY: 'auto',
+                            position: 'relative',
+                            zIndex: 9999,
+                            scrollbarWidth: 'none',
+                            msOverflowStyle: 'none'
+                        }}
+                    >
                     <h2 style={{
                         marginBottom: '30px',
                         fontSize: '28px',
@@ -387,6 +420,7 @@ const ContactModal = ({ isOpen, onClose }: ContactModalProps) => {
                             {isSubmitting ? 'Отправка...' : 'Отправить'}
                         </button>
                     </form>
+                </div>
                 </div>
             </div>
         </>
