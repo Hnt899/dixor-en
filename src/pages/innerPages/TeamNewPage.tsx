@@ -6,7 +6,6 @@ import DarkClass from "../../components/classes/DarkClass";
 import ThemeDark from "../../components/switcher/ThemeDark";
 import ContactModal from "../../components/modal/ContactModal";
 import { toast } from "react-toastify";
-import { Link } from "react-router-dom";
 
 const TeamNewPage = () => {
     const [selectedSpecialist, setSelectedSpecialist] = useState<{

@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom"; // Link все еще нужен для копирайта (если хочешь)
 import NewsletterV2 from '../newsletter/NewsletterV2';
 import FooterSocial from '../social/FooterSocial';
 

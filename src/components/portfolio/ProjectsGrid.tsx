@@ -20,7 +20,7 @@ const SingleProjectGrid = ({ project, activeFilter, animationDelay = 0 }: { proj
     const { id, thumb, text, textBold, tag, description, backgroundColor } = project;
 
     // Сохранение позиции скролла перед переходом
-    const handleProjectClick = (e: React.MouseEvent<HTMLElement>) => {
+    const handleProjectClick = (_e: React.MouseEvent<HTMLElement>) => {
         // Сохраняем позицию скролла
         const scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
         sessionStorage.setItem('projectsPageScrollPosition', scrollPosition.toString());

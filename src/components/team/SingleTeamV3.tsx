@@ -8,7 +8,7 @@ interface DataType {
 }
 
 const SingleTeamV3 = ({ team }: { team: DataType }) => {
-    const { id, thumb, name, designation } = team
+    const { id, name, designation } = team
 
     return (
         <>

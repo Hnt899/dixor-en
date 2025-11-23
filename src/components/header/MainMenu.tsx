@@ -5,6 +5,7 @@ import { useState } from "react";
 
 interface DataType {
     navbarPlacement?: string;
+    toggleSubMenu?: (e: React.MouseEvent<HTMLAnchorElement>) => void;
 }
 
 const MainMenu = ({ navbarPlacement }: DataType) => {

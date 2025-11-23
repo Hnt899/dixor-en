@@ -5,7 +5,7 @@ interface TeamMemberCardProps {
     description: string;
 }
 
-const TeamMemberCard = ({ name, role, description }: TeamMemberCardProps) => {
+const TeamMemberCard = ({ name }: TeamMemberCardProps) => {
     // Разделяем имя и фамилию
     const nameParts = name.split(' ');
     const lastName = nameParts.length > 1 ? nameParts.slice(1).join(' ') : '';

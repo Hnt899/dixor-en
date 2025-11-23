@@ -1,10 +1,5 @@
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
-import portfolio13 from "/assets/img/portfolio/13.jpg";
-import portfolio14 from "/assets/img/portfolio/14.jpg";
-import portfolio15 from "/assets/img/portfolio/15.jpg";
-import portfolio44 from "/assets/img/portfolio/44.jpg";
-import PortfolioV1Data from "../../../src/assets/jsonData/portfolio/PortfolioV1Data.json";
 
 interface DataType {
     id?: number;
@@ -24,8 +19,8 @@ interface ProjectDetailsProps {
     totalProjects?: number
 }
 
-const ProjectDetailsContentV1 = ({ projectInfo, sectionClass, totalProjects }: ProjectDetailsProps) => {
-    const { text, textBold, tag, id, thumbFull, description, screenshots, category, backgroundColor } = projectInfo || {};
+const ProjectDetailsContentV1 = ({ projectInfo, sectionClass }: ProjectDetailsProps) => {
+    const { text, textBold, tag, id, thumbFull, description, screenshots, category } = projectInfo || {};
     const title = `${text || ''} ${textBold || ''}`.trim();
     const isUIUX = category === "UI/UX";
     const isSites = category === "Сайты";
@@ -1994,21 +1989,21 @@ const ProjectDetailsContentV1 = ({ projectInfo, sectionClass, totalProjects }: P
     const projectText = getProjectText();
 
     // Projects Navigation
-    const currentId = id ? parseInt(id.toString(), 10) : 1;
+    // const currentId = id ? parseInt(id.toString(), 10) : 1;
 
-    // Calculate the previous and next IDs dynamically
-    const previousId = currentId === 1 ? totalProjects : currentId - 1;
-    const nextId = currentId === totalProjects ? 1 : currentId + 1;
+    // Calculate the previous and next IDs dynamically (commented out as not used)
+    // const previousId = currentId === 1 ? totalProjects : currentId - 1;
+    // const nextId = currentId === totalProjects ? 1 : currentId + 1;
 
-    // Get the previous and next project titles
-    const previousProject = PortfolioV1Data.find((project) => project.id === previousId);
-    const nextProject = PortfolioV1Data.find((project) => project.id === nextId);
+    // Get the previous and next project titles (commented out as not used)
+    // const previousProject = PortfolioV1Data.find((project) => project.id === previousId);
+    // const nextProject = PortfolioV1Data.find((project) => project.id === nextId);
 
-    // Get project title for navigation
-    const getProjectTitle = (project?: DataType) => {
-        if (!project) return "Нет названия";
-        return `${project.text || ''} ${project.textBold || ''}`.trim() || "Нет названия";
-    };
+    // Get project title for navigation (commented out as not used)
+    // const getProjectTitle = (project?: DataType) => {
+    //     if (!project) return "Нет названия";
+    //     return `${project.text || ''} ${project.textBold || ''}`.trim() || "Нет названия";
+    // };
 
     return (
         <>
