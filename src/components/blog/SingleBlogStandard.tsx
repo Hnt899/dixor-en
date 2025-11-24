@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 interface DataType {
     id?: number;
-    thumb?: string;
+    thumbFull?: string;
     date?: string;
     title?: string;
     text?: string;
@@ -11,7 +11,7 @@ interface DataType {
 
 const SingleBlogStandard = ({ blog }: { blog: DataType }) => {
     // 'id' теперь нужен для ссылки
-    const { id, thumb, date, title, text, author } = blog
+    const { id, thumbFull, date, title, text, author } = blog
 
     return (
         <>
@@ -19,7 +19,7 @@ const SingleBlogStandard = ({ blog }: { blog: DataType }) => {
                 <div className="thumb">
                     {/* Ссылка теперь ведет на отдельную страницу поста */}
                     <Link to={`/blog-post/${id}`}>
-                        <img src={`/assets/img/blog/${thumb}`} alt="Image Not Found" width={1500} height={750} />
+                        <img src={thumbFull?.startsWith('статьи/') ? `/assets/${thumbFull}` : `/assets/img/blog/${thumbFull}`} alt="Image Not Found" width={1500} height={750} />
                     </Link>
                 </div>
                 <div className="info">

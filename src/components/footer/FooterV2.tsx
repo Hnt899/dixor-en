@@ -22,13 +22,13 @@ const FooterV2 = ({ sectionClass }: DataType) => {
                                 </div>
                                 <ul className="address-list">
                                     <li>
-                                        <h4>Australia</h4>
+                                        <h4>Главный офис (Белгород)</h4>
                                         <p>
-                                            Travel World House, Level 7, 17 Jones St, NSW, 2060
+                                            Улица Сумская 168 офис 306
                                         </p>
                                     </li>
                                     <li>
-                                        <h4>Dubai</h4>
+                                        <h4>Филиал (Дубай)</h4>
                                         <p>
                                             Sheikh Mohammed bin salah, #234 B - Downtown - Dubai
                                         </p>
@@ -37,10 +37,10 @@ const FooterV2 = ({ sectionClass }: DataType) => {
                                 <div className="footer-contact">
                                     <ul>
                                         <li>
-                                            <a href="mailto:someone@example.com">info@dixor.com</a>
+                                            <a href="mailto:demyanovcdi@mail.ru">demyanovcdi@mail.ru</a>
                                         </li>
                                         <li>
-                                            <a href="tel:+4733378901">+47 333 78 901</a>
+                                            <a href="tel:+79853656294">+7 985 365 6294</a>
                                         </li>
                                     </ul>
                                 </div>

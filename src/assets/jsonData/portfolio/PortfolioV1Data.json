@@ -1081,18 +1081,18 @@
     },
     {
         "id": 106,
-        "thumb": "лого/Mask group-45.svg",
-        "thumbLight": "лого/Mask group-45.svg",
-        "text": "Мобильное",
-        "textBold": "приложение",
+        "thumb": "лого/Mask group-46.svg",
+        "thumbLight": "лого/Mask group-46.svg",
+        "text": "Световые",
+        "textBold": "Решения",
         "thumbFull": "",
-        "tag": "Веб-разработка",
-        "description": "Мобильное приложение с удобным интерфейсом для записи на тренировки, просмотра расписания и управления абонементом.",
+        "tag": "Освещение UI/UX",
+        "description": "Сайт производителя световых решений с каталогом продукции, техническими характеристиками, проектами и конфигуратором освещения.",
         "screenshots": [
-            "сайт/106/Group 2051.png"
+            "ux ui/8/Group 1945.png"
         ],
-        "category": "Сайты",
-        "backgroundColor": "#FE9E0A"
+        "category": "UI/UX",
+        "backgroundColor": "#020200"
     },
     {
         "id": 107,

@@ -12,6 +12,8 @@ import ProjectDetailsV1Page from "./pages/innerPages/ProjectDetailsV1Page";
 import ProjectsPage from "./pages/innerPages/ProjectsPage";
 // Страница команды
 import TeamNewPage from "./pages/innerPages/TeamNewPage"; 
+// Страница деталей услуги
+import ServiceDetailsPage from "./pages/servicesPages/ServiceDetailsPage";
 
 
 const Routers = () => {
@@ -38,6 +40,10 @@ const Routers = () => {
 
                 {/* Страница команды */}
                 <Route path='/team' element={<TeamNewPage />} />
+
+                {/* Страница деталей услуги */}
+                {/* :id - это 1, 2, 3, 4 из ServicesV1Data.json */}
+                <Route path='/service-details/:id' element={<ServiceDetailsPage />} />
 
                 {/* 404 */}
                 <Route path='*' element={<NotFoundPage />} />

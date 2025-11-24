@@ -1,7 +1,19 @@
+import { useState } from 'react';
 import NewsletterV2 from '../newsletter/NewsletterV2';
 import FooterSocial from '../social/FooterSocial';
+import ContactModal from '../modal/ContactModal';
 
 const FooterV3 = () => {
+    const [isModalOpen, setIsModalOpen] = useState(false);
+
+    const openModal = () => {
+        setIsModalOpen(true);
+    };
+
+    const closeModal = () => {
+        setIsModalOpen(false);
+    };
+
     return (
         <>
             <footer>
@@ -12,8 +24,7 @@ const FooterV3 = () => {
                                 <div className="col-lg-6 footer-item about pr-120 pr-md-15 pr-xs-15 pr-md-15 pr-xs-15">
                                     <div className="top">
                                         <h2>Нужна поддержка?</h2>
-                                        {/* ИСПРАВЛЕНИЕ: Кнопка-стрелка теперь ведет к блоку #contact */}
-                                        <a className="quick-btn" href="#contact">
+                                        <a className="quick-btn" href="#" onClick={(e) => { e.preventDefault(); openModal(); }}>
                                             <i className="fas fa-long-arrow-right" />
                                         </a>
                                     </div>
@@ -21,14 +32,12 @@ const FooterV3 = () => {
                                         <li>
                                             <h4>Главный офис (Белгород)</h4>
                                             <p>
-                                                {/* Впиши свой адрес сюда */}
                                                 Улица Сумская 168 офис 306
                                             </p>
                                         </li>
                                         <li>
                                             <h4>Филиал (Дубай)</h4>
                                             <p>
-                                                {/* Впиши свой адрес сюда */}
                                                 Sheikh Mohammed bin Salah, #234 B - Downtown - Dubai
                                             </p>
                                         </li>
@@ -70,6 +79,7 @@ const FooterV3 = () => {
                     </div>
                 </div>
             </footer>
+            <ContactModal isOpen={isModalOpen} onClose={closeModal} />
         </>
     );
 };

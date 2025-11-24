@@ -15,11 +15,11 @@ const ServiceDetailsPage = () => {
     return (
         <>
             <Helmet>
-                <title>Dixor - Service Details</title>
+                <title>Dixor - {data?.title || 'Детали услуги'}</title>
             </Helmet>
 
             <LayoutV1>
-                <Breadcrumb title='Our Services' breadCrumb='service-details' />
+                <Breadcrumb title={data?.title || 'Наши услуги'} breadCrumb='service-details' />
                 {data && <ServiceDetailsContent serviceInfo={data} sectionClass='default-padding-bottom' />}
                 <DarkClass />
                 <ThemeDark />

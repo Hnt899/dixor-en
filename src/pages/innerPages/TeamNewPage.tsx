@@ -67,7 +67,7 @@ const TeamNewPage = () => {
     };
 
     const handleCopyEmail = async () => {
-        const email = "arturfurt9@gmail.com";
+        const email = "demyanovcdi@mail.ru";
         try {
             await navigator.clipboard.writeText(email);
             toast.success("Почта скопирована! Напишите нам на почту и мы с вами свяжемся!", {

@@ -128,6 +128,11 @@ const ContactModal = ({ isOpen, onClose }: ContactModalProps) => {
                 .modal-content.contact-modal::-webkit-scrollbar {
                     display: none;
                 }
+                .contact-modal-close-btn::before,
+                .contact-modal-close-btn::after {
+                    content: none !important;
+                    display: none !important;
+                }
             `}</style>
             <div 
                 className="modal-overlay" 
@@ -150,32 +155,34 @@ const ContactModal = ({ isOpen, onClose }: ContactModalProps) => {
             >
                 <div style={{ position: 'relative' }}>
                     <button
+                        className="contact-modal-close-btn"
                         onClick={onClose}
                         style={{
                             position: 'absolute',
                             top: '-20px',
                             right: '-20px',
-                            background: 'transparent',
+                            background: 'none',
                             border: 'none',
                             color: 'var(--color-primary)',
                             fontSize: '32px',
                             cursor: 'pointer',
-                            width: '40px',
-                            height: '40px',
+                            width: 'auto',
+                            height: 'auto',
                             display: 'flex',
                             alignItems: 'center',
                             justifyContent: 'center',
-                            borderRadius: '50%',
-                            transition: 'all 0.3s ease',
-                            zIndex: 10000
+                            padding: '0',
+                            zIndex: 10000,
+                            outline: 'none',
+                            boxShadow: 'none'
                         }}
                         onMouseEnter={(e) => {
-                            e.currentTarget.style.background = 'var(--color-primary)';
-                            e.currentTarget.style.color = '#000000';
+                            e.currentTarget.style.outline = 'none';
+                            e.currentTarget.style.boxShadow = 'none';
                         }}
-                        onMouseLeave={(e) => {
-                            e.currentTarget.style.background = 'transparent';
-                            e.currentTarget.style.color = 'var(--color-primary)';
+                        onFocus={(e) => {
+                            e.currentTarget.style.outline = 'none';
+                            e.currentTarget.style.boxShadow = 'none';
                         }}
                         aria-label="Закрыть"
                     >

@@ -53,7 +53,7 @@ const BlogSingleContent = ({ blogInfo, totalBlogs, sectionClass }: BlogSinglePro
                                     <div className="blog-style-one item">
                                         <div className="blog-item-box">
                                             <div className="thumb">
-                                                <img src={thumbFull?.startsWith('../') ? `/assets/img/${thumbFull.replace('../', '')}` : `/assets/img/blog/${thumbFull}`} width={1075} height={546} alt="Thumb" />
+                                                <img src={thumbFull?.startsWith('../') ? `/assets/img/${thumbFull.replace('../', '')}` : thumbFull?.startsWith('статьи/') ? `/assets/${thumbFull}` : `/assets/img/blog/${thumbFull}`} width={1075} height={546} alt="Thumb" />
                                             </div>
                                             <div className="info">
                                                 <div className="meta">

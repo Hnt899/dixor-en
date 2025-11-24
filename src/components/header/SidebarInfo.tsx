@@ -41,19 +41,19 @@ const SidebarInfo = ({ openInfoBar, isInfoOpen, closeInfoBar, contactButton }: S
                                     <li>
                                         <div className="content">
                                             <p>Address</p>
-                                            <strong>California, TX 70240</strong>
+                                            <strong>Улица Сумская 168 офис 306, Белгород</strong>
                                         </div>
                                     </li>
                                     <li>
                                         <div className="content">
                                             <p>Email</p>
-                                            <strong>support@validtheme.com</strong>
+                                            <strong>demyanovcdi@mail.ru</strong>
                                         </div>
                                     </li>
                                     <li>
                                         <div className="content">
                                             <p>Contact</p>
-                                            <strong>+44-20-7328-4499</strong>
+                                            <strong>+7 985 365 6294</strong>
                                         </div>
                                     </li>
                                 </ul>

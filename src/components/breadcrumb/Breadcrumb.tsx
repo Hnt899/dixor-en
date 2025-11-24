@@ -1,4 +1,6 @@
 import { Link } from "react-router-dom";
+import illustration5 from '/assets/img/illustration/5.png';
+import illustration8 from '/assets/img/illustration/8.png';
 
 interface DataType {
     title?: string;
@@ -19,24 +21,31 @@ const Breadcrumb = ({ title, breadCrumb, activeFilter, onFilterChange }: DataTyp
         return (
             <>
                 <div className="breadcrumb-area portfolio-page-no-gradient portfolio-breadcrumb-custom" style={{ 
-                    backgroundImage: `url(/assets/img/shape/10.jpg)`,
+                    backgroundImage: `url(/assets/img/shape/3.jpg)`,
                     paddingTop: '350px',
                     paddingBottom: '80px',
                     position: 'relative'
                 }}>
-                    <div className="light-banner-active bg-gray bg-cover" style={{ backgroundImage: 'url(/assets/img/shape/6.jpg)' }} />
-                    <div className="container">
+                    <div className="light-banner-active bg-gray bg-cover portfolio-banner-bg" style={{ backgroundImage: 'url(/assets/img/shape/8.jpg)' }} />
+                    {/* Анимированная сфера - только для ПК, за текстом */}
+                    <div className="portfolio-sphere-container">
+                        <img className='regular-img portfolio-sphere' src={illustration5} alt="Sphere" />
+                        <img className='light-img portfolio-sphere' src={illustration8} alt="Sphere" />
+                    </div>
+                    <div className="container" style={{ position: 'relative', zIndex: 10 }}>
                         <div className="breadcrumb-item" style={{ padding: 0 }}>
                             <div className="row">
                                 <div className="col-lg-12 portfolio-breadcrumb-content">
                                     <h1 className="portfolio-breadcrumb-title">
                                         ПОРТФОЛИО
                                     </h1>
-                                    <p className="portfolio-breadcrumb-description">
-                                        За 5 лет мы реализовали свыше 200<br />
-                                        проектов. Ниже представлены некоторые<br />
-                                        из наших работ
-                                    </p>
+                                    <div className="portfolio-text-card">
+                                        <p className="portfolio-breadcrumb-description">
+                                            За 5 лет мы реализовали свыше 200<br />
+                                            проектов. Ниже представлены некоторые<br />
+                                            из наших работ
+                                        </p>
+                                    </div>
                                     
                                     {/* Фильтры */}
                                     {onFilterChange && (
@@ -89,7 +98,12 @@ const Breadcrumb = ({ title, breadCrumb, activeFilter, onFilterChange }: DataTyp
                                 <nav aria-label="breadcrumb">
                                     <ol className="breadcrumb">
                                         <li><Link to="/"><i className="fas fa-home" /> Главная</Link></li>
-                                        <li className="active">{breadCrumb ? (breadCrumb === 'projects' ? 'Продукты' : breadCrumb) : "error"}</li>
+                                        <li className="active">{breadCrumb ? (
+                                            breadCrumb === 'projects' ? 'Продукты' :
+                                            breadCrumb === 'service-details' ? 'Детали услуги' :
+                                            breadCrumb === 'service-details-light' ? 'Детали услуги' :
+                                            breadCrumb
+                                        ) : "error"}</li>
                                     </ol>
                                 </nav>
                             </div>

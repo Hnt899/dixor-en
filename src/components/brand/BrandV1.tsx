@@ -9,44 +9,44 @@ const BrandV1 = () => {
                                 <div className="brand-items">
                                     <div className="brand-conetnt">
                                         <div className="item">
-                                            <h2>Маркетинг</h2>
-                                        </div>
-                                        <div className="item">
-                                            <h2>Брендинг</h2>
-                                        </div>
-                                        <div className="item">
                                             <h2>Дизайн</h2>
                                         </div>
                                         <div className="item">
                                             <h2>Разработка</h2>
+                                        </div>
+                                        <div className="item">
+                                            <h2>Маркетинг</h2>
+                                        </div>
+                                        <div className="item">
+                                            <h2>Брендинг</h2>
                                         </div>
                                     </div>
                                     <div className="brand-conetnt">
                                         <div className="item">
-                                            <h2>Маркетинг</h2>
-                                        </div>
-                                        <div className="item">
-                                            <h2>Брендинг</h2>
-                                        </div>
-                                        <div className="item">
                                             <h2>Дизайн</h2>
                                         </div>
                                         <div className="item">
                                             <h2>Разработка</h2>
+                                        </div>
+                                        <div className="item">
+                                            <h2>Маркетинг</h2>
+                                        </div>
+                                        <div className="item">
+                                            <h2>Брендинг</h2>
                                         </div>
                                     </div>
                                     <div className="brand-conetnt">
                                         <div className="item">
-                                            <h2>Маркетинг</h2>
-                                        </div>
-                                        <div className="item">
-                                            <h2>Брендинг</h2>
-                                        </div>
-                                        <div className="item">
                                             <h2>Дизайн</h2>
                                         </div>
                                         <div className="item">
                                             <h2>Разработка</h2>
+                                        </div>
+                                        <div className="item">
+                                            <h2>Маркетинг</h2>
+                                        </div>
+                                        <div className="item">
+                                            <h2>Брендинг</h2>
                                         </div>
                                     </div>
                                 </div>

@@ -13,8 +13,7 @@ const ProjectIdeaV1 = () => {
                                 </div>
                                 <div className="info">
                                     <h4>Телефон</h4>
-                                    {/* Номер телефона остался тот же */}
-                                    <a className="phone-link" href="tel:+4733378901">+4733378901</a> <br />
+                                    <a className="phone-link" href="tel:+79853656294">+7 985 365 6294</a> <br />
                                 </div>
                             </li>
                             <li>
@@ -23,8 +22,7 @@ const ProjectIdeaV1 = () => {
                                 </div>
                                 <div className="info">
                                     <h4>Официальная почта</h4>
-                                    {/* Email остался тот же */}
-                                    <a href="mailto:info@agrul.com.com">info@agrul.com</a>
+                                    <a href="mailto:demyanovcdi@mail.ru">demyanovcdi@mail.ru</a>
                                 </div>
                             </li>
                         </ul>

@@ -74,8 +74,8 @@ const WhyChooseV1 = ({ sectionClass }: DataType) => {
                                 <div className="award-items">
                                     <Animate className='animate__animated animate__fadeInLeft'>
                                         <div className="award-item">
-                                            <i className="fab fa-behance" />
-                                            <h4>Награды Behance</h4>
+                                            <img src="/assets/Mask group.svg" alt="Яндекс" style={{ width: '60px', height: '60px', marginBottom: '5px', display: 'block' }} />
+                                            <h4>Награды Яндекс</h4>
                                         </div>
                                     </Animate>
 

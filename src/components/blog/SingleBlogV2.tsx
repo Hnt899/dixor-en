@@ -2,7 +2,7 @@ import { Link } from "react-router-dom"; // Я ВЕРНУЛ ЭТОТ ИМПОР�
 
 interface DataType {
     id?: number;
-    thumb?: string;
+    thumbFull?: string;
     author?: string;
     comment?: number;
     date?: string;
@@ -11,7 +11,7 @@ interface DataType {
 }
 
 const SingleBlogV2 = ({ blog }: { blog: DataType }) => {
-    const { id, thumb, author, comment, title, date, month } = blog
+    const { id, thumbFull, author, comment, title, date, month } = blog
 
     return (
         <>
@@ -19,7 +19,7 @@ const SingleBlogV2 = ({ blog }: { blog: DataType }) => {
                 <div className="thumb">
                     {/* ИСПРАВЛЕНИЕ: Ссылка ведет на /blog */}
                     <Link to={`/blog-post/${id}`}>
-                        <img src={thumb?.startsWith('../') ? `/assets/img/${thumb.replace('../', '')}` : `/assets/img/blog/${thumb}`} alt="Image Not Found" width={800} height={600} />
+                        <img src={thumbFull?.startsWith('../') ? `/assets/img/${thumbFull.replace('../', '')}` : thumbFull?.startsWith('статьи/') ? `/assets/${thumbFull}` : thumbFull ? `/assets/img/blog/${thumbFull}` : '/assets/img/blog/default.jpg'} alt="Image Not Found" width={800} height={600} />
                     </Link>
                     <div className="date">{date} <strong>{month}</strong></div>
                 </div>

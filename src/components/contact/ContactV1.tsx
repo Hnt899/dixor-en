@@ -16,20 +16,20 @@ const ContactV1 = ({ sectionClass }: DataType) => {
                                 <div className="contact-style-one-info">
                                     <ul className="contact-address">
                                         <li>
-                                            <a className="phone-link" href="tel:+4733378901"><i className="fas fa-user-headset" /> +4733378901</a>
+                                            <a className="phone-link" href="tel:+79853656294"><i className="fas fa-user-headset" /> +7 985 365 6294</a>
                                         </li>
                                         <li>
                                             <div className="info">
                                                 <h4>Location</h4>
                                                 <p>
-                                                    55 Main Street, The Grand Avenue <br /> 2nd Block, New York City
+                                                    Улица Сумская 168 офис 306 <br /> Белгород
                                                 </p>
                                             </div>
                                         </li>
                                         <li>
                                             <div className="info">
                                                 <h4>Official Email</h4>
-                                                <a href="mailto:info@digital.com.com">info@digital.com</a>
+                                                <a href="mailto:demyanovcdi@mail.ru">demyanovcdi@mail.ru</a>
                                             </div>
                                         </li>
                                         <li>

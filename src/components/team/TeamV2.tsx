@@ -12,7 +12,7 @@ const TeamV2 = () => {
                     <div className="row">
                         <div className="col-lg-8 offset-lg-2">
                             <div className="site-heading text-center">
-                                <h4 className="sub-title">Team member</h4>
+                                <h4 className="sub-title">Члены команды</h4>
                                 <h2 className="title split-text">
                                     <SplitText
                                         delay={120}

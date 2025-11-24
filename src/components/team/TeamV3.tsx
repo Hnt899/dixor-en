@@ -20,7 +20,7 @@ const TeamV3 = ({ hasTitle, sectionClass }: DataType) => {
                         <div className="site-heading">
                             <div className="row align-center">
                                 <div className="col-lg-6">
-                                    <h4 className="sub-title">Team member</h4>
+                                    <h4 className="sub-title">Члены команды</h4>
                                     <h2 className="title split-text">
                                         <SplitText
                                             delay={120}

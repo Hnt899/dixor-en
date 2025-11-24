@@ -17,7 +17,7 @@ const SingleTeamV3 = ({ team }: { team: DataType }) => {
                     <Link to={`/team-details/${id}`}>
                         <img 
                             src="/assets/team/artur.jpg" 
-                            alt={name || 'Team member'}
+                            alt={name || 'Члены команды'}
                             style={{
                                 width: '100%',
                                 height: '100%',

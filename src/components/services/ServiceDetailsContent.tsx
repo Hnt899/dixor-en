@@ -1,10 +1,8 @@
-import banner6 from "/assets/img/banner/6.jpg";
-import portfolio45 from "/assets/img/portfolio/45.jpg";
-import portfolio46 from "/assets/img/portfolio/46.jpg";
 import ServicesV1Data from "../../../src/assets/jsonData/services/ServicesV1Data.json";
 import { Link } from "react-router-dom";
 
 interface DataType {
+    id?: number;
     title?: string;
 }
 
@@ -14,7 +12,14 @@ interface ServiceDetailsProps {
 }
 
 const ServiceDetailsContent = ({ serviceInfo, sectionClass }: ServiceDetailsProps) => {
-    const { title } = serviceInfo || {};
+    const { title, id } = serviceInfo || {};
+    
+    // Получаем изображение в зависимости от ID услуги
+    const getServiceImage = () => {
+        if (!id) return "/assets/услуги/1.jpg";
+        const imageId = id <= 3 ? id : ((id - 1) % 3) + 1;
+        return `/assets/услуги/${imageId}.jpg`;
+    };
 
     return (
         <>
@@ -24,7 +29,7 @@ const ServiceDetailsContent = ({ serviceInfo, sectionClass }: ServiceDetailsProp
                         <div className="row">
                             <div className="col-xl-12">
                                 <div className="service-single-thumb">
-                                    <img src={banner6} alt="Thumb" />
+                                    <img src={getServiceImage()} alt={title || "Service"} />
                                 </div>
                             </div>
                         </div>
@@ -32,17 +37,17 @@ const ServiceDetailsContent = ({ serviceInfo, sectionClass }: ServiceDetailsProp
                             <div className="col-lg-7">
                                 <h2>{title}</h2>
                                 <p>
-                                    We denounce with righteous indige nation and dislike men who are so beguiled and demo realized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue cannot foresee. These cases are perfectly simple and easy to distinguish. In a free hour, when our power of choice is untrammelled data structures manages data in technology. Dislike men who are so beguiled and demo realized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble.
+                                    Мы с праведным гневом осуждаем и ненавидим людей, которые настолько очарованы и неосознанны прелестями сиюминутного удовольствия, настолько ослеплены желанием, что не могут предвидеть боль и беды, которые неизбежно последуют. Эти случаи совершенно просты и легко различимы. В свободный час, когда наша свобода выбора не ограничена, структуры данных управляют данными в технологиях. Ненавидим людей, которые настолько очарованы и неосознанны прелестями сиюминутного удовольствия, настолько ослеплены желанием, что не могут предвидеть боль и беды.
                                 </p>
                             </div>
                             <div className="col-lg-5 pl-60 pl-md-15 pl-xs-15">
                                 <p>
-                                    New had happen unable uneasy. Drawings can followed improved out sociable not. Earnestly so do instantly pretended. See general few civilly amiable pleased account carried. These cases are perfectly simple and easy to distinguish.
+                                    Правило, несколько вежливо любезных довольных, несённых. Эти случаи совершенно просты и легко различимы.
                                 </p>
                                 <ul className="feature-list-item">
-                                    <li>Social media marketing</li>
-                                    <li>Search engine optimization (seo)</li>
-                                    <li>Public Relations</li>
+                                    <li>Маркетинг в социальных сетях</li>
+                                    <li>Поисковая оптимизация (SEO)</li>
+                                    <li>Связи с общественностью</li>
                                 </ul>
                             </div>
                         </div>
@@ -50,57 +55,57 @@ const ServiceDetailsContent = ({ serviceInfo, sectionClass }: ServiceDetailsProp
                             <div className="process-style-two">
                                 <div className="process-style-two-item">
                                     <span>01</span>
-                                    <h4>Project Research</h4>
+                                    <h4>Проектное исследование</h4>
                                     <p>
-                                        Excuse Deal say over contain performance from comparison new melancholy themselves.
+                                        Извините, сделка говорит о том, что они сами сдерживают производительность от сравнения новой меланхолии.
                                     </p>
                                 </div>
                                 <div className="process-style-two-item">
                                     <span>02</span>
-                                    <h4>Best Concept</h4>
+                                    <h4>Лучшая концепция</h4>
                                     <p>
-                                        Excuse Deal say over contain performance from comparison new melancholy themselves.
+                                        Извините, сделка говорит о том, что они сами сдерживают производительность от сравнения новой меланхолии.
                                     </p>
                                 </div>
                                 <div className="process-style-two-item">
                                     <span>03</span>
-                                    <h4>Design Implement</h4>
+                                    <h4>Проектирование и реализация</h4>
                                     <p>
-                                        Excuse Deal say over contain performance from comparison new melancholy themselves.
+                                        Извините, сделка говорит о том, что они сами сдерживают производительность от сравнения новой меланхолии.
                                     </p>
                                 </div>
                                 <div className="process-style-two-item">
                                     <span>04</span>
-                                    <h4>Final Result</h4>
+                                    <h4>Окончательный результат</h4>
                                     <p>
-                                        Excuse Deal say over contain performance from comparison new melancholy themselves.
+                                        Извините, сделка говорит о том, что они сами сдерживают производительность от сравнения новой меланхолии.
                                     </p>
                                 </div>
                             </div>
                         </div>
                         <div className="row mt-80 mt-xs-50 gallery-two-columns">
                             <div className="col-md-6">
-                                <img src={portfolio45} alt="Image Not Found" />
+                                <img src="/assets/услуги/2.jpg" alt="Услуга 2" />
                             </div>
                             <div className="col-md-6">
-                                <img src={portfolio46} alt="Image Not Found" />
+                                <img src="/assets/услуги/3.jpg" alt="Услуга 3" />
                             </div>
                         </div>
                         <div className="d-grid colums-2 mt-50">
                             <div className="item">
                                 <div className="faq-style-one faq-style-two">
-                                    <h2 className="mb-30">Any questions find here.</h2>
+                                    <h2 className="mb-30">Если у вас есть вопросы, найдите их здесь.</h2>
                                     <div className="accordion" id="faqAccordion">
                                         <div className="accordion-item">
                                             <h2 className="accordion-header" id="headingOne">
                                                 <button className="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                                    Business Innovation
+                                                    Бизнес-инновации
                                                 </button>
                                             </h2>
                                             <div id="collapseOne" className="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
                                                 <div className="accordion-body">
                                                     <p>
-                                                        Bennings appetite disposed me an at subjects an. To no indulgence diminution so discovered mr apartments are off under folly death.
+                                                        Аппетит Беннингса расположил меня к предметам. Никакого снисхождения, поэтому обнаружилось, что квартиры мистера отключены под страхом смерти.
                                                     </p>
                                                 </div>
                                             </div>
@@ -108,13 +113,13 @@ const ServiceDetailsContent = ({ serviceInfo, sectionClass }: ServiceDetailsProp
                                         <div className="accordion-item">
                                             <h2 className="accordion-header" id="headingTwo">
                                                 <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                                    Search Engine Optimization
+                                                    Поисковая оптимизация
                                                 </button>
                                             </h2>
                                             <div id="collapseTwo" className="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
                                                 <div className="accordion-body">
                                                     <p>
-                                                        Regularity appetite disposed me an at subjects an. To no indulgence diminution so discovered mr apartments are off under folly death.
+                                                        Регулярность аппетита располагала меня к предметам. Никакого снисхождения, поэтому обнаружил, что квартиры мистера отключены под безумием смерти.
                                                     </p>
                                                 </div>
                                             </div>
@@ -122,13 +127,13 @@ const ServiceDetailsContent = ({ serviceInfo, sectionClass }: ServiceDetailsProp
                                         <div className="accordion-item">
                                             <h2 className="accordion-header" id="headingThree">
                                                 <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                                    Thinking Differently
+                                                    Думать по-другому
                                                 </button>
                                             </h2>
                                             <div id="collapseThree" className="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
                                                 <div className="accordion-body">
                                                     <p>
-                                                        Permanent appetite disposed me an at subjects an. To no indulgence diminution so discovered mr apartments are off under folly death.
+                                                        Постоянный аппетит располагал меня к предметам. Никакого снисхождения, поэтому обнаружил, что квартиры мистера отключены под безумием смерти.
                                                     </p>
                                                 </div>
                                             </div>
@@ -137,17 +142,17 @@ const ServiceDetailsContent = ({ serviceInfo, sectionClass }: ServiceDetailsProp
                                 </div>
                             </div>
                             <div className="item">
-                                <h2>What we do?</h2>
+                                <h2>Что мы делаем?</h2>
                                 <p>
-                                    Regular libero tempore, cum soluta nobis est elig endi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda.
+                                    Обычное свободное время, когда наша свобода выбора не ограничена, мы создаем решения, которые помогают бизнесу достигать максимальных результатов. Мы предлагаем комплексный подход к решению задач, учитывая все аспекты и возможности.
                                 </p>
                                 <p>
-                                    Momnis voluptas assumenda est, omnis dolor repelle ndus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores.
+                                    Мы обеспечиваем полный спектр услуг, начиная от анализа и планирования до реализации и поддержки. Наша команда профессионалов работает над каждым проектом с максимальной отдачей, используя современные технологии и проверенные методики для достижения наилучших результатов.
                                 </p>
                             </div>
                         </div>
                         <div className="services-more mt-100 mt-xs-30">
-                            <h2 className="mb-20">Most popular services</h2>
+                            <h2 className="mb-20">Самые популярные услуги</h2>
                             <div className="row">
                                 {ServicesV1Data.slice(0, 3).map(service =>
                                     <div className="col-lg-4 col-md-6" key={service.id}>

@@ -3,8 +3,13 @@ import { Keyboard, Pagination, Navigation, EffectFade } from 'swiper/modules';
 import PortfolioV1Data from '../../../src/assets/jsonData/portfolio/PortfolioV1Data.json';
 import SinglePortfolioV1 from './SinglePortfolioV1';
 import { Link } from 'react-router-dom';
+import { useEffect } from 'react';
 
-const PortfolioV1 = () => {
+interface PortfolioV1Props {
+    onSlideChange?: (project: typeof PortfolioV1Data[0]) => void;
+}
+
+const PortfolioV1 = ({ onSlideChange }: PortfolioV1Props) => {
     // Функция для проверки, что название состоит из 2 слов
     const hasTwoWords = (project: typeof PortfolioV1Data[0]) => {
         const text = (project.text || '').trim();
@@ -52,6 +57,23 @@ const PortfolioV1 = () => {
 
     const recentProjects = getRecentProjects();
 
+    // Устанавливаем первый проект при загрузке
+    useEffect(() => {
+        if (onSlideChange && recentProjects.length > 0) {
+            onSlideChange(recentProjects[0]);
+        }
+    }, [onSlideChange]);
+
+    const handleSlideChange = (swiper: any) => {
+        if (onSlideChange && recentProjects.length > 0) {
+            const realIndex = swiper.realIndex;
+            const project = recentProjects[realIndex];
+            if (project) {
+                onSlideChange(project);
+            }
+        }
+    };
+
     return (
         <>
             <div className="portfolio-style-one-content">
@@ -62,6 +84,8 @@ const PortfolioV1 = () => {
                     effect={"fade"}
                     fadeEffect={{ crossFade: true }}
                     speed={1000}
+                    onSlideChange={handleSlideChange}
+                    onInit={handleSlideChange}
                     pagination={{
                         el: ".project-pagination",
                         type: "custom",

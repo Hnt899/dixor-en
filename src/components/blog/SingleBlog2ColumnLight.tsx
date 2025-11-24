@@ -2,21 +2,21 @@ import { Link } from "react-router-dom";
 
 interface DataType {
     id?: number;
-    thumb?: string;
+    thumbFull?: string;
     title?: string;
     author?: string;
     date?: string;
 }
 
 const SingleBlog2ColumnLight = ({ blog }: { blog: DataType }) => {
-    const { id, thumb, author, title, date } = blog
+    const { id, thumbFull, author, title, date } = blog
 
     return (
         <>
             <div className="home-blog-style-one">
                 <div className="thumb">
                     <Link to={`/blog-single-with-sidebar-light/${id}`}>
-                        <img src={`/assets/img/blog/${thumb}`} width={800} height={600} alt="Thumb" />
+                        <img src={`/assets/img/blog/`} width={800} height={600} alt="Thumb" />
                     </Link>
                     <div className="info">
                         <div className="meta">

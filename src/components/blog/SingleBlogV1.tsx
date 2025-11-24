@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 interface DataType {
     id?: number;
-    thumb?: string;
+    thumbFull?: string;
     author?: string;
     dateFull?: string;
     comments?: number;
@@ -11,14 +11,14 @@ interface DataType {
 }
 
 const SingleBlogV1 = ({ blog }: { blog: DataType }) => {
-    const { id, thumb, author, dateFull, comments, title } = blog
+    const { id, thumbFull, author, dateFull, comments, title } = blog
 
     return (
         <>
             <div className="home-blog-one">
                 <div className="thumb">
                     <Link to={`/blog-single-with-sidebar/${id}`}>
-                        <img src={`/assets/img/blog/${thumb}`} alt="Image Not Found" width={800} height={1000} />
+                        <img src={`/assets/img/blog/`} alt="Image Not Found" width={800} height={1000} />
                     </Link>
                     <div className="date">{dateFull}</div>
                 </div>
