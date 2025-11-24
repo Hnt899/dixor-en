@@ -11,7 +11,7 @@ interface DataType {
 }
 
 const SingleBlogV1 = ({ blog }: { blog: DataType }) => {
-    const { id, thumbFull, author, dateFull, comments, title } = blog
+    const { id, author, dateFull, comments, title } = blog
 
     return (
         <>

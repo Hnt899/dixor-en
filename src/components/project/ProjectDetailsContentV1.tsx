@@ -1373,7 +1373,7 @@ const ProjectDetailsContentV1 = ({ projectInfo, sectionClass }: ProjectDetailsPr
     
     // Генерация текста на основе типа проекта
     // Маппинг клиентов для каждого проекта
-    const getProjectClient = (projectId: number | undefined, projectTitle: string, projectDescription: string): string => {
+    const getProjectClient = (projectId: number | undefined): string => {
         const clientMapping: { [key: number]: string } = {
             3: "ИП МедТех Сервис",
             4: "ООО ТрансЛогистик",
@@ -2124,7 +2124,7 @@ const ProjectDetailsContentV1 = ({ projectInfo, sectionClass }: ProjectDetailsPr
                                                         <h3>Клиент</h3>
                                                     </div>
                                                     <div className="right-info">
-                                                        <h3>{getProjectClient(id, title, description || '')}</h3>
+                                                        <h3>{getProjectClient(id)}</h3>
                                                     </div>
                                                 </li>
                                                 <li>
@@ -2207,7 +2207,7 @@ const ProjectDetailsContentV1 = ({ projectInfo, sectionClass }: ProjectDetailsPr
                                                         <h3>Клиент</h3>
                                                     </div>
                                                     <div className="right-info">
-                                                        <h3>{getProjectClient(id, title, description || '')}</h3>
+                                                        <h3>{getProjectClient(id)}</h3>
                                                     </div>
                                                 </li>
                                                 <li>

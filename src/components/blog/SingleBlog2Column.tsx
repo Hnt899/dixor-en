@@ -9,7 +9,7 @@ interface DataType {
 }
 
 const SingleBlog2Column = ({ blog }: { blog: DataType }) => {
-    const { id, thumbFull, author, title, date } = blog
+    const { id, author, title, date } = blog
 
     return (
         <>

@@ -9,7 +9,7 @@ interface DataType {
 }
 
 const SingleBlog3ColumnLight = ({ blog }: { blog: DataType }) => {
-    const { id, thumbFull, title2, date, author } = blog
+    const { id, title2, date, author } = blog
 
     return (
         <>
