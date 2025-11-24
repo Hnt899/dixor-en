@@ -21591,25 +21591,15 @@ nav.navbar.validnavs .navbar-collapse.collapse.show img.light-img {
     font-size: 16px;
     font-weight: 500;
     cursor: pointer;
-    transition: all 0.3s ease;
     white-space: nowrap;
+    transition: none !important;
+    -webkit-transition: none !important;
 }
 
 .bg-dark .blog-filter-btn {
     background: #1a1a1a;
     border-color: #fff;
     color: #fff;
-}
-
-.blog-filter-btn:hover {
-    background: #1a1a1a;
-    color: #fff;
-    transform: translateY(-2px);
-}
-
-.bg-dark .blog-filter-btn:hover {
-    background: #fff;
-    color: #1a1a1a;
 }
 
 .blog-filter-btn.active {
@@ -21622,6 +21612,16 @@ nav.navbar.validnavs .navbar-collapse.collapse.show img.light-img {
     background: #fff;
     color: #1a1a1a;
     border-color: #fff;
+}
+
+/* Disable all hover effects and animations for filter buttons */
+.blog-filter-btn:hover {
+    transform: none !important;
+    color: inherit !important;
+}
+
+.blog-filter-btn:hover::after {
+    display: none !important;
 }
 
 /* Blog Card Styles */
