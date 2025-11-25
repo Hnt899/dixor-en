@@ -7074,9 +7074,27 @@ ul.list-style-two li:last-child {
 }
 
 .video-card a {
-	display: inline-block;
+	display: inline-flex;
+	align-items: center;
 	text-transform: uppercase;
 	color: var(--color-heading);
+	font-weight: 600;
+	text-decoration: none;
+}
+
+.video-card a .video-text {
+	display: flex;
+	flex-direction: column;
+	line-height: 1.2;
+	margin-left: 10px;
+}
+
+.video-card a .video-text-line {
+	display: block;
+}
+
+.bg-dark .video-card a {
+	color: var(--color-primary);
 }
 
 .bg-dark .video-card a {
@@ -9716,6 +9734,124 @@ a.btn-circle:hover strong {
 	filter: grayscale(0);
 }
 
+/* Центрирование фотографий команды с текстом на мобилке */
+@media only screen and (max-width: 767px) {
+	.col-xl-7.offset-xl-1,
+	.col-xl-7 {
+		width: 100% !important;
+		text-align: center !important;
+		margin-left: 0 !important;
+	}
+
+	.tab-content,
+	.tab-pane {
+		width: 100% !important;
+		text-align: center !important;
+	}
+
+	.team-style-one-carousel {
+		width: 100% !important;
+		text-align: center !important;
+		margin: 0 auto !important;
+	}
+
+	.team-style-one-carousel.swiper {
+		width: 100% !important;
+		text-align: center !important;
+	}
+
+	.team-style-one-carousel .swiper-wrapper {
+		display: flex !important;
+		align-items: center !important;
+		justify-content: center !important;
+		text-align: center !important;
+	}
+
+	.team-style-one-carousel .swiper-slide {
+		display: flex !important;
+		justify-content: center !important;
+		align-items: center !important;
+		width: 100% !important;
+		text-align: center !important;
+		height: auto !important;
+	}
+
+	.team-style-one-carousel .swiper-slide > * {
+		width: 100% !important;
+		text-align: center !important;
+	}
+
+	.team-style-one-item {
+		display: flex !important;
+		flex-direction: column !important;
+		align-items: center !important;
+		text-align: center !important;
+		width: 100% !important;
+		max-width: 100% !important;
+		margin: 0 auto !important;
+		justify-content: center !important;
+	}
+
+	.team-style-one-item .thumb {
+		margin: 0 auto !important;
+		display: flex !important;
+		justify-content: center !important;
+		align-items: center !important;
+		width: 100% !important;
+		max-width: 300px !important;
+		text-align: center !important;
+		position: relative !important;
+	}
+
+	.team-style-one-item .thumb a {
+		display: flex !important;
+		justify-content: center !important;
+		align-items: center !important;
+		margin: 0 auto !important;
+		width: 100% !important;
+		text-align: center !important;
+	}
+
+	.team-style-one-item .thumb a > img,
+	.team-style-one-item .thumb img {
+		margin: 0 auto !important;
+		display: block !important;
+		transform: none !important;
+		max-width: 100% !important;
+		width: auto !important;
+		height: auto !important;
+		text-align: center !important;
+	}
+
+	.team-style-one-item .info {
+		text-align: center !important;
+		margin-top: 20px !important;
+		width: 100% !important;
+		display: flex !important;
+		flex-direction: column !important;
+		align-items: center !important;
+		justify-content: center !important;
+		padding: 30px !important;
+		margin-left: auto !important;
+		margin-right: auto !important;
+	}
+
+	.team-style-one-item .info h4,
+	.team-style-one-item .info h4 a {
+		text-align: center !important;
+		width: 100% !important;
+		margin: 0 auto !important;
+		display: block !important;
+	}
+
+	.team-style-one-item .info span {
+		text-align: center !important;
+		width: 100% !important;
+		margin: 0 auto !important;
+		display: block !important;
+	}
+}
+
 .social-overlay .icon {
 	background: var(--white);
 	border-radius: 60px;
@@ -12336,6 +12472,67 @@ ul.contact-list li .info {
 	border-color: var(--color-primary);
 }
 
+/* Стили для переключателя на мобильных устройствах */
+@media only screen and (max-width: 767px) {
+	.nav.nav-tabs.pricing-tab-navs {
+		display: flex;
+		gap: 0;
+		justify-content: center;
+		background: rgba(255, 255, 255, 0.05);
+		border: 1px solid var(--bg-gray);
+		border-radius: 50px;
+		padding: 4px;
+		position: relative;
+		max-width: 100%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	
+	.nav.nav-tabs.pricing-tab-navs button {
+		flex: 1;
+		border: none;
+		border-radius: 50px;
+		padding: 12px 20px;
+		font-size: 16px;
+		background: transparent;
+		color: var(--color-heading);
+		position: relative;
+		z-index: 2;
+		transition: all 0.3s ease-in-out;
+		margin: 0;
+	}
+	
+	.nav.nav-tabs.pricing-tab-navs button:first-child {
+		order: 1;
+	}
+	
+	.nav.nav-tabs.pricing-tab-navs button:last-child {
+		order: 2;
+	}
+	
+	.nav.nav-tabs.pricing-tab-navs button.active {
+		background: var(--color-primary);
+		color: var(--white);
+		border-color: transparent;
+		box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+	}
+	
+	/* Для темного фона */
+	.bg-dark .nav.nav-tabs.pricing-tab-navs {
+		background: rgba(255, 255, 255, 0.05);
+		border: 1px solid rgba(255, 255, 255, 0.2);
+	}
+	
+	.bg-dark .nav.nav-tabs.pricing-tab-navs button {
+		color: var(--white);
+	}
+	
+	.bg-dark .nav.nav-tabs.pricing-tab-navs button.active {
+		background: var(--color-primary);
+		color: var(--white);
+	}
+}
+
 .pricing-style-two {
 	background: linear-gradient(180deg, #fbffed 0, #ffffff 60%);
 	padding: 60px;
@@ -12476,6 +12673,191 @@ ul.contact-list li .info {
 .bg-dark .btn-border.dark:hover {
 	border-color: var(--color-primary);
 	color: var(--color-heading);
+}
+
+/* Стили для заголовка pricing на десктопе */
+@media only screen and (min-width: 768px) {
+	.pricing-style-two-area .site-heading .title {
+		text-align: center !important;
+		display: block !important;
+		width: 100% !important;
+	}
+	
+	/* На ПК: "Выберите подходящий" - первая строка, "формат сотрудничества" - вторая строка */
+	.pricing-style-two-area .site-heading .title {
+		text-align: center !important;
+		display: flex !important;
+		flex-direction: column !important;
+		align-items: center !important;
+		width: 100% !important;
+		line-height: 1.4 !important;
+	}
+	
+	/* Первая строка: "Выберите подходящий" - центрированно */
+	.pricing-style-two-area .site-heading .title .price-title-line-1 {
+		display: block !important;
+		width: 100% !important;
+		text-align: center !important;
+		margin: 0 auto !important;
+		margin-left: -30px !important;
+		padding: 0 !important;
+		margin-bottom: 0.1em !important;
+	}
+	
+	/* На ПК скрываем "формат" на первой строке */
+	.pricing-style-two-area .site-heading .title .price-title-line-1 .price-title-part2-desktop {
+		display: none !important;
+		visibility: hidden !important;
+		width: 0 !important;
+		height: 0 !important;
+		overflow: hidden !important;
+	}
+	
+	/* На ПК показываем "формат" на второй строке вместе с "сотрудничества" */
+	.pricing-style-two-area .site-heading .title .price-title-line-2 .price-title-part2-mobile {
+		display: inline-block !important;
+	}
+	
+	.pricing-style-two-area .site-heading .title .price-title-line-1 .price-title-part1 {
+		display: inline-block !important;
+		white-space: nowrap !important;
+		margin: 0 !important;
+		text-align: center !important;
+	}
+
+	/* Вторая строка: "формат сотрудничества" - центрированно в одну строку */
+	.pricing-style-two-area .site-heading .title .price-title-line-2 {
+		display: flex !important;
+		justify-content: center !important;
+		align-items: center !important;
+		width: 100% !important;
+		text-align: center !important;
+		margin-top: 0.1em !important;
+		margin-left: 5px !important;
+		padding: 0 !important;
+		flex-wrap: nowrap !important;
+		white-space: nowrap !important;
+	}
+	
+	.pricing-style-two-area .site-heading .title .price-title-line-2 span {
+		display: inline-block !important;
+		white-space: nowrap !important;
+		margin: 0 !important;
+		text-align: center !important;
+		flex-shrink: 0 !important;
+	}
+	
+	/* Переопределение для SplitText на десктопе */
+	.pricing-style-two-area .site-heading .title .price-title-line-1 .split-parent {
+		text-align: center !important;
+		display: inline !important;
+		white-space: normal !important;
+	}
+	
+	.pricing-style-two-area .site-heading .title .price-title-line-2 .split-parent {
+		text-align: center !important;
+		display: inline !important;
+		white-space: normal !important;
+	}
+}
+
+/* Исправление обрезания заголовка на мобильных устройствах */
+@media only screen and (max-width: 767px) {
+	.pricing-style-two-area .site-heading .title {
+		overflow: visible !important;
+		width: 100% !important;
+		padding: 0 !important;
+		margin-left: 0 !important;
+		margin-right: 0 !important;
+		box-sizing: border-box !important;
+		font-size: 28px !important;
+		line-height: 1.3 !important;
+	}
+	
+	/* На мобильных: "выберите подходящий" на первой строке */
+	.pricing-style-two-area .site-heading .title .price-title-line-1 {
+		margin-left: 0 !important;
+		margin-right: 0 !important;
+		display: block !important;
+		text-align: center !important;
+		width: 100% !important;
+		overflow: visible !important;
+		max-width: 100% !important;
+		padding: 0 !important;
+		box-sizing: border-box !important;
+	}
+	
+	/* На мобильных скрываем "формат" на первой строке (для ПК) */
+	.pricing-style-two-area .site-heading .title .price-title-part2-desktop {
+		display: none !important;
+	}
+	
+	/* На мобильных показываем "формат" на второй строке вместе с "сотрудничества" */
+	.pricing-style-two-area .site-heading .title .price-title-part2-mobile {
+		display: inline-block !important;
+		white-space: nowrap !important;
+	}
+	
+	.pricing-style-two-area .site-heading .title .price-title-line-2 {
+		margin-left: 0 !important;
+		margin-right: 0 !important;
+		text-align: center !important;
+	}
+	
+	.pricing-style-two-area .site-heading .title > div {
+		overflow: visible !important;
+		width: 100% !important;
+		padding: 0 !important;
+		margin: 0 !important;
+		margin-left: 0 !important;
+		margin-right: 0 !important;
+		max-width: 100% !important;
+		box-sizing: border-box !important;
+	}
+	
+	.pricing-style-two-area .site-heading {
+		overflow: visible !important;
+		padding: 0 !important;
+		margin-left: 0 !important;
+		margin-right: 0 !important;
+		width: 100% !important;
+		max-width: 100% !important;
+		box-sizing: border-box !important;
+	}
+	
+	.pricing-style-two-area .container {
+		overflow: visible !important;
+		padding-left: 15px !important;
+		padding-right: 15px !important;
+		max-width: 100% !important;
+		width: 100% !important;
+		box-sizing: border-box !important;
+	}
+	
+	.pricing-style-two-area .row {
+		overflow: visible !important;
+		margin-left: 0 !important;
+		margin-right: 0 !important;
+		width: 100% !important;
+		max-width: 100% !important;
+	}
+	
+	.pricing-style-two-area .row > [class*="col-"] {
+		overflow: visible !important;
+		padding-left: 0 !important;
+		padding-right: 0 !important;
+		width: 100% !important;
+		max-width: 100% !important;
+		box-sizing: border-box !important;
+		margin-left: 0 !important;
+		margin-right: 0 !important;
+	}
+	
+	/* Убираем offset на мобильных */
+	.pricing-style-two-area .row > [class*="offset-"] {
+		margin-left: 0 !important;
+		margin-right: 0 !important;
+	}
 }
 
 /* ============================================================== 
@@ -20316,21 +20698,42 @@ nav.navbar.validnavs .navbar-collapse.collapse.show img.light-img {
     }
     
     .portfolio-text-card {
-        padding: 30px 20px !important;
+        padding: 20px 20px !important;
         border-radius: 15px !important;
+        margin-left: 0 !important;
+        max-width: 100% !important;
+        display: block !important;
+        width: 100% !important;
+        word-wrap: normal !important;
+        word-break: normal !important;
+        white-space: normal !important;
+        margin-bottom: 0 !important;
     }
     
     .portfolio-text-card .portfolio-breadcrumb-title {
         font-size: 48px !important;
         top: 0 !important;
         margin-left: 0 !important;
-        margin-bottom: 20px !important;
+        margin-bottom: 15px !important;
         line-height: 1.1 !important;
+        word-wrap: normal !important;
+        word-break: normal !important;
+        white-space: normal !important;
     }
     
     .portfolio-text-card .portfolio-breadcrumb-description {
         font-size: 18px !important;
         margin-left: 0 !important;
+        margin-bottom: 0 !important;
+        word-wrap: normal !important;
+        word-break: normal !important;
+        white-space: normal !important;
+        overflow-wrap: normal !important;
+        line-height: 1.4 !important;
+    }
+    
+    .portfolio-text-card .portfolio-breadcrumb-description br {
+        display: block !important;
     }
     
     .portfolio-breadcrumb-title {
@@ -20474,10 +20877,57 @@ nav.navbar.validnavs .navbar-collapse.collapse.show img.light-img {
 
 .team-members-grid {
     display: grid;
-    grid-template-columns: repeat(5, 1.3fr);
-    gap: 10px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
     align-items: stretch;
     width: 100%;
+    justify-items: center;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Центрирование фоток команды на ПК */
+@media (min-width: 768px) {
+    .team-members-section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .team-members-section .container-full {
+        width: 100%;
+        max-width: 1400px;
+        margin: 0 auto;
+    }
+
+    .team-members-section .team-member-card.team-style-three-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+    }
+
+    .team-members-section .team-member-card.team-style-three-item .thumb {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    .team-members-section .team-member-card.team-style-three-item .thumb img {
+        margin: 0 auto;
+        display: block;
+    }
+
+    .team-members-section .team-member-card.team-style-three-item .info {
+        text-align: center;
+        margin-left: 0;
+        margin-right: 0;
+        width: 100%;
+    }
 }
 
 .team-members-grid > * {
@@ -20488,6 +20938,88 @@ nav.navbar.validnavs .navbar-collapse.collapse.show img.light-img {
 .team-members-carousel {
     display: contents;
     --carousel-offset: 0%;
+}
+
+/* Убеждаемся, что на десктопе карусель работает как grid, а не flex */
+@media (min-width: 768px) {
+    .team-members-carousel {
+        display: contents !important;
+        transform: none !important;
+        transition: none !important;
+    }
+}
+
+/* Стиль кнопки "ВСЯ КОМАНДА" на мобилке - как желто-зеленая прямоугольная кнопка */
+@media only screen and (max-width: 767px) {
+    .team-style-three-area .btn-circle {
+        display: inline-block !important;
+        padding: 13px 40px !important;
+        border-radius: 5px !important;
+        font-size: 16px !important;
+        color: var(--color-heading) !important;
+        border: none !important;
+        background: var(--color-primary) !important;
+        position: relative !important;
+        z-index: 1 !important;
+        overflow: hidden !important;
+        text-decoration: none !important;
+        font-weight: 600 !important;
+        text-transform: uppercase !important;
+        transition: all 0.3s ease !important;
+        min-width: auto !important;
+        padding-left: 40px !important;
+        padding-bottom: 13px !important;
+        padding-top: 13px !important;
+    }
+
+    .team-style-three-area .btn-circle::after {
+        position: absolute !important;
+        top: inherit !important;
+        right: inherit !important;
+        bottom: inherit !important;
+        left: -5% !important;
+        content: "" !important;
+        height: 150px !important;
+        width: 115% !important;
+        z-index: -1 !important;
+        background-color: var(--dark) !important;
+        transition: all 0.25s ease-in-out !important;
+        transform: translateY(-45%) skew(25deg) scale(0) !important;
+        border-radius: 0 !important;
+        background-image: none !important;
+        background-size: auto !important;
+        background-repeat: no-repeat !important;
+        background-position: left center !important;
+    }
+
+    .team-style-three-area .btn-circle:hover::after {
+        transform: translateY(-45%) skew(25deg) scale(1.2) !important;
+    }
+
+    .team-style-three-area .btn-circle:hover {
+        color: var(--white) !important;
+    }
+
+    .team-style-three-area .btn-circle img {
+        display: none !important;
+    }
+
+    .team-style-three-area .btn-circle .button-content {
+        position: relative !important;
+        z-index: 1 !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+
+    .team-style-three-area .btn-circle .button-content span {
+        display: none !important;
+    }
+
+    .team-style-three-area .btn-circle .button-content strong {
+        margin: 0 !important;
+        position: static !important;
+    }
 }
 
 .team-member-wrapper {
@@ -20517,6 +21049,24 @@ nav.navbar.validnavs .navbar-collapse.collapse.show img.light-img {
     z-index: 10;
     padding: 0;
     pointer-events: auto;
+    transition: none;
+}
+
+.team-nav-arrow:hover {
+    background: transparent;
+    color: var(--color-primary);
+    transform: translateY(-50%);
+}
+
+.team-nav-arrow:active,
+.team-nav-arrow:focus,
+.team-nav-arrow:focus-visible {
+    background: transparent !important;
+    color: var(--color-primary) !important;
+    transform: translateY(-50%) !important;
+    outline: none !important;
+    box-shadow: none !important;
+    border-color: var(--color-primary) !important;
 }
 
 .team-nav-arrow svg {
@@ -20556,6 +21106,31 @@ nav.navbar.validnavs .navbar-collapse.collapse.show img.light-img {
     object-position: center center;
     transition: none;
     transform: none !important;
+}
+
+/* Убираем тень и трансформацию для карусели команды на главной */
+.team-members-section .team-member-card.team-style-three-item .thumb {
+    overflow: hidden;
+    border-radius: 30px;
+    position: relative;
+}
+
+.team-members-section .team-member-card.team-style-three-item .thumb img {
+    width: 100% !important;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+    border-radius: 30px;
+    transform: none !important;
+    max-width: 100% !important;
+    transition: none;
+    -webkit-transform: none !important;
+    box-shadow: none !important;
+}
+
+/* Убираем псевдоэлемент ::after который может создавать тень */
+.team-members-section .team-member-card.team-style-three-item .thumb::after {
+    display: none !important;
 }
 
 .team-new-page .team-member-card .thumb::after {
@@ -20803,6 +21378,34 @@ nav.navbar.validnavs .navbar-collapse.collapse.show img.light-img {
     justify-content: center;
     z-index: 9999;
     animation: fadeIn 0.3s ease;
+}
+
+/* Модалка контакта - поверх всего, включая шапку */
+.contact-modal-overlay,
+.modal-overlay.contact-modal-overlay {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    background: rgba(0, 0, 0, 0.9) !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    z-index: 10000 !important;
+    animation: fadeIn 0.3s ease;
+}
+
+.contact-modal,
+.modal-content.contact-modal {
+    position: relative !important;
+    z-index: 10001 !important;
+}
+
+.contact-modal-close-btn {
+    z-index: 10002 !important;
 }
 
 @keyframes fadeIn {
@@ -21373,9 +21976,13 @@ nav.navbar.validnavs .navbar-collapse.collapse.show img.light-img {
     .team-members-carousel {
         display: flex;
         width: 100%;
-        transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1) !important;
         will-change: transform;
-        transform: translateX(calc(-1 * var(--carousel-offset, 0%)));
+        transform: translateX(calc(-1 * var(--carousel-offset, 0%))) !important;
+        backface-visibility: hidden;
+        -webkit-backface-visibility: hidden;
+        perspective: 1000px;
+        -webkit-perspective: 1000px;
     }
     
     .team-member-wrapper {
@@ -21383,6 +21990,8 @@ nav.navbar.validnavs .navbar-collapse.collapse.show img.light-img {
         width: 100%;
         flex-shrink: 0;
         opacity: 1;
+        transform: translateZ(0);
+        -webkit-transform: translateZ(0);
     }
     
     .team-members-section {
@@ -21410,25 +22019,32 @@ nav.navbar.validnavs .navbar-collapse.collapse.show img.light-img {
 
     .team-nav-arrow {
         pointer-events: auto;
-        background: rgba(0, 0, 0, 0.5);
+        background: transparent;
         border-radius: 50%;
         width: 36px;
         height: 36px;
         display: flex;
         align-items: center;
         justify-content: center;
-        transition: all 0.3s ease;
+        transition: none;
         border: 2px solid var(--color-primary);
     }
 
     .team-nav-arrow:hover {
-        background: var(--color-primary);
-        color: #000;
-        transform: translateY(-50%) scale(1.1);
+        background: transparent;
+        color: var(--color-primary);
+        transform: translateY(-50%);
     }
 
-    .team-nav-arrow:active {
-        transform: translateY(-50%) scale(0.95);
+    .team-nav-arrow:active,
+    .team-nav-arrow:focus,
+    .team-nav-arrow:focus-visible {
+        background: transparent !important;
+        color: var(--color-primary) !important;
+        transform: translateY(-50%) !important;
+        outline: none !important;
+        box-shadow: none !important;
+        border-color: var(--color-primary) !important;
     }
 
     .team-nav-arrow svg {
@@ -21886,4 +22502,618 @@ nav.navbar.validnavs .navbar-collapse.collapse.show img.light-img {
     .blog-card-title {
         font-size: 16px;
     }
+    
+    /* Service Details - Мобильная версия изображений */
+    /* Скрываем старый блок с двумя изображениями на мобилке */
+    .gallery-two-columns {
+        display: none !important;
+    }
+    
+    /* Показываем изображения для мобильной версии */
+    .service-mobile-image {
+        display: block;
+        margin-bottom: 30px;
+        width: 100%;
+    }
+    
+    .service-mobile-image img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+}
+
+/* На десктопе скрываем мобильные изображения */
+@media (min-width: 768px) {
+    .service-mobile-image {
+        display: none !important;
+    }
+    
+    .gallery-two-columns {
+        display: flex !important;
+    }
+}
+
+/* Project Idea - Мобильная версия */
+@media only screen and (max-width: 767px) {
+    .project-idea-row {
+        flex-direction: column;
+        display: flex;
+    }
+    
+    /* Текст - убираем transform, центрируем */
+    .project-idea-text {
+        transform: none !important;
+        text-align: center !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 0 15px !important;
+        order: 1;
+        margin-bottom: 40px;
+    }
+    
+    .project-idea-text .sub-title {
+        text-align: center !important;
+        margin-bottom: 15px;
+    }
+    
+    .project-idea-text .title {
+        text-align: center !important;
+        font-size: 28px !important;
+        line-height: 1.3 !important;
+        margin-bottom: 30px;
+    }
+    
+    .project-idea-text .contact-list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        margin-top: 30px;
+    }
+    
+    .project-idea-text .contact-list li {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+        text-align: center;
+    }
+    
+    .project-idea-text .contact-list li .info {
+        text-align: center !important;
+    }
+    
+    /* Изображение - перемещаем вниз */
+    .project-idea-image {
+        position: relative !important;
+        height: auto !important;
+        min-height: auto !important;
+        order: 2;
+        width: 100% !important;
+        margin-top: 0;
+        padding: 0 15px;
+    }
+    
+    .project-idea-image .thumb {
+        position: relative !important;
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        padding-bottom: 20px;
+    }
+    
+    .project-idea-image .project-idea-phone-img {
+        position: relative !important;
+        transform: none !important;
+        width: 100% !important;
+        max-width: 300px;
+        height: auto !important;
+        min-height: auto !important;
+        object-fit: contain !important;
+        display: block;
+        margin: 0 auto;
+    }
+}
+
+/* Мобильная версия - шапка всегда видна и следует за скроллом */
+/* Важно: эти стили должны быть в конце файла для максимального приоритета */
+/* Переопределяем Bootstrap и все другие стили */
+@media screen and (max-width: 1023px) {
+    /* Убираем overflow: hidden с родительских элементов, которые могут блокировать sticky */
+    html, body {
+        overflow-x: visible !important;
+        overflow-y: auto !important;
+    }
+
+    .smooth-scroll-container {
+        overflow: visible !important;
+        height: auto !important;
+        overflow-x: visible !important;
+        overflow-y: visible !important;
+    }
+
+    #smooth-wrapper {
+        overflow: visible !important;
+        height: auto !important;
+        overflow-x: visible !important;
+        overflow-y: visible !important;
+    }
+
+    #smooth-content {
+        overflow: visible !important;
+        overflow-x: visible !important;
+        overflow-y: visible !important;
+    }
+
+    header {
+        position: relative !important;
+        overflow: visible !important;
+    }
+
+    /* Переопределяем ВСЕ возможные варианты navbar для мобилки */
+    /* Используем максимальную специфичность для гарантированного применения */
+    body header nav.navbar.validnavs,
+    body header nav.navbar.validnavs.navbar-fixed,
+    body header nav.navbar.validnavs.navbar-fixed.no-background,
+    body header nav.navbar.validnavs.sticked,
+    body header nav.navbar.validnavs.navbar-fixed.sticked,
+    body header nav.navbar.validnavs.navbar-fixed.no-background.sticked,
+    body header nav.navbar.validnavs.mobile-sidenav,
+    body header nav.navbar.validnavs.navbar-sticky,
+    body header nav.navbar.validnavs.navbar-default,
+    body header nav.navbar.validnavs.navbar-responsive,
+    body header nav.navbar.validnavs.navbar-fixed.mobile-sidenav,
+    body header nav.navbar.validnavs.navbar-fixed.navbar-sticky,
+    body header nav.navbar.validnavs.navbar-fixed.navbar-default,
+    body header nav.navbar.validnavs.navbar-fixed.no-background.mobile-sidenav,
+    body header nav.navbar.validnavs.navbar-fixed.no-background.navbar-sticky,
+    body header nav.navbar.validnavs.navbar-fixed.no-background.navbar-default,
+    body header nav.navbar.validnavs.sticked.mobile-sidenav,
+    body header nav.navbar.validnavs.sticked.navbar-sticky,
+    body header nav.navbar.validnavs.sticked.navbar-default,
+    body header nav.navbar.validnavs.navbar-fixed.sticked.mobile-sidenav,
+    body header nav.navbar.validnavs.navbar-fixed.sticked.navbar-sticky,
+    body header nav.navbar.validnavs.navbar-fixed.sticked.navbar-default {
+        position: fixed !important;
+        top: 0 !important;
+        left: 0 !important;
+        right: 0 !important;
+        z-index: 9999 !important;
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+    
+    /* Универсальное правило для всех navbar на мобилке */
+    body header nav.navbar {
+        position: fixed !important;
+        top: 0 !important;
+        left: 0 !important;
+        right: 0 !important;
+        z-index: 9999 !important;
+    }
+
+    /* Добавляем отступ сверху для контента, чтобы он не прятался под fixed шапкой */
+    body header nav.navbar ~ * {
+        margin-top: 0;
+    }
+
+    .smooth-scroll-container > *:not(header) {
+        margin-top: 0;
+    }
+
+    /* Высота шапки для расчета отступа */
+    body header nav.navbar {
+        height: auto;
+        min-height: 80px;
+    }
+}
+
+/* Стили для бургер-меню - темный фон с желто-зелеными акцентами */
+/* Максимальная специфичность для перекрытия всех правил из validnavs.css */
+div.side,
+.bg-dark div.side,
+body.bg-dark div.side,
+body div.side,
+.side.on,
+.bg-dark .side.on,
+body.bg-dark .side.on {
+    background-color: #04000b !important;
+    background: #04000b !important;
+    color: #ffffff !important;
+}
+
+.side .widget .logo::after,
+.bg-dark .side .widget .logo::after,
+body.bg-dark .side .widget .logo::after {
+    background: #04000b !important;
+}
+
+.side .close-side,
+.bg-dark .side .close-side,
+body.bg-dark .side .close-side {
+    color: var(--color-primary) !important;
+    border-color: var(--color-primary) !important;
+    transition: all 0.3s ease;
+}
+
+.side .close-side:hover,
+.bg-dark .side .close-side:hover,
+body.bg-dark .side .close-side:hover {
+    background-color: var(--color-primary) !important;
+    color: #04000b !important;
+}
+
+/* Стили для пунктов меню */
+ul.simple-menu-list > li > a,
+.bg-dark ul.simple-menu-list > li > a,
+body.bg-dark ul.simple-menu-list > li > a,
+.side-navbar-inner ul.simple-menu-list > li > a,
+.side ul.simple-menu-list > li > a,
+.bg-dark .side ul.simple-menu-list > li > a,
+body.bg-dark .side ul.simple-menu-list > li > a {
+    color: #ffffff !important;
+    transition: color 0.3s ease;
+    border-bottom-color: rgba(201, 243, 29, 0.2) !important;
+}
+
+ul.simple-menu-list > li > a:hover,
+.bg-dark ul.simple-menu-list > li > a:hover,
+body.bg-dark ul.simple-menu-list > li > a:hover {
+    color: var(--color-primary) !important;
+}
+
+ul.simple-menu-list > li.on > a,
+.bg-dark ul.simple-menu-list > li.on > a,
+body.bg-dark ul.simple-menu-list > li.on > a {
+    color: var(--color-primary) !important;
+}
+
+/* Стили для иконок стрелок */
+ul.simple-menu-list > li i,
+.bg-dark ul.simple-menu-list > li i,
+body.bg-dark ul.simple-menu-list > li i {
+    color: var(--color-primary) !important;
+    transition: all 0.3s ease;
+}
+
+ul.simple-menu-list > li i:hover,
+.bg-dark ul.simple-menu-list > li i:hover,
+body.bg-dark ul.simple-menu-list > li i:hover {
+    color: #ffffff !important;
+    background-color: var(--color-primary);
+    border-radius: 50%;
+}
+
+ul.simple-menu-list > li.on i,
+.bg-dark ul.simple-menu-list > li.on i,
+body.bg-dark ul.simple-menu-list > li.on i {
+    color: #ffffff !important;
+    background-color: var(--color-primary);
+    border-radius: 50%;
+}
+
+/* Стили для подменю */
+ul.simple-menu-list .sub-menu,
+.bg-dark ul.simple-menu-list .sub-menu,
+body.bg-dark ul.simple-menu-list .sub-menu {
+    background-color: rgba(201, 243, 29, 0.05) !important;
+    border-left: 2px solid var(--color-primary) !important;
+    padding: 10px 0 !important;
+    margin-left: 10px !important;
+    border-radius: 4px;
+}
+
+ul.simple-menu-list .sub-menu li a,
+.bg-dark ul.simple-menu-list .sub-menu li a,
+body.bg-dark ul.simple-menu-list .sub-menu li a {
+    color: #cccccc !important;
+    transition: all 0.3s ease;
+    padding: 8px 20px !important;
+}
+
+ul.simple-menu-list .sub-menu li a:hover,
+.bg-dark ul.simple-menu-list .sub-menu li a:hover,
+body.bg-dark ul.simple-menu-list .sub-menu li a:hover {
+    color: var(--color-primary) !important;
+    background-color: rgba(201, 243, 29, 0.1) !important;
+    padding-left: 30px !important;
+}
+
+/* Стили для виджетов в меню */
+.side .widget.address ul li p,
+.bg-dark .side .widget.address ul li p,
+body.bg-dark .side .widget.address ul li p {
+    color: var(--color-primary) !important;
+}
+
+.side .widget.address ul li strong,
+.bg-dark .side .widget.address ul li strong,
+body.bg-dark .side .widget.address ul li strong {
+    color: #ffffff !important;
+}
+
+.side .widget h4.title,
+.bg-dark .side .widget h4.title,
+body.bg-dark .side .widget h4.title {
+    color: var(--color-primary) !important;
+}
+
+.side-navbar-inner,
+.bg-dark .side-navbar-inner,
+body.bg-dark .side-navbar-inner {
+    border-right-color: rgba(201, 243, 29, 0.2) !important;
+}
+
+/* Стили для социальных иконок */
+.side .widget.social li a,
+.bg-dark .side .widget.social li a,
+body.bg-dark .side .widget.social li a {
+    border: 1px solid rgba(201, 243, 29, 0.3) !important;
+    color: var(--color-primary) !important;
+    transition: all 0.3s ease;
+}
+
+.side .widget.social li a:hover,
+.bg-dark .side .widget.social li a:hover,
+body.bg-dark .side .widget.social li a:hover {
+    background-color: var(--color-primary) !important;
+    color: #04000b !important;
+    border-color: var(--color-primary) !important;
+}
+
+/* Мобильная версия блока "Недавние работы" */
+@media screen and (max-width: 991px) {
+	/* Скрыть десктопную версию на мобильных */
+	.recent-projects-desktop {
+		display: none !important;
+	}
+
+	/* Показать мобильную версию */
+	.recent-projects-mobile {
+		display: block;
+		text-align: center;
+	}
+
+	/* Заголовок "Недавние работы" - центрировать */
+	.recent-projects-mobile-title {
+		text-align: center;
+		margin-top: 0;
+		margin-bottom: 20px;
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.recent-projects-mobile-title.sub-title {
+		display: inline-block;
+		margin-left: auto;
+		margin-right: auto;
+		text-align: center;
+	}
+
+	/* Название проекта остается по центру, описание - слева */
+	.recent-projects-mobile-description {
+		text-align: left;
+	}
+
+	/* Заголовок проекта - центрировать и в одну строчку */
+	.recent-projects-mobile-project-title {
+		font-size: 32px;
+		line-height: 1.2;
+		margin-top: 0;
+		margin-bottom: 15px;
+		text-align: center;
+		color: #fff;
+		font-weight: 600;
+		width: 100%;
+	}
+
+	.recent-projects-mobile-project-title strong {
+		display: inline;
+		margin-left: 5px;
+		margin-top: 0;
+		font-weight: 600;
+	}
+
+	/* Описание проекта */
+	.recent-projects-mobile-description {
+		font-size: 16px;
+		line-height: 1.6;
+		margin-top: 0 !important;
+		margin-bottom: 15px !important;
+		color: rgba(255, 255, 255, 0.8);
+		text-align: left;
+		padding: 0 !important;
+	}
+
+	/* Обрезать изображение по вертикали в 2 раза на мобильных */
+	.recent-projects-mobile .portfolio-style-one-item {
+		margin-top: 0 !important;
+		margin-bottom: 0 !important;
+		padding: 0 !important;
+	}
+
+	.recent-projects-mobile .portfolio-style-one-item > div {
+		height: 300px !important; /* Было 600px, стало 300px (в 2 раза меньше) */
+		overflow: hidden !important;
+		margin-bottom: 0 !important;
+		margin-top: 0 !important;
+		padding: 0 !important;
+	}
+
+	.recent-projects-mobile .portfolio-style-one-item img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		object-position: center;
+	}
+
+	/* Скрыть заголовок и кнопку внутри изображения на мобильных */
+	.recent-projects-mobile .portfolio-style-one-item .info {
+		display: none;
+	}
+
+	/* Кнопка "Подробнее" под изображением на мобильных - по центру с отступами */
+	.recent-projects-mobile .portfolio-mobile-details-btn {
+		display: flex !important;
+		justify-content: center !important;
+		align-items: center !important;
+		margin-top: 15px !important;
+		margin-bottom: 15px !important;
+		text-align: center !important;
+		width: 100% !important;
+		padding: 0 !important;
+	}
+
+	.recent-projects-mobile .portfolio-mobile-details-btn .btn-animation {
+		margin-left: auto !important;
+		margin-right: auto !important;
+		display: inline-flex !important;
+		justify-content: center !important;
+		align-items: center !important;
+	}
+
+	/* Скрыть фразу "Идеальное сочетание креативности и функциональности" на мобильных */
+	.recent-projects-mobile .portfolio-info-card {
+		display: none !important;
+	}
+
+	/* Убедиться, что кнопка "Все работы" видна на мобильных */
+	.recent-projects-mobile .portfolio-mobile-view-all-btn {
+		display: flex !important;
+		justify-content: center !important;
+		margin-top: 15px !important;
+		margin-bottom: 0 !important;
+		padding: 0 !important;
+	}
+
+	/* Убрать лишние отступы у слайдера */
+	.recent-projects-mobile .portfolio-style-one-content {
+		margin-top: 0 !important;
+		padding-top: 0 !important;
+		padding-left: 0 !important;
+		margin-bottom: 0 !important;
+		padding-bottom: 0 !important;
+	}
+
+	.recent-projects-mobile .project-swiper-nav {
+		margin-top: 15px !important;
+		margin-bottom: 0 !important;
+		padding: 0 !important;
+	}
+
+	/* Убрать отступы у секции на мобильных */
+	.recent-projects-mobile .project-style-one-area.default-padding {
+		padding-top: 20px !important;
+		padding-bottom: 20px !important;
+	}
+
+	.recent-projects-mobile .project-style-one-area {
+		padding-top: 20px !important;
+		padding-bottom: 20px !important;
+	}
+
+	/* Убрать лишние отступы у swiper */
+	.recent-projects-mobile .swiper {
+		margin: 0 !important;
+		padding: 0 !important;
+	}
+
+	.recent-projects-mobile .swiper-wrapper {
+		margin: 0 !important;
+		padding: 0 !important;
+	}
+
+	.recent-projects-mobile .swiper-slide {
+		margin: 0 !important;
+		padding: 0 !important;
+	}
+
+	/* Убрать лишние отступы у row и col */
+	.recent-projects-mobile .row {
+		margin-left: 0 !important;
+		margin-right: 0 !important;
+		margin-top: 0 !important;
+		margin-bottom: 0 !important;
+	}
+
+	.recent-projects-mobile .row > * {
+		padding-left: 0 !important;
+		padding-right: 0 !important;
+	}
+
+	/* Убрать отступы у контейнера */
+	.recent-projects-mobile .container {
+		padding-left: 15px !important;
+		padding-right: 15px !important;
+		padding-top: 0 !important;
+		padding-bottom: 0 !important;
+	}
+}
+
+/* Десктопная версия - скрыть мобильную кнопку */
+@media screen and (min-width: 992px) {
+	.portfolio-mobile-details-btn {
+		display: none !important;
+	}
+}
+
+/* Десктопная версия - скрыть мобильную */
+@media screen and (min-width: 992px) {
+	.recent-projects-mobile {
+		display: none !important;
+	}
+}
+/* Мобильная верстка блока с кнопкой "Подробнее" */
+@media (max-width: 768px) {
+
+  /* убираем фиксированную высоту и лишнюю пустоту у слайдера */
+  .recent-projects-mobile .project-style-one-area,
+  .recent-projects-mobile .swiper,
+  .recent-projects-mobile .swiper-wrapper,
+  .recent-projects-mobile .swiper-slide,
+  .recent-projects-mobile .portfolio-style-one-item {
+    height: auto !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  /* сам блок с контентом слайда */
+  .recent-projects-mobile .portfolio-style-one-content {
+    margin: 0 !important;
+    padding: 0 15px !important;
+    text-align: center;
+  }
+
+  /* заголовок / текст над кнопкой – минимальные отступы */
+  .recent-projects-mobile .portfolio-style-one-content h3,
+  .recent-projects-mobile .portfolio-style-one-content p {
+    margin-top: 0 !important;
+    margin-bottom: 10px !important;
+  }
+
+  /* КНОПКА "ПОДРОБНЕЕ" – по центру и с небольшими отступами */
+  /* Замени .btn-more на класс твоей кнопки, если он другой */
+  .recent-projects-mobile .btn-more {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin: 12px auto 12px auto !important; /* сверху/снизу по 12px */
+  }
+
+  /* чтобы вся секция не давила пустотой сверху/снизу */
+  .project-style-one-area.default-padding {
+    padding-top: 20px !important;
+    padding-bottom: 20px !important;
+  }
+
+  /* блок с кнопкой "Смотреть все работы" ближе к слайдеру */
+  .recent-projects-mobile .view-all-btn {
+    margin-top: 16px !important;
+    margin-bottom: 0 !important;
+  }
 }

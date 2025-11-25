@@ -63,7 +63,8 @@ const RecentProjectsSection = () => {
             
             <div className="project-style-one-area default-padding blurry-shape-left overflow-hidden" style={{ backgroundColor: '#000' }}>
                 <div className="container">
-                    <div className="row align-center">
+                    {/* Десктопная версия */}
+                    <div className="row align-center recent-projects-desktop">
                         <div className="col-lg-4 pr-50 pr-md-15 pr-xs-15">
                             <div className="portfolio-style-one-left-info">
                                 <h4 className="sub-title">Недавние работы</h4>
@@ -94,6 +95,22 @@ const RecentProjectsSection = () => {
                         <div className="col-lg-8">
                             <PortfolioV1 onSlideChange={setCurrentProject} />
                         </div>
+                    </div>
+
+                    {/* Мобильная версия */}
+                    <div className="recent-projects-mobile">
+                        <h4 className="sub-title recent-projects-mobile-title">Недавние работы</h4>
+                        {currentProject && (
+                            <>
+                                <h2 className="recent-projects-mobile-project-title">
+                                    {currentProject.text} <strong>{currentProject.textBold}</strong>
+                                </h2>
+                                <p className="recent-projects-mobile-description">
+                                    {currentProject.description || projectText}
+                                </p>
+                            </>
+                        )}
+                        <PortfolioV1 onSlideChange={setCurrentProject} />
                     </div>
                 </div>
             </div>

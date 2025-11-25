@@ -7,9 +7,10 @@ import BlogV3Data from '../../../src/assets/jsonData/blog/BlogV3Data.json';
 interface DataType {
     navbarPlacement?: string;
     toggleSubMenu?: (e: React.MouseEvent<HTMLAnchorElement>) => void;
+    closeMenu?: () => void;
 }
 
-const MainMenu = ({ navbarPlacement }: DataType) => {
+const MainMenu = ({ navbarPlacement, closeMenu }: DataType) => {
 
     const [isOpen, setOpen] = useState(false);
     const [isProjectsDropdownOpen, setIsProjectsDropdownOpen] = useState(false);
@@ -36,6 +37,19 @@ const MainMenu = ({ navbarPlacement }: DataType) => {
     // Функция для плавного скролла к элементу
     const handleSmoothScroll = (e: React.MouseEvent<HTMLAnchorElement>, targetId: string) => {
         e.preventDefault();
+        e.stopPropagation();
+        
+        // Закрываем меню сразу при клике
+        if (closeMenu) {
+            closeMenu();
+        }
+        
+        // Принудительно закрываем меню через DOM
+        const menuElement = document.getElementById('navbar-menu');
+        if (menuElement) {
+            menuElement.classList.remove('show');
+        }
+        document.body.classList.remove('no-fade');
         
         // Если мы не на главной странице, сначала переходим на главную
         if (location.pathname !== '/') {
@@ -49,10 +63,12 @@ const MainMenu = ({ navbarPlacement }: DataType) => {
             }, 300);
         } else {
             // Если мы на главной странице, просто скроллим
+            setTimeout(() => {
             const element = document.getElementById(targetId);
             if (element) {
                 element.scrollIntoView({ behavior: 'smooth', block: 'start' });
             }
+            }, 100);
         }
     };
 
@@ -85,13 +101,28 @@ const MainMenu = ({ navbarPlacement }: DataType) => {
     // Функция для обработки клика на "Проекты" - переходим к блоку "Недавние работы"
     const handleProjectsClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
         e.preventDefault();
+        e.stopPropagation();
+        
+        // Закрываем меню сразу при клике
+        if (closeMenu) {
+            closeMenu();
+        }
+        
+        // Принудительно закрываем меню через DOM
+        const menuElement = document.getElementById('navbar-menu');
+        if (menuElement) {
+            menuElement.classList.remove('show');
+        }
+        document.body.classList.remove('no-fade');
         
         // Если мы на главной странице, делаем плавный скролл к блоку projects
         if (location.pathname === '/') {
+            setTimeout(() => {
             const element = document.getElementById('projects');
             if (element) {
                 element.scrollIntoView({ behavior: 'smooth', block: 'start' });
             }
+            }, 100);
         } else {
             // Если мы на другой странице, переходим на главную с хешем
             navigate('/#projects');
@@ -137,7 +168,16 @@ const MainMenu = ({ navbarPlacement }: DataType) => {
             <ul className={`nav navbar-nav ${navbarPlacement ? navbarPlacement : ""}`} data-in="fadeInDown" data-out="fadeOutUp">
 
                 <li>
-                    <Link to="/">Главная</Link>
+                    <Link to="/" onClick={(e) => {
+                        if (closeMenu) {
+                            closeMenu();
+                        }
+                        const menuElement = document.getElementById('navbar-menu');
+                        if (menuElement) {
+                            menuElement.classList.remove('show');
+                        }
+                        document.body.classList.remove('no-fade');
+                    }}>Главная</Link>
                 </li>
                 <li>
                     <a href="#about" onClick={(e) => handleSmoothScroll(e, 'about')}>О нас</a>
@@ -172,9 +212,11 @@ const MainMenu = ({ navbarPlacement }: DataType) => {
                     }}
                     style={{ position: 'relative' }}
                 >
-                    <a href="#projects" onClick={handleProjectsClick}>
+                    <a href="#projects" onClick={(e) => {
+                        handleProjectsClick(e);
+                        if (closeMenu) closeMenu();
+                    }}>
                         Проекты
-                        <i className="fas fa-chevron-down" style={{ marginLeft: '5px', fontSize: '12px' }} />
                     </a>
                     {isProjectsDropdownOpen && (
                         <ul 
@@ -218,7 +260,10 @@ const MainMenu = ({ navbarPlacement }: DataType) => {
                             <li>
                                 <a 
                                     href="/projects" 
-                                    onClick={(e) => handleProjectFilterClick(e, 'Сайты')}
+                                    onClick={(e) => {
+                                        handleProjectFilterClick(e, 'Сайты');
+                                        if (closeMenu) closeMenu();
+                                    }}
                                     style={{
                                         display: 'block',
                                         padding: '10px 20px',
@@ -235,7 +280,10 @@ const MainMenu = ({ navbarPlacement }: DataType) => {
                             <li>
                                 <a 
                                     href="/projects" 
-                                    onClick={(e) => handleProjectFilterClick(e, 'Мобильные приложения')}
+                                    onClick={(e) => {
+                                        handleProjectFilterClick(e, 'Мобильные приложения');
+                                        if (closeMenu) closeMenu();
+                                    }}
                                     style={{
                                         display: 'block',
                                         padding: '10px 20px',
@@ -252,7 +300,10 @@ const MainMenu = ({ navbarPlacement }: DataType) => {
                             <li>
                                 <a 
                                     href="/projects" 
-                                    onClick={(e) => handleProjectFilterClick(e, 'UI/UX')}
+                                    onClick={(e) => {
+                                        handleProjectFilterClick(e, 'UI/UX');
+                                        if (closeMenu) closeMenu();
+                                    }}
                                     style={{
                                         display: 'block',
                                         padding: '10px 20px',
@@ -306,13 +357,23 @@ const MainMenu = ({ navbarPlacement }: DataType) => {
                 >
                     <Link 
                         to="/blog" 
-                        onClick={() => {
+                        onClick={(e) => {
+                            e.preventDefault();
                             // Очищаем фильтр при клике на "Блог", чтобы показать все статьи
                             sessionStorage.removeItem('blogPageActiveFilter');
+                            if (closeMenu) {
+                                closeMenu();
+                            }
+                            // Принудительно закрываем меню через DOM
+                            const menuElement = document.getElementById('navbar-menu');
+                            if (menuElement) {
+                                menuElement.classList.remove('show');
+                            }
+                            document.body.classList.remove('no-fade');
+                            navigate('/blog');
                         }}
                     >
                         Блог
-                        <i className="fas fa-chevron-down" style={{ marginLeft: '5px', fontSize: '12px' }} />
                     </Link>
                     {isBlogDropdownOpen && (
                         <ul 
@@ -357,7 +418,10 @@ const MainMenu = ({ navbarPlacement }: DataType) => {
                                 <li key={filter.id}>
                                     <a 
                                         href="/blog" 
-                                        onClick={(e) => handleBlogFilterClick(e, filter.id)}
+                                        onClick={(e) => {
+                                            handleBlogFilterClick(e, filter.id);
+                                            if (closeMenu) closeMenu();
+                                        }}
                                         style={{
                                             display: 'block',
                                             padding: '10px 20px',

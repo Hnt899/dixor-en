@@ -9,7 +9,7 @@ import HeaderV1 from "../../components/header/HeaderV1";
 import MultiSection from "../../components/multi/MultiSection";
 import PriceV2 from "../../components/price/PriceV2";
 import ServicesV1 from "../../components/services/ServicesV1";
-import TeamV3 from "../../components/team/TeamV3";
+import TeamV3Carousel from "../../components/team/TeamV3Carousel";
 import TestimonialV1 from "../../components/testimonial/TestimonialV1";
 import DarkClass from "../../components/classes/DarkClass";
 import ThemeDark from "../../components/switcher/ThemeDark";
@@ -64,7 +64,7 @@ const Home9 = () => {
 
                 {/* ID для "Команда" */}
                 <div id="team">
-                    <TeamV3 sectionClass='bg-gray' hasTitle={true} />
+                    <TeamV3Carousel sectionClass='bg-gray' hasTitle={true} />
                 </div>
 
                 {/* ID для "Контакты" (уже был) */}

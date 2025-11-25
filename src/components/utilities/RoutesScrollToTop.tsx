@@ -7,7 +7,35 @@ const RoutesScrollToTop = () => {
 
     // Automatically scrolls to top whenever pathname changes
     useEffect(() => {
-        window.scrollTo(0, 0);
+        // Мгновенный скролл вверх - используем несколько методов для надежности на мобильных устройствах
+        window.scrollTo({ top: 0, behavior: 'auto' });
+        document.documentElement.scrollTop = 0;
+        document.body.scrollTop = 0;
+        
+        // Дополнительные попытки после задержки (на случай, если контент еще загружается)
+        const timeout1 = setTimeout(() => {
+            window.scrollTo({ top: 0, behavior: 'auto' });
+            document.documentElement.scrollTop = 0;
+            document.body.scrollTop = 0;
+        }, 100);
+        
+        const timeout2 = setTimeout(() => {
+            window.scrollTo({ top: 0, behavior: 'auto' });
+            document.documentElement.scrollTop = 0;
+            document.body.scrollTop = 0;
+        }, 300);
+        
+        const timeout3 = setTimeout(() => {
+            window.scrollTo({ top: 0, behavior: 'auto' });
+            document.documentElement.scrollTop = 0;
+            document.body.scrollTop = 0;
+        }, 500);
+        
+        return () => {
+            clearTimeout(timeout1);
+            clearTimeout(timeout2);
+            clearTimeout(timeout3);
+        };
     }, [pathname]);
 
     // Return null since this component does not need to render anything

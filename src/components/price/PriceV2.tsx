@@ -1,8 +1,20 @@
+import { useState } from "react";
 import PriceV2Data from "../../../src/assets/jsonData/price/PriceV2Data.json";
 import SinglePriceV2 from "./SinglePriceV2";
 import SplitText from "../animation/SplitText.jsx";
+import ContactModal from "../modal/ContactModal";
 
 const PriceV2 = () => {
+    const [isModalOpen, setIsModalOpen] = useState(false);
+
+    const openModal = () => {
+        setIsModalOpen(true);
+    };
+
+    const closeModal = () => {
+        setIsModalOpen(false);
+    };
+
     return (
         <>
             <div className="pricing-style-two-area default-padding bottom-less bg-gray">
@@ -14,8 +26,8 @@ const PriceV2 = () => {
                                 <h5 className="sub-title">Лучшие предложения</h5>
 
                                 <h2 className="title" style={{ textAlign: "center", width: "100%", display: "block" }}>
-                                    <div style={{ display: "block", width: "100%", textAlign: "center" }}>
-                                        <span style={{ display: "inline-block", whiteSpace: "nowrap", marginLeft: "-160px" }}>
+                                    <div className="price-title-line-1" style={{ display: "block", width: "100%", textAlign: "center" }}>
+                                        <span className="price-title-part1" style={{ display: "inline-block", whiteSpace: "nowrap" }}>
                                             <SplitText
                                                 delay={20}
                                                 animationFrom={{ opacity: 0, transform: "translate3d(0,50px,0)" }}
@@ -25,13 +37,26 @@ const PriceV2 = () => {
                                                 rootMargin="-50px"
                                                 textAlign="center"
                                             >
-                                                {"Выберите\u00A0подходящий\u00A0формат"}
+                                                {"Выберите\u00A0подходящий"}
+                                            </SplitText>
+                                        </span>
+                                        <span className="price-title-part2-desktop" style={{ display: "inline-block", whiteSpace: "nowrap" }}>
+                                            <SplitText
+                                                delay={20}
+                                                animationFrom={{ opacity: 0, transform: "translate3d(0,50px,0)" }}
+                                                animationTo={{ opacity: 1, transform: "translate3d(0,0,0)" }}
+                                                easing="easeOutCubic"
+                                                threshold={0.2}
+                                                rootMargin="-50px"
+                                                textAlign="center"
+                                            >
+                                                {"\u00A0формат"}
                                             </SplitText>
                                         </span>
                                     </div>
 
-                                    <div style={{ display: "block", width: "100%", textAlign: "center", marginTop: "0.5em" }}>
-                                        <span style={{ display: "inline-block", whiteSpace: "nowrap", marginLeft: "-30px" }}>
+                                    <div className="price-title-line-2" style={{ display: "block", width: "100%", textAlign: "center", marginTop: "0.5em" }}>
+                                        <span className="price-title-part2-mobile" style={{ display: "inline-block", whiteSpace: "nowrap" }}>
                                             <SplitText
                                                 delay={20}
                                                 animationFrom={{ opacity: 0, transform: "translate3d(0,50px,0)" }}
@@ -41,7 +66,20 @@ const PriceV2 = () => {
                                                 rootMargin="-50px"
                                                 textAlign="center"
                                             >
-                                                сотрудничества
+                                                формат
+                                            </SplitText>
+                                        </span>
+                                        <span style={{ display: "inline-block", whiteSpace: "nowrap" }}>
+                                            <SplitText
+                                                delay={20}
+                                                animationFrom={{ opacity: 0, transform: "translate3d(0,50px,0)" }}
+                                                animationTo={{ opacity: 1, transform: "translate3d(0,0,0)" }}
+                                                easing="easeOutCubic"
+                                                threshold={0.2}
+                                                rootMargin="-50px"
+                                                textAlign="center"
+                                            >
+                                                {"\u00A0сотрудничества"}
                                             </SplitText>
                                         </span>
                                     </div>
@@ -93,7 +131,7 @@ const PriceV2 = () => {
                                 <div className="row">
                                     {PriceV2Data.yearlyPlans.map(plan => (
                                         <div className="col-xl-4 col-lg-6 col-md-6 mb-30" key={plan.id}>
-                                            <SinglePriceV2 plan={plan} />
+                                            <SinglePriceV2 plan={plan} onOpenModal={openModal} />
                                         </div>
                                     ))}
                                 </div>
@@ -104,7 +142,7 @@ const PriceV2 = () => {
                                 <div className="row">
                                     {PriceV2Data.monthlyPlans.map(plan => (
                                         <div className="col-xl-4 col-lg-6 col-md-6 mb-30" key={plan.id}>
-                                            <SinglePriceV2 plan={plan} />
+                                            <SinglePriceV2 plan={plan} onOpenModal={openModal} />
                                         </div>
                                     ))}
                                 </div>
@@ -115,6 +153,7 @@ const PriceV2 = () => {
                 </div>
 
             </div>
+            <ContactModal isOpen={isModalOpen} onClose={closeModal} />
         </>
     );
 };

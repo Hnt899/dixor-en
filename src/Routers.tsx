@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, Navigate } from "react-router-dom";
 import Home9 from "./pages/homePages/Home9";
 import NotFoundPage from "./pages/innerPages/NotFoundPage";
 import BlogStandardPage from "./pages/blogPages/BlogStandardPage";
@@ -30,9 +30,13 @@ const Routers = () => {
                 {/* 2. ДОБАВЛЯЕМ РОУТ ДЛЯ ОДНОГО ПОСТА */}
                 {/* :id - это 1, 2, 3 и т.д. из твоего JSON-файла */}
                 <Route path='/blog-post/:id' element={<BlogSinglePage />} />
+                {/* Алиас для совместимости: /blog/:id также ведет на страницу статьи */}
+                <Route path='/blog/:id' element={<BlogSinglePage />} />
 
                 {/* Страница со всеми проектами */}
                 <Route path='/projects' element={<ProjectsPage />} />
+                {/* Редирект /project на /projects для совместимости */}
+                <Route path='/project' element={<Navigate to="/projects" replace />} />
 
                 {/* Страница деталей проекта */}
                 {/* :id - это 1-36 из PortfolioV1Data.json */}

@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import MainMenu from "./MainMenu";
 import { Link } from "react-router-dom";
 import ContactModal from '../modal/ContactModal';
@@ -14,11 +14,36 @@ const HeaderV7 = () => {
     const toggleSubMenu = useSubMenuToggle();
     const isMenuSticky = useStickyMenu();
     const [isContactModalOpen, setIsContactModalOpen] = useState(false);
+    const [isMobile, setIsMobile] = useState(false);
+
+    useEffect(() => {
+        const checkMobile = () => {
+            setIsMobile(window.innerWidth <= 1023);
+        };
+        
+        checkMobile();
+        window.addEventListener('resize', checkMobile);
+        
+        return () => window.removeEventListener('resize', checkMobile);
+    }, []);
+
+    // Стили для мобильной версии - шапка всегда fixed
+    const mobileNavStyle = isMobile ? {
+        position: 'fixed' as const,
+        top: 0,
+        left: 0,
+        right: 0,
+        zIndex: 9999,
+        width: '100%'
+    } : {};
 
     return (
         <>
             <header>
-                <nav className={`navbar mobile-sidenav navbar-sticky navbar-default validnavs navbar-fixed ${isMenuSticky ? "sticked" : "no-background"} ${isOpen ? "navbar-responsive" : ""} `}>
+                <nav 
+                    className={`navbar mobile-sidenav navbar-sticky navbar-default validnavs navbar-fixed ${isMenuSticky ? "sticked" : "no-background"} ${isOpen ? "navbar-responsive" : ""} `}
+                    style={mobileNavStyle}
+                >
                     <div className="container d-flex justify-content-between align-items-center">
                         <div className="navbar-header">
                             <button type="button" className="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu" onClick={openMenu}>
@@ -36,7 +61,7 @@ const HeaderV7 = () => {
                             <button type="button" className="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu" onClick={closeMenu}>
                                 <i className="fa fa-times" />
                             </button>
-                            <MainMenu toggleSubMenu={toggleSubMenu} navbarPlacement='navbar-center' />
+                            <MainMenu toggleSubMenu={toggleSubMenu} navbarPlacement='navbar-center' closeMenu={closeMenu} />
                         </div>
                         <div className="attr-right">
                             <div className="attr-nav flex">

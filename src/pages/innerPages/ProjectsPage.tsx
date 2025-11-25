@@ -11,45 +11,40 @@ const ProjectsPage = () => {
     const savedFilter = sessionStorage.getItem('projectsPageActiveFilter') || "all";
     const [activeFilter, setActiveFilter] = useState(savedFilter);
 
-    // Восстановление позиции скролла при монтировании компонента
+    // Скроллим страницу вверх при загрузке
     useEffect(() => {
-        const savedScrollPosition = sessionStorage.getItem('projectsPageScrollPosition');
+        // Мгновенный скролл вверх - используем несколько методов для надежности на мобильных устройствах
+        window.scrollTo({ top: 0, behavior: 'auto' });
+        document.documentElement.scrollTop = 0;
+        document.body.scrollTop = 0;
         
-        if (savedScrollPosition) {
-            // Используем несколько попыток для надежного восстановления позиции
-            const restoreScroll = () => {
-                const scrollPos = parseInt(savedScrollPosition, 10);
-                window.scrollTo({
-                    top: scrollPos,
-                    behavior: 'auto' // Мгновенный скролл, без анимации
-                });
-                
-                // Проверяем, что скролл действительно произошел
-                // Если нет, пытаемся еще раз через небольшую задержку
-                setTimeout(() => {
-                    const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
-                    if (Math.abs(currentScroll - scrollPos) > 10) {
-                        window.scrollTo({
-                            top: scrollPos,
-                            behavior: 'auto'
-                        });
-                    }
-                }, 50);
-                
-                // Очищаем сохраненную позицию после восстановления
-                sessionStorage.removeItem('projectsPageScrollPosition');
-            };
-
-            // Задержка для того, чтобы контент успел отрендериться
-            // Используем requestAnimationFrame для более плавного восстановления
-            const timeoutId = setTimeout(() => {
-                requestAnimationFrame(() => {
-                    restoreScroll();
-                });
-            }, 150);
-            
-            return () => clearTimeout(timeoutId);
-        }
+        // Очищаем сохраненную позицию скролла
+        sessionStorage.removeItem('projectsPageScrollPosition');
+        
+        // Дополнительные попытки после задержки (на случай, если контент еще загружается)
+        const timeout1 = setTimeout(() => {
+            window.scrollTo({ top: 0, behavior: 'auto' });
+            document.documentElement.scrollTop = 0;
+            document.body.scrollTop = 0;
+        }, 100);
+        
+        const timeout2 = setTimeout(() => {
+            window.scrollTo({ top: 0, behavior: 'auto' });
+            document.documentElement.scrollTop = 0;
+            document.body.scrollTop = 0;
+        }, 300);
+        
+        const timeout3 = setTimeout(() => {
+            window.scrollTo({ top: 0, behavior: 'auto' });
+            document.documentElement.scrollTop = 0;
+            document.body.scrollTop = 0;
+        }, 500);
+        
+        return () => {
+            clearTimeout(timeout1);
+            clearTimeout(timeout2);
+            clearTimeout(timeout3);
+        };
     }, []);
 
     // Восстанавливаем активный фильтр при монтировании

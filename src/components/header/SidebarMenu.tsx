@@ -34,7 +34,13 @@ const SidebarMenu = ({ isInfoOpen, closeInfoBar, openInfoBar }: DataType) => {
                     </ul>
                 </div>
                 <div className="col-lg-2">
-                    <div className={`side ${isInfoOpen ? "on" : ""}`}>
+                    <div 
+                        className={`side ${isInfoOpen ? "on" : ""}`}
+                        style={{
+                            backgroundColor: '#04000b',
+                            color: '#ffffff'
+                        }}
+                    >
                         <Link to="#" className="close-side" onClick={closeInfoBar}>Close <i className="fas fa-times" /></Link>
                         <div className="widget">
                             <div className="logo">

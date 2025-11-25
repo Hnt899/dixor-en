@@ -1,60 +1,94 @@
 /* eslint-disable no-unused-vars */
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 
 interface DataType {
-    toggleSubMenu2?: (event: React.MouseEvent<HTMLAnchorElement>) => void;
+    toggleSubMenu2?: (event: React.MouseEvent<HTMLElement>) => void;
     closeInfoBar?: () => void;
 }
 
 const MainMenuV2 = ({ toggleSubMenu2, closeInfoBar }: DataType) => {
+    const location = useLocation();
+    const navigate = useNavigate();
+
+    // Функция для плавного скролла к элементу
+    const handleSmoothScroll = (e: React.MouseEvent<HTMLAnchorElement>, targetId: string) => {
+        e.preventDefault();
+        
+        if (location.pathname !== '/') {
+            navigate(`/#${targetId}`);
+            setTimeout(() => {
+                const element = document.getElementById(targetId);
+                if (element) {
+                    element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            }, 300);
+        } else {
+            const element = document.getElementById(targetId);
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        }
+        
+        // Закрываем меню после перехода
+        if (closeInfoBar) closeInfoBar();
+    };
+
+
+    // Функция для обработки клика на "Проекты"
+    const handleProjectsClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+        e.preventDefault();
+        if (location.pathname === '/') {
+            const element = document.getElementById('projects');
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        } else {
+            navigate('/#projects');
+            setTimeout(() => {
+                const element = document.getElementById('projects');
+                if (element) {
+                    element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            }, 300);
+        }
+        if (closeInfoBar) closeInfoBar();
+    };
+
+    // Функция для обработки клика на "Блог"
+    const handleBlogClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+        e.preventDefault();
+        navigate('/blog');
+        if (closeInfoBar) closeInfoBar();
+    };
+
+
     return (
         <>
             <ul className="simple-menu-list">
                 <li>
-                    <Link to="#" >Home </Link>
-                    <i className="fas fa-plus" onClick={toggleSubMenu2} />
-                    <ul className="sub-menu">
-                        <li><Link to="/" onClick={closeInfoBar}>Home Main</Link></li>
-                        <li><Link to="/home-6" onClick={closeInfoBar}>Modern Agency</Link></li>
-                        <li><Link to="/home-2" onClick={closeInfoBar}>Creative Agency</Link></li>
-                        <li><Link to="/home-3" onClick={closeInfoBar}>Startup Agency</Link></li>
-                        <li><Link to="/home-7" onClick={closeInfoBar}>Digital Agency</Link></li>
-                        <li><Link to="/home-8" onClick={closeInfoBar}>Modern Startup</Link></li>
-                        <li><Link to="/home-9" onClick={closeInfoBar}>Design Studio</Link></li>
-                        <li><Link to="/home-4" onClick={closeInfoBar}>Showcase Carousel</Link></li>
-                        <li><Link to="/home-5" onClick={closeInfoBar}>Showcase Slider</Link></li>
-                        <li className="menu-dropdown">
-                            <Link to="#">Light Version</Link>
-                            <i className="fas fa-plus" onClick={toggleSubMenu2} />
-                            <ul className="sub-menu">
-                                <li><Link to="/home-1-light" onClick={closeInfoBar}>Home Main</Link></li>
-                                <li><Link to="/home-6-light" onClick={closeInfoBar}>Modern Agency</Link></li>
-                                <li><Link to="/home-2-light" onClick={closeInfoBar}>Creative Agency</Link></li>
-                                <li><Link to="/home-3-light" onClick={closeInfoBar}>Startup Agency</Link></li>
-                                <li><Link to="/home-7-light" onClick={closeInfoBar}>Digital Agency</Link></li>
-                                <li><Link to="/home-8-light" onClick={closeInfoBar}>Modern Startup</Link></li>
-                                <li><Link to="/home-9-light" onClick={closeInfoBar}>Design Studio</Link></li>
-                                <li><Link to="/home-4-light" onClick={closeInfoBar}>Showcase Carousel</Link></li>
-                                <li><Link to="/home-5-light" onClick={closeInfoBar}>Showcase Slider</Link></li>
-                            </ul>
-                        </li>
-                    </ul>
+                    <Link to="/" onClick={closeInfoBar}>Главная</Link>
                 </li>
                 <li>
-                    <Link to="#">Blog </Link>
-                    <i className="fas fa-plus" onClick={toggleSubMenu2} />
-                    <ul className="sub-menu">
-                        <li><Link to="/blog-standard" onClick={closeInfoBar}>Blog Standard</Link></li>
-                        <li><Link to="/blog-with-sidebar" onClick={closeInfoBar}>Blog With Sidebar</Link></li>
-                        <li><Link to="/blog-2-column" onClick={closeInfoBar}>Blog Grid Two column</Link></li>
-                        <li><Link to="/blog-3-column" onClick={closeInfoBar}>Blog Grid Three column</Link></li>
-                        <li><Link to="/blog-single/1" onClick={closeInfoBar}>Blog Single</Link></li>
-                        <li><Link to="/blog-single-with-sidebar/1" onClick={closeInfoBar}>Blog Single With Sidebar</Link></li>
-                    </ul>
+                    <Link to="#" onClick={(e) => handleSmoothScroll(e, 'about')}>О Нас</Link>
                 </li>
-                <li><Link to="/services" onClick={closeInfoBar}>Services </Link></li>
-                <li><Link to="/about-us" onClick={closeInfoBar}>About</Link> </li>
-                <li><Link to="/contact-us" onClick={closeInfoBar}>Contact</Link></li>
+                <li>
+                    <Link to="/services" onClick={closeInfoBar}>Услуги</Link>
+                </li>
+                <li>
+                    <Link to="#" onClick={handleProjectsClick}>Проекты</Link>
+                </li>
+                <li>
+                    <Link to="#" onClick={(e) => handleSmoothScroll(e, 'pricing')}>Предложения</Link>
+                </li>
+                <li>
+                    <Link to="#" onClick={(e) => handleSmoothScroll(e, 'team')}>Команда</Link>
+                        </li>
+                <li>
+                    <Link to="#" onClick={handleBlogClick}>Блог</Link>
+                </li>
+                <li>
+                    <Link to="#" onClick={(e) => handleSmoothScroll(e, 'contact')}>Контакты</Link>
+                </li>
             </ul>
         </>
     );

@@ -57,11 +57,13 @@ const AboutV1 = ({ lightMode }: DataType) => {
                                     <div className="thumb">
                                         <img src={team10} alt="Image Not Found" />
                                         <img src={team11} alt="Image Not Found" />
-                                        <img src={team12} alt="Image Not Found" />
                                     </div>
                                     <a href="#" className="popup-youtube" onClick={(e) => { e.preventDefault(); setOpen(true); }}>
                                         <i className="fas fa-play" />
-                                        Смотреть видео
+                                        <span className="video-text">
+                                            <span className="video-text-line">СМОТРЕТЬ</span>
+                                            <span className="video-text-line">ВИДЕО</span>
+                                        </span>
                                     </a>
                                 </div>
                                 <p className="text">

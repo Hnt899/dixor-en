@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Helmet } from "react-helmet-async";
 import LayoutV1 from "../../components/layouts/LayoutV1";
 import TeamMemberCard from "../../components/team/TeamMemberCard";
@@ -8,6 +8,43 @@ import ContactModal from "../../components/modal/ContactModal";
 import { toast } from "react-toastify";
 
 const TeamNewPage = () => {
+    // Скроллим страницу вверх при загрузке
+    useEffect(() => {
+        // Убираем hash из URL, если он есть
+        if (window.location.hash) {
+            window.history.replaceState(null, '', window.location.pathname);
+        }
+        
+        // Мгновенный скролл вверх
+        window.scrollTo({ top: 0, behavior: 'auto' });
+        document.documentElement.scrollTop = 0;
+        document.body.scrollTop = 0;
+        
+        // Дополнительные попытки после задержки (на случай, если контент еще загружается)
+        const timeout1 = setTimeout(() => {
+            window.scrollTo({ top: 0, behavior: 'auto' });
+            document.documentElement.scrollTop = 0;
+            document.body.scrollTop = 0;
+        }, 100);
+        
+        const timeout2 = setTimeout(() => {
+            window.scrollTo({ top: 0, behavior: 'auto' });
+            document.documentElement.scrollTop = 0;
+            document.body.scrollTop = 0;
+        }, 300);
+        
+        const timeout3 = setTimeout(() => {
+            window.scrollTo({ top: 0, behavior: 'auto' });
+            document.documentElement.scrollTop = 0;
+            document.body.scrollTop = 0;
+        }, 500);
+        
+        return () => {
+            clearTimeout(timeout1);
+            clearTimeout(timeout2);
+            clearTimeout(timeout3);
+        };
+    }, []);
     const [selectedSpecialist, setSelectedSpecialist] = useState<{
         name: string;
         stack: string[];

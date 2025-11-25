@@ -12,7 +12,12 @@ interface DataType {
     priceLabel?: string;
 }
 
-const SinglePriceV2 = ({ plan }: { plan: DataType }) => {
+interface SinglePriceV2Props {
+    plan: DataType;
+    onOpenModal: () => void;
+}
+
+const SinglePriceV2 = ({ plan, onOpenModal }: SinglePriceV2Props) => {
     const { title, description, features, priceOriginal, priceDiscounted, currency, billingCycle, priceLabel } = plan;
 
     return (
@@ -43,7 +48,17 @@ const SinglePriceV2 = ({ plan }: { plan: DataType }) => {
                     </h2>
 
                 </div>
-                <Link className="btn mt-25 btn-sm circle btn-border dark effect" to="/#contact" style={{ marginTop: "auto" }}>Оставить заявку</Link>
+                <Link 
+                    className="btn mt-25 btn-sm circle btn-border dark effect" 
+                    to="/#contact" 
+                    onClick={(e) => {
+                        e.preventDefault();
+                        onOpenModal();
+                    }}
+                    style={{ marginTop: "auto" }}
+                >
+                    Оставить заявку
+                </Link>
             </div>
         </>
     );

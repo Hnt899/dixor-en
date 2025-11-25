@@ -90,6 +90,12 @@ const SinglePortfolioV1 = ({ portfolio, usePlaceholderLogo = false, placeholderI
                     <h2><Link to={`/project/${id}`}>{text} <strong>{textBold}</strong></Link></h2>
                     <Link className="btn-animation mt-30" to={`/project/${id}`}><i className="fas fa-arrow-right" /> <span>Подробнее</span></Link>
                 </div>
+                {/* Кнопка "Подробнее" для мобильной версии */}
+                <div className="portfolio-mobile-details-btn">
+                    <Link className="btn-animation" to={`/project/${id}`}>
+                        <i className="fas fa-arrow-right" /> <span>Подробнее</span>
+                    </Link>
+                </div>
             </div>
         </>
     );

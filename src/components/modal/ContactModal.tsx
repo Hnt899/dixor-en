@@ -135,7 +135,7 @@ const ContactModal = ({ isOpen, onClose }: ContactModalProps) => {
                 }
             `}</style>
             <div 
-                className="modal-overlay" 
+                className="modal-overlay contact-modal-overlay" 
                 onClick={onClose}
                 style={{
                     position: 'fixed',
@@ -143,17 +143,17 @@ const ContactModal = ({ isOpen, onClose }: ContactModalProps) => {
                     left: 0,
                     right: 0,
                     bottom: 0,
-                    background: 'rgba(0, 0, 0, 0.8)',
+                    background: 'rgba(0, 0, 0, 0.9)',
                     backdropFilter: 'blur(5px)',
                     WebkitBackdropFilter: 'blur(5px)',
-                    zIndex: 9998,
+                    zIndex: 10000,
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
                     padding: '20px'
                 }}
             >
-                <div style={{ position: 'relative' }}>
+                <div style={{ position: 'relative', zIndex: 10001 }}>
                     <button
                         className="contact-modal-close-btn"
                         onClick={onClose}
@@ -172,7 +172,7 @@ const ContactModal = ({ isOpen, onClose }: ContactModalProps) => {
                             alignItems: 'center',
                             justifyContent: 'center',
                             padding: '0',
-                            zIndex: 10000,
+                            zIndex: 10002,
                             outline: 'none',
                             boxShadow: 'none'
                         }}
@@ -201,7 +201,7 @@ const ContactModal = ({ isOpen, onClose }: ContactModalProps) => {
                             maxHeight: '90vh',
                             overflowY: 'auto',
                             position: 'relative',
-                            zIndex: 9999,
+                            zIndex: 10001,
                             scrollbarWidth: 'none',
                             msOverflowStyle: 'none'
                         }}

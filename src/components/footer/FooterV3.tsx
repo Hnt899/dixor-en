@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import NewsletterV2 from '../newsletter/NewsletterV2';
 import FooterSocial from '../social/FooterSocial';
 import ContactModal from '../modal/ContactModal';
@@ -46,13 +47,12 @@ const FooterV3 = () => {
                                 <div className="col-lg-5 offset-lg-1 footer-item">
                                     <h4 className="widget-title">Полезные ссылки</h4>
                                     <ul className="useful-link">
-                                        {/* ИСПРАВЛЕНИЕ: Заменил Link на <a>, чтобы они вели на якоря */}
-                                        <li><a href="#about">О нас</a></li>
-                                        <li><a href="#contact">Контакты</a></li>
-                                        <li><a href="#services">Услуги</a></li>
-                                        <li><a href="#projects">Проекты</a></li>
-                                        <li><a href="#team">Команда</a></li>
-                                        <li><a href="#blog">Блог</a></li>
+                                        <li><Link to="/#about">О нас</Link></li>
+                                        <li><Link to="/#contact">Контакты</Link></li>
+                                        <li><Link to="/#services">Услуги</Link></li>
+                                        <li><Link to="/#projects">Проекты</Link></li>
+                                        <li><Link to="/#team">Команда</Link></li>
+                                        <li><Link to="/#blog">Блог</Link></li>
                                     </ul>
                                     {/* Форма "Your Email" находится в этом компоненте */}
                                     <NewsletterV2 />

@@ -1294,12 +1294,15 @@ nav.navbar.validnavs.navbar-fixed.nav-box {
 	width: 100%;
 }
 
+/* Это правило применяется только на десктопе, для мобилки используется sticky */
+@media (min-width: 1024px) {
 nav.navbar.validnavs.navbar-fixed.no-background {
 	display: block;
 	position: absolute;
 	width: 100%;
 	z-index: 100;
 	box-shadow: 0 8px 25px 0 rgb(0 0 0 / 4%);
+	}
 }
 
 nav.navbar.validnavs {
@@ -1509,6 +1512,7 @@ nav.navbar.validnavs.brand-center {
 		border: none;
 	}
 
+	/* Это правило применяется только на десктопе */
 	nav.navbar.validnavs.navbar-fixed {
 		position: absolute;
 		background: transparent;
@@ -2361,10 +2365,22 @@ ul.simple-menu-list>li {
 }
 
 ul.simple-menu-list .sub-menu {
-	display: none;
+	/* display: none; - отключено для анимации */
+	display: block !important;
 	z-index: 999;
 	color: var(--white);
 	margin: 15px 0;
+	max-height: 0;
+	overflow: hidden;
+	opacity: 0;
+	transform: translateY(-10px);
+	transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+	            opacity 0.3s ease,
+	            transform 0.3s ease,
+	            padding 0.3s ease,
+	            margin-top 0.3s ease;
+	padding: 0 !important;
+	margin: 0 0 0 10px !important;
 }
 
 ul.simple-menu-list .sub-menu li {
@@ -2447,6 +2463,10 @@ ul.simple-menu-list>li i {
 }
 
 @media (max-width: 1023px) {
+	header {
+		position: relative;
+	}
+
 	a.navbar-brand {
 		position: absolute;
 		left: 50%;
@@ -2456,13 +2476,75 @@ ul.simple-menu-list>li i {
 
 	nav.navbar.validnavs {
 		padding: 0;
-		position: absolute !important;
+		position: sticky !important;
+		top: 0 !important;
+		left: 0 !important;
+		right: 0 !important;
+		z-index: 9999 !important;
 		border-bottom: 1px solid #e7e7e7;
 		background: var(--white) !important;
+		width: 100% !important;
+	}
+
+	nav.navbar.validnavs.navbar-fixed {
+		position: sticky !important;
+		top: 0 !important;
+		z-index: 9999 !important;
+		width: 100% !important;
+	}
+
+	nav.navbar.validnavs.navbar-fixed.no-background {
+		position: sticky !important;
+		top: 0 !important;
+		z-index: 9999 !important;
+		width: 100% !important;
+		box-shadow: none !important;
+	}
+
+	nav.navbar.validnavs.sticked {
+		position: sticky !important;
+		top: 0 !important;
+		left: 0 !important;
+		right: 0 !important;
+		box-shadow: var(--box-shadow);
+		background: var(--white) !important;
+		width: 100% !important;
+		z-index: 9999 !important;
+	}
+
+	nav.navbar.validnavs.navbar-fixed.sticked {
+		position: sticky !important;
+		top: 0 !important;
+		left: 0 !important;
+		right: 0 !important;
+		box-shadow: var(--box-shadow);
+		background: var(--white) !important;
+		width: 100% !important;
+		z-index: 9999 !important;
+	}
+
+	nav.navbar.validnavs.navbar-fixed.no-background.sticked {
+		position: sticky !important;
+		top: 0 !important;
+		left: 0 !important;
+		right: 0 !important;
+		box-shadow: var(--box-shadow);
+		background: var(--white) !important;
+		width: 100% !important;
+		z-index: 9999 !important;
 	}
 
 	.bg-dark nav.navbar.validnavs {
 		border-bottom: none;
+		background: var(--dark) !important;
+	}
+
+	.bg-dark nav.navbar.validnavs.sticked {
+		background: var(--dark) !important;
+	}
+
+	.bg-dark nav.navbar.validnavs.navbar-fixed.sticked {
+		background: var(--dark) !important;
 	}
 
 	nav.navbar.validnavs.navbar-sidebar {
@@ -3604,6 +3686,7 @@ nav.navbar.validnavs.nav-full-width {
 		padding: 0;
 	}
 
+	/* Это правило применяется только на десктопе */
 	nav.navbar.validnavs.sticked {
 		background: rgba(255, 255, 255, 0.85) !important;
 		box-shadow: 0px 1px 3px 0px rgba(18, 20, 32, 0.14);
@@ -4392,4 +4475,365 @@ nav.navbar.validnavs.navbar-fixed img.logo {
 
 .bg-dark nav.navbar.validnavs.navbar-fixed img.logo-dark {
 	display: none !important;
+}
+
+/* ============================================================== 
+     # Стили для мобильного бургер-меню (collapse-mobile)
+     # Добавлено в конец файла для максимальной специфичности
+=================================================================== */
+
+/* Фон мобильного меню - темный #04000b */
+@media only screen and (max-width: 1023px) {
+	nav.navbar.validnavs.mobile-sidenav .navbar-collapse.collapse.collapse-mobile,
+	.bg-dark nav.navbar.validnavs.mobile-sidenav .navbar-collapse.collapse.collapse-mobile,
+	body.bg-dark nav.navbar.validnavs.mobile-sidenav .navbar-collapse.collapse.collapse-mobile,
+	nav.navbar.validnavs.mobile-sidenav .navbar-collapse.collapse.collapse-mobile.show,
+	.bg-dark nav.navbar.validnavs.mobile-sidenav .navbar-collapse.collapse.collapse-mobile.show,
+	body.bg-dark nav.navbar.validnavs.mobile-sidenav .navbar-collapse.collapse.collapse-mobile.show {
+		background: #04000b !important;
+		background-color: #04000b !important;
+		color: #ffffff !important;
+	}
+
+	/* Пункты меню в мобильном меню - белый текст */
+	nav.navbar.validnavs.mobile-sidenav .navbar-collapse.collapse.collapse-mobile ul.nav li a,
+	.bg-dark nav.navbar.validnavs.mobile-sidenav .navbar-collapse.collapse.collapse-mobile ul.nav li a,
+	body.bg-dark nav.navbar.validnavs.mobile-sidenav .navbar-collapse.collapse.collapse-mobile ul.nav li a {
+		color: #ffffff !important;
+		transition: color 0.3s ease;
+	}
+
+	/* Анимация раздвижения для элементов мобильного меню с подменю */
+	nav.navbar.validnavs.mobile-sidenav .navbar-collapse.collapse.collapse-mobile ul.nav li,
+	.bg-dark nav.navbar.validnavs.mobile-sidenav .navbar-collapse.collapse.collapse-mobile ul.nav li,
+	body.bg-dark nav.navbar.validnavs.mobile-sidenav .navbar-collapse.collapse.collapse-mobile ul.nav li {
+		transition: margin-bottom 0.3s ease;
+	}
+
+	nav.navbar.validnavs.mobile-sidenav .navbar-collapse.collapse.collapse-mobile ul.nav li:has(ul.sub-menu.open),
+	nav.navbar.validnavs.mobile-sidenav .navbar-collapse.collapse.collapse-mobile ul.nav li:has(ul.dropdown-menu.open),
+	.bg-dark nav.navbar.validnavs.mobile-sidenav .navbar-collapse.collapse.collapse-mobile ul.nav li:has(ul.sub-menu.open),
+	.bg-dark nav.navbar.validnavs.mobile-sidenav .navbar-collapse.collapse.collapse-mobile ul.nav li:has(ul.dropdown-menu.open),
+	body.bg-dark nav.navbar.validnavs.mobile-sidenav .navbar-collapse.collapse.collapse-mobile ul.nav li:has(ul.sub-menu.open),
+	body.bg-dark nav.navbar.validnavs.mobile-sidenav .navbar-collapse.collapse.collapse-mobile ul.nav li:has(ul.dropdown-menu.open) {
+		margin-bottom: 10px;
+	}
+
+	nav.navbar.validnavs.mobile-sidenav .navbar-collapse.collapse.collapse-mobile ul.nav li a:hover,
+	.bg-dark nav.navbar.validnavs.mobile-sidenav .navbar-collapse.collapse.collapse-mobile ul.nav li a:hover,
+	body.bg-dark nav.navbar.validnavs.mobile-sidenav .navbar-collapse.collapse.collapse-mobile ul.nav li a:hover {
+		color: #C9F31D !important;
+	}
+
+	/* Иконки стрелок в мобильном меню - желто-зеленые */
+	nav.navbar.validnavs.mobile-sidenav .navbar-collapse.collapse.collapse-mobile ul.nav li a i,
+	nav.navbar.validnavs.mobile-sidenav .navbar-collapse.collapse.collapse-mobile ul.nav li i,
+	.bg-dark nav.navbar.validnavs.mobile-sidenav .navbar-collapse.collapse.collapse-mobile ul.nav li a i,
+	.bg-dark nav.navbar.validnavs.mobile-sidenav .navbar-collapse.collapse.collapse-mobile ul.nav li i,
+	body.bg-dark nav.navbar.validnavs.mobile-sidenav .navbar-collapse.collapse.collapse-mobile ul.nav li a i,
+	body.bg-dark nav.navbar.validnavs.mobile-sidenav .navbar-collapse.collapse.collapse-mobile ul.nav li i {
+		color: #C9F31D !important;
+		transition: all 0.3s ease;
+	}
+
+	nav.navbar.validnavs.mobile-sidenav .navbar-collapse.collapse.collapse-mobile ul.nav li a:hover i,
+	nav.navbar.validnavs.mobile-sidenav .navbar-collapse.collapse.collapse-mobile ul.nav li i:hover,
+	.bg-dark nav.navbar.validnavs.mobile-sidenav .navbar-collapse.collapse.collapse-mobile ul.nav li a:hover i,
+	.bg-dark nav.navbar.validnavs.mobile-sidenav .navbar-collapse.collapse.collapse-mobile ul.nav li i:hover,
+	body.bg-dark nav.navbar.validnavs.mobile-sidenav .navbar-collapse.collapse.collapse-mobile ul.nav li a:hover i,
+	body.bg-dark nav.navbar.validnavs.mobile-sidenav .navbar-collapse.collapse.collapse-mobile ul.nav li i:hover {
+		color: #ffffff !important;
+	}
+
+	/* Подменю в мобильном меню с анимацией раздвижения */
+	nav.navbar.validnavs.mobile-sidenav .navbar-collapse.collapse.collapse-mobile ul.nav li ul.sub-menu,
+	nav.navbar.validnavs.mobile-sidenav .navbar-collapse.collapse.collapse-mobile ul.nav li ul.dropdown-menu,
+	.bg-dark nav.navbar.validnavs.mobile-sidenav .navbar-collapse.collapse.collapse-mobile ul.nav li ul.sub-menu,
+	.bg-dark nav.navbar.validnavs.mobile-sidenav .navbar-collapse.collapse.collapse-mobile ul.nav li ul.dropdown-menu,
+	body.bg-dark nav.navbar.validnavs.mobile-sidenav .navbar-collapse.collapse.collapse-mobile ul.nav li ul.sub-menu,
+	body.bg-dark nav.navbar.validnavs.mobile-sidenav .navbar-collapse.collapse.collapse-mobile ul.nav li ul.dropdown-menu {
+		background-color: rgba(201, 243, 29, 0.05) !important;
+		border-left: 2px solid #C9F31D !important;
+		padding: 0 !important;
+		margin-left: 10px !important;
+		margin-top: 0 !important;
+		border-radius: 4px;
+		max-height: 0;
+		overflow: hidden;
+		opacity: 0;
+		transform: translateY(-10px);
+		transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+		            opacity 0.3s ease,
+		            transform 0.3s ease,
+		            padding 0.3s ease,
+		            margin-top 0.3s ease;
+		display: block !important;
+	}
+
+	nav.navbar.validnavs.mobile-sidenav .navbar-collapse.collapse.collapse-mobile ul.nav li ul.sub-menu.open,
+	nav.navbar.validnavs.mobile-sidenav .navbar-collapse.collapse.collapse-mobile ul.nav li ul.dropdown-menu.open,
+	.bg-dark nav.navbar.validnavs.mobile-sidenav .navbar-collapse.collapse.collapse-mobile ul.nav li ul.sub-menu.open,
+	.bg-dark nav.navbar.validnavs.mobile-sidenav .navbar-collapse.collapse.collapse-mobile ul.nav li ul.dropdown-menu.open,
+	body.bg-dark nav.navbar.validnavs.mobile-sidenav .navbar-collapse.collapse.collapse-mobile ul.nav li ul.sub-menu.open,
+	body.bg-dark nav.navbar.validnavs.mobile-sidenav .navbar-collapse.collapse.collapse-mobile ul.nav li ul.dropdown-menu.open {
+		max-height: 500px;
+		opacity: 1;
+		transform: translateY(0);
+		padding: 10px 0 !important;
+		margin-top: 10px !important;
+	}
+
+	nav.navbar.validnavs.mobile-sidenav .navbar-collapse.collapse.collapse-mobile ul.nav li ul.sub-menu li a,
+	nav.navbar.validnavs.mobile-sidenav .navbar-collapse.collapse.collapse-mobile ul.nav li ul.dropdown-menu li a,
+	.bg-dark nav.navbar.validnavs.mobile-sidenav .navbar-collapse.collapse.collapse-mobile ul.nav li ul.sub-menu li a,
+	.bg-dark nav.navbar.validnavs.mobile-sidenav .navbar-collapse.collapse.collapse-mobile ul.nav li ul.dropdown-menu li a,
+	body.bg-dark nav.navbar.validnavs.mobile-sidenav .navbar-collapse.collapse.collapse-mobile ul.nav li ul.sub-menu li a,
+	body.bg-dark nav.navbar.validnavs.mobile-sidenav .navbar-collapse.collapse.collapse-mobile ul.nav li ul.dropdown-menu li a {
+		color: #cccccc !important;
+		transition: all 0.3s ease;
+		padding: 8px 20px !important;
+	}
+
+	nav.navbar.validnavs.mobile-sidenav .navbar-collapse.collapse.collapse-mobile ul.nav li ul.sub-menu li a:hover,
+	nav.navbar.validnavs.mobile-sidenav .navbar-collapse.collapse.collapse-mobile ul.nav li ul.dropdown-menu li a:hover,
+	.bg-dark nav.navbar.validnavs.mobile-sidenav .navbar-collapse.collapse.collapse-mobile ul.nav li ul.sub-menu li a:hover,
+	.bg-dark nav.navbar.validnavs.mobile-sidenav .navbar-collapse.collapse.collapse-mobile ul.nav li ul.dropdown-menu li a:hover,
+	body.bg-dark nav.navbar.validnavs.mobile-sidenav .navbar-collapse.collapse.collapse-mobile ul.nav li ul.sub-menu li a:hover,
+	body.bg-dark nav.navbar.validnavs.mobile-sidenav .navbar-collapse.collapse.collapse-mobile ul.nav li ul.dropdown-menu li a:hover {
+		color: #C9F31D !important;
+		background-color: rgba(201, 243, 29, 0.1) !important;
+		padding-left: 30px !important;
+	}
+
+	/* Кнопка закрытия в мобильном меню */
+	nav.navbar.validnavs.mobile-sidenav .navbar-collapse.collapse.collapse-mobile button.navbar-toggle,
+	.bg-dark nav.navbar.validnavs.mobile-sidenav .navbar-collapse.collapse.collapse-mobile button.navbar-toggle,
+	body.bg-dark nav.navbar.validnavs.mobile-sidenav .navbar-collapse.collapse.collapse-mobile button.navbar-toggle {
+		color: #C9F31D !important;
+		border-color: #C9F31D !important;
+		background-color: transparent !important;
+		transition: all 0.3s ease;
+	}
+
+	nav.navbar.validnavs.mobile-sidenav .navbar-collapse.collapse.collapse-mobile button.navbar-toggle:hover,
+	.bg-dark nav.navbar.validnavs.mobile-sidenav .navbar-collapse.collapse.collapse-mobile button.navbar-toggle:hover,
+	body.bg-dark nav.navbar.validnavs.mobile-sidenav .navbar-collapse.collapse.collapse-mobile button.navbar-toggle:hover {
+		background-color: #C9F31D !important;
+		color: #04000b !important;
+	}
+
+	nav.navbar.validnavs.mobile-sidenav .navbar-collapse.collapse.collapse-mobile button.navbar-toggle i,
+	.bg-dark nav.navbar.validnavs.mobile-sidenav .navbar-collapse.collapse.collapse-mobile button.navbar-toggle i,
+	body.bg-dark nav.navbar.validnavs.mobile-sidenav .navbar-collapse.collapse.collapse-mobile button.navbar-toggle i {
+		color: #C9F31D !important;
+	}
+
+	nav.navbar.validnavs.mobile-sidenav .navbar-collapse.collapse.collapse-mobile button.navbar-toggle:hover i,
+	.bg-dark nav.navbar.validnavs.mobile-sidenav .navbar-collapse.collapse.collapse-mobile button.navbar-toggle:hover i,
+	body.bg-dark nav.navbar.validnavs.mobile-sidenav .navbar-collapse.collapse.collapse-mobile button.navbar-toggle:hover i {
+		color: #04000b !important;
+	}
+}
+
+/* ============================================================== 
+     # Стили для бургер-меню - темный фон с желто-зелеными акцентами
+     # Добавлено в конец файла для максимальной специфичности
+=================================================================== */
+
+/* Фон меню - темный #04000b */
+.side,
+.bg-dark .side,
+body.bg-dark .side,
+body .side,
+.side.on,
+.bg-dark .side.on,
+body.bg-dark .side.on {
+	background-color: #04000b !important;
+	background: #04000b !important;
+	color: #ffffff !important;
+}
+
+.side .widget .logo::after,
+.bg-dark .side .widget .logo::after,
+body.bg-dark .side .widget .logo::after {
+	background: #04000b !important;
+}
+
+/* Кнопка закрытия */
+.side .close-side,
+.bg-dark .side .close-side,
+body.bg-dark .side .close-side {
+	color: #C9F31D !important;
+	border-color: #C9F31D !important;
+	transition: all 0.3s ease;
+}
+
+.side .close-side:hover,
+.bg-dark .side .close-side:hover,
+body.bg-dark .side .close-side:hover {
+	background-color: #C9F31D !important;
+	color: #04000b !important;
+}
+
+/* Пункты меню - белый текст */
+ul.simple-menu-list > li > a,
+.bg-dark ul.simple-menu-list > li > a,
+body.bg-dark ul.simple-menu-list > li > a,
+.side-navbar-inner ul.simple-menu-list > li > a,
+.side ul.simple-menu-list > li > a,
+.bg-dark .side ul.simple-menu-list > li > a,
+body.bg-dark .side ul.simple-menu-list > li > a {
+	color: #ffffff !important;
+	transition: color 0.3s ease;
+	border-bottom-color: rgba(201, 243, 29, 0.2) !important;
+}
+
+ul.simple-menu-list > li > a:hover,
+.bg-dark ul.simple-menu-list > li > a:hover,
+body.bg-dark ul.simple-menu-list > li > a:hover {
+	color: #C9F31D !important;
+}
+
+ul.simple-menu-list > li.on > a,
+.bg-dark ul.simple-menu-list > li.on > a,
+body.bg-dark ul.simple-menu-list > li.on > a {
+	color: #C9F31D !important;
+}
+
+/* Анимация раздвижения для элементов меню с подменю */
+ul.simple-menu-list > li.submenu-item,
+.bg-dark ul.simple-menu-list > li.submenu-item,
+body.bg-dark ul.simple-menu-list > li.submenu-item {
+	transition: margin-bottom 0.3s ease;
+}
+
+ul.simple-menu-list > li.submenu-item.open,
+.bg-dark ul.simple-menu-list > li.submenu-item.open,
+body.bg-dark ul.simple-menu-list > li.submenu-item.open {
+	margin-bottom: 10px;
+}
+
+/* Иконки стрелок - желто-зеленые */
+ul.simple-menu-list > li i,
+.bg-dark ul.simple-menu-list > li i,
+body.bg-dark ul.simple-menu-list > li i {
+	color: #C9F31D !important;
+	transition: all 0.3s ease;
+}
+
+ul.simple-menu-list > li i:hover,
+.bg-dark ul.simple-menu-list > li i:hover,
+body.bg-dark ul.simple-menu-list > li i:hover {
+	color: #ffffff !important;
+	background-color: #C9F31D;
+	border-radius: 50%;
+}
+
+ul.simple-menu-list > li.on i,
+.bg-dark ul.simple-menu-list > li.on i,
+body.bg-dark ul.simple-menu-list > li.on i {
+	color: #ffffff !important;
+	background-color: #C9F31D;
+	border-radius: 50%;
+}
+
+/* Подменю с анимацией раздвижения - переопределяем display: none из строки 2368 */
+ul.simple-menu-list .sub-menu,
+.bg-dark ul.simple-menu-list .sub-menu,
+body.bg-dark ul.simple-menu-list .sub-menu,
+ul.simple-menu-list li .sub-menu,
+.bg-dark ul.simple-menu-list li .sub-menu,
+body.bg-dark ul.simple-menu-list li .sub-menu {
+	background-color: rgba(201, 243, 29, 0.05) !important;
+	border-left: 2px solid #C9F31D !important;
+	padding: 0 !important;
+	margin-left: 10px !important;
+	margin-top: 0 !important;
+	margin: 0 0 0 10px !important;
+	border-radius: 4px;
+	max-height: 0;
+	overflow: hidden;
+	opacity: 0;
+	transform: translateY(-10px);
+	transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+	            opacity 0.3s ease,
+	            transform 0.3s ease,
+	            padding 0.3s ease,
+	            margin-top 0.3s ease;
+	display: block !important;
+	visibility: visible !important;
+}
+
+ul.simple-menu-list .sub-menu.open,
+.bg-dark ul.simple-menu-list .sub-menu.open,
+body.bg-dark ul.simple-menu-list .sub-menu.open,
+ul.simple-menu-list li .sub-menu.open,
+.bg-dark ul.simple-menu-list li .sub-menu.open,
+body.bg-dark ul.simple-menu-list li .sub-menu.open {
+	max-height: 500px !important;
+	opacity: 1 !important;
+	transform: translateY(0) !important;
+	padding: 10px 0 !important;
+	margin-top: 10px !important;
+	margin: 10px 0 0 10px !important;
+	display: block !important;
+	visibility: visible !important;
+}
+
+ul.simple-menu-list .sub-menu li a,
+.bg-dark ul.simple-menu-list .sub-menu li a,
+body.bg-dark ul.simple-menu-list .sub-menu li a {
+	color: #cccccc !important;
+	transition: all 0.3s ease;
+	padding: 8px 20px !important;
+}
+
+ul.simple-menu-list .sub-menu li a:hover,
+.bg-dark ul.simple-menu-list .sub-menu li a:hover,
+body.bg-dark ul.simple-menu-list .sub-menu li a:hover {
+	color: #C9F31D !important;
+	background-color: rgba(201, 243, 29, 0.1) !important;
+	padding-left: 30px !important;
+}
+
+/* Виджеты в меню */
+.side .widget.address ul li p,
+.bg-dark .side .widget.address ul li p,
+body.bg-dark .side .widget.address ul li p {
+	color: #C9F31D !important;
+}
+
+.side .widget.address ul li strong,
+.bg-dark .side .widget.address ul li strong,
+body.bg-dark .side .widget.address ul li strong {
+	color: #ffffff !important;
+}
+
+.side .widget h4.title,
+.bg-dark .side .widget h4.title,
+body.bg-dark .side .widget h4.title {
+	color: #C9F31D !important;
+}
+
+.side-navbar-inner,
+.bg-dark .side-navbar-inner,
+body.bg-dark .side-navbar-inner {
+	border-right-color: rgba(201, 243, 29, 0.2) !important;
+}
+
+/* Социальные иконки */
+.side .widget.social li a,
+.bg-dark .side .widget.social li a,
+body.bg-dark .side .widget.social li a {
+	border: 1px solid rgba(201, 243, 29, 0.3) !important;
+	color: #C9F31D !important;
+	transition: all 0.3s ease;
+}
+
+.side .widget.social li a:hover,
+.bg-dark .side .widget.social li a:hover,
+body.bg-dark .side .widget.social li a:hover {
+	background-color: #C9F31D !important;
+	color: #04000b !important;
+	border-color: #C9F31D !important;
 }
