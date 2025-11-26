@@ -148,84 +148,85 @@ const TeamNewPage = () => {
             name: "Александр Иванов",
             role: "Frontend Developer",
             description: "Специализируется на React и TypeScript, создаёт интуитивные интерфейсы.",
-            photo: "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=900&q=80"
+            photo: "/assets/team/просто сотрудник 1.jpg"
+            
         },
         {
             id: 2,
             name: "Мария Петрова",
             role: "UI/UX Designer",
             description: "Превращает идеи в визуальные решения с фокусом на пользовательский опыт.",
-            photo: "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=900&q=80&sat=-20"
+            photo: "/assets/team/просто сотрудник 2.jpg"
         },
         {
             id: 3,
             name: "Дмитрий Сидоров",
             role: "Backend Developer",
             description: "Разрабатывает масштабируемые серверные решения на Node.js.",
-            photo: "https://images.unsplash.com/photo-1544723795-3fb6469f5b39?auto=format&fit=crop&w=900&q=80"
+            photo: "/assets/team/просто сотрудник 3.jpg"
         },
         {
             id: 4,
             name: "Елена Козлова",
             role: "Project Manager",
             description: "Координирует проекты и обеспечивает эффективную коммуникацию в команде.",
-            photo: "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=900&q=80&sat=-50"
+            photo: "/assets/team/просто сотрудник 4.jpg"
         },
         {
             id: 5,
             name: "Игорь Волков",
             role: "DevOps Engineer",
             description: "Настраивает инфраструктуру и автоматизирует процессы разработки.",
-            photo: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=900&q=80"
+            photo: "/assets/team/просто сотрудник 5.jpg"
         },
         {
             id: 6,
             name: "Анна Смирнова",
             role: "Full Stack Developer",
             description: "Работает на всех уровнях стека, от базы данных до фронтенда.",
-            photo: "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=900&q=80&sat=-80"
+            photo: "/assets/team/просто сотрудник 6.jpg"
         },
         {
             id: 7,
             name: "Сергей Лебедев",
             role: "Mobile Developer",
             description: "Создаёт нативные и кроссплатформенные мобильные приложения.",
-            photo: "https://images.unsplash.com/photo-1544723795-3fb6469f5b39?auto=format&fit=crop&w=900&q=80&sat=-40"
+            photo: "/assets/team/просто сотрудник 7.jpg"
         },
         {
             id: 8,
             name: "Ольга Новикова",
             role: "QA Engineer",
             description: "Обеспечивает качество продукта через тщательное тестирование.",
-            photo: "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=900&q=80&sat=-10"
+            photo: "/assets/team/просто сотрудник 8.jpg"
         },
         {
             id: 9,
             name: "Павел Морозов",
             role: "Tech Lead",
             description: "Руководит технической стратегией и архитектурными решениями.",
-            photo: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=900&q=80&sat=-30"
+            photo: "/assets/team/просто сотрудник 9.jpg"
         },
         {
             id: 10,
             name: "Татьяна Федорова",
             role: "Product Designer",
             description: "Проектирует продукты с учётом бизнес-целей и потребностей пользователей.",
-            photo: "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=900&q=80&sat=-60"
+            photo: "/assets/team/просто сотрудник 10.jpg"
         },
         {
             id: 11,
             name: "Никита Андреев",
             role: "Data Analyst",
             description: "Собирает и интерпретирует продуктовую аналитику, помогает принимать решения на основании данных.",
-            photo: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=900&q=80&sat=-10"
+            photo: "/assets/team/просто сотрудник 11.jpg"
         },
         {
             id: 12,
             name: "Виктория Романова",
             role: "Customer Success Lead",
             description: "Выстраивает процессы сопровождения клиентов и обеспечивает постоянную обратную связь с продуктовой командой.",
-            photo: "https://images.unsplash.com/photo-1544723795-3fb6469f5b39?auto=format&fit=crop&w=900&q=80&sat=-60"
+            photo: "/assets/team/просто сотрудник 12.png"
         }
     ];
 
