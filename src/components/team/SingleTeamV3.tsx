@@ -42,7 +42,7 @@ const SingleTeamV3 = ({ team, onOpenSpecialist }: SingleTeamV3Props) => {
                     </Link>
                 </div>
                 <div className="info">
-                    <h4><Link to={`/team-details/${id}`}>{name}</Link></h4>
+                    <h4><Link to={`/team-details/${id}`} style={{ whiteSpace: 'pre-wrap' }}>{name}</Link></h4>
                     {specialistDetails && (
                         <button
                             type="button"
