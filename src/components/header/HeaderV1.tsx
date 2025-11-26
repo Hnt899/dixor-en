@@ -36,7 +36,7 @@ const HeaderV1 = () => {
                             <button type="button" className="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu" onClick={closeMenu}>
                                 <i className="fa fa-times" />
                             </button>
-                            <MainMenu toggleSubMenu={toggleSubMenu} navbarPlacement='navbar-center' />
+                            <MainMenu toggleSubMenu={toggleSubMenu} navbarPlacement='navbar-center' closeMenu={closeMenu} />
                         </div>
                         <div className="d-flex align-items-center">
                             <button type="button" className="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu" onClick={openMenu} style={{ marginRight: '20px' }}>
