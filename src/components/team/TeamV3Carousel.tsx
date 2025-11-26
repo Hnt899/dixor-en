@@ -17,6 +17,7 @@ interface SpecialistModalPayload {
     category: string;
     stack: string[];
     description: string;
+    thumb?: string;
 }
 
 const TeamV3Carousel = ({ hasTitle, sectionClass }: DataType) => {
@@ -38,7 +39,8 @@ const TeamV3Carousel = ({ hasTitle, sectionClass }: DataType) => {
             name: member.name,
             category,
             stack,
-            description
+            description,
+            thumb: member.thumb
         });
     };
 
@@ -97,16 +99,13 @@ const TeamV3Carousel = ({ hasTitle, sectionClass }: DataType) => {
                                         <div className="team-member-card team-style-three-item">
                                             <div className="thumb">
                                                 <img 
-                                                    src="/assets/team/artur.jpg"
+                                                    src={member.thumb ? `/assets/team/${member.thumb}` : "/assets/team/artur.jpg"}
                                                     alt={member.name}
                                                 />
                                             </div>
                                             <div className="info">
-                                                <h4>
-                                                    {member.name.split(' ').length > 1 && (
-                                                        <span className="last-name">{member.name.split(' ').slice(1).join(' ')}</span>
-                                                    )}
-                                                    <span className="first-name">{member.name.split(' ')[0]}</span>
+                                                <h4 style={{ whiteSpace: 'pre-wrap' }}>
+                                                    {member.name}
                                                 </h4>
                                                 {member.specialistDetails && (
                                                     <button

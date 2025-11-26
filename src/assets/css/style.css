@@ -20965,12 +20965,16 @@ nav.navbar.validnavs .navbar-collapse.collapse.show img.light-img {
         display: block;
     }
 
-    .team-members-section .team-member-card.team-style-three-item .info {
-        text-align: center;
-        margin-left: 0;
-        margin-right: 0;
-        width: 100%;
-    }
+.team-members-section .team-member-card.team-style-three-item .info {
+    text-align: center;
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+}
+
+.team-members-section .team-member-card.team-style-three-item .info h4 {
+    white-space: pre-wrap;
+}
 }
 
 .team-members-grid > * {
