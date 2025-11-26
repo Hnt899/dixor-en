@@ -51,36 +51,18 @@ const TeamNewPage = () => {
         stack: string[];
         description: string;
         category: string;
+        photo?: string;
     } | null>(null);
     const [currentMemberIndex, setCurrentMemberIndex] = useState(0);
     const [isContactModalOpen, setIsContactModalOpen] = useState(false);
 
-    // Данные ведущих специалистов
-    const specialists = {
-        frontend: {
-            name: "Александр Иванов",
-            stack: ["React", "TypeScript", "Next.js", "Tailwind CSS", "Figma"],
-            description: "Глава отдела разработки и дизайна, специалист широкого профиля, который поможет вам визуально интерпретировать ваши идеи. Более 8 лет опыта в создании современных веб-приложений. Эксперт в области React-экосистемы и TypeScript, создал десятки успешных проектов для крупных компаний.",
-            category: "Frontend"
-        },
-        backend: {
-            name: "Дмитрий Сидоров",
-            stack: ["Node.js", "PostgreSQL", "MongoDB", "GraphQL", "AWS"],
-            description: "Ведущий backend-разработчик с глубоким пониманием архитектуры масштабируемых систем. Специализируется на создании высоконагруженных серверных решений и микросервисной архитектуры. Опыт работы с облачными платформами и оптимизацией производительности.",
-            category: "Backend"
-        },
-        tools: {
-            name: "Игорь Волков",
-            stack: ["Docker", "Kubernetes", "Git", "Jest", "Cypress"],
-            description: "DevOps-инженер и архитектор инфраструктуры. Автоматизирует процессы разработки и развертывания, обеспечивает стабильность и масштабируемость систем. Эксперт в области контейнеризации, CI/CD и мониторинга приложений.",
-            category: "Инструменты"
-        }
-    };
-
     const handleOpenModal = (category: 'frontend' | 'backend' | 'tools') => {
         setSelectedSpecialist({
-            ...specialists[category],
-            category: specialists[category].category
+            name: specialists[category].name,
+            stack: specialists[category].stack,
+            description: specialists[category].description,
+            category: specialists[category].category,
+            photo: specialists[category].photo
         });
     };
 
@@ -147,75 +129,112 @@ const TeamNewPage = () => {
             id: 1,
             name: "Александр Иванов",
             role: "Frontend Developer",
-            description: "Специализируется на React и TypeScript, создаёт интуитивные интерфейсы."
+            description: "Специализируется на React и TypeScript, создаёт интуитивные интерфейсы.",
+            photo: "/assets/team/просто сотрудник 1.jpg"
         },
         {
             id: 2,
             name: "Мария Петрова",
             role: "UI/UX Designer",
-            description: "Превращает идеи в визуальные решения с фокусом на пользовательский опыт."
+            description: "Превращает идеи в визуальные решения с фокусом на пользовательский опыт.",
+            photo: "/assets/team/просто сотрудник 2.jpg"
         },
         {
             id: 3,
             name: "Дмитрий Сидоров",
             role: "Backend Developer",
-            description: "Разрабатывает масштабируемые серверные решения на Node.js."
+            description: "Разрабатывает масштабируемые серверные решения на Node.js.",
+            photo: "/assets/team/просто сотрудник 3.jpg"
         },
         {
             id: 4,
             name: "Елена Козлова",
             role: "Project Manager",
-            description: "Координирует проекты и обеспечивает эффективную коммуникацию в команде."
+            description: "Координирует проекты и обеспечивает эффективную коммуникацию в команде.",
+            photo: "/assets/team/просто сотрудник 4.jpg"
         },
         {
             id: 5,
             name: "Игорь Волков",
             role: "DevOps Engineer",
-            description: "Настраивает инфраструктуру и автоматизирует процессы разработки."
+            description: "Настраивает инфраструктуру и автоматизирует процессы разработки.",
+            photo: "/assets/team/просто сотрудник 5.jpg"
         },
         {
             id: 6,
             name: "Анна Смирнова",
             role: "Full Stack Developer",
-            description: "Работает на всех уровнях стека, от базы данных до фронтенда."
+            description: "Работает на всех уровнях стека, от базы данных до фронтенда.",
+            photo: "/assets/team/просто сотрудник 6.jpg"
         },
         {
             id: 7,
             name: "Сергей Лебедев",
             role: "Mobile Developer",
-            description: "Создаёт нативные и кроссплатформенные мобильные приложения."
+            description: "Создаёт нативные и кроссплатформенные мобильные приложения.",
+            photo: "/assets/team/просто сотрудник 7.jpg"
         },
         {
             id: 8,
             name: "Ольга Новикова",
             role: "QA Engineer",
-            description: "Обеспечивает качество продукта через тщательное тестирование."
+            description: "Обеспечивает качество продукта через тщательное тестирование.",
+            photo: "/assets/team/просто сотрудник 8.jpg"
         },
         {
             id: 9,
             name: "Павел Морозов",
             role: "Tech Lead",
-            description: "Руководит технической стратегией и архитектурными решениями."
+            description: "Руководит технической стратегией и архитектурными решениями.",
+            photo: "/assets/team/просто сотрудник 9.jpg"
         },
         {
             id: 10,
             name: "Татьяна Федорова",
             role: "Product Designer",
-            description: "Проектирует продукты с учётом бизнес-целей и потребностей пользователей."
+            description: "Проектирует продукты с учётом бизнес-целей и потребностей пользователей.",
+            photo: "/assets/team/просто сотрудник 10.jpg"
         },
         {
             id: 11,
             name: "Никита Андреев",
             role: "Data Analyst",
-            description: "Собирает и интерпретирует продуктовую аналитику, помогает принимать решения на основании данных."
+            description: "Собирает и интерпретирует продуктовую аналитику, помогает принимать решения на основании данных.",
+            photo: "/assets/team/просто сотрудник 11.jpg"
         },
         {
             id: 12,
             name: "Виктория Романова",
             role: "Customer Success Lead",
-            description: "Выстраивает процессы сопровождения клиентов и обеспечивает постоянную обратную связь с продуктовой командой."
+            description: "Выстраивает процессы сопровождения клиентов и обеспечивает постоянную обратную связь с продуктовой командой.",
+            photo: "/assets/team/просто сотрудник 12.png"
         }
     ];
+
+    // Данные ведущих специалистов (используем случайных людей из списка сотрудников)
+    const specialists = {
+        frontend: {
+            name: teamMembers[0].name, // Александр Иванов
+            stack: ["React", "TypeScript", "Next.js", "Tailwind CSS", "Figma"],
+            description: "Глава отдела разработки и дизайна, специалист широкого профиля, который поможет вам визуально интерпретировать ваши идеи. Более 8 лет опыта в создании современных веб-приложений. Эксперт в области React-экосистемы и TypeScript, создал десятки успешных проектов для крупных компаний.",
+            category: "Frontend",
+            photo: teamMembers[0].photo
+        },
+        backend: {
+            name: teamMembers[2].name, // Дмитрий Сидоров
+            stack: ["Node.js", "PostgreSQL", "MongoDB", "GraphQL", "AWS"],
+            description: "Ведущий backend-разработчик с глубоким пониманием архитектуры масштабируемых систем. Специализируется на создании высоконагруженных серверных решений и микросервисной архитектуры. Опыт работы с облачными платформами и оптимизацией производительности.",
+            category: "Backend",
+            photo: teamMembers[2].photo
+        },
+        tools: {
+            name: teamMembers[4].name, // Игорь Волков
+            stack: ["Docker", "Kubernetes", "Git", "Jest", "Cypress"],
+            description: "DevOps-инженер и архитектор инфраструктуры. Автоматизирует процессы разработки и развертывания, обеспечивает стабильность и масштабируемость систем. Эксперт в области контейнеризации, CI/CD и мониторинга приложений.",
+            category: "DevOps",
+            photo: teamMembers[4].photo
+        }
+    };
 
     const frontendTech = [
         "React", "TypeScript", "Next.js", "Tailwind CSS", "Figma"
@@ -275,6 +294,7 @@ const TeamNewPage = () => {
                                                 name={member.name}
                                                 role={member.role}
                                                 description={member.description}
+                                                photo={member.photo}
                                             />
                                         </div>
                                     ))}
@@ -367,7 +387,7 @@ const TeamNewPage = () => {
                                 </div>
                                 <div className="tech-block">
                                     <div className="tech-block-header">
-                                        <h3 className="tech-block-title">Инструменты</h3>
+                                        <h3 className="tech-block-title">DevOps</h3>
                                         <button className="tech-block-btn" onClick={() => handleOpenModal('tools')}>о ведущем специалисте</button>
                                     </div>
                                     <div className="team-tech-grid">

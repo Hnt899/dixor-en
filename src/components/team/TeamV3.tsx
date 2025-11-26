@@ -18,6 +18,7 @@ interface SpecialistModalPayload {
     category: string;
     stack: string[];
     description: string;
+    thumb?: string;
 }
 
 const TeamV3 = ({ hasTitle, sectionClass }: DataType) => {
@@ -35,7 +36,8 @@ const TeamV3 = ({ hasTitle, sectionClass }: DataType) => {
             category,
             stack,
             description,
-            name: name || team.name || 'Ведущий специалист'
+            name: name || team.name || 'Ведущий специалист',
+            thumb: team.thumb
         });
     };
 

@@ -1,7 +1,7 @@
 [
     {
       "id": 1,
-      "name": "Иван Петров",
+      "name": "Фурт Артур",
       "designation": "Team Lead · Full-stack",
       "thumb": "artur.jpg",
       "social": {
@@ -16,7 +16,7 @@
     },
     {
       "id": 2,
-      "name": "Анна Соколова",
+      "name": "Фурт Артур",
       "designation": "Frontend · React/Next.js",
       "thumb": "artur.jpg",
       "social": {
@@ -31,7 +31,7 @@
     },
     {
       "id": 3,
-      "name": "Дмитрий Орлов",
+      "name": "Фурт Артур",
       "designation": "Backend · Node.js/Nest",
       "thumb": "artur.jpg",
       "social": {

@@ -3,6 +3,8 @@ interface SpecialistDetails {
     category: string;
     stack: string[];
     description: string;
+    thumb?: string;
+    photo?: string;
 }
 
 interface TeamSpecialistModalProps {
@@ -30,7 +32,7 @@ const TeamSpecialistModal = ({ specialist, isOpen, onClose }: TeamSpecialistModa
                 <div className="specialist-modal-content">
                     <div className="specialist-modal-photo">
                         <img
-                            src="/assets/team/artur.jpg"
+                            src={specialist.photo || (specialist.thumb ? `/assets/team/${specialist.thumb}` : "/assets/team/artur.jpg")}
                             alt={specialist.name}
                             style={{
                                 width: '100%',
