@@ -15,7 +15,7 @@ const TeamMemberCard = ({ name, photo }: TeamMemberCardProps) => {
     return (
         <div className="team-member-card team-style-three-item">
             <div className="thumb">
-            <img
+                <img
                     src={photo || "/assets/team/artur.jpg"}
                     alt={name}
                     style={{
