@@ -226,7 +226,7 @@ const TeamNewPage = () => {
             name: "Виктория Романова",
             role: "Customer Success Lead",
             description: "Выстраивает процессы сопровождения клиентов и обеспечивает постоянную обратную связь с продуктовой командой.",
-            photo: "/assets/team/просто сотрудник 12.png"
+            photo: "https://images.unsplash.com/photo-1544723795-3fb6469f5b39?auto=format&fit=crop&w=900&q=80&sat=-60"
         }
     ];
 
