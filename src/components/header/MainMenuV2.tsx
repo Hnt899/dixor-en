@@ -82,8 +82,8 @@ const MainMenuV2 = ({ toggleSubMenu2: _toggleSubMenu2, closeInfoBar }: DataType)
                     <Link to="#" onClick={(e) => handleSmoothScroll(e, 'pricing')}>Предложения</Link>
                 </li>
                 <li>
-                    <Link to="#" onClick={(e) => handleSmoothScroll(e, 'team')}>Команда</Link>
-                        </li>
+                    <Link to="/team" onClick={closeInfoBar}>Команда</Link>
+                </li>
                 <li>
                     <Link to="#" onClick={handleBlogClick}>Блог</Link>
                 </li>

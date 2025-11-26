@@ -1,15 +1,46 @@
 import arrowLongRight from '/assets/img/icon/arrow-long-right.png';
 import { Link } from "react-router-dom";
+import { useState } from "react";
 import TeamV3Data from "../../../src/assets/jsonData/team/TeamV3Data.json";
 import SingleTeamV3 from './SingleTeamV3';
-import SplitText from "../animation/SplitText.jsx"
+import SplitText from "../animation/SplitText.jsx";
+import TeamSpecialistModal from "./TeamSpecialistModal";
 
 interface DataType {
     hasTitle?: boolean;
     sectionClass?: string;
 }
 
+type TeamMember = (typeof TeamV3Data)[number];
+
+interface SpecialistModalPayload {
+    name: string;
+    category: string;
+    stack: string[];
+    description: string;
+}
+
 const TeamV3 = ({ hasTitle, sectionClass }: DataType) => {
+    const [selectedSpecialist, setSelectedSpecialist] = useState<SpecialistModalPayload | null>(null);
+
+    const handleOpenSpecialist = (team: TeamMember) => {
+        if (!team.specialistDetails) return;
+
+        const { category, stack, description, name } = {
+            name: undefined,
+            ...team.specialistDetails
+        };
+
+        setSelectedSpecialist({
+            category,
+            stack,
+            description,
+            name: name || team.name || 'Ведущий специалист'
+        });
+    };
+
+    const handleCloseSpecialist = () => setSelectedSpecialist(null);
+
     return (
         <>
             <div className={`team-style-three-area default-padding bottom-less ${sectionClass ? sectionClass : ""}`}>
@@ -50,12 +81,17 @@ const TeamV3 = ({ hasTitle, sectionClass }: DataType) => {
                     <div className="row">
                         {TeamV3Data.slice(0, 4).map(team =>
                             <div className="col-xl-3 col-md-6 mb-30" key={team.id}>
-                                <SingleTeamV3 team={team} />
+                                <SingleTeamV3 team={team} onOpenSpecialist={() => handleOpenSpecialist(team)} />
                             </div>
                         )}
                     </div>
                 </div>
             </div>
+            <TeamSpecialistModal
+                isOpen={!!selectedSpecialist}
+                specialist={selectedSpecialist}
+                onClose={handleCloseSpecialist}
+            />
         </>
     );
 };

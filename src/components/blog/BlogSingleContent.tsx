@@ -1,10 +1,5 @@
 import { Link } from "react-router-dom";
 import { useState, useEffect, useRef } from "react";
-import team1Thumb from "/assets/img/team/9.jpg"
-import BlogPostComments from './BlogPostComments';
-import BlogCommentForm from './BlogCommentForm';
-import handleSmoothScroll from '../utilities/handleSmoothScroll';
-import SocialShareV3 from '../social/SocialShareV3';
 import BlogV3Data from "../../../src/assets/jsonData/blog/BlogV3Data.json";
 import Animate from "../animation/Animate";
 
@@ -46,8 +41,15 @@ const BlogSingleContent = ({ blogInfo, totalBlogs, sectionClass }: BlogSinglePro
     const previousBlog = BlogV3Data.find((blog) => blog.id === previousId);
     const nextBlog = BlogV3Data.find((blog) => blog.id === nextId);
 
-    // Get the first two words of the project title
-    const getFirstTwoWords = (text?: string) => text?.split(' ').slice(0, 2).join(' ') || "No Title";
+    // Форматируем заголовок для переключателя статей
+    const getReadableTitle = (text?: string) => {
+        if (!text) return "Без названия";
+        const words = text.split(' ');
+        if (words.length <= 8) {
+            return text;
+        }
+        return `${words.slice(0, 8).join(' ')}…`;
+    };
 
     // Функция для получения полного пути к изображению
     const getImagePath = (src: string) => {
@@ -257,63 +259,25 @@ const BlogSingleContent = ({ blogInfo, totalBlogs, sectionClass }: BlogSinglePro
                                         </div>
                                     </div>
 
-                                    {/* Post Author */}
-                                    <div className="post-author">
-                                        <div className="thumb">
-                                            <img src={team1Thumb} alt="Thumb" />
-                                        </div>
-                                        <div className="info">
-                                            <h4><Link to="#" onClick={handleSmoothScroll}>Md Sohag</Link></h4>
-                                            <p>
-                                                Grursus mal suada faci lisis Lorem ipsum dolarorit more ametion consectetur elit. Vesti at bulum nec at odio aea the dumm ipsumm ipsum that dolocons rsus mal suada and fadolorit to the consectetur elit. All the Lorem Ipsum generators on the Internet tend.
-                                            </p>
-                                        </div>
-                                    </div>
-
-                                    {/* Post Tags Share */}
-                                    <div className="post-tags share">
-                                        <div className="tags">
-                                            <h4>Tags: </h4>
-                                            <Link to="#" onClick={handleSmoothScroll}>Algorithm</Link>
-                                            <Link to="#" onClick={handleSmoothScroll}>Data science</Link>
-                                        </div>
-                                        <div className="social">
-                                            <h4>Share:</h4>
-                                            <ul>
-                                                <SocialShareV3 />
-                                            </ul>
-                                        </div>
-                                    </div>
-
                                     {/* Post Pagination */}
                                     <div className="post-pagi-area">
                                         <div className="post-previous">
-                                            <Link to={`/blog-single/${previousId}`}>
+                                            <Link to={`/blog-post/${previousId}`}>
                                                 <div className="icon"><i className="fas fa-angle-double-left"></i></div>
-                                                <div className="nav-title"> Previous Post <h5>{getFirstTwoWords(previousBlog?.title)}</h5></div>
+                                                <div className="nav-title">
+                                                    <span>Предыдущая статья</span>
+                                                    <h5>{getReadableTitle(previousBlog?.title)}</h5>
+                                                </div>
                                             </Link>
                                         </div>
                                         <div className="post-next">
-                                            <Link to={`/blog-single/${nextId}`}>
-                                                <div className="nav-title">Next Post <h5>{getFirstTwoWords(nextBlog?.title)}</h5></div>
+                                            <Link to={`/blog-post/${nextId}`}>
+                                                <div className="nav-title">
+                                                    <span>Следующая статья</span>
+                                                    <h5>{getReadableTitle(nextBlog?.title)}</h5>
+                                                </div>
                                                 <div className="icon"><i className="fas fa-angle-double-right"></i></div>
                                             </Link>
-                                        </div>
-                                    </div>
-
-                                    {/* Start Blog Comment */}
-                                    <div className="blog-comments">
-                                        <div className="comments-area">
-                                            <div className="comments-title">
-                                                <h3>3 Comments On “Providing Top Quality Cleaning Related Services Charms.”</h3>
-                                                <BlogPostComments />
-                                            </div>
-                                            <div className="comments-form">
-                                                <div className="title">
-                                                    <h3>Leave a comments</h3>
-                                                </div>
-                                                <BlogCommentForm />
-                                            </div>
                                         </div>
                                     </div>
 

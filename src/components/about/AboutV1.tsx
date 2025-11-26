@@ -1,13 +1,9 @@
-import team10 from '/assets/img/team/10.jpg';
-import team11 from '/assets/img/team/11.jpg';
 import arrowIcon from '/assets/img/icon/arrow.png';
 import arrowThemeIcon from '/assets/img/icon/arrow-theme.png';
 import banner3 from '/assets/img/banner/3.jpg';
 // import { Link } from "react-router-dom"; // Ссылка больше не используется, заменена на <a>
 import SkillProgress from '../process/SkillProgress';
 import SkillProgressData from "../../../src/assets/jsonData/progress/SkillProgressData.json";
-import ModalVideo from 'react-modal-video';
-import { useState } from 'react';
 import TextScrollAnimation from '../animation/TextScrollAnimation';
 import CountUp from 'react-countup';
 import useScrollAnimation from '../../hooks/useScrollAnimation';
@@ -20,7 +16,6 @@ interface DataType {
 
 const AboutV1 = ({ lightMode }: DataType) => {
 
-    const [isOpen, setOpen] = useState(false);
     const containerRef = useScrollAnimation();
 
     useThumbParallax()
@@ -52,19 +47,6 @@ const AboutV1 = ({ lightMode }: DataType) => {
                         </div>
                         <div className="col-lg-8 offset-lg-1">
                             <div className="about-style-one-info text-scroll-animation" ref={containerRef}>
-                                <div className="video-card mb-40">
-                                    <div className="thumb">
-                                        <img src={team10} alt="Image Not Found" />
-                                        <img src={team11} alt="Image Not Found" />
-                                    </div>
-                                    <a href="#" className="popup-youtube" onClick={(e) => { e.preventDefault(); setOpen(true); }}>
-                                        <i className="fas fa-play" />
-                                        <span className="video-text">
-                                            <span className="video-text-line">СМОТРЕТЬ</span>
-                                            <span className="video-text-line">ВИДЕО</span>
-                                        </span>
-                                    </a>
-                                </div>
                                 <p className="text">
                                     Мы — команда стратегов, дизайнеров и разработчиков, объединённых общей целью: создавать цифровые продукты, которые решают задачи бизнеса и восхищают пользователей. Мы верим в осмысленный дизайн и технологии, которые работают на результат.
                                 </p>
@@ -104,8 +86,6 @@ const AboutV1 = ({ lightMode }: DataType) => {
                     </div>
                 </div>
             </div>
-            {/* ID видео можно поменять на свое */}
-            <ModalVideo channel='youtube' isOpen={isOpen} videoId="izTDbJ23_ws" onClose={() => setOpen(false)} />
         </>
     );
 };

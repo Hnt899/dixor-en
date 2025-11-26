@@ -324,7 +324,21 @@ const MainMenu = ({ navbarPlacement, closeMenu }: DataType) => {
                     <a href="#pricing" onClick={(e) => handleSmoothScroll(e, 'pricing')}>Предложения</a>
                 </li>
                 <li>
-                    <a href="#team" onClick={(e) => handleSmoothScroll(e, 'team')}>Команда</a>
+                    <Link
+                        to="/team"
+                        onClick={() => {
+                            if (closeMenu) {
+                                closeMenu();
+                            }
+                            const menuElement = document.getElementById('navbar-menu');
+                            if (menuElement) {
+                                menuElement.classList.remove('show');
+                            }
+                            document.body.classList.remove('no-fade');
+                        }}
+                    >
+                        Команда
+                    </Link>
                 </li>
 
                 {/* ИСПРАВЛЕНИЕ: Меняем якорную ссылку на ссылку страницы */}

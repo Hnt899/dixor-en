@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Helmet } from "react-helmet-async";
 import LayoutV1 from "../../components/layouts/LayoutV1";
 import TeamMemberCard from "../../components/team/TeamMemberCard";
+import TeamSpecialistModal from "../../components/team/TeamSpecialistModal";
 import DarkClass from "../../components/classes/DarkClass";
 import ThemeDark from "../../components/switcher/ThemeDark";
 import ContactModal from "../../components/modal/ContactModal";
@@ -201,6 +202,18 @@ const TeamNewPage = () => {
             name: "Татьяна Федорова",
             role: "Product Designer",
             description: "Проектирует продукты с учётом бизнес-целей и потребностей пользователей."
+        },
+        {
+            id: 11,
+            name: "Никита Андреев",
+            role: "Data Analyst",
+            description: "Собирает и интерпретирует продуктовую аналитику, помогает принимать решения на основании данных."
+        },
+        {
+            id: 12,
+            name: "Виктория Романова",
+            role: "Customer Success Lead",
+            description: "Выстраивает процессы сопровождения клиентов и обеспечивает постоянную обратную связь с продуктовой командой."
         }
     ];
 
@@ -414,46 +427,11 @@ const TeamNewPage = () => {
                 onClose={handleCloseContactModal} 
             />
 
-            {/* Модалка специалиста */}
-            {selectedSpecialist && (
-                <div className="specialist-modal-overlay" onClick={handleCloseModal}>
-                    <div className="specialist-modal" onClick={(e) => e.stopPropagation()}>
-                        <button className="specialist-modal-close" onClick={handleCloseModal}>
-                            ×
-                        </button>
-                        <div className="specialist-modal-content">
-                            <div className="specialist-modal-photo">
-                                <img 
-                                    src="/assets/team/artur.jpg" 
-                                    alt={selectedSpecialist.name}
-                                    style={{
-                                        width: '100%',
-                                        height: '100%',
-                                        objectFit: 'cover',
-                                        borderRadius: '10px'
-                                    }}
-                                />
-                            </div>
-                            <div className="specialist-modal-info">
-                                <div className="specialist-modal-category">{selectedSpecialist.category}</div>
-                                <h3 className="specialist-modal-name">{selectedSpecialist.name}</h3>
-                                <div className="specialist-modal-stack">
-                                    <h4 className="specialist-stack-title">Стэк:</h4>
-                                    <div className="specialist-stack-badges">
-                                        {selectedSpecialist.stack.map((tech, index) => (
-                                            <span key={index} className="specialist-stack-badge">{tech}</span>
-                                        ))}
-                                    </div>
-                                </div>
-                                <div className="specialist-modal-description">
-                                    <h4 className="specialist-description-title">Почему он ведущий специалист:</h4>
-                                    <p>{selectedSpecialist.description}</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            )}
+            <TeamSpecialistModal
+                isOpen={!!selectedSpecialist}
+                specialist={selectedSpecialist}
+                onClose={handleCloseModal}
+            />
         </>
     );
 };

@@ -3,14 +3,25 @@ import TeamV3Data from "../../../src/assets/jsonData/team/TeamV3Data.json";
 import SplitText from "../animation/SplitText.jsx";
 import arrowLongRight from '/assets/img/icon/arrow-long-right.png';
 import { Link } from "react-router-dom";
+import TeamSpecialistModal from "./TeamSpecialistModal";
 
 interface DataType {
     hasTitle?: boolean;
     sectionClass?: string;
 }
 
+type TeamMember = (typeof TeamV3Data)[number];
+
+interface SpecialistModalPayload {
+    name: string;
+    category: string;
+    stack: string[];
+    description: string;
+}
+
 const TeamV3Carousel = ({ hasTitle, sectionClass }: DataType) => {
     const [currentMemberIndex, setCurrentMemberIndex] = useState(0);
+    const [selectedSpecialist, setSelectedSpecialist] = useState<SpecialistModalPayload | null>(null);
 
     const handlePrevMember = () => {
         setCurrentMemberIndex((prev) => (prev === 0 ? TeamV3Data.length - 1 : prev - 1));
@@ -19,6 +30,19 @@ const TeamV3Carousel = ({ hasTitle, sectionClass }: DataType) => {
     const handleNextMember = () => {
         setCurrentMemberIndex((prev) => (prev === TeamV3Data.length - 1 ? 0 : prev + 1));
     };
+
+    const handleOpenSpecialist = (member: TeamMember) => {
+        if (!member.specialistDetails) return;
+        const { category, stack, description } = member.specialistDetails;
+        setSelectedSpecialist({
+            name: member.name,
+            category,
+            stack,
+            description
+        });
+    };
+
+    const handleCloseSpecialist = () => setSelectedSpecialist(null);
 
     return (
         <>
@@ -84,7 +108,15 @@ const TeamV3Carousel = ({ hasTitle, sectionClass }: DataType) => {
                                                     )}
                                                     <span className="first-name">{member.name.split(' ')[0]}</span>
                                                 </h4>
-                                                <span>{member.designation}</span>
+                                                {member.specialistDetails && (
+                                                    <button
+                                                        type="button"
+                                                        className="tech-block-btn team-card-btn"
+                                                        onClick={() => handleOpenSpecialist(member)}
+                                                    >
+                                                        о ведущем специалисте
+                                                    </button>
+                                                )}
                                             </div>
                                         </div>
                                     </div>
@@ -115,6 +147,11 @@ const TeamV3Carousel = ({ hasTitle, sectionClass }: DataType) => {
                     </div>
                 </section>
             </div>
+            <TeamSpecialistModal
+                isOpen={!!selectedSpecialist}
+                specialist={selectedSpecialist}
+                onClose={handleCloseSpecialist}
+            />
         </>
     );
 };

@@ -10262,6 +10262,13 @@ a.btn-circle:hover strong {
 	margin-right: 50px;
 }
 
+.team-style-three-area .team-style-three-item .info {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	gap: 8px;
+}
+
 .team-style-three-item .info span {
 	font-size: 20px;
 }
@@ -20532,7 +20539,8 @@ nav.navbar.validnavs .navbar-collapse.collapse.show img.light-img {
     border: 1px solid #C9F31D;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
     max-width: 800px;
-    margin-left: 350px;
+    margin-left: 0;
+    margin-top: 20px;
     position: relative;
     z-index: 10;
     display: inline-block;
@@ -20631,6 +20639,30 @@ nav.navbar.validnavs .navbar-collapse.collapse.show img.light-img {
 
 .portfolio-filter-btn:active {
     transform: scale(0.95);
+}
+
+.recent-projects-mobile-cta {
+    display: none;
+}
+
+.recent-projects-mobile-btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background: var(--color-primary, #C9F31D);
+    color: #0a0a0a !important;
+    text-transform: uppercase;
+    font-weight: 600;
+    border-radius: 12px;
+    padding: 14px 20px;
+    border: none;
+    text-decoration: none;
+    letter-spacing: 0.5px;
+}
+
+.recent-projects-mobile-btn:active {
+    transform: scale(0.99);
 }
 
 /* Анимация для карточек проектов */
@@ -20802,6 +20834,12 @@ nav.navbar.validnavs .navbar-collapse.collapse.show img.light-img {
             opacity: 1;
             transform: translateY(0) scale(1);
         }
+    }
+
+    .recent-projects-mobile-cta {
+        display: block;
+        margin-top: 20px;
+        text-align: center;
     }
 }
 
@@ -21421,14 +21459,14 @@ nav.navbar.validnavs .navbar-collapse.collapse.show img.light-img {
     background: #0a0a0a;
     border: 1px solid var(--color-primary);
     border-radius: 20px;
-    max-width: 800px;
+    max-width: 620px;
     width: 90%;
     max-height: 90vh;
     overflow-y: auto;
     overflow-x: hidden;
     position: relative;
     animation: slideUp 0.4s ease;
-    padding: 40px;
+    padding: 32px;
     scrollbar-width: none;
     -ms-overflow-style: none;
 }
@@ -21482,13 +21520,21 @@ nav.navbar.validnavs .navbar-collapse.collapse.show img.light-img {
 .specialist-modal-content {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 24px;
+    align-items: center;
+    text-align: center;
 }
 
 .specialist-modal-photo {
     width: 100%;
     display: flex;
     justify-content: center;
+}
+
+.specialist-modal-photo img {
+    width: 100%;
+    height: auto;
+    max-width: 320px;
 }
 
 .team-photo-placeholder-modal {
@@ -21728,6 +21774,27 @@ nav.navbar.validnavs .navbar-collapse.collapse.show img.light-img {
     background: #000000;
     border: 2px solid var(--color-primary);
     color: #ffffff;
+}
+
+.team-card-btn {
+    opacity: 1;
+    transform: none;
+    margin-left: 0;
+    margin-top: 12px;
+    width: auto;
+    padding: 10px 26px;
+    justify-content: center;
+    color: #ffffff;
+    background: #050505;
+    border: 2px solid var(--color-primary);
+    transition: none !important;
+}
+
+.team-card-btn:hover,
+.team-card-btn:focus-visible {
+    background: #050505;
+    color: #ffffff;
+    border-color: var(--color-primary);
 }
 
 .team-tech-grid {
@@ -22578,6 +22645,10 @@ nav.navbar.validnavs .navbar-collapse.collapse.show img.light-img {
         justify-content: center;
         gap: 15px;
         text-align: center;
+    }
+
+    .project-idea-text .contact-list li:first-child {
+        transform: translateX(-20px) !important;
     }
     
     .project-idea-text .contact-list li .info {

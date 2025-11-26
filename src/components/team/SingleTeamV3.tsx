@@ -1,14 +1,26 @@
 import { Link } from "react-router-dom";
 
+interface SpecialistDetails {
+    category?: string;
+    stack?: string[];
+    description?: string;
+}
+
 interface DataType {
     id?: number;
     thumb?: string;
     name?: string;
     designation?: string;
+    specialistDetails?: SpecialistDetails;
 }
 
-const SingleTeamV3 = ({ team }: { team: DataType }) => {
-    const { id, name, designation } = team
+interface SingleTeamV3Props {
+    team: DataType;
+    onOpenSpecialist: (team: DataType) => void;
+}
+
+const SingleTeamV3 = ({ team, onOpenSpecialist }: SingleTeamV3Props) => {
+    const { id, name, specialistDetails } = team;
 
     return (
         <>
@@ -30,7 +42,15 @@ const SingleTeamV3 = ({ team }: { team: DataType }) => {
                 </div>
                 <div className="info">
                     <h4><Link to={`/team-details/${id}`}>{name}</Link></h4>
-                    <span>{designation}</span>
+                    {specialistDetails && (
+                        <button
+                            type="button"
+                            className="tech-block-btn team-card-btn"
+                            onClick={() => onOpenSpecialist(team)}
+                        >
+                            о ведущем специалисте
+                        </button>
+                    )}
                 </div>
             </div>
         </>

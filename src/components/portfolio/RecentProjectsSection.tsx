@@ -47,6 +47,11 @@ const RecentProjectsSection = () => {
                             <PortfolioV1 />
                         </div>
                     </div>
+                    <div className="recent-projects-mobile-cta">
+                        <Link className="recent-projects-mobile-btn" to="/projects">
+                            Смотреть все работы
+                        </Link>
+                    </div>
                 </div>
             </div>
             
