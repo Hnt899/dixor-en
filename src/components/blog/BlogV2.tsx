@@ -42,38 +42,38 @@ const BlogV2 = ({ sectionClass }: DataType) => {
                             </div>
                         )}
                     </div>
-                    <div className="row">
-                        <div className="col-12 text-center" style={{ marginTop: '30px' }}>
+                        <div className="row">
+                            <div className="col-12 text-center" style={{ marginTop: '30px' }}>
                             <Link
                                 to="/blog"
-                                style={{
+                                    style={{
                                     display: 'inline-block',
-                                    padding: '15px 40px',
-                                    border: 'none',
-                                    background: 'var(--color-primary)',
-                                    color: 'var(--color-heading)',
-                                    borderRadius: '5px',
-                                    cursor: 'pointer',
-                                    fontSize: '16px',
-                                    fontWeight: '600',
-                                    transition: 'all 0.3s ease',
-                                    position: 'relative',
-                                    zIndex: 1,
-                                    overflow: 'hidden',
+                                        padding: '15px 40px',
+                                        border: 'none',
+                                        background: 'var(--color-primary)',
+                                        color: 'var(--color-heading)',
+                                        borderRadius: '5px',
+                                        cursor: 'pointer',
+                                        fontSize: '16px',
+                                        fontWeight: '600',
+                                        transition: 'all 0.3s ease',
+                                        position: 'relative',
+                                        zIndex: 1,
+                                        overflow: 'hidden',
                                     boxSizing: 'border-box',
                                     textDecoration: 'none'
-                                }}
-                                onMouseEnter={(e) => {
-                                    e.currentTarget.style.background = 'var(--dark)';
-                                    e.currentTarget.style.color = '#ffffff';
-                                    e.currentTarget.style.transform = 'translateY(-2px)';
-                                }}
-                                onMouseLeave={(e) => {
-                                    e.currentTarget.style.background = 'var(--color-primary)';
-                                    e.currentTarget.style.color = 'var(--color-heading)';
-                                    e.currentTarget.style.transform = 'translateY(0)';
-                                }}
-                            >
+                                    }}
+                                    onMouseEnter={(e) => {
+                                        e.currentTarget.style.background = 'var(--dark)';
+                                        e.currentTarget.style.color = '#ffffff';
+                                        e.currentTarget.style.transform = 'translateY(-2px)';
+                                    }}
+                                    onMouseLeave={(e) => {
+                                        e.currentTarget.style.background = 'var(--color-primary)';
+                                        e.currentTarget.style.color = 'var(--color-heading)';
+                                        e.currentTarget.style.transform = 'translateY(0)';
+                                    }}
+                                >
                                 Показать все статьи
                             </Link>
                         </div>
