@@ -1,7 +1,19 @@
+import { useState } from "react";
 import PriceV2Data from "../../assets/jsonData/price/PriceV2Data.json"
 import SinglePriceV2 from "./SinglePriceV2";
+import ContactModal from "../modal/ContactModal";
 
 const PriceV3 = () => {
+    const [isModalOpen, setIsModalOpen] = useState(false);
+
+    const openModal = () => {
+        setIsModalOpen(true);
+    };
+
+    const closeModal = () => {
+        setIsModalOpen(false);
+    };
+
     return (
         <>
             <div id="pricing" className="pricing-style-two-area default-padding bottom-less bg-gray">
@@ -12,7 +24,7 @@ const PriceV3 = () => {
                                 <div className="row">
                                     {PriceV2Data.monthlyPlans.map(plan =>
                                         <div className="col-xl-4 col-lg-6 col-md-6 mb-30" key={plan.id}>
-                                            <SinglePriceV2 plan={plan} />
+                                            <SinglePriceV2 plan={plan} onOpenModal={openModal} />
                                         </div>
                                     )}
                                 </div>
@@ -22,7 +34,7 @@ const PriceV3 = () => {
                                 <div className="row">
                                     {PriceV2Data.yearlyPlans.map(plan =>
                                         <div className="col-xl-4 col-lg-6 col-md-6 mb-30" key={plan.id}>
-                                            <SinglePriceV2 plan={plan} />
+                                            <SinglePriceV2 plan={plan} onOpenModal={openModal} />
                                         </div>
                                     )}
                                 </div>
@@ -31,6 +43,7 @@ const PriceV3 = () => {
                     </div>
                 </div>
             </div>
+            <ContactModal isOpen={isModalOpen} onClose={closeModal} />
         </>
     );
 };

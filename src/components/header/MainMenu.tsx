@@ -168,7 +168,7 @@ const MainMenu = ({ navbarPlacement, closeMenu }: DataType) => {
             <ul className={`nav navbar-nav ${navbarPlacement ? navbarPlacement : ""}`} data-in="fadeInDown" data-out="fadeOutUp">
 
                 <li>
-                    <Link to="/" onClick={(e) => {
+                    <Link to="/" onClick={() => {
                         if (closeMenu) {
                             closeMenu();
                         }

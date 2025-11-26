@@ -6,7 +6,8 @@ interface DataType {
     closeInfoBar?: () => void;
 }
 
-const MainMenuV2 = ({ toggleSubMenu2, closeInfoBar }: DataType) => {
+const MainMenuV2 = ({ toggleSubMenu2: _toggleSubMenu2, closeInfoBar }: DataType) => {
+    // toggleSubMenu2 is passed but not used - kept for compatibility
     const location = useLocation();
     const navigate = useNavigate();
 

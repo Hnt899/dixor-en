@@ -1,6 +1,5 @@
 import team10 from '/assets/img/team/10.jpg';
 import team11 from '/assets/img/team/11.jpg';
-import team12 from '/assets/img/team/12.jpg';
 import arrowIcon from '/assets/img/icon/arrow.png';
 import arrowThemeIcon from '/assets/img/icon/arrow-theme.png';
 import banner3 from '/assets/img/banner/3.jpg';
