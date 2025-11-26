@@ -20,15 +20,19 @@ interface SingleTeamV3Props {
 }
 
 const SingleTeamV3 = ({ team, onOpenSpecialist }: SingleTeamV3Props) => {
-    const { id, name, specialistDetails } = team;
+    const { id, name, thumb, specialistDetails } = team;
+
+    const thumbSrc = thumb
+        ? (thumb.startsWith('http') ? thumb : `/assets/team/${thumb}`)
+        : '/assets/team/artur.jpg';
 
     return (
         <>
             <div className="team-style-three-item">
                 <div className="thumb">
                     <Link to={`/team-details/${id}`}>
-                        <img 
-                            src="/assets/team/artur.jpg" 
+                        <img
+                            src={thumbSrc}
                             alt={name || 'Члены команды'}
                             style={{
                                 width: '100%',

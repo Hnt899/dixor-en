@@ -26,11 +26,14 @@ const ServiceDetailsContent = ({ serviceInfo, sectionClass }: ServiceDetailsProp
     
     // Получаем изображение в зависимости от ID услуги
     const getServiceImage = () => {
-        if (!id) return "/assets/услуги/1.jpg";
-        // Для id=2 и id=3 используем 1.jpg
-        if (id === 2 || id === 3) return "/assets/услуги/1.jpg";
-        const imageId = id <= 3 ? id : ((id - 1) % 3) + 1;
-        return `/assets/услуги/${imageId}.jpg`;
+        const heroImages: Record<number, string> = {
+            1: "https://images.unsplash.com/photo-1454165205744-3b78555e5572?auto=format&fit=crop&w=1400&q=80",
+            2: "https://images.unsplash.com/photo-1523475472560-d2df97ec485c?auto=format&fit=crop&w=1400&q=80",
+            3: "https://images.unsplash.com/photo-1559028012-481c04fa702d?auto=format&fit=crop&w=1400&q=80",
+            4: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1400&q=80",
+        };
+
+        return heroImages[id || 1] || heroImages[1];
     };
 
     return (
