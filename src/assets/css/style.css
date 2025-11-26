@@ -20953,6 +20953,7 @@ nav.navbar.validnavs .navbar-collapse.collapse.show img.light-img {
         width: 100%;
         max-width: 100%;
         margin: 0 auto;
+        aspect-ratio: 3 / 4;
     }
 
     .team-members-section .team-member-card.team-style-three-item .thumb img {
