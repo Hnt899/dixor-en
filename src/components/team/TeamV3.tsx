@@ -18,6 +18,7 @@ interface SpecialistModalPayload {
     category: string;
     stack: string[];
     description: string;
+    photo?: string;
 }
 
 const TeamV3 = ({ hasTitle, sectionClass }: DataType) => {
@@ -35,7 +36,8 @@ const TeamV3 = ({ hasTitle, sectionClass }: DataType) => {
             category,
             stack,
             description,
-            name: name || team.name || 'Ведущий специалист'
+            name: name || team.name || 'Ведущий специалист',
+            photo: team.photo || team.thumb
         });
     };
 
@@ -43,7 +45,7 @@ const TeamV3 = ({ hasTitle, sectionClass }: DataType) => {
 
     return (
         <>
-            <div className={`team-style-three-area default-padding bottom-less ${sectionClass ? sectionClass : ""}`}>
+            <div className={`team-style-three-area default-padding bottom-less team-members-section team-page-grid ${sectionClass ? sectionClass : ""}`}>
 
                 {/* Team Title  */}
                 {hasTitle &&
@@ -77,13 +79,13 @@ const TeamV3 = ({ hasTitle, sectionClass }: DataType) => {
                     </div>
                 }
 
-                <div className="container-full">
-                    <div className="row">
-                        {TeamV3Data.slice(0, 4).map(team =>
-                            <div className="col-xl-3 col-md-6 mb-30" key={team.id}>
+                <div className="container team-grid-container">
+                    <div className="team-grid-row">
+                        {TeamV3Data.map(team => (
+                            <div className="team-grid-card" key={team.id}>
                                 <SingleTeamV3 team={team} onOpenSpecialist={() => handleOpenSpecialist(team)} />
                             </div>
-                        )}
+                        ))}
                     </div>
                 </div>
             </div>

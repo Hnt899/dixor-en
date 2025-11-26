@@ -12,11 +12,13 @@ const TeamMemberCard = ({ name, photo }: TeamMemberCardProps) => {
     const lastName = nameParts.length > 1 ? nameParts.slice(1).join(' ') : '';
     const firstName = nameParts[0] || '';
 
+    const photoSrc = photo ? `/assets/team/${photo}` : "/assets/team/artur.jpg";
+
     return (
         <div className="team-member-card team-style-three-item">
             <div className="thumb">
                 <img
-                    src={photo || "/assets/team/artur.jpg"}
+                    src={photoSrc}
                     alt={name}
                     style={{
                         width: '100%',
