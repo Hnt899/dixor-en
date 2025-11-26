@@ -1,12 +1,13 @@
 [
 	{
-		"id": 1,
-		"name": "Иван Петров",
-		"designation": "Team Lead · Full-stack",
-		"thumb": "1.jpg",
-		"social": {
-			"linkedin": "https://linkedin.com/",
-			"github": "https://github.com/"
+                "id": 1,
+                "name": "Иван Петров",
+                "designation": "Team Lead · Full-stack",
+                "photo": "artur.jpg",
+                "thumb": "1.jpg",
+                "social": {
+                        "linkedin": "https://linkedin.com/",
+                        "github": "https://github.com/"
 		},
 		"specialistDetails": {
 			"category": "Team Lead",
@@ -15,13 +16,14 @@
 		}
 	},
 	{
-		"id": 2,
-		"name": "Анна Соколова",
-		"designation": "Frontend · React/Next.js",
-		"thumb": "2.jpg",
-		"social": {
-			"linkedin": "https://linkedin.com/",
-			"github": "https://github.com/"
+                "id": 2,
+                "name": "Анна Соколова",
+                "designation": "Frontend · React/Next.js",
+                "photo": "artur.jpg",
+                "thumb": "2.jpg",
+                "social": {
+                        "linkedin": "https://linkedin.com/",
+                        "github": "https://github.com/"
 		},
 		"specialistDetails": {
 			"category": "Frontend",
@@ -30,13 +32,14 @@
 		}
 	},
 	{
-		"id": 3,
-		"name": "Дмитрий Орлов",
-		"designation": "Backend · Node.js/Nest",
-		"thumb": "3.jpg",
-		"social": {
-			"linkedin": "https://linkedin.com/",
-			"github": "https://github.com/"
+                "id": 3,
+                "name": "Дмитрий Орлов",
+                "designation": "Backend · Node.js/Nest",
+                "photo": "artur.jpg",
+                "thumb": "3.jpg",
+                "social": {
+                        "linkedin": "https://linkedin.com/",
+                        "github": "https://github.com/"
 		},
 		"specialistDetails": {
 			"category": "Backend",
@@ -45,13 +48,14 @@
 		}
 	},
 	{
-		"id": 4,
-		"name": "Мария Климова",
-		"designation": "DevOps · CI/CD, Cloud",
-		"thumb": "4.jpg",
-		"social": {
-			"linkedin": "https://linkedin.com/"
-		},
+                "id": 4,
+                "name": "Мария Климова",
+                "designation": "DevOps · CI/CD, Cloud",
+                "photo": "mikhail.jpg",
+                "thumb": "4.jpg",
+                "social": {
+                        "linkedin": "https://linkedin.com/"
+                },
 		"specialistDetails": {
 			"category": "DevOps",
 			"stack": ["CI/CD", "Docker", "Kubernetes", "Grafana", "Cloudflare"],
