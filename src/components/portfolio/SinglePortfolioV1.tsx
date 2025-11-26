@@ -20,7 +20,7 @@ const SinglePortfolioV1 = ({ portfolio, usePlaceholderLogo = false, placeholderI
     // Функция для получения правильного пути к изображению
     const getImagePath = (imagePath?: string) => {
         if (!imagePath) return '';
-        if (imagePath.startsWith('мобильнык/') || imagePath.startsWith('ux ui/') || imagePath.startsWith('сайт/') || imagePath.startsWith('бренд/') || imagePath.startsWith('лого/')) {
+        if (imagePath.startsWith('мобильнык/') || imagePath.startsWith('ux ui/') || imagePath.startsWith('сайт/') || imagePath.startsWith('бренд/')) {
             return `/assets/${imagePath}`;
         }
         return `/assets/img/portfolio/${imagePath}`;
@@ -89,12 +89,6 @@ const SinglePortfolioV1 = ({ portfolio, usePlaceholderLogo = false, placeholderI
                 <div className="info">
                     <h2><Link to={`/project/${id}`}>{text} <strong>{textBold}</strong></Link></h2>
                     <Link className="btn-animation mt-30" to={`/project/${id}`}><i className="fas fa-arrow-right" /> <span>Подробнее</span></Link>
-                </div>
-                {/* Кнопка "Подробнее" для мобильной версии */}
-                <div className="portfolio-mobile-details-btn">
-                    <Link className="btn-animation" to={`/project/${id}`}>
-                        <i className="fas fa-arrow-right" /> <span>Подробнее</span>
-                    </Link>
                 </div>
             </div>
         </>

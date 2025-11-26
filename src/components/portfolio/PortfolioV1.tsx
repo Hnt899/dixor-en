@@ -2,14 +2,8 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Keyboard, Pagination, Navigation, EffectFade } from 'swiper/modules';
 import PortfolioV1Data from '../../../src/assets/jsonData/portfolio/PortfolioV1Data.json';
 import SinglePortfolioV1 from './SinglePortfolioV1';
-import { Link } from 'react-router-dom';
-import { useEffect } from 'react';
 
-interface PortfolioV1Props {
-    onSlideChange?: (project: typeof PortfolioV1Data[0]) => void;
-}
-
-const PortfolioV1 = ({ onSlideChange }: PortfolioV1Props) => {
+const PortfolioV1 = () => {
     // Функция для проверки, что название состоит из 2 слов
     const hasTwoWords = (project: typeof PortfolioV1Data[0]) => {
         const text = (project.text || '').trim();
@@ -57,23 +51,6 @@ const PortfolioV1 = ({ onSlideChange }: PortfolioV1Props) => {
 
     const recentProjects = getRecentProjects();
 
-    // Устанавливаем первый проект при загрузке
-    useEffect(() => {
-        if (onSlideChange && recentProjects.length > 0) {
-            onSlideChange(recentProjects[0]);
-        }
-    }, [onSlideChange]);
-
-    const handleSlideChange = (swiper: any) => {
-        if (onSlideChange && recentProjects.length > 0) {
-            const realIndex = swiper.realIndex;
-            const project = recentProjects[realIndex];
-            if (project) {
-                onSlideChange(project);
-            }
-        }
-    };
-
     return (
         <>
             <div className="portfolio-style-one-content">
@@ -84,8 +61,6 @@ const PortfolioV1 = ({ onSlideChange }: PortfolioV1Props) => {
                     effect={"fade"}
                     fadeEffect={{ crossFade: true }}
                     speed={1000}
-                    onSlideChange={handleSlideChange}
-                    onInit={handleSlideChange}
                     pagination={{
                         el: ".project-pagination",
                         type: "custom",
@@ -110,11 +85,6 @@ const PortfolioV1 = ({ onSlideChange }: PortfolioV1Props) => {
                     <div className="project-pagination" />
                     <div className="project-button-prev" />
                     <div className="project-button-next" />
-                </div>
-                <div className="portfolio-mobile-view-all-btn" style={{ display: 'none' }}>
-                    <Link className="btn-contact-style" to="/projects">
-                        Смотреть все работы
-                    </Link>
                 </div>
             </div>
         </>
