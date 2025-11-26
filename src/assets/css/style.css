@@ -10247,10 +10247,10 @@ a.btn-circle:hover strong {
 }
 
 .team-style-three-item h4 {
-	margin: 0;
-	font-size: 32px;
-	position: relative;
-	margin-top: 20px;
+        margin: 0;
+        font-size: 36px;
+        position: relative;
+        margin-top: 20px;
 }
 
 .bg-dark .team-style-three-item h4 {
@@ -21225,7 +21225,7 @@ nav.navbar.validnavs .navbar-collapse.collapse.show img.light-img {
 
 .team-new-page .team-member-card .info h4 {
     margin: 0;
-    font-size: 40px;
+    font-size: 44px;
     position: relative;
     color: #ffffff;
     text-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
@@ -21242,7 +21242,7 @@ nav.navbar.validnavs .navbar-collapse.collapse.show img.light-img {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    font-size: 40px;
+    font-size: 44px;
 }
 
 .team-new-page .team-member-card .info h4 a {
@@ -22154,12 +22154,12 @@ nav.navbar.validnavs .navbar-collapse.collapse.show img.light-img {
     }
 
     .team-new-page .team-member-card .info h4 {
-        font-size: 28px;
+        font-size: 30px;
     }
 
     .team-new-page .team-member-card .info h4 .last-name,
     .team-new-page .team-member-card .info h4 .first-name {
-        font-size: 28px;
+        font-size: 30px;
     }
 
     .team-new-page .team-member-card .info span {

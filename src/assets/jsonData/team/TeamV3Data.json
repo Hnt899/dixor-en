@@ -44,14 +44,14 @@
 "description": "Строит надёжные сервисы и API: проектирует базу, настраивает очереди, масштабирует инфраструктуру и следит за стабильностью под нагрузкой."
 }
 },
-{
-"id": 4,
-"name": "Сотрудник крутой 4",
-"designation": "Ведущий специалист",
-"thumb": "artur.jpg",
-"social": {
-"linkedin": "https://linkedin.com/"
-},
+    {
+        "id": 4,
+        "name": "Сотрудник крутой 4",
+        "designation": "Ведущий специалист",
+        "thumb": "mikhail.jpg",
+        "social": {
+            "linkedin": "https://linkedin.com/"
+        },
 "specialistDetails": {
 "category": "DevOps",
 "stack": ["CI/CD", "Docker", "Kubernetes", "Grafana", "Cloudflare"],
