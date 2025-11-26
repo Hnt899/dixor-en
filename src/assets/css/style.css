@@ -9150,7 +9150,10 @@ a.btn-circle:hover strong {
 }
 
 .service-single-thumb img {
-	margin-bottom: 60px;
+        width: 100%;
+        height: auto;
+        display: block;
+        margin-bottom: 60px;
 }
 
 .services-list-widget {
@@ -10244,10 +10247,10 @@ a.btn-circle:hover strong {
 }
 
 .team-style-three-item h4 {
-	margin: 0;
-	font-size: 32px;
-	position: relative;
-	margin-top: 20px;
+        margin: 0;
+        font-size: 36px;
+        position: relative;
+        margin-top: 20px;
 }
 
 .bg-dark .team-style-three-item h4 {
@@ -21171,20 +21174,20 @@ nav.navbar.validnavs .navbar-collapse.collapse.show img.light-img {
     display: none !important;
 }
 
-.team-new-page .team-member-card .thumb::after {
+.team-new-page .team-members-section .team-member-card.team-style-three-item .thumb::after {
     position: absolute;
     left: 0;
     bottom: 0;
     content: "";
-    height: 400px;
+    height: 45%;
     width: 100%;
-    background: linear-gradient(to bottom, 
-        rgba(0, 0, 0, 0) 0%, 
-        rgba(0, 0, 0, 0.3) 40%,
-        rgba(0, 0, 0, 0.6) 60%,
-        rgba(0, 0, 0, 0.85) 75%,
-        rgba(0, 0, 0, 0.95) 85%,
-        rgba(0, 0, 0, 1) 100%);
+    display: block !important;
+    background: linear-gradient(to bottom,
+        rgba(0, 0, 0, 0) 0%,
+        rgba(0, 0, 0, 0.35) 25%,
+        rgba(0, 0, 0, 0.6) 55%,
+        rgba(0, 0, 0, 0.82) 80%,
+        rgba(0, 0, 0, 0.94) 100%);
     z-index: 1;
 }
 
@@ -21222,9 +21225,10 @@ nav.navbar.validnavs .navbar-collapse.collapse.show img.light-img {
 
 .team-new-page .team-member-card .info h4 {
     margin: 0;
-    font-size: 40px;
+    font-size: 44px;
     position: relative;
     color: #ffffff;
+    text-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
     margin-bottom: 8px;
     line-height: 1.2;
     display: flex;
@@ -21238,11 +21242,11 @@ nav.navbar.validnavs .navbar-collapse.collapse.show img.light-img {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    font-size: 40px;
+    font-size: 44px;
 }
 
 .team-new-page .team-member-card .info h4 a {
-    color: #ffffff;
+    color: #fdfdfd;
     text-decoration: none;
 }
 
@@ -21252,7 +21256,8 @@ nav.navbar.validnavs .navbar-collapse.collapse.show img.light-img {
 
 .team-new-page .team-member-card .info span {
     font-size: 20px;
-    color: #a0a0a0;
+    color: #e1e6f0;
+    text-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
 }
 
 /* Team Member Button */
@@ -22149,12 +22154,12 @@ nav.navbar.validnavs .navbar-collapse.collapse.show img.light-img {
     }
 
     .team-new-page .team-member-card .info h4 {
-        font-size: 28px;
+        font-size: 30px;
     }
 
     .team-new-page .team-member-card .info h4 .last-name,
     .team-new-page .team-member-card .info h4 .first-name {
-        font-size: 28px;
+        font-size: 30px;
     }
 
     .team-new-page .team-member-card .info span {
