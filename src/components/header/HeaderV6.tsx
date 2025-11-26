@@ -33,7 +33,7 @@ const HeaderV6 = () => {
                             <button type="button" className="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu" onClick={closeMenu}>
                                 <i className="fa fa-times" />
                             </button>
-                            <MainMenu toggleSubMenu={toggleSubMenu} navbarPlacement='navbar-center' />
+                            <MainMenu toggleSubMenu={toggleSubMenu} navbarPlacement='navbar-center' closeMenu={closeMenu}/>
                         </div>
                     </div>
                     <div className={`overlay-screen ${isOpen ? "opened" : ""}`} onClick={closeMenu} />

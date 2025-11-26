@@ -35,7 +35,7 @@ const HeaderV8 = () => {
                             <button type="button" className="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu" onClick={closeMenu}>
                                 <i className="fa fa-times" />
                             </button>
-                            <MainMenu toggleSubMenu={toggleSubMenu} navbarPlacement='navbar-center' />
+                            <MainMenu toggleSubMenu={toggleSubMenu} navbarPlacement='navbar-center' closeMenu={closeMenu}/>
                         </div>
                         <SidebarInfo openInfoBar={openInfoBar} closeInfoBar={closeInfoBar} isInfoOpen={isInfoOpen} />
                     </div>

@@ -3,9 +3,10 @@ interface TeamMemberCardProps {
     name: string;
     role: string;
     description: string;
+    photo?: string;
 }
 
-const TeamMemberCard = ({ name }: TeamMemberCardProps) => {
+const TeamMemberCard = ({ name, photo }: TeamMemberCardProps) => {
     // Разделяем имя и фамилию
     const nameParts = name.split(' ');
     const lastName = nameParts.length > 1 ? nameParts.slice(1).join(' ') : '';
@@ -14,8 +15,8 @@ const TeamMemberCard = ({ name }: TeamMemberCardProps) => {
     return (
         <div className="team-member-card team-style-three-item">
             <div className="thumb">
-                <img 
-                    src="/assets/team/artur.jpg" 
+            <img
+                    src={photo || "/assets/team/artur.jpg"}
                     alt={name}
                     style={{
                         width: '100%',
