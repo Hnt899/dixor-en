@@ -1,61 +1,61 @@
 [
-{
-"id": 1,
-"name": "Артур",
-"designation": "Team Lead",
-"thumb": "artur.jpg",
-"social": {
-"linkedin": "https://linkedin.com/",
-"github": "https://github.com/"
-},
-"specialistDetails": {
-"category": "Team Lead",
-"stack": ["Discovery", "Architecture", "React", "Node.js", "Team management"],
-"description": "Ведущий специалист и лицо команды: ведёт встречи с заказчиком, формирует продуктовую стратегию, контролирует архитектуру и следит, чтобы релизы выходили вовремя."
-}
-},
-{
-"id": 2,
-"name": "Артур",
-"designation": "Frontend",
-"thumb": "artur.jpg",
-"social": {
-"linkedin": "https://linkedin.com/",
-"github": "https://github.com/"
-},
-"specialistDetails": {
-"category": "Frontend",
-"stack": ["React", "Next.js", "TypeScript", "Tailwind", "Figma"],
-"description": "Отвечает за витрину продукта: подбирает стек, строит дизайн-систему, настраивает SSR и следит, чтобы интерфейсы оставались быстрыми на всех устройствах."
-}
-},
-{
-"id": 3,
-"name": "Артур",
-"designation": "Backend",
-"thumb": "artur.jpg",
-"social": {
-"linkedin": "https://linkedin.com/",
-"github": "https://github.com/"
-},
-"specialistDetails": {
-"category": "Backend",
-"stack": ["Node.js", "NestJS", "PostgreSQL", "Redis", "AWS"],
-"description": "Строит надёжные сервисы и API: проектирует базу, настраивает очереди, масштабирует инфраструктуру и следит за стабильностью под нагрузкой."
-}
-},
-    {
-        "id": 4,
-        "name": "Сотрудник крутой 4",
-        "designation": "Ведущий специалист",
-        "thumb": "https://images.unsplash.com/photo-1544723795-3fb6469f5b39?auto=format&fit=crop&w=900&q=80&sat=-35",
-        "social": {
-            "linkedin": "https://linkedin.com/"
-        },
-"specialistDetails": {
-"category": "DevOps",
-"stack": ["CI/CD", "Docker", "Kubernetes", "Grafana", "Cloudflare"],
-"description": "Закрывает вопросы инфраструктуры: автоматизирует выкладки, добавляет мониторинг и поддерживает бесперебойную работу сервисов."
-}
-}
+	{
+		"id": 1,
+		"name": "Иван Петров",
+		"designation": "Team Lead · Full-stack",
+		"thumb": "1.jpg",
+		"social": {
+			"linkedin": "https://linkedin.com/",
+			"github": "https://github.com/"
+		},
+		"specialistDetails": {
+			"category": "Team Lead",
+			"stack": ["Discovery", "Architecture", "React", "Node.js", "Team management"],
+			"description": "Ведёт Discovery-сессии, собирает требования и превращает их в понятную дорожную карту. Определяет стек и архитектуру, контролирует качество кода и синхронизирует всех специалистов так, чтобы продукт двигался без хаоса."
+		}
+	},
+	{
+		"id": 2,
+		"name": "Анна Соколова",
+		"designation": "Frontend · React/Next.js",
+		"thumb": "2.jpg",
+		"social": {
+			"linkedin": "https://linkedin.com/",
+			"github": "https://github.com/"
+		},
+		"specialistDetails": {
+			"category": "Frontend",
+			"stack": ["React", "Next.js", "TypeScript", "Tailwind", "Микроанимации"],
+			"description": "Делает интерфейсы быстрыми и живыми: внедряет SSR, настраивает дизайн-системы и микровзаимодействия. Отвечает за пиксельную точность и за то, чтобы интерфейс одинаково летал и на мобильном, и на десктопе."
+		}
+	},
+	{
+		"id": 3,
+		"name": "Дмитрий Орлов",
+		"designation": "Backend · Node.js/Nest",
+		"thumb": "3.jpg",
+		"social": {
+			"linkedin": "https://linkedin.com/",
+			"github": "https://github.com/"
+		},
+		"specialistDetails": {
+			"category": "Backend",
+			"stack": ["Node.js", "NestJS", "PostgreSQL", "Redis", "AWS"],
+			"description": "Проектирует отказоустойчивые сервисы, раскладывает монолиты на микросервисы и настраивает очереди. Следит, чтобы API выдерживал нагрузки, а данные были защищены и доступные в реальном времени."
+		}
+	},
+	{
+		"id": 4,
+		"name": "Мария Климова",
+		"designation": "DevOps · CI/CD, Cloud",
+		"thumb": "4.jpg",
+		"social": {
+			"linkedin": "https://linkedin.com/"
+		},
+		"specialistDetails": {
+			"category": "DevOps",
+			"stack": ["CI/CD", "Docker", "Kubernetes", "Grafana", "Cloudflare"],
+			"description": "Собирает инфраструктуру, где релиз — кнопка, а не квест. Настраивает мониторинг, авто-масштабирование и безопасность, чтобы продукт жил в облаке без простоев и неожиданных сюрпризов."
+		}
+	}
 ]
