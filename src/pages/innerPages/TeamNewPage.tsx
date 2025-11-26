@@ -167,7 +167,7 @@ const TeamNewPage = () => {
         },
         {
             id: 4,
-            name: "Елена Козлова",
+            name: "Георгий Девицкий",
             role: "Project Manager",
             description: "Координирует проекты и обеспечивает эффективную коммуникацию в команде.",
             photo: "/assets/team/просто сотрудник 4.jpg"
@@ -181,21 +181,21 @@ const TeamNewPage = () => {
         },
         {
             id: 6,
-            name: "Анна Смирнова",
+            name: "Адем Белоусов",
             role: "Full Stack Developer",
             description: "Работает на всех уровнях стека, от базы данных до фронтенда.",
             photo: "/assets/team/просто сотрудник 6.jpg"
         },
         {
             id: 7,
-            name: "Сергей Лебедев",
+            name: "Ольга Новикова ",
             role: "Mobile Developer",
             description: "Создаёт нативные и кроссплатформенные мобильные приложения.",
             photo: "/assets/team/просто сотрудник 7.jpg"
         },
         {
             id: 8,
-            name: "Ольга Новикова",
+            name: "Эсталина Денисенко",
             role: "QA Engineer",
             description: "Обеспечивает качество продукта через тщательное тестирование.",
             photo: "/assets/team/просто сотрудник 8.jpg"
@@ -216,7 +216,7 @@ const TeamNewPage = () => {
         },
         {
             id: 11,
-            name: "Никита Андреев",
+            name: "Мария Громова",
             role: "Data Analyst",
             description: "Собирает и интерпретирует продуктовую аналитику, помогает принимать решения на основании данных.",
             photo: "/assets/team/просто сотрудник 11.jpg"
@@ -226,7 +226,7 @@ const TeamNewPage = () => {
             name: "Виктория Романова",
             role: "Customer Success Lead",
             description: "Выстраивает процессы сопровождения клиентов и обеспечивает постоянную обратную связь с продуктовой командой.",
-            photo: "https://images.unsplash.com/photo-1544723795-3fb6469f5b39?auto=format&fit=crop&w=900&q=80&sat=-60"
+            photo: "/assets/team/просто сотрудник 12.png"
         }
     ];
 
