@@ -1,65 +1,121 @@
 [
-	{
-                "id": 1,
-                "name": "Иван Петров",
-                "designation": "Team Lead · Full-stack",
-                "photo": "artur.jpg",
-                "thumb": "1.jpg",
-                "social": {
-                        "linkedin": "https://linkedin.com/",
-                        "github": "https://github.com/"
-		},
-		"specialistDetails": {
-			"category": "Team Lead",
-			"stack": ["Discovery", "Architecture", "React", "Node.js", "Team management"],
-			"description": "Ведёт Discovery-сессии, собирает требования и превращает их в понятную дорожную карту. Определяет стек и архитектуру, контролирует качество кода и синхронизирует всех специалистов так, чтобы продукт двигался без хаоса."
-		}
-	},
-	{
-                "id": 2,
-                "name": "Анна Соколова",
-                "designation": "Frontend · React/Next.js",
-                "photo": "artur.jpg",
-                "thumb": "2.jpg",
-                "social": {
-                        "linkedin": "https://linkedin.com/",
-                        "github": "https://github.com/"
-		},
-		"specialistDetails": {
-			"category": "Frontend",
-			"stack": ["React", "Next.js", "TypeScript", "Tailwind", "Микроанимации"],
-			"description": "Делает интерфейсы быстрыми и живыми: внедряет SSR, настраивает дизайн-системы и микровзаимодействия. Отвечает за пиксельную точность и за то, чтобы интерфейс одинаково летал и на мобильном, и на десктопе."
-		}
-	},
-	{
-                "id": 3,
-                "name": "Дмитрий Орлов",
-                "designation": "Backend · Node.js/Nest",
-                "photo": "artur.jpg",
-                "thumb": "3.jpg",
-                "social": {
-                        "linkedin": "https://linkedin.com/",
-                        "github": "https://github.com/"
-		},
-		"specialistDetails": {
-			"category": "Backend",
-			"stack": ["Node.js", "NestJS", "PostgreSQL", "Redis", "AWS"],
-			"description": "Проектирует отказоустойчивые сервисы, раскладывает монолиты на микросервисы и настраивает очереди. Следит, чтобы API выдерживал нагрузки, а данные были защищены и доступные в реальном времени."
-		}
-	},
-	{
-                "id": 4,
-                "name": "Мария Климова",
-                "designation": "DevOps · CI/CD, Cloud",
-                "photo": "mikhail.jpg",
-                "thumb": "4.jpg",
-                "social": {
-                        "linkedin": "https://linkedin.com/"
-                },
-		"specialistDetails": {
-			"category": "DevOps",
-			"stack": ["CI/CD", "Docker", "Kubernetes", "Grafana", "Cloudflare"],
-			"description": "Собирает инфраструктуру, где релиз — кнопка, а не квест. Настраивает мониторинг, авто-масштабирование и безопасность, чтобы продукт жил в облаке без простоев и неожиданных сюрпризов."
-		}
-	}
+    {
+        "id": 1,
+        "name": "Иван Петров",
+        "designation": "Team Lead · Full-stack",
+        "photo": "просто сотрудник 1.jpg",
+        "thumb": "1.jpg",
+        "social": {
+            "linkedin": "https://linkedin.com/",
+            "github": "https://github.com/"
+        },
+        "specialistDetails": {
+            "category": "Team Lead",
+            "stack": ["Discovery", "Architecture", "React", "Node.js", "Team management"],
+            "description": "Ведёт Discovery-сессии, собирает требования и превращает их в понятную дорожную карту. Определяет стек и архитектуру, контролирует качество кода и синхронизирует всех специалистов так, чтобы продукт двигался без хаоса."
+        }
+    },
+    {
+        "id": 2,
+        "name": "Анна Соколова",
+        "designation": "Frontend · React/Next.js",
+        "photo": "просто сотрудник 2.jpg",
+        "thumb": "2.jpg",
+        "social": {
+            "linkedin": "https://linkedin.com/",
+            "github": "https://github.com/"
+        },
+        "specialistDetails": {
+            "category": "Frontend",
+            "stack": ["React", "Next.js", "TypeScript", "Tailwind", "Микроанимации"],
+            "description": "Делает интерфейсы быстрыми и живыми: внедряет SSR, настраивает дизайн-системы и микровзаимодействия. Отвечает за пиксельную точность и за то, чтобы интерфейс одинаково летал и на мобильном, и на десктопе."
+        }
+    },
+    {
+        "id": 3,
+        "name": "Дмитрий Орлов",
+        "designation": "Backend · Node.js/Nest",
+        "photo": "просто сотрудник 3.jpg",
+        "thumb": "3.jpg",
+        "social": {
+            "linkedin": "https://linkedin.com/",
+            "github": "https://github.com/"
+        },
+        "specialistDetails": {
+            "category": "Backend",
+            "stack": ["Node.js", "NestJS", "PostgreSQL", "Redis", "AWS"],
+            "description": "Проектирует отказоустойчивые сервисы, раскладывает монолиты на микросервисы и настраивает очереди. Следит, чтобы API выдерживал нагрузки, а данные были защищены и доступные в реальном времени."
+        }
+    },
+    {
+        "id": 4,
+        "name": "Мария Климова",
+        "designation": "DevOps · CI/CD, Cloud",
+        "photo": "просто сотрудник 4.jpg",
+        "thumb": "4.jpg",
+        "social": {
+            "linkedin": "https://linkedin.com/"
+        },
+        "specialistDetails": {
+            "category": "DevOps",
+            "stack": ["CI/CD", "Docker", "Kubernetes", "Grafana", "Cloudflare"],
+            "description": "Собирает инфраструктуру, где релиз — кнопка, а не квест. Настраивает мониторинг, авто-масштабирование и безопасность, чтобы продукт жил в облаке без простоев и неожиданных сюрпризов."
+        }
+    },
+    {
+        "id": 5,
+        "name": "Просто сотрудник 5",
+        "designation": "Специалист",
+        "photo": "просто сотрудник 5.jpg",
+        "thumb": "5.jpg"
+    },
+    {
+        "id": 6,
+        "name": "Просто сотрудник 6",
+        "designation": "Специалист",
+        "photo": "просто сотрудник 6.jpg",
+        "thumb": "6.jpg"
+    },
+    {
+        "id": 7,
+        "name": "Просто сотрудник 7",
+        "designation": "Специалист",
+        "photo": "просто сотрудник 7.jpg",
+        "thumb": "7.jpg"
+    },
+    {
+        "id": 8,
+        "name": "Просто сотрудник 8",
+        "designation": "Специалист",
+        "photo": "просто сотрудник 8.jpg",
+        "thumb": "8.jpg"
+    },
+    {
+        "id": 9,
+        "name": "Просто сотрудник 9",
+        "designation": "Специалист",
+        "photo": "просто сотрудник 9.jpg",
+        "thumb": "9.jpg"
+    },
+    {
+        "id": 10,
+        "name": "Просто сотрудник 10",
+        "designation": "Специалист",
+        "photo": "просто сотрудник 10.jpg",
+        "thumb": "10.jpg"
+    },
+    {
+        "id": 11,
+        "name": "Просто сотрудник 11",
+        "designation": "Специалист",
+        "photo": "просто сотрудник 11.jpg",
+        "thumb": "11.jpg"
+    },
+    {
+        "id": 12,
+        "name": "Просто сотрудник 12",
+        "designation": "Специалист",
+        "photo": "просто сотрудник 12.png",
+        "thumb": "12.png"
+    }
 ]

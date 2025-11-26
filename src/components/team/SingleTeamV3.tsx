@@ -9,6 +9,7 @@ interface SpecialistDetails {
 interface DataType {
     id?: number;
     thumb?: string;
+    photo?: string;
     name?: string;
     designation?: string;
     specialistDetails?: SpecialistDetails;
@@ -20,23 +21,17 @@ interface SingleTeamV3Props {
 }
 
 const SingleTeamV3 = ({ team, onOpenSpecialist }: SingleTeamV3Props) => {
-    const { id, name, specialistDetails } = team;
+    const { id, name, specialistDetails, photo, thumb } = team;
+    const photoSrc = `/assets/team/${photo || thumb || 'artur.jpg'}`;
 
     return (
         <>
             <div className="team-style-three-item">
                 <div className="thumb">
                     <Link to={`/team-details/${id}`}>
-                        <img 
-                            src="/assets/team/artur.jpg" 
+                        <img
+                            src={photoSrc}
                             alt={name || 'Члены команды'}
-                            style={{
-                                width: '100%',
-                                height: '100%',
-                                objectFit: 'cover',
-                                objectPosition: 'center center',
-                                borderRadius: '10px'
-                            }}
                         />
                     </Link>
                 </div>
