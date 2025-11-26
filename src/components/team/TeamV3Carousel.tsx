@@ -17,6 +17,7 @@ interface SpecialistModalPayload {
     category: string;
     stack: string[];
     description: string;
+    photo?: string;
 }
 
 const TeamV3Carousel = ({ hasTitle, sectionClass }: DataType) => {
@@ -38,7 +39,8 @@ const TeamV3Carousel = ({ hasTitle, sectionClass }: DataType) => {
             name: member.name,
             category,
             stack,
-            description
+            description,
+            photo: member.photo
         });
     };
 
@@ -53,7 +55,7 @@ const TeamV3Carousel = ({ hasTitle, sectionClass }: DataType) => {
                         <div className="site-heading">
                             <div className="row align-center">
                                 <div className="col-lg-6">
-                                    <h4 className="sub-title">Члены команды</h4>
+                                    <h4 className="sub-title">Члены коанды</h4>
                                     <h2 className="title split-text">
                                         <SplitText
                                             delay={120}
@@ -83,44 +85,48 @@ const TeamV3Carousel = ({ hasTitle, sectionClass }: DataType) => {
                 <section className="team-members-section">
                     <div className="container-full">
                         <div className="team-members-grid">
-                            <div 
+                            <div
                                 className="team-members-carousel"
                                 style={{
                                     '--carousel-offset': `${currentMemberIndex * 100}%`
                                 } as React.CSSProperties}
                             >
-                                {TeamV3Data.map((member, index) => (
-                                    <div
-                                        key={member.id}
-                                        className={`team-member-wrapper ${index === currentMemberIndex ? 'active' : ''}`}
-                                    >
-                                        <div className="team-member-card team-style-three-item">
-                                            <div className="thumb">
-                                                <img 
-                                                    src="/assets/team/artur.jpg"
-                                                    alt={member.name}
-                                                />
-                                            </div>
-                                            <div className="info">
-                                                <h4>
-                                                    {member.name.split(' ').length > 1 && (
-                                                        <span className="last-name">{member.name.split(' ').slice(1).join(' ')}</span>
+                                {TeamV3Data.map((member, index) => {
+                                    const memberPhoto = member.photo || 'artur.jpg';
+
+                                    return (
+                                        <div
+                                            key={member.id}
+                                            className={`team-member-wrapper ${index === currentMemberIndex ? 'active' : ''}`}
+                                        >
+                                            <div className="team-member-card team-style-three-item">
+                                                <div className="thumb">
+                                                    <img
+                                                        src={`/assets/team/${memberPhoto}`}
+                                                        alt={member.name}
+                                                    />
+                                                </div>
+                                                <div className="info">
+                                                    <h4>
+                                                        {member.name.split(' ').length > 1 && (
+                                                            <span className="last-name">{member.name.split(' ').slice(1).join(' ')}</span>
+                                                        )}
+                                                        <span className="first-name">{member.name.split(' ')[0]}</span>
+                                                    </h4>
+                                                    {member.specialistDetails && (
+                                                        <button
+                                                            type="button"
+                                                            className="tech-block-btn team-card-btn"
+                                                            onClick={() => handleOpenSpecialist(member)}
+                                                        >
+                                                            о ведущем специалисте
+                                                        </button>
                                                     )}
-                                                    <span className="first-name">{member.name.split(' ')[0]}</span>
-                                                </h4>
-                                                {member.specialistDetails && (
-                                                    <button
-                                                        type="button"
-                                                        className="tech-block-btn team-card-btn"
-                                                        onClick={() => handleOpenSpecialist(member)}
-                                                    >
-                                                        о ведущем специалисте
-                                                    </button>
-                                                )}
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                ))}
+                                    );
+                                })}
                             </div>
                         </div>
                     </div>
@@ -157,4 +163,3 @@ const TeamV3Carousel = ({ hasTitle, sectionClass }: DataType) => {
 };
 
 export default TeamV3Carousel;
-
