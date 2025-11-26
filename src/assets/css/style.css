@@ -21156,7 +21156,8 @@ nav.navbar.validnavs .navbar-collapse.collapse.show img.light-img {
 }
 
 /* Убираем тень и трансформацию для карусели команды на главной */
-.team-members-section .team-member-card.team-style-three-item .thumb {
+/* Стили применяются только к главной странице (где есть .team-style-three-area), не к странице команды */
+.team-style-three-area .team-members-section .team-member-card.team-style-three-item .thumb {
     overflow: hidden;
     border-radius: 30px;
     position: relative;
@@ -21164,7 +21165,7 @@ nav.navbar.validnavs .navbar-collapse.collapse.show img.light-img {
     height: 400px;
 }
 
-.team-members-section .team-member-card.team-style-three-item .thumb img {
+.team-style-three-area .team-members-section .team-member-card.team-style-three-item .thumb img {
     width: 100% !important;
     height: 100% !important;
     min-height: 400px;
@@ -21176,6 +21177,31 @@ nav.navbar.validnavs .navbar-collapse.collapse.show img.light-img {
     transition: none;
     -webkit-transform: none !important;
     box-shadow: none !important;
+}
+
+/* Для страницы команды - возвращаем исходные стили без фиксированной высоты */
+/* Используем более специфичный селектор, чтобы переопределить стили для главной */
+.team-new-page .team-members-section .team-member-card.team-style-three-item .thumb {
+    overflow: hidden;
+    border-radius: 30px;
+    position: relative;
+    flex: 1;
+    min-height: 750px;
+    height: auto;
+}
+
+.team-new-page .team-members-section .team-member-card.team-style-three-item .thumb img {
+    width: 100% !important;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+    border-radius: 30px;
+    transform: none !important;
+    max-width: 100% !important;
+    transition: none;
+    -webkit-transform: none !important;
+    box-shadow: none !important;
+    min-height: auto !important;
 }
 
 /* Убираем псевдоэлемент ::after который может создавать тень */
