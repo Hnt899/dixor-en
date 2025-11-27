@@ -16,9 +16,9 @@
     },
     {
       "id": 2,
-      "name": "Фурт Артур",
+      "name": "Демьяненко Никита",
       "designation": "Frontend · React/Next.js",
-      "thumb": "artur.jpg",
+      "thumb": "nekit.jpg",
       "social": {
         "linkedin": "https://linkedin.com/",
         "github": "https://github.com/"
@@ -31,9 +31,9 @@
     },
     {
       "id": 3,
-      "name": "Фурт Артур",
+      "name": "Демьяненко Михаил",
       "designation": "Backend · Node.js/Nest",
-      "thumb": "artur.jpg",
+      "thumb": "miha.jpg",
       "social": {
         "linkedin": "https://linkedin.com/",
         "github": "https://github.com/"
