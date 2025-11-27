@@ -21,28 +21,27 @@ const AboutV1 = ({ lightMode }: DataType) => {
 
     useThumbParallax();
 
-    // Сбрасываем transform для большой фотографии при монтировании компонента
+    // Убеждаемся, что фотография всегда по центру при монтировании компонента
     useEffect(() => {
-        const resetAboutImage = () => {
+        const centerAboutImage = () => {
             const aboutImages = document.querySelectorAll(
                 '.about-style-one-area .bottom-info .thumb .img-container img'
             ) as NodeListOf<HTMLElement>;
             
             aboutImages.forEach((img) => {
-                // Убираем все inline стили transform и left
-                img.style.removeProperty('transform');
-                img.style.removeProperty('-webkit-transform');
-                img.style.removeProperty('left');
+                // Принудительно устанавливаем центрирование
+                img.style.left = '50%';
+                img.style.transform = 'translateX(-50%) scale(1.4)';
                 // Принудительно применяем CSS правило через reflow
                 void img.offsetHeight;
             });
         };
 
-        // Выполняем сброс сразу и после небольших задержек
-        resetAboutImage();
-        const timeout1 = setTimeout(resetAboutImage, 50);
-        const timeout2 = setTimeout(resetAboutImage, 200);
-        const timeout3 = setTimeout(resetAboutImage, 500);
+        // Выполняем центрирование сразу и после небольших задержек
+        centerAboutImage();
+        const timeout1 = setTimeout(centerAboutImage, 50);
+        const timeout2 = setTimeout(centerAboutImage, 200);
+        const timeout3 = setTimeout(centerAboutImage, 500);
 
         return () => {
             clearTimeout(timeout1);

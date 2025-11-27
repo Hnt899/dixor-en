@@ -36,8 +36,8 @@ const useThumbParallax = () => {
                     const img = container.querySelector('img');
                     if (!img) return;
 
-                    // Убеждаемся, что начальное состояние правильное
-                    // Используем xPercent для центрирования вместо transform
+                    // Убеждаемся, что начальное состояние правильное - центрируем изображение
+                    // Используем left: 50% и xPercent: -50 для центрирования
                     gsap.set(img, { 
                         left: '50%',
                         xPercent: -50,
@@ -51,15 +51,30 @@ const useThumbParallax = () => {
                             scrub: true,
                             pin: false,
                             onRefresh: () => {
-                                // При обновлении ScrollTrigger сбрасываем позицию
-                                gsap.set(img, { yPercent: 0 });
+                                // При обновлении ScrollTrigger восстанавливаем центрирование
+                                gsap.set(img, { 
+                                    left: '50%',
+                                    xPercent: -50,
+                                    scale: 1.4,
+                                    yPercent: 0
+                                });
                             }
                         }
                     });
 
+                    // Анимируем только вертикальное движение, сохраняя центрирование
                     t4.fromTo(img,
-                        { yPercent: -60, ease: 'none' },
-                        { yPercent: 60, ease: 'none' }
+                        { 
+                            yPercent: -60,
+                            xPercent: -50, // Всегда центрируем по горизонтали
+                            scale: 1.4
+                        },
+                        { 
+                            yPercent: 60,
+                            xPercent: -50, // Всегда центрируем по горизонтали
+                            scale: 1.4,
+                            ease: 'none' 
+                        }
                     );
                 });
             } else {

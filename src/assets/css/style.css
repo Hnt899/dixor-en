@@ -7119,16 +7119,16 @@ ul.list-style-two li:last-child {
 	height: 100%;
 	position: absolute;
 	top: 0;
-	left: 50%;
-	transform: translateX(-50%) scale(1.4);
+	left: 50% !important;
+	transform: translateX(-50%) scale(1.4) !important;
 	transform-origin: 50% 50%;
 	will-change: transform;
 }
 
-/* Начальное состояние - всегда применяется */
+/* Начальное состояние - всегда применяется и имеет приоритет */
 .about-style-one-area .bottom-info .thumb .img-container img {
-	left: 50%;
-	transform: translateX(-50%) scale(1.4);
+	left: 50% !important;
+	transform: translateX(-50%) scale(1.4) !important;
 }
 
 .about-style-one-area .bottom-info .thumb .about-skills {
