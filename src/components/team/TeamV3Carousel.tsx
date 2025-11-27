@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import TeamV3Data from "../../../src/assets/jsonData/team/TeamV3Data.json";
 import SplitText from "../animation/SplitText.jsx";
 import arrowLongRight from '/assets/img/icon/arrow-long-right.png';
@@ -23,6 +23,30 @@ interface SpecialistModalPayload {
 const TeamV3Carousel = ({ hasTitle, sectionClass }: DataType) => {
     const [currentMemberIndex, setCurrentMemberIndex] = useState(0);
     const [selectedSpecialist, setSelectedSpecialist] = useState<SpecialistModalPayload | null>(null);
+
+    // Сбрасываем transform для всех фоток команды при монтировании компонента
+    useEffect(() => {
+        const resetTeamImages = () => {
+            const teamImages = document.querySelectorAll(
+                '.team-style-three-area .team-members-section .team-member-card.team-style-three-item .thumb img'
+            ) as NodeListOf<HTMLElement>;
+            
+            teamImages.forEach((img) => {
+                // Принудительно сбрасываем transform
+                img.style.transform = 'translateX(-30px)';
+                // Убираем inline стиль после небольшой задержки, чтобы CSS правила применились
+                setTimeout(() => {
+                    img.style.transform = '';
+                }, 100);
+            });
+        };
+
+        // Выполняем сброс сразу и после небольшой задержки
+        resetTeamImages();
+        const timeout = setTimeout(resetTeamImages, 200);
+
+        return () => clearTimeout(timeout);
+    }, []);
 
     const handlePrevMember = () => {
         setCurrentMemberIndex((prev) => (prev === 0 ? TeamV3Data.length - 1 : prev - 1));

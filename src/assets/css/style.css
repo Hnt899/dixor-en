@@ -21222,12 +21222,16 @@ nav.navbar.validnavs .navbar-collapse.collapse.show img.light-img {
     border-radius: 24px;
     max-width: none !important;
     transition: transform 0.4s ease;
-    transform: translateX(-30px);
+    transform: translateX(-30px) !important;
     box-shadow: none !important;
 }
 
+.team-style-three-area .team-members-section .team-member-card.team-style-three-item:not(:hover) .thumb img {
+    transform: translateX(-30px) !important;
+}
+
 .team-style-three-area .team-members-section .team-member-card.team-style-three-item:hover .thumb img {
-    transform: translateX(10px);
+    transform: translateX(10px) !important;
 }
 
 /* Для страницы команды - карточки как на главной */
