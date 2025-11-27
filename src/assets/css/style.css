@@ -9724,19 +9724,17 @@ a.btn-circle:hover strong {
 
 .leader-hover-enabled .team-style-one-item .thumb {
         overflow: hidden;
-}
-
-.leader-hover-enabled .team-style-one-item .thumb a>img {
-        transform: translateX(0);
+        position: relative;
 }
 
 @media (min-width: 768px) {
         .leader-hover-enabled .team-style-one-item .thumb a>img {
-                transition: transform 0.4s ease-in-out;
+                transition: transform 0.35s ease;
+                will-change: transform;
         }
 
         .leader-hover-enabled .team-style-one-item:hover .thumb a>img {
-                transform: translateX(16px);
+                transform: translateX(35px);
         }
 }
 
