@@ -21263,6 +21263,25 @@ nav.navbar.validnavs .navbar-collapse.collapse.show img.light-img {
     box-shadow: none !important;
 }
 
+
+@media (min-width: 768px) {
+    /* Анимация смещения фото для карточек руководителей только на главной */
+    .team-style-three-area .team-style-three-item .thumb {
+        overflow: hidden;
+        position: relative;
+    }
+
+    .team-style-three-area .team-style-three-item .thumb img {
+        object-position: center center;
+        transition: object-position 0.35s ease;
+        will-change: object-position;
+    }
+
+    .team-style-three-area .team-style-three-item:hover .thumb img {
+        object-position: calc(50% + 35px) center;
+    }
+}
+
 /* Для страницы команды - карточки как на главной */
 .team-new-page .team-members-section .team-member-card.team-style-three-item .thumb {
     overflow: hidden;

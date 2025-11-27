@@ -349,7 +349,7 @@ const TeamNewPage = () => {
                                             <TeamMemberCard
                                                 id={member.id}
                                                 name={member.name}
-                                                role={member.role}
+                                                
                                                 description={member.description}
                                                 photo={member.photo}
                                                 stack={member.stack}

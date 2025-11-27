@@ -1,7 +1,7 @@
 interface TeamMemberCardProps {
     id: number;
     name: string;
-    role: string;
+    
     description: string;
     photo?: string;
     summary: string;
@@ -12,7 +12,7 @@ interface TeamMemberCardProps {
 
 import { useEffect, useState } from "react";
 
-const TeamMemberCard = ({ name, photo, role, summary, stack, expertise, onSelect }: TeamMemberCardProps) => {
+const TeamMemberCard = ({ name, photo, summary, stack, expertise, onSelect }: TeamMemberCardProps) => {
     // Разделяем имя и фамилию
     const nameParts = name.split(' ');
     const lastName = nameParts.length > 1 ? nameParts.slice(1).join(' ') : '';
@@ -88,7 +88,6 @@ const TeamMemberCard = ({ name, photo, role, summary, stack, expertise, onSelect
                     {lastName && <span className="last-name">{lastName}</span>}
                     {firstName && <span className="first-name">{firstName}</span>}
                 </h4>
-                <span className="team-member-role-text">{role}</span>
             </div>
         </div>
     );
