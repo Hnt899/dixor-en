@@ -10256,11 +10256,11 @@ a.btn-circle:hover strong {
 	transform: none;
 }
 
-.team-style-three-area .team-style-three-item .thumb img {
+.team-style-three-area .team-members-section .team-member-card.team-style-three-item .thumb img {
 	transition: transform 0.4s ease, opacity 0.35s;
 }
 
-.team-style-three-area .team-style-three-item:hover .thumb img {
+.team-style-three-area .team-members-section .team-member-card.team-style-three-item:hover .thumb img {
 	transform: translateX(24px);
 }
 
