@@ -234,9 +234,22 @@ const MainMenu = ({ navbarPlacement, closeMenu }: DataType) => {
                     }}
                     style={{ position: 'relative' }}
                 >
-                    <a href="#services" onClick={(e) => handleSmoothScroll(e, 'services')}>
+                    <Link 
+                        to="/services" 
+                        onClick={(e) => {
+                            if (closeMenu) {
+                                closeMenu();
+                            }
+                            const menuElement = document.getElementById('navbar-menu');
+                            if (menuElement) {
+                                menuElement.classList.remove('show');
+                            }
+                            document.body.classList.remove('no-fade');
+                            navigate('/services');
+                        }}
+                    >
                         Услуги
-                    </a>
+                    </Link>
                     {isServicesDropdownOpen && (
                         <ul
                             className={`dropdown-menu projects-dropdown ${isServicesDropdownVisible ? 'show' : ''}`}
@@ -277,8 +290,8 @@ const MainMenu = ({ navbarPlacement, closeMenu }: DataType) => {
                         >
                             {servicesForDropdown.map(service => (
                                 <li key={service.id}>
-                                    <a
-                                        href={`/service-details/${service.id}`}
+                                    <Link
+                                        to={`/service-details/${service.id}`}
                                         onClick={(e) => handleServiceDropdownClick(e, service.id)}
                                         style={{
                                             display: 'block',
@@ -291,7 +304,7 @@ const MainMenu = ({ navbarPlacement, closeMenu }: DataType) => {
                                         onMouseLeave={(e) => e.currentTarget.style.background = 'transparent'}
                                     >
                                         {service.title}
-                                    </a>
+                                    </Link>
                                 </li>
                             ))}
                         </ul>
