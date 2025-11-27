@@ -57,7 +57,7 @@ const TeamSpecialistModal = ({ specialist, isOpen, onClose }: TeamSpecialistModa
                             </div>
                         </div>
                         <div className="specialist-modal-description">
-                            <h4 className="specialist-description-title">Почему он ведущий специалист:</h4>
+                            <h4 className="specialist-description-title">О специолисте:</h4>
                             <p>{specialist.description}</p>
                         </div>
                     </div>
