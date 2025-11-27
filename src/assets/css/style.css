@@ -14969,7 +14969,8 @@ ul.footer-social li {
 	margin-right: 10px;
 }
 
-ul.footer-social li a {
+ul.footer-social li a,
+ul.footer-social li button {
 	display: inline-block;
 	height: 40px;
 	width: 40px;
@@ -14985,6 +14986,27 @@ ul.footer-social li a {
 	background: rgba(255, 255, 255, 0.1);
 	color: var(--white);
 	border: none;
+}
+
+.bg-dark ul.footer-social li button {
+	background: rgba(255, 255, 255, 0.1);
+	color: var(--white);
+	border: none;
+}
+
+.footer-phone-copy.copied {
+	color: var(--color-primary);
+}
+
+ul.footer-social li button {
+	border: 1px solid #e7e7e7;
+	cursor: pointer;
+	padding: 0;
+	font-size: 16px;
+}
+
+ul.footer-social li button i {
+	pointer-events: none;
 }
 
 ul.footer-social li a img {
