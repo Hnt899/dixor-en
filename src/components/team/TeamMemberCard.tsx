@@ -10,16 +10,39 @@ interface TeamMemberCardProps {
     onSelect: () => void;
 }
 
+import { useEffect, useState } from "react";
+
 const TeamMemberCard = ({ name, photo, role, summary, stack, expertise, onSelect }: TeamMemberCardProps) => {
     // Разделяем имя и фамилию
     const nameParts = name.split(' ');
     const lastName = nameParts.length > 1 ? nameParts.slice(1).join(' ') : '';
     const firstName = nameParts[0] || '';
     const stackPreview = stack?.length ? stack.join(', ') : '';
+    const [isMobile, setIsMobile] = useState(false);
+    const [isHoverVisible, setIsHoverVisible] = useState(false);
+
+    useEffect(() => {
+        const handleResize = () => {
+            setIsMobile(window.innerWidth <= 767);
+        };
+        handleResize();
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
+
+    const toggleHoverMobile = () => {
+        if (!isMobile) return;
+        setIsHoverVisible(prev => !prev);
+    };
+
+    const handleViewDetails = () => {
+        if (isMobile) return;
+        onSelect();
+    };
 
     return (
         <div className="team-member-card team-style-three-item">
-            <div className="thumb">
+            <div className="thumb" onClick={toggleHoverMobile}>
                 <img
                     src={photo || "/assets/team/artur.jpg"}
                     alt={name}
@@ -31,7 +54,7 @@ const TeamMemberCard = ({ name, photo, role, summary, stack, expertise, onSelect
                         borderRadius: '30px'
                     }}
                 />
-                <div className="team-member-hover">
+                <div className={`team-member-hover ${isHoverVisible ? 'show' : ''}`}>
                     <p className="team-member-summary">{summary}</p>
                     <div className="team-member-hover-meta">
                         {stackPreview && (
@@ -47,9 +70,11 @@ const TeamMemberCard = ({ name, photo, role, summary, stack, expertise, onSelect
                             </div>
                         )}
                     </div>
-                    <button className="team-member-hover-btn" type="button" onClick={onSelect}>
-                        Подробнее
-                    </button>
+                    {!isMobile && (
+                        <button className="team-member-hover-btn" type="button" onClick={handleViewDetails}>
+                            Подробнее
+                        </button>
+                    )}
                 </div>
             </div>
             <div className="info">

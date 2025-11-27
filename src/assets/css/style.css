@@ -1,3 +1,76 @@
+.team-member-hover {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.88);
+    color: #ffffff;
+    padding: 28px 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 16px;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.35s ease, transform 0.35s ease;
+    pointer-events: none;
+    border-radius: 30px;
+}
+
+.team-member-card:hover .team-member-hover {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+.team-member-hover.show {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+.team-member-summary {
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #f3f3f3;
+}
+
+.team-member-hover-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.team-member-hover-meta span {
+    font-size: 11px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.team-member-hover-meta p {
+    margin: 2px 0 0;
+    font-size: 14px;
+    color: #ffffff;
+}
+
+.team-member-hover-btn {
+    align-self: flex-start;
+    padding: 10px 24px;
+    border-radius: 999px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    background: transparent;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.team-member-hover-btn:hover {
+    background: var(--color-primary);
+    color: var(--color-heading);
+    border-color: var(--color-primary);
+}
 /* ----------------------------------
 
 Template Name: Dixor - Creative Digital Agency React Template 
@@ -21302,7 +21375,7 @@ nav.navbar.validnavs .navbar-collapse.collapse.show img.light-img {
 .team-member-hover {
     position: absolute;
     inset: 0;
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 20%, rgba(0, 0, 0, 0.75) 75%, rgba(0, 0, 0, 0.9) 100%);
+    background: rgba(0, 0, 0, 0.9);
     color: #ffffff;
     padding: 28px 32px;
     display: flex;
