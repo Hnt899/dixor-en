@@ -16,7 +16,7 @@
     },
     {
       "id": 2,
-      "name": "Демьяненко Никита",
+      "name": "Демьянов Никита",
       "designation": "Frontend · React/Next.js",
       "thumb": "nerit 3.jpg",
       "social": {
@@ -31,7 +31,7 @@
     },
     {
       "id": 3,
-      "name": "Демьяненко Михаил",
+      "name": " Михаил Власов",
       "designation": "Backend · Node.js/Nest",
       "thumb": "miha.png",
       "social": {
@@ -46,9 +46,9 @@
     },
     {
       "id": 4,
-      "name": "Мама",
+      "name": "Девицкий Георгий",
       "designation": "DevOps · CI/CD, Cloud",
-      "thumb": "mama.png",
+      "thumb": "просто сотрудник 1.png",
       "social": {
         "linkedin": "https://linkedin.com/"
       },

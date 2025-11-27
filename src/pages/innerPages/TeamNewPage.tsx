@@ -138,13 +138,13 @@ const TeamNewPage = () => {
     const teamMembers: TeamMember[] = [
         {
             id: 1,
-            name: "Александр Иванов",
+            name: "Елена Демьянова",
             role: "Frontend Developer",
-            description: "Специализируется на React и TypeScript, создаёт интуитивные интерфейсы.",
-            photo: "/assets/team/просто сотрудник 1.png",
-            stack: ["React", "TypeScript", "Next.js"],
-            summary: "Ведёт фронт-направление и отвечает за стабильность интерфейсов.",
-            expertise: "Архитектура SPA, дизайн-системы, performance review"
+            description: "Специализируется на управление контроле и переговорам.",
+            photo: "/assets/team/mama.png",
+            stack: ["Управлие", "Организация", "Ответственность"],
+            summary: "Ведёт команду вперёд и готова поддержать любого",
+            expertise: "Создано более 300 проектов, Собрала команду"
         },
         {
             id: 2,
@@ -168,7 +168,7 @@ const TeamNewPage = () => {
         },
         {
             id: 4,
-            name: "Георгий Девицкий",
+            name: "Перов Иван",
             role: "Project Manager",
             description: "Координирует проекты и обеспечивает эффективную коммуникацию в команде.",
             photo: "/assets/team/просто сотрудник 4.jpg",
@@ -188,7 +188,7 @@ const TeamNewPage = () => {
         },
         {
             id: 6,
-            name: "Анна Смирнова",
+            name: "Иван Левин",
             role: "Full Stack Developer",
             description: "Работает на всех уровнях стека, от базы данных до фронтенда.",
             photo: "/assets/team/просто сотрудник 6.jpg",
@@ -198,7 +198,7 @@ const TeamNewPage = () => {
         },
         {
             id: 7,
-            name: "Сергей Лебедев",
+            name: "Анастасия Лебедева",
             role: "Mobile Developer",
             description: "Создаёт нативные и кроссплатформенные мобильные приложения.",
             photo: "/assets/team/просто сотрудник 7.jpg",
@@ -248,7 +248,7 @@ const TeamNewPage = () => {
         },
         {
             id: 12,
-            name: "Виктория Романова",
+            name: "Фёдор Аргунов",
             role: "Customer Success Lead",
             description: "Выстраивает процессы сопровождения клиентов и обеспечивает постоянную обратную связь с продуктовой командой.",
             photo: "/assets/team/просто сотрудник 12.png",
@@ -271,11 +271,11 @@ const TeamNewPage = () => {
     // Данные ведущих специалистов (используем случайных людей из списка сотрудников)
     const specialists = {
         frontend: {
-            name: teamMembers[0].name, // Александр Иванов
+            name: teamMembers[5].name, // Александр Иванов
             stack: ["React", "TypeScript", "Next.js", "Tailwind CSS", "Figma"],
             description: "Глава отдела разработки и дизайна, специалист широкого профиля, который поможет вам визуально интерпретировать ваши идеи. Более 8 лет опыта в создании современных веб-приложений. Эксперт в области React-экосистемы и TypeScript, создал десятки успешных проектов для крупных компаний.",
             category: "Frontend",
-            photo: teamMembers[0].photo
+            photo: teamMembers[5].photo
         },
         backend: {
             name: teamMembers[2].name, // Дмитрий Сидоров
