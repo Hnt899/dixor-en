@@ -23083,3 +23083,24 @@ body.bg-dark .side .widget.social li a:hover {
     border-color: var(--color-primary) !important;
 }
 
+/* Движение фото внутри карточки у управленцев на главной */
+@media (min-width: 768px) {
+	/* Рамка карточки – стоит на месте, только прячет края фото */
+	.team-style-three-area .team-member-card.team-style-three-item {
+	  position: relative;
+	  overflow: hidden;
+	}
+  
+	/* Само фото внутри карточки */
+	.team-style-three-area .team-member-card.team-style-three-item img {
+	  display: block;
+	  transition: transform 0.35s ease;
+	  will-change: transform;
+	}
+  
+	/* При наведении двигаем только картинку вправо */
+	.team-style-three-area .team-member-card.team-style-three-item:hover img {
+	  transform: translateX(35px); /* можешь поменять на 20–25px, если много */
+	}
+  }
+  
