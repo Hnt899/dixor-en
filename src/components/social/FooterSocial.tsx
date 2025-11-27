@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
-const TELEGRAM_URL = "https://t.me/cdiglobal";
+const TELEGRAM_URL = "https://t.me/CDI_Agency";
 const WHATSAPP_URL = "https://wa.me/79853656294";
 const PHONE_DISPLAY = "+7 985 365 6294";
 const PHONE_VALUE = "+79853656294";
