@@ -236,7 +236,7 @@ const MainMenu = ({ navbarPlacement, closeMenu }: DataType) => {
                 >
                     <Link 
                         to="/services" 
-                        onClick={(e) => {
+                        onClick={() => {
                             if (closeMenu) {
                                 closeMenu();
                             }

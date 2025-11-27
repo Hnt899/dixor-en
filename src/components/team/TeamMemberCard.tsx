@@ -30,6 +30,12 @@ const TeamMemberCard = ({ name, photo, role, summary, stack, expertise, onSelect
         return () => window.removeEventListener('resize', handleResize);
     }, []);
 
+    useEffect(() => {
+        if (!isMobile) {
+            setIsHoverVisible(false);
+        }
+    }, [isMobile]);
+
     const toggleHoverMobile = () => {
         if (!isMobile) return;
         setIsHoverVisible(prev => !prev);

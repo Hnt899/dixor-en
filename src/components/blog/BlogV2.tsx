@@ -33,7 +33,7 @@ const BlogV2 = ({ sectionClass }: DataType) => {
                     id: article.id,
                     title: article.title,
                     author: article.author,
-                    comment: article.comment ?? 0,
+                    comment: 0,
                     date: day,
                     month,
                     thumbFull: article.thumbFull

@@ -1,12 +1,12 @@
 .team-member-hover {
     position: absolute;
     inset: 0;
-    background: rgba(0, 0, 0, 0.88);
+    background: rgba(0, 0, 0, 0.95);
     color: #ffffff;
-    padding: 28px 32px;
+    padding: 32px 32px 56px;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
+    justify-content: space-between;
     gap: 16px;
     opacity: 0;
     transform: translateY(30px);
@@ -15,12 +15,7 @@
     border-radius: 30px;
 }
 
-.team-member-card:hover .team-member-hover {
-    opacity: 1;
-    transform: translateY(0);
-    pointer-events: auto;
-}
-
+.team-member-card:hover .team-member-hover,
 .team-member-hover.show {
     opacity: 1;
     transform: translateY(0);
@@ -54,7 +49,7 @@
 }
 
 .team-member-hover-btn {
-    align-self: flex-start;
+    align-self: center;
     padding: 10px 24px;
     border-radius: 999px;
     border: 1px solid rgba(255, 255, 255, 0.5);
@@ -70,6 +65,21 @@
     background: var(--color-primary);
     color: var(--color-heading);
     border-color: var(--color-primary);
+}
+
+@media (max-width: 767px) {
+    .team-member-hover {
+        padding: 24px 20px 120px;
+        justify-content: flex-start;
+    }
+
+    .team-member-hover-btn {
+        display: none;
+    }
+
+    .team-new-page .team-member-card .thumb {
+        cursor: pointer;
+    }
 }
 /* ----------------------------------
 
@@ -21375,12 +21385,12 @@ nav.navbar.validnavs .navbar-collapse.collapse.show img.light-img {
 .team-member-hover {
     position: absolute;
     inset: 0;
-    background: rgba(0, 0, 0, 0.9);
+    background: rgba(0, 0, 0, 0.95);
     color: #ffffff;
-    padding: 28px 32px;
+    padding: 32px 32px 56px;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
+    justify-content: space-between;
     gap: 16px;
     opacity: 0;
     transform: translateY(30px);
@@ -21389,7 +21399,8 @@ nav.navbar.validnavs .navbar-collapse.collapse.show img.light-img {
     border-radius: 30px;
 }
 
-.team-member-card:hover .team-member-hover {
+.team-member-card:hover .team-member-hover,
+.team-member-hover.show {
     opacity: 1;
     transform: translateY(0);
     pointer-events: auto;
@@ -21422,7 +21433,7 @@ nav.navbar.validnavs .navbar-collapse.collapse.show img.light-img {
 }
 
 .team-member-hover-btn {
-    align-self: flex-start;
+    align-self: center;
     padding: 10px 24px;
     border-radius: 999px;
     border: 1px solid rgba(255, 255, 255, 0.5);
