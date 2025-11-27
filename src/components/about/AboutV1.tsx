@@ -29,9 +29,10 @@ const AboutV1 = ({ lightMode }: DataType) => {
             ) as NodeListOf<HTMLElement>;
             
             aboutImages.forEach((img) => {
-                // Убираем все inline стили transform
+                // Убираем все inline стили transform и left
                 img.style.removeProperty('transform');
                 img.style.removeProperty('-webkit-transform');
+                img.style.removeProperty('left');
                 // Принудительно применяем CSS правило через reflow
                 void img.offsetHeight;
             });

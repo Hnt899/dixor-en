@@ -15,9 +15,10 @@ const useThumbParallax = () => {
             containers.forEach(container => {
                 const img = container.querySelector('img') as HTMLElement;
                 if (img) {
-                    // Сбрасываем все inline стили transform
+                    // Сбрасываем все inline стили transform и left
                     img.style.removeProperty('transform');
                     img.style.removeProperty('-webkit-transform');
+                    img.style.removeProperty('left');
                     // Принудительно применяем CSS правило
                     void img.offsetHeight;
                 }
@@ -36,8 +37,11 @@ const useThumbParallax = () => {
                     if (!img) return;
 
                     // Убеждаемся, что начальное состояние правильное
+                    // Используем xPercent для центрирования вместо transform
                     gsap.set(img, { 
-                        transform: 'translateX(-50%) scale(1.4)',
+                        left: '50%',
+                        xPercent: -50,
+                        scale: 1.4,
                         yPercent: 0
                     });
 
