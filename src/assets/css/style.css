@@ -7120,15 +7120,15 @@ ul.list-style-two li:last-child {
 	position: absolute;
 	top: 0;
 	left: 50% !important;
-	transform: translateX(-50%) scale(1.4) !important;
+	transform: translateX(-50%) scale(1.4);
 	transform-origin: 50% 50%;
 	will-change: transform;
 }
 
-/* Начальное состояние - всегда применяется и имеет приоритет */
+/* Начальное состояние - всегда применяется */
 .about-style-one-area .bottom-info .thumb .img-container img {
 	left: 50% !important;
-	transform: translateX(-50%) scale(1.4) !important;
+	transform: translateX(-50%) scale(1.4);
 }
 
 .about-style-one-area .bottom-info .thumb .about-skills {
