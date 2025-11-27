@@ -10248,15 +10248,20 @@ a.btn-circle:hover strong {
 	width: calc(100% + 60px);
 	object-fit: cover;
 	object-position: center center;
-	-webkit-transition: opacity 0.35s;
-	transition: opacity 0.35s;
-	-webkit-transform: none;
+	transition: transform 0.4s ease, opacity 0.35s;
 	transform: none;
 }
 
 .team-style-three-item:hover .thumb img {
-	-webkit-transform: none;
 	transform: none;
+}
+
+.team-style-three-area .team-style-three-item .thumb img {
+	transition: transform 0.4s ease, opacity 0.35s;
+}
+
+.team-style-three-area .team-style-three-item:hover .thumb img {
+	transform: translateX(24px);
 }
 
 .team-style-three-item h4 {
