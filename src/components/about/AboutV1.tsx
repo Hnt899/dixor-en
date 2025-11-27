@@ -21,7 +21,7 @@ const AboutV1 = ({ lightMode }: DataType) => {
 
     useThumbParallax();
 
-    // Убеждаемся, что фотография всегда по центру при монтировании компонента
+    // Убеждаемся, что фотография всегда по центру (горизонтально и вертикально) при монтировании компонента
     useEffect(() => {
         const centerAboutImage = () => {
             const aboutImages = document.querySelectorAll(
@@ -29,9 +29,10 @@ const AboutV1 = ({ lightMode }: DataType) => {
             ) as NodeListOf<HTMLElement>;
             
             aboutImages.forEach((img) => {
-                // Принудительно устанавливаем центрирование
+                // Принудительно устанавливаем центрирование по горизонтали и вертикали
+                img.style.top = '50%';
                 img.style.left = '50%';
-                img.style.transform = 'translateX(-50%) scale(1.4)';
+                img.style.transform = 'translate(-50%, -50%) scale(1.4)';
                 // Принудительно применяем CSS правило через reflow
                 void img.offsetHeight;
             });
