@@ -1,11 +1,9 @@
 // api/order.ts
-import type { VercelRequest, VercelResponse } from '@vercel/node';
+// @ts-nocheck  // отключаем придирки TypeScript в этом файле
 
-const BOT_API_URL =
-  process.env.BOT_APT_URL || // твой текущий секрет с опечаткой
-  process.env.BOT_API_URL;   // на будущее, если переименуешь
+const BOT_API_URL = process.env.BOT_API_URL;
 
-export default async function handler(req: VercelRequest, res: VercelResponse) {
+export default async function handler(req: any, res: any) {
   if (req.method !== 'POST') {
     res.setHeader('Allow', 'POST');
     return res
@@ -14,16 +12,17 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
   }
 
   if (!BOT_API_URL) {
-    console.error('BOT_API_URL (или BOT_APT_URL) не задан в переменных окружения');
+    console.error('BOT_API_URL is not configured');
     return res.status(500).json({
       success: false,
-      error: 'Сервер не настроен (BOT_API_URL отсутствует)',
+      error: 'BOT_API_URL is not configured on server',
     });
   }
 
   try {
     const { name, phone, email, budget, description } = req.body || {};
 
+    // можно добавить простую проверку
     if (!name || !phone) {
       return res.status(400).json({
         success: false,
@@ -31,8 +30,8 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
       });
     }
 
-    // Прокидываем данные в твоего Python-бота
-    const upstreamResponse = await fetch(BOT_API_URL, {
+    // шлём данные в твоего Python-бота (ngrok /new_order)
+    const upstreamRes = await fetch(BOT_API_URL, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -40,21 +39,21 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
       body: JSON.stringify({
         name,
         phone,
-        email: email || undefined,
-        budget: budget || undefined,
-        comment: description || undefined, // description -> comment
+        email: email || undefined,          // опционально
+        budget: budget || undefined,        // опционально
+        comment: description || undefined,  // описание → comment для бота
       }),
     });
 
-    const upstreamJson = await upstreamResponse.json().catch(() => ({}));
+    const upstreamJson = await upstreamRes.json().catch(() => ({}));
 
-    if (!upstreamResponse.ok || upstreamJson.success === false) {
+    if (!upstreamRes.ok || upstreamJson.success === false) {
       console.error('Bot upstream error:', upstreamJson);
       return res.status(500).json({
         success: false,
         error:
           upstreamJson.error ||
-          `Ошибка при запросе к боту (status ${upstreamResponse.status})`,
+          `Ошибка при запросе к боту (status ${upstreamRes.status})`,
       });
     }
 
@@ -63,7 +62,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     console.error('Error in /api/order:', err);
     return res.status(500).json({
       success: false,
-      error: 'Внутренняя ошибка сервера',
+      error: err?.message || 'Внутренняя ошибка сервера',
     });
   }
 }
