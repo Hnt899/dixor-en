@@ -1,20 +1,5 @@
 [
     {
-        "id": 3,
-        "thumb": "лого/Mask group-leo.svg",
-        "thumbLight": "лого/Mask group-leo.svg",
-        "text": "Продажа медицинского",
-        "textBold": "оборудования",
-        "thumbFull": "3.jpg",
-        "tag": "Веб-разработка",
-        "description": "Интернет-магазин медицинского оборудования с каталогом профессиональной техники для клиник и медицинских учреждений.",
-        "screenshots": [
-            "сайт/3/сайт 3.png"
-        ],
-        "category": "Сайты",
-        "backgroundColor": "#C62829"
-    },
-    {
         "id": 4,
         "thumb": "лого/Group vozovoz.svg",
         "thumbLight": "лого/Group vozovoz.svg",

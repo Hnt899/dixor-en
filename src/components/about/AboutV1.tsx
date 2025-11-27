@@ -6,6 +6,7 @@ import SkillProgress from '../process/SkillProgress';
 import SkillProgressData from "../../../src/assets/jsonData/progress/SkillProgressData.json";
 import TextScrollAnimation from '../animation/TextScrollAnimation';
 import CountUp from 'react-countup';
+import { useEffect } from 'react';
 import useScrollAnimation from '../../hooks/useScrollAnimation';
 import useThumbParallax from '../../hooks/useThumbParallax';
 
@@ -18,7 +19,36 @@ const AboutV1 = ({ lightMode }: DataType) => {
 
     const containerRef = useScrollAnimation();
 
-    useThumbParallax()
+    useThumbParallax();
+
+    // Сбрасываем transform для большой фотографии при монтировании компонента
+    useEffect(() => {
+        const resetAboutImage = () => {
+            const aboutImages = document.querySelectorAll(
+                '.about-style-one-area .bottom-info .thumb .img-container img'
+            ) as NodeListOf<HTMLElement>;
+            
+            aboutImages.forEach((img) => {
+                // Убираем все inline стили transform
+                img.style.removeProperty('transform');
+                img.style.removeProperty('-webkit-transform');
+                // Принудительно применяем CSS правило через reflow
+                void img.offsetHeight;
+            });
+        };
+
+        // Выполняем сброс сразу и после небольших задержек
+        resetAboutImage();
+        const timeout1 = setTimeout(resetAboutImage, 50);
+        const timeout2 = setTimeout(resetAboutImage, 200);
+        const timeout3 = setTimeout(resetAboutImage, 500);
+
+        return () => {
+            clearTimeout(timeout1);
+            clearTimeout(timeout2);
+            clearTimeout(timeout3);
+        };
+    }, []);
 
     return (
         <>

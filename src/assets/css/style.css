@@ -7120,8 +7120,14 @@ ul.list-style-two li:last-child {
 	position: absolute;
 	top: 0;
 	left: 0;
-	transform: translateX(-50%) scale(1.4);
+	transform: translateX(-50%) scale(1.4) !important;
 	transform-origin: 50% 50%;
+	will-change: transform;
+}
+
+/* Начальное состояние - всегда применяется */
+.about-style-one-area .bottom-info .thumb .img-container img {
+	transform: translateX(-50%) scale(1.4) !important;
 }
 
 .about-style-one-area .bottom-info .thumb .about-skills {
@@ -10241,28 +10247,7 @@ a.btn-circle:hover strong {
 	--bs-gutter-x: 10px;
 }
 
-.team-style-three-item .thumb img {
-	border-radius: 30px;
-	max-width: none;
-	width: -webkit-calc(100% + 60px);
-	width: calc(100% + 60px);
-	object-fit: cover;
-	object-position: center center;
-	transition: transform 0.4s ease, opacity 0.35s;
-	transform: none;
-}
-
-.team-style-three-item:hover .thumb img {
-	transform: none;
-}
-
-.team-style-three-area .team-members-section .team-member-card.team-style-three-item .thumb img {
-	transition: transform 0.4s ease, opacity 0.35s;
-}
-
-.team-style-three-area .team-members-section .team-member-card.team-style-three-item:hover .thumb img {
-	transform: translateX(24px);
-}
+/* Старые правила удалены - используются более специфичные правила ниже */
 
 .team-style-three-item h4 {
 	margin: 0;
@@ -21203,7 +21188,7 @@ nav.navbar.validnavs .navbar-collapse.collapse.show img.light-img {
     transform: none !important;
 }
 
-/* Убираем тень и трансформацию для карусели команды на главной */
+/* Стили для фотографий команды на главной странице */
 /* Стили применяются только к главной странице (где есть .team-style-three-area), не к странице команды */
 .team-style-three-area .team-members-section .team-member-card.team-style-three-item .thumb {
     overflow: hidden;
@@ -21221,15 +21206,19 @@ nav.navbar.validnavs .navbar-collapse.collapse.show img.light-img {
     object-position: center center;
     border-radius: 24px;
     max-width: none !important;
-    transition: transform 0.4s ease;
+    transition: transform 0.4s ease !important;
     transform: translateX(-30px) !important;
     box-shadow: none !important;
+    will-change: transform;
 }
 
+/* Начальное состояние - всегда применяется */
+.team-style-three-area .team-members-section .team-member-card.team-style-three-item .thumb img,
 .team-style-three-area .team-members-section .team-member-card.team-style-three-item:not(:hover) .thumb img {
     transform: translateX(-30px) !important;
 }
 
+/* Состояние при hover */
 .team-style-three-area .team-members-section .team-member-card.team-style-three-item:hover .thumb img {
     transform: translateX(10px) !important;
 }
@@ -23103,24 +23092,5 @@ body.bg-dark .side .widget.social li a:hover {
     border-color: var(--color-primary) !important;
 }
 
-/* Движение фото внутри карточки у управленцев на главной */
-@media (min-width: 768px) {
-	/* Рамка карточки – стоит на месте, только прячет края фото */
-	.team-style-three-area .team-member-card.team-style-three-item {
-	  position: relative;
-	  overflow: hidden;
-	}
-  
-	/* Само фото внутри карточки */
-	.team-style-three-area .team-member-card.team-style-three-item img {
-	  display: block;
-	  transition: transform 0.35s ease;
-	  will-change: transform;
-	}
-  
-	/* При наведении двигаем только картинку вправо */
-	.team-style-three-area .team-member-card.team-style-three-item:hover img {
-	  transform: translateX(35px); /* можешь поменять на 20–25px, если много */
-	}
-  }
+/* Правила для движения фото удалены - используются более специфичные правила выше */
   

@@ -24,7 +24,7 @@ const TeamV3Carousel = ({ hasTitle, sectionClass }: DataType) => {
     const [currentMemberIndex, setCurrentMemberIndex] = useState(0);
     const [selectedSpecialist, setSelectedSpecialist] = useState<SpecialistModalPayload | null>(null);
 
-    // Сбрасываем transform для всех фоток команды при монтировании компонента
+    // Сбрасываем transform для всех фоток команды при монтировании компонента и при изменении индекса
     useEffect(() => {
         const resetTeamImages = () => {
             const teamImages = document.querySelectorAll(
@@ -32,21 +32,26 @@ const TeamV3Carousel = ({ hasTitle, sectionClass }: DataType) => {
             ) as NodeListOf<HTMLElement>;
             
             teamImages.forEach((img) => {
-                // Принудительно сбрасываем transform
-                img.style.transform = 'translateX(-30px)';
-                // Убираем inline стиль после небольшой задержки, чтобы CSS правила применились
-                setTimeout(() => {
-                    img.style.transform = '';
-                }, 100);
+                // Убираем все inline стили transform
+                img.style.removeProperty('transform');
+                img.style.removeProperty('-webkit-transform');
+                // Принудительно применяем CSS правило через reflow
+                void img.offsetHeight;
             });
         };
 
-        // Выполняем сброс сразу и после небольшой задержки
+        // Выполняем сброс сразу, после небольшой задержки и после рендера
         resetTeamImages();
-        const timeout = setTimeout(resetTeamImages, 200);
+        const timeout1 = setTimeout(resetTeamImages, 50);
+        const timeout2 = setTimeout(resetTeamImages, 200);
+        const timeout3 = setTimeout(resetTeamImages, 500);
 
-        return () => clearTimeout(timeout);
-    }, []);
+        return () => {
+            clearTimeout(timeout1);
+            clearTimeout(timeout2);
+            clearTimeout(timeout3);
+        };
+    }, [currentMemberIndex]);
 
     const handlePrevMember = () => {
         setCurrentMemberIndex((prev) => (prev === 0 ? TeamV3Data.length - 1 : prev - 1));
