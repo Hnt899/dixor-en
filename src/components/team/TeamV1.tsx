@@ -7,12 +7,13 @@ import TeamV1Data from '../../../src/assets/jsonData/team/TeamV1Data.json';
 interface DataType {
     sectionClass?: string;
     hasTitle?: boolean;
+    enableLeaderHover?: boolean;
 }
 
-const TeamV1 = ({ sectionClass, hasTitle }: DataType) => {
+const TeamV1 = ({ sectionClass, hasTitle, enableLeaderHover }: DataType) => {
     return (
         <>
-            <div className={`team-style-one-area relative overflow-hidden default-padding-bottom ${sectionClass ? sectionClass : ""}`}>
+            <div className={`team-style-one-area relative overflow-hidden default-padding-bottom ${sectionClass ? sectionClass : ""} ${enableLeaderHover ? "leader-hover-enabled" : ""}`}>
 
                 {/* Team Title  */}
                 {hasTitle &&
