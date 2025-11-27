@@ -29,7 +29,7 @@ const Home1 = () => {
                 <RecentProjectsSection />
                 <MultiSection />
                 <ProjectV1 />
-                <TeamV1 sectionClass='bg-gray' hasTitle={true} />
+                <TeamV1 sectionClass='bg-gray' hasTitle={true} enableLeaderHover={true} />
                 <TestimonialV3 />
                 <ClientsV1 sectionClass='bg-gray' />
                 <BlogV2 sectionClass='bg-gray' />
