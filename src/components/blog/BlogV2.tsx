@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
-import BlogV2Data from '../../../src/assets/jsonData/blog/BlogV2Data.json';
+import { useMemo } from 'react';
+import BlogV3Data from '../../../src/assets/jsonData/blog/BlogV3Data.json';
 import SingleBlogV2 from './SingleBlogV2';
 import SplitText from "../animation/SplitText.jsx"
 
@@ -8,7 +9,37 @@ interface DataType {
 }
 
 const BlogV2 = ({ sectionClass }: DataType) => {
-    const visibleArticles = BlogV2Data.slice(0, 2);
+    const visibleArticles = useMemo(() => {
+        const desiredIds = new Set([1, 2]);
+
+        const formatDateParts = (fullDate?: string) => {
+            if (!fullDate) {
+                return { day: '', month: '' };
+            }
+            const parts = fullDate.split(' ');
+            const day = parts[0]?.replace(/\D/g, '') || fullDate;
+            let month = parts[1] ? parts[1].replace(',', '') : '';
+            if (month) {
+                month = month.slice(0, 3).toUpperCase();
+            }
+            return { day, month };
+        };
+
+        return BlogV3Data
+            .filter(article => desiredIds.has(article.id))
+            .map(article => {
+                const { day, month } = formatDateParts(article.date);
+                return {
+                    id: article.id,
+                    title: article.title,
+                    author: article.author,
+                    comment: article.comment ?? 0,
+                    date: day,
+                    month,
+                    thumbFull: article.thumbFull
+                };
+            });
+    }, []);
 
     return (
         <>

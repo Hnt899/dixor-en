@@ -17,7 +17,7 @@ const FooterV3 = () => {
 
     return (
         <>
-            <footer>
+            <footer id="footer">
                 <div className="footer-box">
                     <div className="container">
                         <div className="f-items">

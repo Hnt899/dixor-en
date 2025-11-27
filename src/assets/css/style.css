@@ -10234,13 +10234,13 @@ a.btn-circle:hover strong {
 	object-position: center center;
 	-webkit-transition: opacity 0.35s;
 	transition: opacity 0.35s;
-	-webkit-transform: translate3d(-50px, 0, 0);
-	transform: translate3d(-50px, 0, 0);
+	-webkit-transform: none;
+	transform: none;
 }
 
 .team-style-three-item:hover .thumb img {
-	-webkit-transform: translate3d(-50px, 0, 0);
-	transform: translate3d(-50px, 0, 0);
+	-webkit-transform: none;
+	transform: none;
 }
 
 .team-style-three-item h4 {
@@ -21142,8 +21142,9 @@ nav.navbar.validnavs .navbar-collapse.collapse.show img.light-img {
     overflow: hidden;
     border-radius: 30px;
     position: relative;
-    flex: 1;
-    min-height: 750px;
+    flex: 0 0 400px;
+    min-height: 400px;
+    height: 400px;
 }
 
 .team-new-page .team-member-card .thumb img {
@@ -21179,20 +21180,18 @@ nav.navbar.validnavs .navbar-collapse.collapse.show img.light-img {
     box-shadow: none !important;
 }
 
-/* Для страницы команды - возвращаем исходные стили без фиксированной высоты */
-/* Используем более специфичный селектор, чтобы переопределить стили для главной */
+/* Для страницы команды - карточки как на главной */
 .team-new-page .team-members-section .team-member-card.team-style-three-item .thumb {
     overflow: hidden;
     border-radius: 30px;
     position: relative;
-    flex: 1;
-    min-height: 750px;
-    height: auto;
+    min-height: 400px;
+    height: 400px;
 }
 
 .team-new-page .team-members-section .team-member-card.team-style-three-item .thumb img {
     width: 100% !important;
-    height: 100%;
+    height: 100% !important;
     object-fit: cover;
     object-position: center center;
     border-radius: 30px;
@@ -21201,7 +21200,7 @@ nav.navbar.validnavs .navbar-collapse.collapse.show img.light-img {
     transition: none;
     -webkit-transform: none !important;
     box-shadow: none !important;
-    min-height: auto !important;
+    min-height: 400px;
 }
 
 /* Убираем псевдоэлемент ::after который может создавать тень */
@@ -21214,7 +21213,7 @@ nav.navbar.validnavs .navbar-collapse.collapse.show img.light-img {
     left: 0;
     bottom: 0;
     content: "";
-    height: 500px;
+    height: 400px;
     width: 100%;
     background: linear-gradient(to bottom, 
         rgba(0, 0, 0, 0) 0%, 
@@ -22172,13 +22171,14 @@ nav.navbar.validnavs .navbar-collapse.collapse.show img.light-img {
 
     /* Адаптация карточек для мобильных */
     .team-new-page .team-member-card .thumb {
-        min-height: 580px;
+        min-height: 360px;
+        height: 360px;
     }
 
     .team-photo-placeholder {
         width: 100%;
-        height: 580px;
-        min-height: 580px;
+        height: 360px;
+        min-height: 360px;
         transform: translate3d(0, 0, 0);
     }
 

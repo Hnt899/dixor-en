@@ -3,6 +3,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom"; // Я ВЕР�
 import ModalVideo from "react-modal-video";
 import { useState, useMemo } from "react";
 import BlogV3Data from '../../../src/assets/jsonData/blog/BlogV3Data.json';
+import ServicesV1Data from '../../../src/assets/jsonData/services/ServicesV1Data.json';
 
 interface DataType {
     navbarPlacement?: string;
@@ -14,10 +15,13 @@ const MainMenu = ({ navbarPlacement, closeMenu }: DataType) => {
 
     const [isOpen, setOpen] = useState(false);
     const [isProjectsDropdownOpen, setIsProjectsDropdownOpen] = useState(false);
+    const [isServicesDropdownOpen, setIsServicesDropdownOpen] = useState(false);
     const [isBlogDropdownOpen, setIsBlogDropdownOpen] = useState(false);
     const [isDropdownVisible, setIsDropdownVisible] = useState(false);
+    const [isServicesDropdownVisible, setIsServicesDropdownVisible] = useState(false);
     const [isBlogDropdownVisible, setIsBlogDropdownVisible] = useState(false);
     const [dropdownTimeout, setDropdownTimeout] = useState<number | null>(null);
+    const [servicesDropdownTimeout, setServicesDropdownTimeout] = useState<number | null>(null);
     const [blogDropdownTimeout, setBlogDropdownTimeout] = useState<number | null>(null);
     const location = useLocation();
     const navigate = useNavigate();
@@ -32,6 +36,13 @@ const MainMenu = ({ navbarPlacement, closeMenu }: DataType) => {
         });
         const uniqueTags = Array.from(tags).sort();
         return uniqueTags.map(tag => ({ id: tag, label: tag }));
+    }, []);
+
+    const servicesForDropdown = useMemo(() => {
+        return ServicesV1Data.slice(0, 4).map(service => ({
+            id: service.id,
+            title: service.title
+        }));
     }, []);
 
     // Функция для плавного скролла к элементу
@@ -83,6 +94,22 @@ const MainMenu = ({ navbarPlacement, closeMenu }: DataType) => {
         
         // Закрываем выпадающее меню
         setIsProjectsDropdownOpen(false);
+    };
+
+    const handleServiceDropdownClick = (e: React.MouseEvent<HTMLAnchorElement>, serviceId: number) => {
+        e.preventDefault();
+        e.stopPropagation();
+        if (closeMenu) {
+            closeMenu();
+        }
+        const menuElement = document.getElementById('navbar-menu');
+        if (menuElement) {
+            menuElement.classList.remove('show');
+        }
+        document.body.classList.remove('no-fade');
+        navigate(`/service-details/${serviceId}`);
+        setIsServicesDropdownOpen(false);
+        setIsServicesDropdownVisible(false);
     };
 
     // Функция для обработки клика на фильтр блога
@@ -182,8 +209,93 @@ const MainMenu = ({ navbarPlacement, closeMenu }: DataType) => {
                 <li>
                     <a href="#about" onClick={(e) => handleSmoothScroll(e, 'about')}>О нас</a>
                 </li>
-                <li>
-                    <a href="#services" onClick={(e) => handleSmoothScroll(e, 'services')}>Услуги</a>
+                <li
+                    className="dropdown"
+                    onMouseEnter={() => {
+                        if (servicesDropdownTimeout) {
+                            clearTimeout(servicesDropdownTimeout);
+                            setServicesDropdownTimeout(null);
+                        }
+                        setIsServicesDropdownOpen(true);
+                        setTimeout(() => {
+                            setIsServicesDropdownVisible(true);
+                        }, 10);
+                    }}
+                    onMouseLeave={(e) => {
+                        const relatedTarget = e.relatedTarget as HTMLElement;
+                        if (relatedTarget && e.currentTarget.contains(relatedTarget)) {
+                            return;
+                        }
+                        setIsServicesDropdownVisible(false);
+                        const timeout = setTimeout(() => {
+                            setIsServicesDropdownOpen(false);
+                        }, 300);
+                        setServicesDropdownTimeout(timeout);
+                    }}
+                    style={{ position: 'relative' }}
+                >
+                    <a href="#services" onClick={(e) => handleSmoothScroll(e, 'services')}>
+                        Услуги
+                    </a>
+                    {isServicesDropdownOpen && (
+                        <ul
+                            className={`dropdown-menu projects-dropdown ${isServicesDropdownVisible ? 'show' : ''}`}
+                            onMouseEnter={() => {
+                                if (servicesDropdownTimeout) {
+                                    clearTimeout(servicesDropdownTimeout);
+                                    setServicesDropdownTimeout(null);
+                                }
+                                setIsServicesDropdownVisible(true);
+                            }}
+                            onMouseLeave={(e) => {
+                                const relatedTarget = e.relatedTarget as HTMLElement;
+                                if (relatedTarget && e.currentTarget.closest('li.dropdown')?.contains(relatedTarget)) {
+                                    return;
+                                }
+                                setIsServicesDropdownVisible(false);
+                                const timeout = setTimeout(() => {
+                                    setIsServicesDropdownOpen(false);
+                                }, 300);
+                                setServicesDropdownTimeout(timeout);
+                            }}
+                            style={{
+                                position: 'absolute',
+                                top: '100%',
+                                left: 0,
+                                marginTop: '5px',
+                                background: 'rgba(42, 45, 50, 0.8)',
+                                backdropFilter: 'blur(10px)',
+                                WebkitBackdropFilter: 'blur(10px)',
+                                minWidth: '220px',
+                                padding: '15px 0 10px 0',
+                                margin: 0,
+                                listStyle: 'none',
+                                zIndex: 1000,
+                                border: '1px solid rgba(255, 255, 255, 0.1)',
+                                borderRadius: '8px'
+                            }}
+                        >
+                            {servicesForDropdown.map(service => (
+                                <li key={service.id}>
+                                    <a
+                                        href={`/service-details/${service.id}`}
+                                        onClick={(e) => handleServiceDropdownClick(e, service.id)}
+                                        style={{
+                                            display: 'block',
+                                            padding: '10px 20px',
+                                            color: '#fff',
+                                            textDecoration: 'none',
+                                            transition: 'background 0.3s ease'
+                                        }}
+                                        onMouseEnter={(e) => e.currentTarget.style.background = 'var(--color-primary)'}
+                                        onMouseLeave={(e) => e.currentTarget.style.background = 'transparent'}
+                                    >
+                                        {service.title}
+                                    </a>
+                                </li>
+                            ))}
+                        </ul>
+                    )}
                 </li>
                 <li 
                     className="dropdown"
@@ -455,7 +567,7 @@ const MainMenu = ({ navbarPlacement, closeMenu }: DataType) => {
                 </li>
 
                 <li>
-                    <a href="#contact" onClick={(e) => handleSmoothScroll(e, 'contact')}>Контакты</a>
+                    <a href="#footer" onClick={(e) => handleSmoothScroll(e, 'footer')}>Контакты</a>
                 </li>
 
             </ul>
