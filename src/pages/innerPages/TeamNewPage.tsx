@@ -124,92 +124,149 @@ const TeamNewPage = () => {
     };
 
     // Данные участников команды
-    const teamMembers = [
+    interface TeamMember {
+        id: number;
+        name: string;
+        role: string;
+        description: string;
+        photo?: string;
+        stack: string[];
+        summary: string;
+        expertise: string;
+    }
+
+    const teamMembers: TeamMember[] = [
         {
             id: 1,
             name: "Александр Иванов",
             role: "Frontend Developer",
             description: "Специализируется на React и TypeScript, создаёт интуитивные интерфейсы.",
-            photo: "/assets/team/просто сотрудник 1.png"
+            photo: "/assets/team/просто сотрудник 1.png",
+            stack: ["React", "TypeScript", "Next.js"],
+            summary: "Ведёт фронт-направление и отвечает за стабильность интерфейсов.",
+            expertise: "Архитектура SPA, дизайн-системы, performance review"
         },
         {
             id: 2,
             name: "Мария Петрова",
             role: "UI/UX Designer",
             description: "Превращает идеи в визуальные решения с фокусом на пользовательский опыт.",
-            photo: "/assets/team/просто сотрудник 2.png"
+            photo: "/assets/team/просто сотрудник 2.png",
+            stack: ["Figma", "Framer", "Design Systems"],
+            summary: "Собирает пользовательские инсайты и поддерживает дизайн-систему.",
+            expertise: "UX-исследования, прототипирование, микроанимации"
         },
         {
             id: 3,
             name: "Дмитрий Сидоров",
             role: "Backend Developer",
             description: "Разрабатывает масштабируемые серверные решения на Node.js.",
-            photo: "/assets/team/просто сотрудник 3.jpg"
+            photo: "/assets/team/просто сотрудник 3.jpg",
+            stack: ["Node.js", "PostgreSQL", "Redis"],
+            summary: "Проектирует API без простоев и автоматизирует нагрузочные тесты.",
+            expertise: "Микросервисы, Observability, DevOps-практики"
         },
         {
             id: 4,
             name: "Георгий Девицкий",
             role: "Project Manager",
             description: "Координирует проекты и обеспечивает эффективную коммуникацию в команде.",
-            photo: "/assets/team/просто сотрудник 4.jpg"
+            photo: "/assets/team/просто сотрудник 4.jpg",
+            stack: ["Agile", "Notion", "Roadmaps"],
+            summary: "Держит команду синхронизированной и прозрачно ведёт бэклог.",
+            expertise: "Discovery-сессии, фасилитация, управление ожиданиями"
         },
         {
             id: 5,
             name: "Игорь Волков",
             role: "DevOps Engineer",
             description: "Настраивает инфраструктуру и автоматизирует процессы разработки.",
-            photo: "/assets/team/просто сотрудник 5.jpg"
+            photo: "/assets/team/просто сотрудник 5.jpg",
+            stack: ["Docker", "Kubernetes", "Grafana"],
+            summary: "Собирает инфраструктуру как код и следит за релизами в один клик.",
+            expertise: "CI/CD, мониторинг, безопасность окружений"
         },
         {
             id: 6,
             name: "Анна Смирнова",
             role: "Full Stack Developer",
             description: "Работает на всех уровнях стека, от базы данных до фронтенда.",
-            photo: "/assets/team/просто сотрудник 6.jpg"
+            photo: "/assets/team/просто сотрудник 6.jpg",
+            stack: ["React", "Node.js", "GraphQL"],
+            summary: "Закрывает критичные фичи, переключаясь между фронтом и бэком.",
+            expertise: "Интеграции, API-дизайн, оптимизация запросов"
         },
         {
             id: 7,
             name: "Сергей Лебедев",
             role: "Mobile Developer",
             description: "Создаёт нативные и кроссплатформенные мобильные приложения.",
-            photo: "/assets/team/просто сотрудник 7.jpg"
+            photo: "/assets/team/просто сотрудник 7.jpg",
+            stack: ["Swift", "Kotlin", "Flutter"],
+            summary: "Проектирует мобильные сценарии и следит за отзывчивостью экранов.",
+            expertise: "Store-релизы, mobile analytics, offline-first"
         },
         {
             id: 8,
             name: "Эсталина Денисенко",
             role: "QA Engineer",
             description: "Обеспечивает качество продукта через тщательное тестирование.",
-            photo: "/assets/team/просто сотрудник 8.jpg"
+            photo: "/assets/team/просто сотрудник 8.jpg",
+            stack: ["Playwright", "Postman", "TestRail"],
+            summary: "Строит регрессы заранее и держит качество релизов под контролем.",
+            expertise: "Тест-дизайн, автоматизация, нагрузочные сценарии"
         },
         {
             id: 9,
             name: "Павел Морозов",
             role: "Tech Lead",
             description: "Руководит технической стратегией и архитектурными решениями.",
-            photo: "/assets/team/просто сотрудник 9.jpg"
+            photo: "/assets/team/просто сотрудник 9.jpg",
+            stack: ["Architecture", "Cloud", "Code Review"],
+            summary: "Определяет технические стандарты и помогает командам масштабироваться.",
+            expertise: "Архитектура систем, наставничество, code review"
         },
         {
             id: 10,
             name: "Татьяна Федорова",
             role: "Product Designer",
             description: "Проектирует продукты с учётом бизнес-целей и потребностей пользователей.",
-            photo: "/assets/team/просто сотрудник 10.jpg"
+            photo: "/assets/team/просто сотрудник 10.jpg",
+            stack: ["UX Research", "UI Kit", "Prototyping"],
+            summary: "Переводит пользовательские инсайты в новые интерфейсные паттерны.",
+            expertise: "Customer journey, визуальная коммуникация, продуктовые эксперименты"
         },
         {
             id: 11,
             name: "Ольга Баранка",
             role: "Data Analyst",
             description: "Собирает и интерпретирует продуктовую аналитику, помогает принимать решения на основании данных.",
-            photo: "/assets/team/просто сотрудник 11.jpg"
+            photo: "/assets/team/просто сотрудник 11.jpg",
+            stack: ["SQL", "Python", "Metabase"],
+            summary: "Показывает, где продукт растёт, а где теряет аудиторию.",
+            expertise: "Когортный анализ, воронки, мониторинг метрик"
         },
         {
             id: 12,
             name: "Виктория Романова",
             role: "Customer Success Lead",
             description: "Выстраивает процессы сопровождения клиентов и обеспечивает постоянную обратную связь с продуктовой командой.",
-            photo: "/assets/team/просто сотрудник 12.png"
+            photo: "/assets/team/просто сотрудник 12.png",
+            stack: ["CX", "CRM", "Process"],
+            summary: "Синхронизирует продуктовые решения с потребностями клиентов.",
+            expertise: "SLA, обратная связь, масштабирование процессов"
         }
     ];
+
+    const handleOpenTeamMemberModal = (member: TeamMember) => {
+        setSelectedSpecialist({
+            name: member.name,
+            stack: member.stack,
+            description: `${member.description}\n\nЭкспертиза: ${member.expertise}`,
+            category: member.role,
+            photo: member.photo
+        });
+    };
 
     // Данные ведущих специалистов (используем случайных людей из списка сотрудников)
     const specialists = {
@@ -295,6 +352,10 @@ const TeamNewPage = () => {
                                                 role={member.role}
                                                 description={member.description}
                                                 photo={member.photo}
+                                                stack={member.stack}
+                                                summary={member.summary}
+                                                expertise={member.expertise}
+                                                onSelect={() => handleOpenTeamMemberModal(member)}
                                             />
                                         </div>
                                     ))}
