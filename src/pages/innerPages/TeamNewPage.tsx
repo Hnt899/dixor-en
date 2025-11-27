@@ -130,14 +130,14 @@ const TeamNewPage = () => {
             name: "Александр Иванов",
             role: "Frontend Developer",
             description: "Специализируется на React и TypeScript, создаёт интуитивные интерфейсы.",
-            photo: "/assets/team/просто сотрудник 1.jpg"
+            photo: "/assets/team/просто сотрудник 1.png"
         },
         {
             id: 2,
             name: "Мария Петрова",
             role: "UI/UX Designer",
             description: "Превращает идеи в визуальные решения с фокусом на пользовательский опыт.",
-            photo: "/assets/team/просто сотрудник 2.jpg"
+            photo: "/assets/team/просто сотрудник 2.png"
         },
         {
             id: 3,
@@ -148,7 +148,7 @@ const TeamNewPage = () => {
         },
         {
             id: 4,
-            name: "Елена Козлова",
+            name: "Георгий Девицкий",
             role: "Project Manager",
             description: "Координирует проекты и обеспечивает эффективную коммуникацию в команде.",
             photo: "/assets/team/просто сотрудник 4.jpg"
@@ -176,7 +176,7 @@ const TeamNewPage = () => {
         },
         {
             id: 8,
-            name: "Ольга Новикова",
+            name: "Эсталина Денисенко",
             role: "QA Engineer",
             description: "Обеспечивает качество продукта через тщательное тестирование.",
             photo: "/assets/team/просто сотрудник 8.jpg"
@@ -197,7 +197,7 @@ const TeamNewPage = () => {
         },
         {
             id: 11,
-            name: "Никита Андреев",
+            name: "Ольга Баранка",
             role: "Data Analyst",
             description: "Собирает и интерпретирует продуктовую аналитику, помогает принимать решения на основании данных.",
             photo: "/assets/team/просто сотрудник 11.jpg"
