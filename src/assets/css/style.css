@@ -19948,6 +19948,7 @@ button.Toastify__close-button {
 	bottom: 30px;
 	right: 30px;
 	z-index: 9;
+	display: none !important; /* Скрываем кнопку переключения темы */
 }
 
 .radio-btn .radio-inner {
@@ -20028,6 +20029,7 @@ button.Toastify__close-button {
 	bottom: 30px;
 	right: 30px;
 	z-index: 9;
+	display: none !important; /* Скрываем кнопку переключения темы */
 }
 
 .radio-btn-light .radio-inner-light {

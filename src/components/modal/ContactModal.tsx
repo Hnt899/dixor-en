@@ -81,7 +81,7 @@ const ContactModal = ({ isOpen, onClose }: ContactModalProps) => {
         setIsSubmitting(true);
 
         try {
-            const response = await fetch('/api/order', {
+            const response = await fetch('/send_order.php', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -89,9 +89,10 @@ const ContactModal = ({ isOpen, onClose }: ContactModalProps) => {
                 body: JSON.stringify({
                     name: formData.name,
                     phone: formData.phone,
-                    email: formData.email || undefined,
-                    budget: formData.budget || undefined,
-                    description: formData.description || undefined
+                    email: formData.email || null,
+                    budget: formData.budget || null,
+                    // backend ждёт comment
+                    comment: formData.description || null,
                 }),
             });
 
@@ -101,7 +102,7 @@ const ContactModal = ({ isOpen, onClose }: ContactModalProps) => {
             try {
                 data = raw ? JSON.parse(raw) : {};
             } catch (err) {
-                console.error('Non-JSON response from /api/order:', raw);
+                console.error('Non-JSON response from /send_order.php:', raw);
                 throw new Error('Ошибка сервера при отправке заявки.');
             }
 
