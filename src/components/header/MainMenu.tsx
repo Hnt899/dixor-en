@@ -235,17 +235,12 @@ const MainMenu = ({ navbarPlacement, closeMenu }: DataType) => {
                     style={{ position: 'relative' }}
                 >
                     <Link 
-                        to="/services" 
-                        onClick={() => {
-                            if (closeMenu) {
-                                closeMenu();
+                        to="#" 
+                        onClick={(e) => {
+                            // Если клик был на саму ссылку (не на выпадающее меню), скроллим к блоку услуг
+                            if (e.target === e.currentTarget || (e.target as HTMLElement).tagName === 'A') {
+                                handleSmoothScroll(e, 'services');
                             }
-                            const menuElement = document.getElementById('navbar-menu');
-                            if (menuElement) {
-                                menuElement.classList.remove('show');
-                            }
-                            document.body.classList.remove('no-fade');
-                            navigate('/services');
                         }}
                     >
                         Услуги
