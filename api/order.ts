@@ -2,16 +2,20 @@
 // @ts-nocheck
 
 export default function handler(req: any, res: any) {
-    console.log("[api/order] simple test handler, method =", req.method);
-  
-    res.statusCode = 200;
-    res.setHeader("Content-Type", "application/json");
-    res.end(
-      JSON.stringify({
+    try {
+      // Просто тестовый ответ, без fetch, без env, без логики
+      res.status(200).json({
         success: true,
         method: req.method,
-        test: "order api is alive",
-      })
-    );
+        test: 'order api is alive',
+      });
+    } catch (err: any) {
+      // На всякий случай лог + аккуратный ответ
+      console.error('order.ts error:', err);
+      res.status(500).json({
+        success: false,
+        error: err?.message || 'Server error in order.ts',
+      });
+    }
   }
   
