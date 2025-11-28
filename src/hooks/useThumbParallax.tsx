@@ -15,11 +15,10 @@ const useThumbParallax = () => {
             containers.forEach(container => {
                 const img = container.querySelector('img') as HTMLElement;
                 if (img) {
-                    // Сбрасываем все inline стили transform, left и top
+                    // Сбрасываем все inline стили transform и left
                     img.style.removeProperty('transform');
                     img.style.removeProperty('-webkit-transform');
                     img.style.removeProperty('left');
-                    img.style.removeProperty('top');
                     // Принудительно применяем CSS правило
                     void img.offsetHeight;
                 }
@@ -38,13 +37,12 @@ const useThumbParallax = () => {
                     if (!img) return;
 
                     // Убеждаемся, что начальное состояние правильное - центрируем изображение
-                    // Используем top: 50%, left: 50% и xPercent: -50, yPercent: -50 для центрирования
+                    // Используем left: 50% и xPercent: -50 для центрирования
                     gsap.set(img, { 
-                        top: '50%',
                         left: '50%',
                         xPercent: -50,
-                        yPercent: -50, // Начальное центрирование по вертикали
-                        scale: 1.4
+                        scale: 1.4,
+                        yPercent: 0
                     });
 
                     const t4 = gsap.timeline({
@@ -55,30 +53,24 @@ const useThumbParallax = () => {
                             onRefresh: () => {
                                 // При обновлении ScrollTrigger восстанавливаем центрирование
                                 gsap.set(img, { 
-                                    top: '50%',
                                     left: '50%',
                                     xPercent: -50,
-                                    yPercent: -50, // Начальное центрирование по вертикали
-                                    scale: 1.4
+                                    scale: 1.4,
+                                    yPercent: 0
                                 });
                             }
                         }
                     });
 
-                    // Анимируем вертикальное движение от центра, сохраняя горизонтальное центрирование
-                    // yPercent: -50 - это центр, добавляем анимацию от -60 до +60
+                    // Анимируем только вертикальное движение, сохраняя центрирование
                     t4.fromTo(img,
                         { 
-                            top: '50%',
-                            left: '50%',
-                            yPercent: -50 - 60, // Начало анимации (вверх от центра)
+                            yPercent: -60,
                             xPercent: -50, // Всегда центрируем по горизонтали
                             scale: 1.4
                         },
                         { 
-                            top: '50%',
-                            left: '50%',
-                            yPercent: -50 + 60, // Конец анимации (вниз от центра)
+                            yPercent: 60,
                             xPercent: -50, // Всегда центрируем по горизонтали
                             scale: 1.4,
                             ease: 'none' 

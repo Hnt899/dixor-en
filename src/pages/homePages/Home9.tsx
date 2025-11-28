@@ -33,7 +33,7 @@ const Home9 = () => {
     return (
         <>
             <Helmet>
-                <title>Dixor - Home 9</title>
+                <title>CDI Agency</title>
             </Helmet>
 
             <div className="smooth-scroll-container">
