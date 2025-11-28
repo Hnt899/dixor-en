@@ -1,5 +1,5 @@
 // api/order.ts
-// @ts-nocheck  // отключаем придирки TypeScript в этом файле
+// @ts-nocheck  // отключаем проверки TS в этом файле, чтобы не мешались
 
 const BOT_API_URL = process.env.BOT_API_URL;
 
@@ -22,7 +22,6 @@ export default async function handler(req: any, res: any) {
   try {
     const { name, phone, email, budget, description } = req.body || {};
 
-    // можно добавить простую проверку
     if (!name || !phone) {
       return res.status(400).json({
         success: false,
@@ -30,7 +29,16 @@ export default async function handler(req: any, res: any) {
       });
     }
 
-    // шлём данные в твоего Python-бота (ngrok /new_order)
+    // лог на всякий случай
+    console.log('[api/order] new request:', {
+      name,
+      phone,
+      email,
+      budget,
+      description,
+    });
+
+    // шлём данные в Python-бота (ngrok /new_order)
     const upstreamRes = await fetch(BOT_API_URL, {
       method: 'POST',
       headers: {
@@ -41,14 +49,26 @@ export default async function handler(req: any, res: any) {
         phone,
         email: email || undefined,          // опционально
         budget: budget || undefined,        // опционально
-        comment: description || undefined,  // описание → comment для бота
+        comment: description || undefined,  // описание → comment
       }),
     });
 
-    const upstreamJson = await upstreamRes.json().catch(() => ({}));
+    const raw = await upstreamRes.text();
+    let upstreamJson: any = {};
+
+    try {
+      upstreamJson = raw ? JSON.parse(raw) : {};
+    } catch (e) {
+      console.error('[api/order] upstream not JSON:', raw);
+      // даже если бот вернул не JSON — не валим фронт, а отдаём свою ошибку
+      return res.status(500).json({
+        success: false,
+        error: 'Некорректный ответ от бота',
+      });
+    }
 
     if (!upstreamRes.ok || upstreamJson.success === false) {
-      console.error('Bot upstream error:', upstreamJson);
+      console.error('[api/order] upstream error:', upstreamJson);
       return res.status(500).json({
         success: false,
         error:
@@ -57,6 +77,7 @@ export default async function handler(req: any, res: any) {
       });
     }
 
+    // всё ок → просто прокидываем JSON дальше на фронт
     return res.status(200).json(upstreamJson);
   } catch (err: any) {
     console.error('Error in /api/order:', err);

@@ -89,13 +89,21 @@ const ContactModal = ({ isOpen, onClose }: ContactModalProps) => {
                 body: JSON.stringify({
                     name: formData.name,
                     phone: formData.phone,
-                    email: formData.email || undefined,          // опционально
-                    budget: formData.budget || undefined,        // опционально
-                    description: formData.description || undefined // уйдёт как comment
+                    email: formData.email || undefined,
+                    budget: formData.budget || undefined,
+                    description: formData.description || undefined
                 }),
             });
 
-            const data = await response.json();
+            const raw = await response.text();
+            let data: any = {};
+
+            try {
+                data = raw ? JSON.parse(raw) : {};
+            } catch (err) {
+                console.error('Non-JSON response from /api/order:', raw);
+                throw new Error('Ошибка сервера при отправке заявки.');
+            }
 
             if (!response.ok || data.success === false) {
                 throw new Error(
@@ -117,6 +125,7 @@ const ContactModal = ({ isOpen, onClose }: ContactModalProps) => {
                 description: ''
             });
             onClose();
+
         } catch (error: any) {
             console.error('Error sending order:', error);
             alert(error?.message || 'Ошибка при отправке заявки. Попробуйте позже.');
@@ -162,6 +171,7 @@ const ContactModal = ({ isOpen, onClose }: ContactModalProps) => {
                     display: none !important;
                 }
             `}</style>
+
             <div
                 className="modal-overlay contact-modal-overlay"
                 onClick={onClose}
@@ -204,18 +214,11 @@ const ContactModal = ({ isOpen, onClose }: ContactModalProps) => {
                             outline: 'none',
                             boxShadow: 'none'
                         }}
-                        onMouseEnter={(e) => {
-                            e.currentTarget.style.outline = 'none';
-                            e.currentTarget.style.boxShadow = 'none';
-                        }}
-                        onFocus={(e) => {
-                            e.currentTarget.style.outline = 'none';
-                            e.currentTarget.style.boxShadow = 'none';
-                        }}
                         aria-label="Закрыть"
                     >
                         ×
                     </button>
+
                     <div
                         className="modal-content contact-modal"
                         onClick={(e) => e.stopPropagation()}
@@ -229,9 +232,8 @@ const ContactModal = ({ isOpen, onClose }: ContactModalProps) => {
                             maxHeight: '90vh',
                             overflowY: 'auto',
                             position: 'relative',
-                            zIndex: 10001,
                             scrollbarWidth: 'none',
-                            msOverflowStyle: 'none'
+                            msOverflowStyle: 'none',
                         }}
                     >
                         <h2 style={{
@@ -244,6 +246,8 @@ const ContactModal = ({ isOpen, onClose }: ContactModalProps) => {
                         </h2>
 
                         <form onSubmit={handleSubmit}>
+
+                            {/* Имя */}
                             <div style={{ marginBottom: '20px' }}>
                                 <label style={{
                                     display: 'block',
@@ -252,7 +256,7 @@ const ContactModal = ({ isOpen, onClose }: ContactModalProps) => {
                                     fontWeight: '600',
                                     color: 'var(--color-primary)'
                                 }}>
-                                    Имя <span style={{ color: 'var(--color-primary)' }}>*</span>
+                                    Имя *
                                 </label>
                                 <input
                                     type="text"
@@ -265,19 +269,19 @@ const ContactModal = ({ isOpen, onClose }: ContactModalProps) => {
                                         border: `1px solid ${errors.name ? 'var(--color-primary)' : '#333333'}`,
                                         borderRadius: '5px',
                                         fontSize: '16px',
-                                        boxSizing: 'border-box',
                                         background: '#1a1a1a',
                                         color: 'var(--color-primary)'
                                     }}
                                     placeholder="Введите ваше имя"
                                 />
                                 {errors.name && (
-                                    <span style={{ color: 'var(--color-primary)', fontSize: '12px', marginTop: '5px', display: 'block' }}>
+                                    <span style={{ color: 'var(--color-primary)', fontSize: '12px' }}>
                                         {errors.name}
                                     </span>
                                 )}
                             </div>
 
+                            {/* Телефон */}
                             <div style={{ marginBottom: '20px' }}>
                                 <label style={{
                                     display: 'block',
@@ -286,7 +290,7 @@ const ContactModal = ({ isOpen, onClose }: ContactModalProps) => {
                                     fontWeight: '600',
                                     color: 'var(--color-primary)'
                                 }}>
-                                    Телефон <span style={{ color: 'var(--color-primary)' }}>*</span>
+                                    Телефон *
                                 </label>
                                 <input
                                     type="tel"
@@ -299,19 +303,19 @@ const ContactModal = ({ isOpen, onClose }: ContactModalProps) => {
                                         border: `1px solid ${errors.phone ? 'var(--color-primary)' : '#333333'}`,
                                         borderRadius: '5px',
                                         fontSize: '16px',
-                                        boxSizing: 'border-box',
                                         background: '#1a1a1a',
                                         color: 'var(--color-primary)'
                                     }}
                                     placeholder="+7 (___) ___-__-__"
                                 />
                                 {errors.phone && (
-                                    <span style={{ color: 'var(--color-primary)', fontSize: '12px', marginTop: '5px', display: 'block' }}>
+                                    <span style={{ color: 'var(--color-primary)', fontSize: '12px' }}>
                                         {errors.phone}
                                     </span>
                                 )}
                             </div>
 
+                            {/* Почта */}
                             <div style={{ marginBottom: '20px' }}>
                                 <label style={{
                                     display: 'block',
@@ -320,7 +324,7 @@ const ContactModal = ({ isOpen, onClose }: ContactModalProps) => {
                                     fontWeight: '600',
                                     color: 'var(--color-primary)'
                                 }}>
-                                    Почта (по желанию)
+                                    Почта (необязательно)
                                 </label>
                                 <input
                                     type="email"
@@ -333,19 +337,19 @@ const ContactModal = ({ isOpen, onClose }: ContactModalProps) => {
                                         border: `1px solid ${errors.email ? 'var(--color-primary)' : '#333333'}`,
                                         borderRadius: '5px',
                                         fontSize: '16px',
-                                        boxSizing: 'border-box',
                                         background: '#1a1a1a',
                                         color: 'var(--color-primary)'
                                     }}
                                     placeholder="example@mail.com"
                                 />
                                 {errors.email && (
-                                    <span style={{ color: 'var(--color-primary)', fontSize: '12px', marginTop: '5px', display: 'block' }}>
+                                    <span style={{ color: 'var(--color-primary)', fontSize: '12px' }}>
                                         {errors.email}
                                     </span>
                                 )}
                             </div>
 
+                            {/* Бюджет */}
                             <div style={{ marginBottom: '20px' }}>
                                 <label style={{
                                     display: 'block',
@@ -354,7 +358,7 @@ const ContactModal = ({ isOpen, onClose }: ContactModalProps) => {
                                     fontWeight: '600',
                                     color: 'var(--color-primary)'
                                 }}>
-                                    Бюджет на вашу задачу
+                                    Бюджет
                                 </label>
                                 <input
                                     type="text"
@@ -364,10 +368,9 @@ const ContactModal = ({ isOpen, onClose }: ContactModalProps) => {
                                     style={{
                                         width: '100%',
                                         padding: '12px 15px',
-                                        border: '1px solid #333333',
+                                        border: '1px solid #333',
                                         borderRadius: '5px',
                                         fontSize: '16px',
-                                        boxSizing: 'border-box',
                                         background: '#1a1a1a',
                                         color: 'var(--color-primary)'
                                     }}
@@ -375,6 +378,7 @@ const ContactModal = ({ isOpen, onClose }: ContactModalProps) => {
                                 />
                             </div>
 
+                            {/* Описание */}
                             <div style={{ marginBottom: '25px' }}>
                                 <label style={{
                                     display: 'block',
@@ -383,7 +387,7 @@ const ContactModal = ({ isOpen, onClose }: ContactModalProps) => {
                                     fontWeight: '600',
                                     color: 'var(--color-primary)'
                                 }}>
-                                    Описание задачи <span style={{ fontSize: '12px', fontWeight: '400', color: 'var(--color-primary)' }}>(до 500 символов)</span>
+                                    Описание задачи (до 500 символов)
                                 </label>
                                 <textarea
                                     name="description"
@@ -397,35 +401,24 @@ const ContactModal = ({ isOpen, onClose }: ContactModalProps) => {
                                         border: `1px solid ${errors.description ? 'var(--color-primary)' : '#333333'}`,
                                         borderRadius: '5px',
                                         fontSize: '16px',
-                                        resize: 'none',
-                                        boxSizing: 'border-box',
-                                        fontFamily: 'inherit',
                                         background: '#1a1a1a',
-                                        color: 'var(--color-primary)'
+                                        color: 'var(--color-primary)',
+                                        resize: 'none'
                                     }}
                                     placeholder="Опишите вашу задачу"
                                 />
                                 <div style={{
-                                    display: 'flex',
-                                    justifyContent: 'space-between',
-                                    marginTop: '5px'
+                                    marginTop: '5px',
+                                    textAlign: 'right',
+                                    color: 'var(--color-primary)',
+                                    opacity: formData.description.length > 450 ? 1 : 0.7,
+                                    fontSize: '12px'
                                 }}>
-                                    {errors.description && (
-                                        <span style={{ color: 'var(--color-primary)', fontSize: '12px' }}>
-                                            {errors.description}
-                                        </span>
-                                    )}
-                                    <span style={{
-                                        fontSize: '12px',
-                                        color: 'var(--color-primary)',
-                                        marginLeft: 'auto',
-                                        opacity: formData.description.length > 450 ? '1' : '0.7'
-                                    }}>
-                                        {formData.description.length}/500
-                                    </span>
+                                    {formData.description.length}/500
                                 </div>
                             </div>
 
+                            {/* Кнопка */}
                             <button
                                 type="submit"
                                 disabled={isSubmitting}
@@ -433,27 +426,17 @@ const ContactModal = ({ isOpen, onClose }: ContactModalProps) => {
                                     width: '100%',
                                     padding: '15px',
                                     background: isSubmitting ? '#333' : 'var(--color-primary)',
-                                    color: '#000000',
+                                    color: '#000',
                                     border: 'none',
                                     borderRadius: '5px',
                                     fontSize: '16px',
-                                    fontWeight: '600',
                                     cursor: isSubmitting ? 'not-allowed' : 'pointer',
                                     transition: 'all 0.3s ease'
-                                }}
-                                onMouseEnter={(e) => {
-                                    if (!isSubmitting) {
-                                        e.currentTarget.style.opacity = '0.9';
-                                    }
-                                }}
-                                onMouseLeave={(e) => {
-                                    if (!isSubmitting) {
-                                        e.currentTarget.style.opacity = '1';
-                                    }
                                 }}
                             >
                                 {isSubmitting ? 'Отправка...' : 'Отправить'}
                             </button>
+
                         </form>
                     </div>
                 </div>
