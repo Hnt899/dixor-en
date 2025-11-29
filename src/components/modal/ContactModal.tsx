@@ -89,10 +89,9 @@ const ContactModal = ({ isOpen, onClose }: ContactModalProps) => {
                 body: JSON.stringify({
                     name: formData.name,
                     phone: formData.phone,
-                    email: formData.email || null,
-                    budget: formData.budget || null,
-                    // backend ждёт comment
-                    comment: formData.description || null,
+                    email: formData.email || undefined,
+                    budget: formData.budget || undefined,
+                    description: formData.description || undefined
                 }),
             });
 
