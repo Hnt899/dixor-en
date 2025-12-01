@@ -1,6 +1,6 @@
 import illustration5 from '/assets/img/illustration/5.png';
 import illustration8 from '/assets/img/illustration/8.png';
-// import { Link } from "react-router-dom"; // Мы заменим <Link> на <a>, см. Шаг 2
+import { Link } from "react-router-dom";
 import SplitText from "../animation/SplitText.jsx"
 import Animate from '../animation/Animate';
 
@@ -63,10 +63,9 @@ const BannerV1 = () => {
                                             Мы превращаем идеи в успешные цифровые проекты. От стратегии и комплексного дизайна до разработки, запуска и продвижения
                                         </p>
 
-                                        {/* ВАЖНО: Я заменил <Link to="/project"> на <a href="#projects">.
-                                          См. Шаг 2 ниже.
-                                        */}
-                                        <a href="#projects" className="btn-style-two mt-30"><i className="fas fa-long-arrow-right" /> Наши <br /> Проекты</a>
+                                        <Link to="/projects" className="btn-style-two mt-30">
+                                            <i className="fas fa-long-arrow-right" /> Наши <br /> Проекты
+                                        </Link>
 
                                     </div>
                                 </div>

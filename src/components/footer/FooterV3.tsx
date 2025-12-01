@@ -50,7 +50,7 @@ const FooterV3 = () => {
                                         <li><Link to="/#about">О нас</Link></li>
                                         <li><Link to="/#contact">Контакты</Link></li>
                                         <li><Link to="/#services">Услуги</Link></li>
-                                        <li><Link to="/#projects">Проекты</Link></li>
+                                        <li><Link to="/projects">Проекты</Link></li>
                                         <li><Link to="/#team">Команда</Link></li>
                                         <li><Link to="/#blog">Блог</Link></li>
                                     </ul>

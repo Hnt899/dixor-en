@@ -38,20 +38,7 @@ const MainMenuV2 = ({ toggleSubMenu2: _toggleSubMenu2, closeInfoBar }: DataType)
     // Функция для обработки клика на "Проекты"
     const handleProjectsClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
         e.preventDefault();
-        if (location.pathname === '/') {
-            const element = document.getElementById('projects');
-            if (element) {
-                element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            }
-        } else {
-            navigate('/#projects');
-            setTimeout(() => {
-                const element = document.getElementById('projects');
-                if (element) {
-                    element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                }
-            }, 300);
-        }
+        navigate('/projects');
         if (closeInfoBar) closeInfoBar();
     };
 
@@ -76,7 +63,7 @@ const MainMenuV2 = ({ toggleSubMenu2: _toggleSubMenu2, closeInfoBar }: DataType)
                     <Link to="/services" onClick={closeInfoBar}>Услуги</Link>
                 </li>
                 <li>
-                    <Link to="#" onClick={handleProjectsClick}>Проекты</Link>
+                    <Link to="/projects" onClick={handleProjectsClick}>Проекты</Link>
                 </li>
                 <li>
                     <Link to="#" onClick={(e) => handleSmoothScroll(e, 'pricing')}>Предложения</Link>

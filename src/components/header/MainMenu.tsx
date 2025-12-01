@@ -125,7 +125,7 @@ const MainMenu = ({ navbarPlacement, closeMenu }: DataType) => {
         setIsBlogDropdownOpen(false);
     };
 
-    // Функция для обработки клика на "Проекты" - переходим к блоку "Недавние работы"
+    // Функция для обработки клика на "Проекты" - ведёт на страницу проектов
     const handleProjectsClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
         e.preventDefault();
         e.stopPropagation();
@@ -142,25 +142,8 @@ const MainMenu = ({ navbarPlacement, closeMenu }: DataType) => {
         }
         document.body.classList.remove('no-fade');
         
-        // Если мы на главной странице, делаем плавный скролл к блоку projects
-        if (location.pathname === '/') {
-            setTimeout(() => {
-            const element = document.getElementById('projects');
-            if (element) {
-                element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            }
-            }, 100);
-        } else {
-            // Если мы на другой странице, переходим на главную с хешем
-            navigate('/#projects');
-            // После перехода делаем скролл
-            setTimeout(() => {
-                const element = document.getElementById('projects');
-                if (element) {
-                    element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                }
-            }, 300);
-        }
+        sessionStorage.removeItem('projectsPageActiveFilter');
+        navigate('/projects');
         
         // Закрываем выпадающее меню, если оно открыто
         setIsProjectsDropdownOpen(false);
@@ -332,12 +315,15 @@ const MainMenu = ({ navbarPlacement, closeMenu }: DataType) => {
                     }}
                     style={{ position: 'relative' }}
                 >
-                    <a href="#projects" onClick={(e) => {
-                        handleProjectsClick(e);
-                        if (closeMenu) closeMenu();
-                    }}>
+                    <Link
+                        to="/projects"
+                        onClick={(e) => {
+                            handleProjectsClick(e);
+                            if (closeMenu) closeMenu();
+                        }}
+                    >
                         Проекты
-                    </a>
+                    </Link>
                     {isProjectsDropdownOpen && (
                         <ul 
                             className={`dropdown-menu projects-dropdown ${isDropdownVisible ? 'show' : ''}`}
@@ -378,8 +364,8 @@ const MainMenu = ({ navbarPlacement, closeMenu }: DataType) => {
                             }}
                         >
                             <li>
-                                <a 
-                                    href="/projects" 
+                                <Link 
+                                    to="/projects" 
                                     onClick={(e) => {
                                         handleProjectFilterClick(e, 'Сайты');
                                         if (closeMenu) closeMenu();
@@ -395,11 +381,11 @@ const MainMenu = ({ navbarPlacement, closeMenu }: DataType) => {
                                     onMouseLeave={(e) => e.currentTarget.style.background = 'transparent'}
                                 >
                                     Сайты
-                                </a>
+                                </Link>
                             </li>
                             <li>
-                                <a 
-                                    href="/projects" 
+                                <Link 
+                                    to="/projects" 
                                     onClick={(e) => {
                                         handleProjectFilterClick(e, 'Мобильные приложения');
                                         if (closeMenu) closeMenu();
@@ -415,11 +401,11 @@ const MainMenu = ({ navbarPlacement, closeMenu }: DataType) => {
                                     onMouseLeave={(e) => e.currentTarget.style.background = 'transparent'}
                                 >
                                     Мобильные приложения
-                                </a>
+                                </Link>
                             </li>
                             <li>
-                                <a 
-                                    href="/projects" 
+                                <Link 
+                                    to="/projects" 
                                     onClick={(e) => {
                                         handleProjectFilterClick(e, 'UI/UX');
                                         if (closeMenu) closeMenu();
@@ -435,7 +421,7 @@ const MainMenu = ({ navbarPlacement, closeMenu }: DataType) => {
                                     onMouseLeave={(e) => e.currentTarget.style.background = 'transparent'}
                                 >
                                     UI/UX
-                                </a>
+                                </Link>
                             </li>
                         </ul>
                     )}
