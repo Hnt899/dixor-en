@@ -14,11 +14,11 @@ const BlogSingleWithSidebarLightPage = () => {
     return (
         <>
             <Helmet>
-                <title>Dixor - Blog Single With Sidebar Light</title>
+                <title>CDI - Блог CDI</title>
             </Helmet>
 
             <LayoutV1>
-                <Breadcrumb title='Blog Single' breadCrumb='blog-single-with-sidebar-light' />
+                <Breadcrumb title='Блог CDI' breadCrumb='blog-single-with-sidebar-light' />
                 {data && <BlogSingleWithSidebarContent sectionClass='default-padding-bottom' blogInfo={data} totalBlogs={BlogV3Data.length} />}
                 <ThemeLight />
             </LayoutV1>

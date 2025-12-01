@@ -15,11 +15,11 @@ const BlogSingleWithSidebarPage = () => {
     return (
         <>
             <Helmet>
-                <title>Dixor - Blog Single With Sidebar</title>
+                <title>CDI - Блог CDI</title>
             </Helmet>
 
             <LayoutV1>
-                <Breadcrumb title='Blog Grid' breadCrumb='blog-single-with-sidebar' />
+                <Breadcrumb title='Блог CDI' breadCrumb='blog-single-with-sidebar' />
                 {data && <BlogSingleWithSidebarContent sectionClass='default-padding-bottom' blogInfo={data} totalBlogs={BlogV3Data.length} />}
                 <DarkClass />
                 <ThemeDark />

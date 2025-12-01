@@ -1,27 +1,19 @@
-import twitter from '/assets/img/icon/twitter.png';
 import { Link } from "react-router-dom";
+
+const TELEGRAM_URL = "https://t.me/CDI_Agency";
+const WHATSAPP_URL = "https://wa.me/79853656294";
 
 const SocialShareV3 = () => {
     return (
         <>
             <li>
-                <Link className="facebook" to="https://www.facebook.com/" target="_blank">
-                    <i className="fab fa-facebook-f" />
+                <Link to={TELEGRAM_URL} target="_blank" aria-label="Открыть Telegram">
+                    <i className="fab fa-telegram-plane" />
                 </Link>
             </li>
             <li>
-                <Link className="twitter" to="https://www.x.com" target="_blank">
-                    <img src={twitter} alt="Image Not Found" />
-                </Link>
-            </li>
-            <li>
-                <Link className="linkedin" to="https://www.pinterest.com/" target="_blank">
-                    <i className="fab fa-pinterest-p" />
-                </Link>
-            </li>
-            <li>
-                <Link className="linkedin" to="https://www.linkedin.com/" target="_blank">
-                    <i className="fab fa-linkedin-in" />
+                <Link to={WHATSAPP_URL} target="_blank" aria-label="Написать в WhatsApp">
+                    <i className="fab fa-whatsapp" />
                 </Link>
             </li>
         </>

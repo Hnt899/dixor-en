@@ -49,7 +49,7 @@ const HeaderNewsLetter = () => {
             <div className="input-group stylish-input-group">
                 <input
                     type="email"
-                    placeholder="Enter your e-mail"
+                    placeholder="Введите ваш e-mail"
                     className="form-control"
                     name="email"
                     autoComplete="off"

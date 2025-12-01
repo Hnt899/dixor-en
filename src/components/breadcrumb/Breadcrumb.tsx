@@ -84,6 +84,17 @@ const Breadcrumb = ({ title, breadCrumb, activeFilter, onFilterChange }: DataTyp
         );
     }
 
+    const breadcrumbLabels: Record<string, string> = {
+        projects: "Продукты",
+        "service-details": "Детали услуги",
+        "service-details-light": "Детали услуги",
+        project: "Проект",
+        "blog-single": "Блог CDI",
+        "blog-single-with-sidebar": "Блог CDI",
+        "blog-single-light": "Блог CDI",
+        "blog-single-with-sidebar-light": "Блог CDI",
+    };
+
     return (
         <>
             <div className={`breadcrumb-area text-center`}
@@ -99,10 +110,7 @@ const Breadcrumb = ({ title, breadCrumb, activeFilter, onFilterChange }: DataTyp
                                     <ol className="breadcrumb">
                                         <li><Link to="/"><i className="fas fa-home" /> Главная</Link></li>
                                         <li className="active">{breadCrumb ? (
-                                            breadCrumb === 'projects' ? 'Продукты' :
-                                            breadCrumb === 'service-details' ? 'Детали услуги' :
-                                            breadCrumb === 'service-details-light' ? 'Детали услуги' :
-                                            breadCrumb
+                                            breadcrumbLabels[breadCrumb] || breadCrumb
                                         ) : "error"}</li>
                                     </ol>
                                 </nav>

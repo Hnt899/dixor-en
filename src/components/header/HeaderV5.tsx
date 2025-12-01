@@ -37,7 +37,7 @@ const HeaderV5 = () => {
                                 <ul>
                                     <li className="side-menu">
                                         <Link to="#" onClick={openInfoBar}>
-                                            <strong>MENU </strong>
+                                            <strong>МЕНЮ </strong>
                                             <div className="line">
                                                 <span className="bar-1" />
                                                 <span className="bar-2" />
@@ -50,7 +50,7 @@ const HeaderV5 = () => {
 
                             <div className="col-lg-2">
                                 <div className={`side ${isInfoOpen ? "on" : ""}`}>
-                                    <Link to="#" className="close-side" onClick={closeInfoBar}>Close <i className="fas fa-times" /></Link>
+                                    <Link to="#" className="close-side" onClick={closeInfoBar}>Закрыть <i className="fas fa-times" /></Link>
                                     <div className="widget">
                                         <div className="logo">
                                             <Link to="/home-2">
@@ -74,27 +74,27 @@ const HeaderV5 = () => {
                                                             <ul>
                                                                 <li>
                                                                     <div className="content">
-                                                                        <p>Address</p>
-                                                                        <strong>California, TX 70240</strong>
+                                                                        <p>Адрес</p>
+                                                                        <strong>Улица Сумская 168 офис 306, Белгород</strong>
                                                                     </div>
                                                                 </li>
                                                                 <li>
                                                                     <div className="content">
-                                                                        <p>Email</p>
-                                                                        <strong>support@validtheme.com</strong>
+                                                                        <p>Почта</p>
+                                                                        <strong>demyanovcdi@mail.ru</strong>
                                                                     </div>
                                                                 </li>
                                                                 <li>
                                                                     <div className="content">
-                                                                        <p>Contact</p>
-                                                                        <strong>+44-20-7328-4499</strong>
+                                                                        <p>Контакты</p>
+                                                                        <strong>+7 985 365 6294</strong>
                                                                     </div>
                                                                 </li>
                                                             </ul>
                                                         </div>
                                                     </div>
                                                     <div className="widget newsletter">
-                                                        <h4 className="title">Get Subscribed!</h4>
+                                                        <h4 className="title">Оставьте почту</h4>
                                                         <HeaderNewsLetter />
                                                     </div>
                                                     <div className="widget social">

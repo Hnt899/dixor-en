@@ -40,19 +40,19 @@ const SidebarInfo = ({ openInfoBar, isInfoOpen, closeInfoBar, contactButton }: S
                                 <ul>
                                     <li>
                                         <div className="content">
-                                            <p>Address</p>
+                                            <p>Адрес</p>
                                             <strong>Улица Сумская 168 офис 306, Белгород</strong>
                                         </div>
                                     </li>
                                     <li>
                                         <div className="content">
-                                            <p>Email</p>
+                                            <p>Почта</p>
                                             <strong>demyanovcdi@mail.ru</strong>
                                         </div>
                                     </li>
                                     <li>
                                         <div className="content">
-                                            <p>Contact</p>
+                                            <p>Контакты</p>
                                             <strong>+7 985 365 6294</strong>
                                         </div>
                                     </li>
@@ -62,7 +62,7 @@ const SidebarInfo = ({ openInfoBar, isInfoOpen, closeInfoBar, contactButton }: S
                     </div>
                     <div className="bottom">
                         <div className="widget newsletter">
-                            <h4 className="title">Get Subscribed!</h4>
+                            <h4 className="title">Оставьте почту</h4>
                             <HeaderNewsLetter />
                         </div>
                         <div className="widget social">
