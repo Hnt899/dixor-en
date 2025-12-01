@@ -49,11 +49,11 @@ const BlogSinglePage = () => {
     return (
         <>
             <Helmet>
-                <title>Dixor - Blog Single</title>
+                <title>CDI - Блог CDI</title>
             </Helmet>
 
             <LayoutV1>
-                <Breadcrumb title='Blog Single' breadCrumb='blog-single' />
+                <Breadcrumb title='Блог CDI' breadCrumb='blog-single' />
                 {data && <BlogSingleContent sectionClass='default-padding-bottom' blogInfo={data} totalBlogs={BlogV3Data.length} />}
                 <DarkClass />
                 <ThemeDark />
