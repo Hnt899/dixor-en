@@ -1,5 +1,6 @@
 import ContactForm from "../form/ContactForm";
 import SocialShareV2 from "../social/SocialShareV2";
+import { trackClick } from "../../utils/yandex-metrika";
 
 interface DataType {
     sectionClass?: string
@@ -16,7 +17,20 @@ const ContactV1 = ({ sectionClass }: DataType) => {
                                 <div className="contact-style-one-info">
                                     <ul className="contact-address">
                                         <li>
-                                            <a className="phone-link" href="tel:+79853656294"><i className="fas fa-user-headset" /> +7 985 365 6294</a>
+                                            <a 
+                                                className="phone-link" 
+                                                href="tel:+79853656294"
+                                                onClick={() => {
+                                                    // Отслеживание клика на телефон в Яндекс.Метрике
+                                                    trackClick('phone_click', 'link', {
+                                                        action: 'call_phone',
+                                                        phone: '+79853656294',
+                                                        location: 'contact_page',
+                                                    });
+                                                }}
+                                            >
+                                                <i className="fas fa-user-headset" /> +7 985 365 6294
+                                            </a>
                                         </li>
                                         <li>
                                             <div className="info">

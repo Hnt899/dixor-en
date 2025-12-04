@@ -47,10 +47,73 @@
 
   <!-- Логотип для устройств Apple и некоторых мессенджеров -->
   <link rel="apple-touch-icon" href="/assets/img/logo-light.png" />
+
+  <!-- Preconnect для оптимизации загрузки внешних ресурсов -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://mc.yandex.ru" />
+  
+  <!-- Google Fonts - загружается в head для лучшей производительности -->
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@100;200;300;400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Yandex.Metrika counter - Оптимизированная настройка -->
+  <script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+      m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+      m[i].l=1*new Date();
+      for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+      k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=105676447', 'ym');
+
+    // Оптимизированная конфигурация Яндекс.Метрики
+    ym(105676447, 'init', {
+      // SSR поддержка для React SPA
+      ssr: true,
+      
+      // Вебвизор - запись сессий пользователей
+      webvisor: true,
+      
+      // Карта кликов - показывает куда кликают пользователи
+      clickmap: true,
+      
+      // Ecommerce через dataLayer
+      ecommerce: "dataLayer",
+      
+      // Точный расчет отказов
+      accurateTrackBounce: true,
+      
+      // Отслеживание внешних ссылок
+      trackLinks: true,
+      
+      // Отслеживание хеша для SPA (важно для React Router)
+      trackHash: true,
+      
+      // Отслеживание файлов
+      trackFiles: true,
+      
+      // Не отслеживать внутренние переходы как цели (для SPA)
+      notBounce: false,
+      
+      // Параметры для улучшения производительности
+      defer: false,
+      
+      // Отслеживание прокрутки страницы
+      triggerEvent: true,
+      
+      // Уникальные идентификаторы пользователей
+      userParams: {},
+      
+      // Настройки для мобильных устройств
+      ut: 'noindex',
+    });
+  </script>
+  <!-- /Yandex.Metrika counter -->
 </head>
 
 <body>
   <div id="root"></div>
+  <!-- Yandex.Metrika noscript -->
+  <noscript><div><img src="https://mc.yandex.ru/watch/105676447" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
   <script type="module" src="/src/main.tsx"></script>
 </body>
 

@@ -1,0 +1,52 @@
+# robots.txt для CDI Agency
+# https://cdiagency.ru
+
+User-agent: *
+Allow: /
+
+# Разрешаем индексацию всех страниц
+Allow: /
+Allow: /projects
+Allow: /blog
+Allow: /team
+Allow: /service-details/
+Allow: /project/
+Allow: /blog/
+
+# Запрещаем индексацию служебных файлов и папок
+Disallow: /api/
+Disallow: /admin/
+Disallow: /_next/
+Disallow: /node_modules/
+Disallow: /*.json$
+Disallow: /*?*
+
+# Разрешаем доступ к статическим ресурсам
+Allow: /assets/
+Allow: /images/
+Allow: /fonts/
+
+# Указываем расположение sitemap
+Sitemap: https://cdiagency.ru/sitemap.xml
+
+# Специальные правила для поисковых систем
+User-agent: Googlebot
+Allow: /
+
+User-agent: Yandex
+Allow: /
+Crawl-delay: 1
+
+User-agent: Bingbot
+Allow: /
+
+# Блокируем агрессивных ботов
+User-agent: AhrefsBot
+Crawl-delay: 10
+
+User-agent: SemrushBot
+Crawl-delay: 10
+
+User-agent: MJ12bot
+Crawl-delay: 10
+

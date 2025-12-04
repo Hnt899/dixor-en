@@ -10,4 +10,16 @@ export default defineConfig({
   resolve: {
     extensions: [".js", ".jsx", ".ts", ".tsx"], // Ensure JSX is recognized
   },
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          'react-vendor': ['react', 'react-dom', 'react-router-dom'],
+          'ui-vendor': ['swiper', 'react-toastify', 'react-modal-video', 'react-photo-view'],
+          'animation-vendor': ['gsap', '@react-spring/web', 'animate.css'],
+        },
+      },
+    },
+    chunkSizeWarningLimit: 1000,
+  },
 })

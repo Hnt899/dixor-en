@@ -44,7 +44,7 @@ const ProjectDetailsV1Page = () => {
             clearTimeout(timeout2);
             clearTimeout(timeout3);
         };
-    }, [id]);
+    }, [id, data]);
 
     return (
         <>

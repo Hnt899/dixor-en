@@ -36,6 +36,13 @@ const HeaderNewsLetter = () => {
                 return;
             }
 
+            // Отслеживание подписки на рассылку в Яндекс.Метрике
+            const { trackFormSubmit } = await import('../../utils/yandex-metrika');
+            trackFormSubmit('newsletter_subscribe', {
+                form_type: 'newsletter',
+                email_provided: true,
+            });
+
             form.reset();
             toast.success(data.message || "Спасибо! Мы свяжемся с вами по почте.");
         } catch (error) {

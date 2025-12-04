@@ -1,3 +1,5 @@
+import { trackClick } from "../../utils/yandex-metrika";
+
 const ProjectIdeaV1 = () => {
     return (
         <>
@@ -13,7 +15,20 @@ const ProjectIdeaV1 = () => {
                                 </div>
                                 <div className="info">
                                     <h4>Телефон</h4>
-                                    <a className="phone-link" href="tel:+79853656294">+7 985 365 6294</a> <br />
+                                    <a 
+                                        className="phone-link" 
+                                        href="tel:+79853656294"
+                                        onClick={() => {
+                                            // Отслеживание клика на телефон в Яндекс.Метрике
+                                            trackClick('phone_click', 'link', {
+                                                action: 'call_phone',
+                                                phone: '+79853656294',
+                                                location: 'project_idea',
+                                            });
+                                        }}
+                                    >
+                                        +7 985 365 6294
+                                    </a> <br />
                                 </div>
                             </li>
                             <li>

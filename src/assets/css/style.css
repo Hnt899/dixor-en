@@ -87,7 +87,7 @@ Sidebar heading:  22px 'Barlow', sans-serif
 
 */
 
-@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@100;200;300;400;500;600;700;800&display=swap');
+/* Google Fonts загружается через link в index.html для лучшей производительности */
 
 
 /* AKONY Bold Font */

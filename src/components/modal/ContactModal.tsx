@@ -111,6 +111,23 @@ const ContactModal = ({ isOpen, onClose }: ContactModalProps) => {
                 );
             }
 
+            // Отслеживание отправки формы в Яндекс.Метрике
+            const { trackFormSubmit, trackOrder } = await import('../../utils/yandex-metrika');
+            trackFormSubmit('contact_form', {
+                form_type: 'contact',
+                has_budget: !!formData.budget,
+                has_description: !!formData.description,
+            });
+
+            // Если есть номер заказа, отслеживаем как заказ
+            if (data.order_number) {
+                trackOrder({
+                    orderNumber: data.order_number,
+                    revenue: formData.budget ? parseFloat(formData.budget.replace(/\D/g, '')) : undefined,
+                    currency: 'RUB',
+                });
+            }
+
             alert(
                 data.order_number
                     ? `Спасибо! Заявка отправлена.\nНомер заказа: ${data.order_number}`

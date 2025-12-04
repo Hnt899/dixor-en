@@ -3,6 +3,7 @@ import NewsletterV2 from '../newsletter/NewsletterV2';
 import FooterSocial from '../social/FooterSocial';
 import logoLight from '/assets/img/logo-light.png'
 import logo from '/assets/img/logo.png'
+import { trackClick } from '../../utils/yandex-metrika';
 
 interface DataType {
     sectionClass?: string
@@ -40,7 +41,19 @@ const FooterV4 = ({ sectionClass }: DataType) => {
                                             <a href="mailto:demyanovcdi@mail.ru">demyanovcdi@mail.ru</a>
                                         </li>
                                         <li>
-                                            <a href="tel:+79853656294">+7 985 365 6294</a>
+                                            <a 
+                                                href="tel:+79853656294"
+                                                onClick={() => {
+                                                    // Отслеживание клика на телефон в Яндекс.Метрике
+                                                    trackClick('phone_click', 'link', {
+                                                        action: 'call_phone',
+                                                        phone: '+79853656294',
+                                                        location: 'footer',
+                                                    });
+                                                }}
+                                            >
+                                                +7 985 365 6294
+                                            </a>
                                         </li>
                                     </ul>
                                 </div>
