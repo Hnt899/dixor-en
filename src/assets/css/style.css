@@ -20237,6 +20237,17 @@ nav.navbar.validnavs .navbar-collapse.collapse.show img.light-img {
 	background: rgba(0, 0, 0, 0) linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, var(--white) 90%) repeat scroll 0 0;
 }
 
+/* Фон для breadcrumb-area - цвет #0E0F11 */
+.breadcrumb-area {
+    background-color: #0E0F11 !important;
+    background-image: none !important;
+}
+
+.breadcrumb-area .light-banner-active {
+    background-color: #0E0F11 !important;
+    background-image: none !important;
+}
+
 .team-style-three-area::after {
 	background: url(/assets/img/shape/5-dark.png);
 }
@@ -20569,6 +20580,15 @@ nav.navbar.validnavs .navbar-collapse.collapse.show img.light-img {
     text-align: left;
 }
 
+/* Усиленные стили для заголовка ПОРТФОЛИО */
+.portfolio-breadcrumb-content .portfolio-breadcrumb-title,
+.breadcrumb-area .portfolio-breadcrumb-content .portfolio-breadcrumb-title {
+    font-size: 120px !important;
+    margin-left: -13px !important;
+    text-align: left !important;
+    display: block !important;
+}
+
 /* Карточка для текста на странице портфолио */
 .portfolio-text-card {
     background: rgba(0, 0, 0, 0.7);
@@ -20600,18 +20620,19 @@ nav.navbar.validnavs .navbar-collapse.collapse.show img.light-img {
 
 /* Старые стили для обратной совместимости (если используется без карточки) */
 .portfolio-breadcrumb-title {
-    font-size: 120px;
+    font-size: 160px !important;
     font-weight: bold;
     font-family: sans-serif;
     color: #FFFFFF;
     line-height: 1;
     margin-bottom: 60px;
     margin-top: 0;
-    margin-left: 0;
+    margin-left: -120px !important;
     text-transform: uppercase;
     letter-spacing: -2px;
     position: relative;
     top: -60px;
+    text-align: left !important;
 }
 
 .portfolio-breadcrumb-description {
@@ -20740,16 +20761,19 @@ nav.navbar.validnavs .navbar-collapse.collapse.show img.light-img {
         margin-left: 0 !important;
     }
     
-    .portfolio-text-card .portfolio-breadcrumb-description {
+    .portfolio-text-card     .portfolio-breadcrumb-description {
         font-size: 24px !important;
         margin-left: 0 !important;
         max-width: 100% !important;
     }
     
-    .portfolio-breadcrumb-title {
-        font-size: 80px !important;
+    .portfolio-breadcrumb-title,
+    .portfolio-breadcrumb-content .portfolio-breadcrumb-title {
+        font-size: 120px !important;
         top: -50px !important;
-        margin-left: 0 !important;
+        margin-left: -60px !important;
+        text-align: left !important;
+        display: block !important;
     }
     
     .portfolio-breadcrumb-description {
@@ -20808,12 +20832,15 @@ nav.navbar.validnavs .navbar-collapse.collapse.show img.light-img {
         display: block !important;
     }
     
-    .portfolio-breadcrumb-title {
-        font-size: 48px !important;
+    .portfolio-breadcrumb-title,
+    .portfolio-breadcrumb-content .portfolio-breadcrumb-title {
+        font-size: 64px !important;
         top: 0 !important;
-        margin-left: 0 !important;
+        margin-left: -30px !important;
         margin-bottom: 30px !important;
         line-height: 1.1 !important;
+        text-align: left !important;
+        display: block !important;
     }
     
     .portfolio-breadcrumb-description {
@@ -23096,4 +23123,85 @@ body.bg-dark .side .widget.social li a:hover {
 }
 
 /* Правила для движения фото удалены - используются более специфичные правила выше */
+
+/* Отступ сверху для breadcrumb на страницах деталей, чтобы фиксированная шапка не перекрывала контент */
+/* Для страниц: /blog-post/{id}, /project/{id}, /service-details/{id} */
+.breadcrumb-area {
+    padding-top: 250px !important;
+    padding-bottom: 80px !important;
+}
+
+/* Мобильная версия - меньший отступ */
+@media only screen and (max-width: 991px) {
+    .breadcrumb-area {
+        padding-top: 180px !important;
+        padding-bottom: 60px !important;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .breadcrumb-area {
+        padding-top: 140px !important;
+        padding-bottom: 40px !important;
+    }
+}
+
+/* Стили для заголовка и breadcrumbs */
+.breadcrumb-area .breadcrumb-item h1 {
+    margin-bottom: 40px !important;
+    text-align: center !important;
+    font-size: 3.5rem !important;
+    line-height: 1.2 !important;
+    margin-left: 25px !important;
+}
+
+.breadcrumb-area .breadcrumb-item nav {
+    margin-top: 20px !important;
+    display: flex !important;
+    justify-content: center !important;
+}
+
+.breadcrumb-area .breadcrumb-item .breadcrumb {
+    display: flex !important;
+    justify-content: center !important;
+    margin: 0 auto !important;
+    align-items: center !important;
+}
+
+.breadcrumb-area .breadcrumb-item .breadcrumb li {
+    display: flex !important;
+    align-items: center !important;
+}
+
+/* Мобильная версия - меньший размер шрифта */
+@media only screen and (max-width: 991px) {
+    .breadcrumb-area .breadcrumb-item h1 {
+        font-size: 2.5rem !important;
+        margin-bottom: 30px !important;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .breadcrumb-area .breadcrumb-item h1 {
+        font-size: 2rem !important;
+        margin-bottom: 25px !important;
+    }
+}
+
+/* Исключение для страницы портфолио, у которой свой стиль */
+.breadcrumb-area.portfolio-page-no-gradient {
+    padding-top: 350px !important;
+}
+
+@media only screen and (max-width: 991px) {
+    .breadcrumb-area.portfolio-page-no-gradient {
+        padding-top: 200px !important;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .breadcrumb-area.portfolio-page-no-gradient {
+        padding-top: 150px !important;
+    }
+}
   

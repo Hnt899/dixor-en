@@ -98,17 +98,18 @@ const Breadcrumb = ({ title, breadCrumb, activeFilter, onFilterChange }: DataTyp
     return (
         <>
             <div className={`breadcrumb-area text-center`}
-                style={{ backgroundImage: `url(/assets/img/shape/10.jpg)` }}>
-                <div className="light-banner-active bg-gray bg-cover" style={{ backgroundImage: 'url(/assets/img/shape/6.jpg)' }} />
+                style={{ backgroundColor: '#0E0F11' }}>
+                <div className="light-banner-active bg-gray bg-cover" style={{ backgroundColor: '#0E0F11' }} />
 
                 <div className="container">
                     <div className="breadcrumb-item">
                         <div className="row">
-                            <div className="col-lg-8 offset-lg-2">
-                                <h1>{title ? title : "not found"}</h1>
-                                <nav aria-label="breadcrumb">
-                                    <ol className="breadcrumb">
+                            <div className="col-lg-12" style={{ textAlign: 'center' }}>
+                                <h1 style={{ marginBottom: '40px', textAlign: 'center' }}>{title ? title : "not found"}</h1>
+                                <nav aria-label="breadcrumb" style={{ marginTop: '20px', display: 'flex', justifyContent: 'center' }}>
+                                    <ol className="breadcrumb" style={{ margin: 0, justifyContent: 'center' }}>
                                         <li><Link to="/"><i className="fas fa-home" /> Главная</Link></li>
+                                        <li style={{ margin: '0 8px' }}>—</li>
                                         <li className="active">{breadCrumb ? (
                                             breadcrumbLabels[breadCrumb] || breadCrumb
                                         ) : "error"}</li>
